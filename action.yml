@@ -11,6 +11,10 @@ inputs:
     description: "OpenAI API model."
     required: false
     default: "gpt-4"
+  max_tokens:
+    description: "Maximum number of tokens that can be generated per analysis."
+    required: false
+    default: "700"
   exclude:
     description: "Glob patterns to exclude files from the diff analysis"
     required: false
