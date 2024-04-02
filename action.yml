@@ -15,6 +15,10 @@ inputs:
     description: "Glob patterns to exclude files from the diff analysis"
     required: false
     default: ""
+  custom_prompts:
+    description: "Custom commands to augment the agent's prompts with. Each line is an individual command."
+    required: false
+    default: ""
 runs:
   using: "node16"
   main: "dist/index.js"
