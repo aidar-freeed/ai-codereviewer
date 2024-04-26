@@ -51,6 +51,7 @@ const minimatch_1 = __importDefault(__nccwpck_require__(2002));
 const GITHUB_TOKEN = core.getInput("GITHUB_TOKEN");
 const OPENAI_API_KEY = core.getInput("OPENAI_API_KEY");
 const OPENAI_API_MODEL = core.getInput("OPENAI_API_MODEL");
+const EXTRA_PROMPTS = core.getInput("EXTRA_PROMPTS");
 const octokit = new rest_1.Octokit({ auth: GITHUB_TOKEN });
 const openai = new openai_1.default({
     apiKey: OPENAI_API_KEY,
@@ -105,6 +106,9 @@ function analyzeCode(parsedDiff, prDetails) {
         return comments;
     });
 }
+const extractExtraPrompts = () => {
+    return EXTRA_PROMPTS.split(',').map((prompt) => `- IMPORTANT: ${prompt}\n`).join('');
+};
 function createPrompt(file, chunk, prDetails) {
     return `Your task is to review pull requests. Instructions:
 - Provide the response in following JSON format:  {"reviews": [{"lineNumber":  <line_number>, "reviewComment": "<review comment>"}]}
@@ -113,6 +117,7 @@ function createPrompt(file, chunk, prDetails) {
 - Write the comment in GitHub Markdown format.
 - Use the given description only for the overall context and only comment the code.
 - IMPORTANT: NEVER suggest adding comments to the code.
+${extractExtraPrompts()}
 
 Review the following code diff in the file "${file.to}" and take the pull request title and description into account when writing the response.
   

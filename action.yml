@@ -15,6 +15,11 @@ inputs:
     description: "Glob patterns to exclude files from the diff analysis"
     required: false
     default: ""
+  EXTRA_PROMPTS:
+    description: "Extra prompts to use for the code review."
+    required: false
+    default: ""
+  
 runs:
   using: "node16"
   main: "dist/index.js"
