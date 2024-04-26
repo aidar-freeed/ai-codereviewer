@@ -8,6 +8,7 @@ import minimatch from "minimatch";
 const GITHUB_TOKEN: string = core.getInput("GITHUB_TOKEN");
 const OPENAI_API_KEY: string = core.getInput("OPENAI_API_KEY");
 const OPENAI_API_MODEL: string = core.getInput("OPENAI_API_MODEL");
+const EXTRA_PROMPTS:string = core.getInput("EXTRA_PROMPTS");
 
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
@@ -77,6 +78,9 @@ async function analyzeCode(
   }
   return comments;
 }
+const extractExtraPrompts = () => {
+  return EXTRA_PROMPTS.split(',').map((prompt)=>`- IMPORTANT: ${prompt}\n`).join('');
+}
 
 function createPrompt(file: File, chunk: Chunk, prDetails: PRDetails): string {
   return `Your task is to review pull requests. Instructions:
@@ -86,6 +90,7 @@ function createPrompt(file: File, chunk: Chunk, prDetails: PRDetails): string {
 - Write the comment in GitHub Markdown format.
 - Use the given description only for the overall context and only comment the code.
 - IMPORTANT: NEVER suggest adding comments to the code.
+${extractExtraPrompts()}
 
 Review the following code diff in the file "${
     file.to
