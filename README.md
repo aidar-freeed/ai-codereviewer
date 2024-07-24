@@ -42,6 +42,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # The GITHUB_TOKEN is there by default so you just need to keep it like it is and not necessarily need to add it as secret as it will throw an error. [More Details](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret)
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          COMMENT_LANGUAGE: ${{ secrets.COMMENT_LANGUAGE }}
           OPENAI_API_MODEL: "gpt-4" # Optional: defaults to "gpt-4"
           exclude: "**/*.json, **/*.md" # Optional: exclude patterns separated by commas
 ```
@@ -51,7 +52,9 @@ jobs:
 
 5. Customize the `exclude` input if you want to ignore certain file patterns from being reviewed.
 
-6. Commit the changes to your repository, and AI Code Reviewer will start working on your future pull requests.
+6. Replace the `COMMENT_LANGUAGE` input if you want to add comments in your desired language.
+
+7. Commit the changes to your repository, and AI Code Reviewer will start working on your future pull requests.
 
 ## How It Works
 
