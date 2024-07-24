@@ -11,6 +11,9 @@ inputs:
     description: "OpenAI API model."
     required: false
     default: "gpt-4"
+  COMMENT_LANGUAGE:
+    description: "input if you want to add comments in your desired language."
+    required: false
   exclude:
     description: "Glob patterns to exclude files from the diff analysis"
     required: false
