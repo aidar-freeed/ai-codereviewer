@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_activity"
+    android:background="@color/bgColor">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/header"
+        app:titleTextAppearance="?android:attr/textAppearanceSmall"
+        android:titleTextColor="@color/fontColorWhite"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:fitsSystemWindows="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/depositSummaryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="7dp"
+            app:cardElevation="@dimen/card_shadow"
+            android:layout_marginTop="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin"
+            android:layout_marginBottom="70dp"
+            app:cardBackgroundColor="@color/fontColorWhite">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:id="@+id/tableLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:id="@+id/rowBatchId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/label_batch_id"/>
+
+                        <TextView
+                            android:id="@+id/divider2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text="@string/divider_colon"/>
+
+                        <TextView
+                            android:id="@+id/txtBatchId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/label_batch_id"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/rowTransferBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/label_transfer_by"/>
+
+                        <TextView
+                            android:id="@+id/divider3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text="@string/divider_colon"/>
+
+                        <TextView
+                            android:id="@+id/txttransferBy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/label_bank"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/rowCashierName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/label_cashier_name"/>
+
+                        <TextView
+                            android:id="@+id/divider4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text="@string/divider_colon"/>
+
+                        <TextView
+                            android:id="@+id/txtCashierName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/label_cashier_name"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/rowAccountNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/label_account_number"/>
+
+                        <TextView
+                            android:id="@+id/divider5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text="@string/divider_colon"/>
+
+                        <TextView
+                            android:id="@+id/txtAccountNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/dummy_number"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/rowBankName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp" >
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/label_bank_name"/>
+
+                        <TextView
+                            android:id="@+id/divider6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text="@string/divider_colon"/>
+
+                        <TextView
+                            android:id="@+id/txtBankName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/label_bank_name"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/rowEvidenceTransfer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/label_transfer_evidence"/>
+
+                        <TextView
+                            android:id="@+id/divider"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text="@string/divider_colon"/>
+
+                        <ImageView
+                            android:id="@+id/imgEvidenceTransfer"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_weight="0.25"
+                            android:scaleType="fitStart"
+                            android:src="@drawable/profile_image" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/lblTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/total"/>
+                        <TextView
+                            android:id="@+id/divider7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text="@string/divider_colon"/>
+                        <TextView
+                            android:id="@+id/txtTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:gravity="end"
+                            android:text="@string/total"/>
+                    </TableRow>
+                    <TableRow>
+                        <TextView />
+                    </TableRow>
+                </TableLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/btnPrintDepReport"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:elevation="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_print" />
+    </RelativeLayout>
+</LinearLayout>

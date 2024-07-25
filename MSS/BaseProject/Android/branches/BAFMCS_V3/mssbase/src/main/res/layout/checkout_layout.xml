@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@drawable/bg_grayscale"
+        >
+    <View
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/actionbar_background" />
+
+    <fragment
+            android:id="@+id/mapOut"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:tag="mapout"
+            class="com.google.android.gms.maps.SupportMapFragment" />
+
+    <LinearLayout
+            android:id="@+id/DescLayoutOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/highpriority_background"
+            android:visibility="gone">
+
+        <ImageView
+                android:id="@+id/addressImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_absent"
+                android:layout_gravity="center_vertical" />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/textLocalOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/tv_white"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            <TextView
+                    android:id="@+id/textAddressOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/tv_white"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/btnRefreshCOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/refresh"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="right" />
+
+</LinearLayout>

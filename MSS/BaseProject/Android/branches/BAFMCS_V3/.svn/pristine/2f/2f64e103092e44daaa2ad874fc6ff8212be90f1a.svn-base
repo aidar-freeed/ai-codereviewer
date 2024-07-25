@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/bgColor">
+    <!--<View-->
+        <!--android:id="@+id/actionbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@drawable/actionbar_background" />-->
+    <com.github.jjobes.slidedatetimepicker.SlidingTabLayout
+        android:id="@+id/slidingTabLayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/header"
+        android:layout_height="wrap_content"/>
+
+    <androidx.viewpager.widget.ViewPager
+        xmlns:tools="http://schemas.android.com/tools"
+        android:name="com.adins.mss.base.todolist.form.TaskListFragment_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/pager"
+        tools:context="com.adins.mss.base.todolist.form.TaskListFragment_new">
+    </androidx.viewpager.widget.ViewPager>
+</LinearLayout>

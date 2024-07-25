@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black">
+
+    <com.adins.mss.foundation.camerainapp.helper.AspectFrameLayout
+        android:id="@+id/camera_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.adins.mss.foundation.camerainapp.CameraSurfaceView
+                android:id="@+id/camera_surfaceview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:id="@+id/camera_border"
+                android:layout_width="350dp"
+                android:layout_height="220dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/camera_border" />
+
+            <View
+                android:id="@+id/viewLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/camera_border"
+                android:background="#CC000000"
+                android:layout_toStartOf="@+id/camera_border"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/viewRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/camera_border"
+                android:background="#CC000000"
+                android:layout_toEndOf="@+id/camera_border"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/viewUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/camera_border"
+                android:layout_toLeftOf="@+id/viewRight"
+                android:layout_toRightOf="@+id/viewLeft"
+                android:background="#CC000000"
+                android:layout_toStartOf="@+id/viewRight"
+                android:layout_toEndOf="@+id/viewLeft"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/viewDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/camera_border"
+                android:layout_toLeftOf="@+id/viewRight"
+                android:layout_toRightOf="@+id/viewLeft"
+                android:background="#CC000000"
+                android:layout_toStartOf="@+id/viewRight"
+                android:layout_toEndOf="@+id/viewLeft"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_auto_focus_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.adins.mss.foundation.camerainapp.helper.AspectFrameLayout>
+
+    <TextView
+        android:id="@+id/txtIdCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:text="@string/camera_message"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/footer_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

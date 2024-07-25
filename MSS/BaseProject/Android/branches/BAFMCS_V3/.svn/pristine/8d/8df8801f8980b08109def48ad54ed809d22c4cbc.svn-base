@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="gradient_start1">#137877</color>
+    <color name="gradient_start">#49a341</color>
+    <color name="gradient_end1">#0e5e5d</color>
+    <color name="gradient_end">#50b348</color>
+    <color name="tv_lighter">#a2dea4</color>
+    <!--#7adb4f-->
+    <!--#6abd45-->
+    <!--438c23-->
+    <color name="canvas">#FF404040</color>
+    <color name="bar">#C0202020</color>
+    <color name="grey">#dcdcdc</color>
+    <color name="black">#000000</color>
+
+    <!-- Graph Color -->
+    <color name="graphColor1">#a7fb72</color>
+    <color name="graphColor2">#4bf824</color>
+    <color name="graphColor3">#24ba29</color>
+    <color name="graphColor4">#0c8f1d</color>
+    <color name="graphColor5">#086114</color>
+
+    <!-- Rank Legends Color -->
+    <color name="rankColor1">#FF0000</color>
+    <color name="rankColor2">#000000</color>
+    <color name="rankColor3">#32CD32</color>
+    <color name="rankColor4">#0000FF</color>
+
+
+    <color name="login_color">#1d930c</color>
+</resources>

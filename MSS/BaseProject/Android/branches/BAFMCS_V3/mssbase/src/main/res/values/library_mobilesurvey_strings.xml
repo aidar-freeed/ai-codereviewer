@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="define_int_MobileSurvey">year;owner</string>
+    <string name="library_MobileSurvey_author">AdIns</string>
+    <string name="library_MobileSurvey_authorWebsite">http://ad-ins.com/</string>
+    <string name="library_MobileSurvey_libraryName">CheckId v2.0</string>
+    <string name="library_MobileSurvey_libraryDescription">
+        Mobile Survey have never been easier. You can capture mobile market research anytime, on any device, even offline.
+        Request a free demo and learn more.
+    </string>
+    <string name="library_MobileSurvey_libraryVersion">1.0.0</string>
+    <string name="library_MobileSurvey_libraryWebsite">https://ad-ins.com/MobileSurvey</string>
+    <string name="library_MobileSurvey_licenseId">apache_2_0</string>
+    <string name="library_MobileSurvey_isOpenSource">true</string>
+    <string name="library_MobileSurvey_repositoryLink">https://ad-ins.com/MobileSurvey</string>
+    <!-- Custom variables section -->
+    <string name="library_MobileSurvey_owner">PT. Adicipta Dinamika Inovasi</string>
+    <string name="library_MobileSurvey_year">2015</string>
+</resources>

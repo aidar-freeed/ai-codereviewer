@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/timelineContainer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:id="@+id/timelineItem">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/timelineLine" />
+            <ImageView
+                android:id="@+id/timelineIcon"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/task_highpriority"
+                android:padding="2dp"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/taskHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="5dp"
+                app:cardBackgroundColor="@color/fontColorWhite"
+                app:cardElevation="@dimen/card_shadow"
+                android:layout_margin="@dimen/card_margin">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/taskName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:layout_weight="0.8"
+                            android:text="Sample Name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:drawableLeft="@drawable/ic_person_color"
+                            android:drawablePadding="5dp"/>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2">
+                            <TextView
+                                android:id="@+id/taskTime"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:gravity="right"
+                                android:text="Time"
+                                android:textSize="10dp"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/taskAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/container"
+                        android:paddingBottom="5dp"
+                        android:text="Sample Address"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:drawableLeft="@drawable/ic_location_color"
+                        android:drawablePadding="5dp"/>
+                    <TextView
+                        android:id="@+id/taskCollResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/taskAddress"
+                        android:paddingBottom="5dp"
+                        android:text="@string/collection_result"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:drawableLeft="@drawable/ic_coll_result"
+                        android:drawablePadding="5dp"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/taskStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:id="@+id/taskStatusItem1"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/timelineLine" />
+                        <ImageView
+                            android:id="@+id/taskStatusIcon1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/task_draft"
+                            android:padding="3dp"/>
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="10dp"
+                        app:contentPadding="10dp"
+                        app:cardElevation="@dimen/card_shadow"
+                        android:layout_margin="@dimen/card_margin"
+                        app:cardBackgroundColor="@color/fontColorWhite">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txtStatus1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/txtTime1"
+                                android:text="Title"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
+                            <TextView
+                                android:id="@+id/txtDesc1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/txtStatus1"
+                                android:text="Description"
+                                android:textSize="11dp"
+                                android:visibility="gone"/>
+                            <TextView
+                                android:id="@+id/txtTime1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="Time"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="10dp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/timelineLine" />
+
+</LinearLayout>

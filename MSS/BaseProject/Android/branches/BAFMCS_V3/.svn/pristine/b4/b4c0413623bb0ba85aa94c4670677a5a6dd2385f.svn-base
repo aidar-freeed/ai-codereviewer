@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/title_mn_paymenthistory"
+          android:id="@+id/action_payment_history"/>
+    <item android:title="@string/title_mn_installmentschedule"
+          android:id="@+id/action_installment_schedule"/>
+    <item android:title="@string/title_mn_collection_history"
+          android:id="@+id/action_collection_history"/>
+</menu>

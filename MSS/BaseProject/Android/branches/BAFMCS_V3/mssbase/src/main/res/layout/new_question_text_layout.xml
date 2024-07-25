@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/questionTextLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/questionTextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0. Label"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/customerPhoneContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/callPhoneNumber"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/call_button_background"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Call"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/questionTextAnswer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <EditText
+            android:id="@+id/questionTextAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:imeOptions=""
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@drawable/edit_text_selector"
+            android:textColorHint="@color/shadowColor"
+            app:layout_constraintEnd_toStartOf="@+id/callPhoneNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.8">
+        </EditText>
+
+        <Button
+            android:id="@+id/questionBtnViewPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/view_pdf"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questionTextAnswer"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

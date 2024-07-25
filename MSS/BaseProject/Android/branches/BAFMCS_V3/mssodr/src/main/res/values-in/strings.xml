@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">LeadIn</string>
+    <string name="appVersion">v2.1.0.1</string>
+    <string name="history_payment">Riwayat Pembayaran</string>
+    <string name="installment_schedule">Installment Schedule</string>
+    <!-- Left Menu -->
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">close_drawer</string>
+
+    <!-- CHECK ORDER -->
+    <string name="btnLookupCMO">Lookup CMO</string>
+    <string name="btnLookupCMOMH">Lookup CMO / MH</string>
+    <string name="lblSearchBy">Pilih Filter</string>
+    <string name="lblStartDate">Tanggal Awal</string>
+    <string name="lblEndDate">Tanggal Akhir</string>
+    <string name="lblNomorOrder">Nomor Order</string>
+    <string name="btnSearchOrder">Cari</string>
+    <string name="menu">Main Menu</string>
+    <string name="cekOrder">Check Order</string>
+    <string name="btnOpen">Open</string>
+    <string name="lblSearchByStatus">Status</string>
+    <string name="btnOk">OK</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="submit_all_task">Submit All Task</string>
+    <string name="submit_task_collection">Submit Task Collection</string>
+    <string name="lblAccountName">Account Name :</string>
+    <string name="lblProduct">Product :</string>
+    <string name="lblStatus">Status :</string>
+    <string name="allStatus">All Status</string>
+
+    <string-array name="dropdownAccountStatus">
+        <item>All Status</item>
+        <item>Lead</item>
+        <item>Bid</item>
+        <item>Qualified</item>
+        <item>Completed</item>
+        <item>Deleted</item>
+    </string-array>
+    <string-array name="cbSearchBy">
+        <item >Tanggal</item>
+        <item >Nomor Order</item>
+        <item >Nama Customer</item>
+    </string-array>
+    <string-array name="cbSearchByStatus">
+        <item >ALL</item>
+        <item >On Survey</item>
+        <item >On CA</item>
+    </string-array>
+    <string-array name="cbUpdateOrder">
+        <item >Open Order</item>
+        <item >Cancel Order</item>
+    </string-array>
+
+    <!-- 	Main Menu -->
+    <string name="title_mn_tasklist">Order Progress</string>
+    <string name="title_mn_reportsummary">Report Summary</string>
+    <string name="title_mn_depositreport">Deposit Report</string>
+    <string name="title_mn_newtask">New Order</string>
+    <string name="title_mn_surveyperformance">Survey Performance</string>
+    <string name="title_mn_surveyverification">Survey Verification</string>
+    <string name="title_mn_surveyapproval">Survey Approval</string>
+    <string name="title_mn_surveyassign">Survey Assignment</string>
+    <string name="title_mn_surveyreassign">Survey Re-Assignment</string>
+    <string name="title_mn_installmentschedule">Installment Schedule</string>
+    <string name="title_mn_setting">Pengaturan</string>
+
+
+    <string name="login_desc">Login ke Aplikasi LeadIn</string>
+
+    <string name="toast_crash">Ooooops ! MSSODR crashed, but a report has been sent to my developer to help fix the issue !</string>
+    <string name="password">Password :</string>
+    <string name="user_id">User ID :</string>
+
+    <string name="news_desc">TextView</string>
+    <string name="title_news_parent">Medium Text</string>
+    <string name="data_not_found">Data tidak tersedia.</string>
+
+    <string name="dummy_no_order">1234567</string>
+    <string name="notes">Notes</string>
+    <string name="medium_text">Medium Text</string>
+    <string name="title_activity_developer_option">Dev Options</string>
+    <string name="msgNoNewVersion">Versi saat ini adalah versi terakhir</string>
+    <string name="msgNoTaskList">Anda tidak memiliki daftar task</string>
+    <string name="changelog_v230"><![CDATA[Perbaikan: <br/>
+1. Support Multilingual <br/>
+2. Update compatibility untuk Android M <br/>
+3. Support refresh lokasi dengan mengetuk GPS Icon <br/>
+4. Peningkatan performa <br/>
+5. Perbaikan managemen memory <br/>
+6. Menampilkan radius accuracy di tampilan peta<br/>
+7. Menampilkan pertanyaan tidak relevan secara otomatis<br/>
+8. Mendukung menyalin jawaban dari pertanyaan lain <br/>
+9. Mendukung  validasi pertanyaan tingkat lanjut <br/>
+10. Minor Bug fixes]]>\n</string>
+    <string name="changelog_v2310"><![CDATA[Perbaikan: <br/> 1. Mendukung menyalin jawaban dengan kondisi tertentu]]></string>
+    <string name="changelog_v2320"><![CDATA[Perbaikan: <br/>
+1. perbaikan gambar profile dan gambar cover
+]]></string>
+    <string name="changelog_v200"><![CDATA[Perbaikan: <br/>
+1. Mendukung fitur linimasa tugas<br/>
+2. Mendukung menu navigasi]]></string>
+    <string name="changelog_v210"><![CDATA[Perbaikan: <br/>
+1. Mendukung fitur Promo]]></string>
+    <string name="changelog_v220"><![CDATA[Perbaikan: <br/>
+1. Mendukung fitur Oauth]]></string>
+    <string name="changelog_v2330"><![CDATA[Perbaikan: <br/>
+1. Perbaikan Sinkronisasi<br/>
+2. Perbaikan Linimasa untuk Absensi<br/>
+3. Perbaikan memuat jawaban pertanyaan<br/>
+4. Menambahkan pengecekan root device]]></string>
+    <string name="changelog_v2340"><![CDATA[Perbaikan: <br/>
+1. Alphanumeric pada Password]]></string>
+    <string name="changelog_v2350"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug<br/>
+2. Menghilangkan Form tidak aktif]]></string>
+    <string name="changelog_v2360"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v2370"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug
+2. Perbaikan eror pada GPS]]></string>
+    <string name="changelog_v2380"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v2390"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23100"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23110"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23120"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23130"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23140"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23150"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23160"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23170"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23180"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23190"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v2400"><![CDATA[Perbaikan: <br/>
+1. Penambahan informasi terkait device di menu about<br/>
+2. Mendukung tipe jawaban online lookup<br/>
+3. Tampilan task list dapat berupa box atau list]]></string>
+    <string name="changelog_v3110"><![CDATA[Changes: <br/>
+1. Penambahan status TaskH FailedDraft ketika mendapatkan response code tertentu saat submit task dari web.<br/>
+2. Penambahan user help .<br/>
+3. Pembetulan take picture failed di android 10 .<br/>
+4. App lemot saat Login-Logout-Login .<br/>
+5. Penyempurnaan answer type LuOnline .<br/>
+6. Pembetulan bug uploading task di timeline tidak muncul.<br/>
+7. Penambahan support untuk Android 10]]></string>
+    <string name="changelog_v3120">
+<![CDATA[ Changes: <br/>
+1. Pembetulan Cloud CSV tidak dapat diimport .<br/>
+2. Pembetulan service berhenti ketika keluar aplikasi.<br/>
+3. Pembetulan crash saat sinkronisasi .<br/>
+4. Pembetulan crash saat is_emergency mati .<br/>
+5. Hapus search by priority . <br/>
+6. Pembetulan force stop tidak menuju timeline . ]]>
+</string>
+    <string name="changelog_v3130">
+<![CDATA[ Changes: <br/>
+1. Perbaikan issue user help.<br/>
+2. Perbaikan perilaku logout otomatis ketika menekan tombol kembali.<br/>
+3. Tambah aksi panggil nomor telepon customer pada customer form.<br/>
+4. Perbaikan validasi tidak berjalan pada form dikarenakan regex.<br/>
+5. Tambahkan teks contoh pada user help data dinamis.<br/>
+]]>
+</string>
+<string name="changelog_v3140">
+<![CDATA[ Changes: <br/>
+1. Refactor beberapa kode.<br/>
+2. Perbaikan bug.<br/>]]>
+</string>
+</resources>

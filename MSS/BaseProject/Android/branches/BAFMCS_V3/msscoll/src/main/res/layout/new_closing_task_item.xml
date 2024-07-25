@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/logContainer">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/closingTaskItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="5dp"
+        app:cardElevation="@dimen/card_shadow"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/fontColorWhite">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/lblContractNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:paddingBottom="5dp"
+                    android:text="@string/label_agreement_no"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:drawableLeft="@drawable/ic_form_color"
+                    android:drawableTint="@color/colorMC"
+                    android:drawablePadding="5dp"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/timelineLine" />
+                <TextView
+                    android:id="@+id/contractNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:layout_marginLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Sample Contract No"
+                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/lblCustomerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="@string/customer_name"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:drawableLeft="@drawable/ic_person_color"
+                    android:drawableTint="@color/colorMC"
+                    android:drawablePadding="5dp"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/timelineLine" />
+                <TextView
+                    android:id="@+id/customerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.4"
+                    android:text="Sample Name"
+                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

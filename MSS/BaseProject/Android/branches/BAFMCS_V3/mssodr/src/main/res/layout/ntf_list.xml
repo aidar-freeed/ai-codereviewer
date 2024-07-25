@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/ntf_no"
+        android:gravity="left" />
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/timelineLine" />
+    <TextView
+        android:id="@+id/ntf_name"
+        android:gravity="left" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/timelineLine" />
+    <TextView
+        android:id="@+id/ntf_amount"
+        android:gravity="right|center" />
+
+</TableRow>

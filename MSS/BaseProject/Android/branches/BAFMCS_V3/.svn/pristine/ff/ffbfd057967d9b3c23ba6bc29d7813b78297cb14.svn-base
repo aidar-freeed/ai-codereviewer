@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layoutView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/bgColorWhite"
+	android:orientation="vertical">
+
+	<Button
+		android:id="@+id/btnCreatePlan"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/button_background"
+		android:text="@string/create_plan"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:textColor="#ffffff"
+		android:textSize="18dp"
+		android:visibility="gone" />
+
+	<ListView
+		android:id="@android:id/list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:divider="@android:color/transparent"
+		android:dividerHeight="5dp"
+		android:footerDividersEnabled="true"
+		android:headerDividersEnabled="true"
+		android:padding="5dp"
+		android:scrollbarSize="1dp"
+		android:scrollbarStyle="outsideOverlay" />
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="define_int_MobileOrder">year;owner</string>
+    <string name="library_MobileOrder_author">AdIns</string>
+    <string name="library_MobileOrder_authorWebsite">http://ad-ins.com/</string>
+    <string name="library_MobileOrder_libraryName">LeadIn v2.0</string>
+    <string name="library_MobileOrder_libraryDescription">
+        Mobile Order have never been easier. You can capture mobile market research anytime, on any device, even offline.
+        Request a free demo and learn more.
+    </string>
+    <string name="library_MobileOrder_libraryVersion">1.0.0</string>
+    <string name="library_MobileOrder_libraryWebsite">https://ad-ins.com/MobileOrder</string>
+    <string name="library_MobileOrder_licenseId">apache_2_0</string>
+    <string name="library_MobileOrder_isOpenSource">true</string>
+    <string name="library_MobileOrder_repositoryLink">https://ad-ins.com/MobileOrder</string>
+    <!-- Custom variables section -->
+    <string name="library_MobileOrder_owner">PT. Adicipta Dinamika Inovasi</string>
+    <string name="library_MobileOrder_year">2015</string>
+</resources>

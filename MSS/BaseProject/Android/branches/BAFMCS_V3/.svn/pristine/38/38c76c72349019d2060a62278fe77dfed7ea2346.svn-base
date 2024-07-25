@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_holo_light"
+    android:padding="5dp"
+    >
+
+    <TextView
+        android:id="@+id/documentNameTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guideline &amp; FAQ"
+        android:textSize="@dimen/textSizeLarge_openSource"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/pdfLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:background="@color/gray_holo_light"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photo_view_border"
+            android:padding="1dp"
+            >
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/pdfImage"
+                android:background="@color/fontColorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnNavigationPdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/previous"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_view_background"
+            android:text="Previous"
+            android:textSize="13sp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:textAllCaps="false"
+            android:minHeight="0dp"
+            />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_view_background"
+            android:text="Next"
+            android:textSize="13sp"
+            android:layout_margin="10dp"
+            android:textAllCaps="false"
+            android:padding="10dp"
+            android:minHeight="0dp"/>
+    </LinearLayout>
+</LinearLayout>

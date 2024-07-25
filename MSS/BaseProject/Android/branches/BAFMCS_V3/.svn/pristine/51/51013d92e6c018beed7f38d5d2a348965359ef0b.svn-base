@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/previewContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="?android:attr/actionBarSize"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:padding="10dp"
+        android:background="#90000000"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom" >
+
+<!--         <Button -->
+<!--             android:id="@+id/spFlashCam" -->
+<!--             android:layout_width="48sp" -->
+<!--             android:layout_height="47sp" -->
+<!--             android:layout_alignParentRight="true" -->
+<!--             android:layout_alignParentTop="true" -->
+<!--             android:background="@drawable/ic_flash_auto_white" /> -->
+
+        <Button
+            android:id="@+id/btCaptureCam"
+            android:layout_width="48sp"
+            android:layout_height="47sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_camera" />
+              
+    </RelativeLayout>
+
+</RelativeLayout>

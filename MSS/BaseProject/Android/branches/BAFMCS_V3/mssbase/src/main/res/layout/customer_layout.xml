@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.adins.mss.foundation.formatter.Formatter"
+            alias="fmt" />
+        <import type="com.adins.mss.constant.Global"
+            alias="const" />
+        <variable
+            name="is_processed"
+            type="String" />
+        <variable
+            name="status"
+            type="String" />
+        <variable
+            name="surveyHeader"
+            type="com.adins.mss.base.dynamicform.SurveyHeaderBean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_grayscale"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <View
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/actionbar_background" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/buttons"
+            android:layout_below="@+id/actionbar" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:id="@+id/layoutTaskId"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/lblTaskId"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/customer_task_id"
+                        android:textColor="@color/tv_darker" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/txtTaskId"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="60"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/tv_darker"
+                        android:textColorHint="@color/tv_gray" >
+                    </EditText>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lblCustomerName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/customer_name"
+                    android:textColor="@color/tv_darker" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/txtCustomerName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/customer_name"
+                    android:text=""
+                    android:maxLength="60"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/tv_darker"
+                    android:textColorHint="@color/tv_gray" >
+
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblCustomerPhone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/customer_phone_number"
+                    android:textColor="@color/tv_darker" />
+
+                <EditText
+                    android:id="@+id/txtCustomerPhone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/customer_phone_number"
+                    android:text=""
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/tv_darker"
+                    android:textColorHint="@color/tv_gray" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblCustomerAddress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/customer_address"
+                    android:textColor="@color/tv_darker" />
+
+                <EditText
+                    android:id="@+id/txtCustomerAddress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="top|left"
+                    android:hint="@string/customer_address"
+                    android:text=""
+                    android:maxLength="120"
+                    android:minLines="2"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/tv_darker"
+                    android:textColorHint="@color/tv_gray" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblZipCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/customer_zip_code"
+                    android:textColor="@color/tv_darker"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/txtZipCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/customer_zip_code"
+                    android:text=""
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/tv_darker"
+                    android:textColorHint="@color/tv_gray"
+                    android:visibility="gone" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/txtSurveyLocationTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:maxLength="500"
+                    android:text="@string/survey_location"
+                    android:textColor="@color/tv_darker"
+                    >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/txtSurveyLocation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|left"
+                    android:hint="@string/survey_location_hint"
+                    android:minLines="3"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/tv_darker"
+                    android:textColorHint="@color/tv_gray" >
+                </EditText>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:maxLength="500"
+                    android:text="@string/customer_notes"
+                    android:textColor="@color/tv_darker" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/txtNotes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|left"
+                    android:hint="@string/customer_notes_hint"
+                    android:text=""
+                    android:minLines="3"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/tv_darker"
+                    android:textColorHint="@color/tv_gray" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/txtVoiceNote"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:maxLength="500"
+                    android:text="@string/voice_notes"
+                    android:textColor="@color/tv_darker" >
+                </TextView>
+
+                <ToggleButton
+                    android:id="@+id/btnVoiceNotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_voice_note"
+                    android:textColor="@color/tv_darker"
+                    android:textOff="@string/voice_notes_record"
+                    android:textOn="@string/voice_notes_stop"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtNoVoiceNote"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center_horizontal"
+                    android:maxLength="500"
+                    android:shadowColor="@color/tv_darker"
+                    android:text="@string/voice_notes_not_available"
+                    android:textColor="#555555"
+                    android:visibility="gone" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/lblPtsDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/ptsDate"
+                    android:textColor="@color/tv_darker"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/txtPtsDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/ptsDate"
+                    android:text=""
+                    android:inputType="datetime"
+                    android:maxLength="30"
+                    android:enabled="false"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/tv_darker"
+                    android:textColorHint="@color/tv_gray"
+                    android:visibility="gone" >
+                </EditText>
+
+                <LinearLayout
+                    android:id="@+id/recorderLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gradient_end"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:textOn="Stop"
+                    android:visibility="gone" >
+
+                    <ImageButton
+                        android:id="@+id/btnPlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/circle_button"
+                        android:src="@drawable/ic_play" />
+
+                    <ImageButton
+                        android:id="@+id/btnStop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/circle_button"
+                        android:src="@drawable/ic_stop" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="right"
+            android:padding="5dp" >
+
+            <Button
+                android:id="@+id/btnPts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/btnReschedule"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:visibility="gone" >
+            </Button>
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="@string/btnReset"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ffffff" >
+            </Button>
+
+            <Button
+                android:id="@+id/btnStartSurvey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="@string/btnStart"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ffffff" >
+            </Button>
+
+            <Button
+                android:id="@+id/btnViewTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnView"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:visibility="gone" >
+            </Button>
+
+            <Button
+                android:id="@+id/btnPrint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnPrint"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:visibility="gone" >
+            </Button>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

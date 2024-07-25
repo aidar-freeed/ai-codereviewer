@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/questionDtmLayout">
+    <TextView
+        android:id="@+id/questionDtmLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0. Label"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_margin="5dp">
+        <EditText
+            android:id="@+id/questionDtmAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="ddMMyyy"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@drawable/edit_text_selector"
+            android:focusable="false"
+            android:layout_weight="0.5"/>
+        <Button
+            android:id="@+id/btnSetDtm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:background="@drawable/button_background"
+            android:text="SET THE DATE"
+            android:textColor="@color/fontColorWhite"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+    </LinearLayout>
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

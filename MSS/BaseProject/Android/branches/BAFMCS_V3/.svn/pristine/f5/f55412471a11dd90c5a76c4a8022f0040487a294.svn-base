@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item 
+		android:id="@+id/mnSearch"
+		app:showAsAction="ifRoom"
+		android:icon="@android:drawable/ic_menu_search"
+		android:visible="false"
+	/>
+	<item
+		android:id="@+id/mnpending"
+		android:title="@string/mnPending"
+		app:showAsAction="ifRoom"
+		android:icon="@drawable/ic_mn_pending"
+		android:visible="false"
+	/>
+	<item
+		android:id="@+id/mnChangePassword"
+		app:showAsAction="ifRoom"
+		android:icon="@drawable/changepass_coll"
+		android:visible="false"
+		android:enabled="true"
+		android:title="Change Password" />
+	<item
+		android:id="@+id/mnSetting"
+		app:showAsAction="ifRoom"
+		android:icon="@drawable/english"
+		android:visible="false"
+		android:enabled="true"
+		android:title="@string/title_mn_setting" />
+    <item
+		android:id="@+id/mnGPS"
+		app:showAsAction="always"
+		android:icon="@drawable/location_off"
+		android:visible="true"
+		android:enabled="true"
+		android:title="GPS"
+	/>
+	<item
+		android:id="@+id/mnGuide"
+		app:showAsAction="ifRoom"
+		android:icon="@drawable/dialog_ic_about"
+		android:visible="false"
+		android:enabled="true"
+		android:title="@string/title_mn_guide"
+		/>
+	<item android:id="@+id/more"
+		android:title="More"
+		android:icon="@drawable/ic_more"
+		android:visible="false"
+		app:showAsAction="ifRoom">
+		<menu >
+			<item
+				android:id="@+id/moreChangePassword"
+				app:showAsAction="ifRoom"
+				android:icon="@drawable/changepass_coll"
+				android:visible="false"
+				android:enabled="true"
+				android:title="@string/title_mn_changepassword" />
+			<item
+				android:id="@+id/moreSetting"
+				app:showAsAction="ifRoom"
+				android:icon="@drawable/ic_repairing_service"
+				android:visible="false"
+				android:enabled="true"
+				android:title="@string/title_mn_setting" />
+		</menu>
+	</item>
+<!-- 	<item android:id="@+id/mnViewMap" -->
+<!-- 		  android:showAsAction="never" -->
+<!-- 		  android:visible="true" -->
+<!-- 		  android:title="View Map"/> -->
+<!-- 	<item android:id="@+id/mnViewData" -->
+<!-- 		  android:showAsAction="never" -->
+<!-- 		  android:title="View Data"/> -->
+<!-- 	<item android:id="@+id/mnPrint" -->
+<!-- 		  android:showAsAction="never" -->
+<!-- 		  android:title="Print"/> -->
+
+	<item android:id="@+id/menuMore"
+        android:title="More"
+        android:icon="@drawable/ic_more"
+        android:visible="false"
+        app:showAsAction="ifRoom">
+        <menu >
+            <item 
+		        android:id="@+id/mnPendingTask"
+		        android:title="@string/mnPending"
+		        app:showAsAction="ifRoom|withText"
+		        android:visible="false"
+		    />
+            <item
+		        android:id="@+id/mnRecord"
+		        android:title="@string/voice_notes"
+		        app:showAsAction="ifRoom|withText"
+		        android:visible="false"
+		    />
+            <item 
+		        android:id="@+id/mnInstallmentSchedule"
+		        android:title="@string/mn_installmentschedule"
+		        app:showAsAction="ifRoom|withText"
+		        android:visible="false"
+		    />
+            <item 
+		        android:id="@+id/mnPaymentHistory"
+		        android:title="@string/mn_paymenthistory"
+		        app:showAsAction="ifRoom|withText"
+		        android:visible="false"
+		    />
+            <item 
+		        android:id="@+id/mnCollectionActivity"
+		        android:title="@string/mn_collectionactivity"
+		        app:showAsAction="ifRoom|withText"
+		        android:visible="false"
+		    />
+			<item
+				android:id="@+id/mnReceiptHistory"
+				android:title="Receipt History"
+				app:showAsAction="ifRoom|withText"
+				android:visible="false"
+			/>
+		    <item 
+		        android:id="@+id/mnViewMap"
+		        android:title="@string/mn_viewmap"
+		        app:showAsAction="ifRoom|withText"
+		        android:visible="false"
+		    />
+		    <item 
+		        android:id="@+id/mnViewAllHeader"
+		        android:title="@string/mnViewAllHeader"
+		        app:showAsAction="ifRoom|withText"
+		        android:visible="false"
+		    />
+		    <item 
+		        android:id="@+id/mnViewData"
+		        android:title="@string/mnViewData"
+		        app:showAsAction="ifRoom|withText"
+		        android:visible="false"
+		    />
+		    <item 
+		        android:id="@+id/mnPrint"
+		        android:title="@string/mnPrint"
+		        app:showAsAction="ifRoom|withText"
+		        android:visible="false"
+		    />
+            <item
+                android:id="@+id/recapitulation"
+                app:showAsAction="ifRoom|withText"
+                android:visible="false"
+                android:title="@string/mn_recapitulation"/>
+            <item
+                android:id="@+id/summary"
+                app:showAsAction="ifRoom|withText"
+                android:visible="false"
+                android:title="@string/mn_summary"/>
+  
+        </menu>
+    </item>
+</menu>

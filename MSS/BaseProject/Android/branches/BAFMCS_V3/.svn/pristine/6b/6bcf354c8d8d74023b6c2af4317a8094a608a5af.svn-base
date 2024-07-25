@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_white"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/background_white"
+            app:titleTextAppearance="?android:attr/textAppearanceSmall"
+            app:popupTheme="@style/AppTheme"/>
+
+        <LinearLayout
+            android:id="@+id/loginHeader"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="vertical"
+            android:background="@color/background_white">
+
+            <!--<ImageView-->
+            <!--android:id="@+id/loginLogo"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:src="@drawable/logo_adi"-->
+            <!--android:layout_gravity="center"/>-->
+
+            <ImageView
+                android:id="@+id/logoMobile"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="-30dp"
+                android:src="@drawable/icon_check_id"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/loginLayout">
+
+            <include
+                android:id="@+id/include1"
+                layout="@layout/footer" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/loginForm"
+                android:layout_margin="25dp">
+
+                <EditText
+                    android:id="@+id/txtUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_corner_text_input"
+                    android:drawableStart="@drawable/ic_person_black"
+                    android:drawableLeft="@drawable/ic_person_black"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/lblLoginId"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:nextFocusForward="@+id/txtPassword"
+                    android:layout_marginBottom="20dp"
+                    android:paddingStart="15dp"
+                    android:gravity="center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    app:hintEnabled="false"
+                    app:boxStrokeColor="@null">
+                    <EditText
+                        android:id="@+id/txtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rounded_corner_text_input"
+                        android:drawableStart="@drawable/ic_lock_black"
+                        android:drawableLeft="@drawable/ic_lock_black"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/lblLoginPassword"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:gravity="center_vertical"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/checkRememberMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/tv_darker"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/lblRememberMe"
+                    />
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/login_button_background"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/btnLogin"
+                    android:textColor="@color/fontColorWhite"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom">
+                    <ImageView
+                        android:id="@+id/loginLogo"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginBottom="-25dp"
+                        android:src="@drawable/logo_adi"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
+

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/bgGridLog"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/spinner_background"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="3dp" >
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txtTaskId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/dummy_task_id"
+            android:textColor="@color/tv_white"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/indicatorLamp"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/light_red" />
+
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/logIcon"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_verification_log" />
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_margin="7dp">
+
+        <TextView
+                android:id="@+id/txtName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:text="@string/customer_name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/tv_white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+        <TextView
+                android:id="@+id/txtScheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="2"
+                android:text="@string/dummy_form_id"
+                android:gravity="center_horizontal"
+                android:textColor="@color/tv_white"
+                android:textSize="12dp" />
+
+        <TextView
+                android:id="@+id/txtDivider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tv_white"
+                android:text="@string/divider_dash"
+                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="8dp" />
+
+        <TextView
+                android:id="@+id/txtTimeSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/dummy_date_time"
+                android:textColor="@color/tv_white"
+                android:textSize="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

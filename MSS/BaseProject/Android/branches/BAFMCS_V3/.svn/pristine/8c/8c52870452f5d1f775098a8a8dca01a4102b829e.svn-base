@@ -1,0 +1,147 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    lintOptions {
+        disable 'MissingTranslation'
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+//    change with your msmkey storeFile
+    signingConfigs {
+        msmkey {
+            keyAlias 'aitmsskey'
+            keyPassword 'AdIns2020'
+            storeFile file('keystore2020.jks')
+            storePassword 'AdIns2020'
+        }
+    }
+
+    compileSdkVersion 30
+    buildToolsVersion '29.0.2'
+    defaultConfig {
+        applicationId "com.adins.survey"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 7910
+        versionName "3.2.0.2-$versionCode"
+        multiDexEnabled true
+        useLibrary 'org.apache.http.legacy'
+        archivesBaseName = "MSSSVY-$versionName"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
+    }
+    dexOptions {
+        javaMaxHeapSize "5g"
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.msmkey
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions{
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+    flavorDimensions "default"
+    productFlavors {
+        developer {
+            applicationId "com.adins.mss.svy.dev"
+            versionCode 7898
+            dimension "default"
+            versionName "3.2.0.0-$versionCode-D"
+            buildConfigField "boolean", "IS_DEV", "true"
+            buildConfigField "boolean", "IS_DBENCRYPT", "false"
+            buildConfigField "boolean", "IS_BYPASSROOT", "true"
+            buildConfigField "String", "IS_FLAVORS", "\"DEVELOPER\""
+        }
+        product {
+            applicationId "com.adins.mss.svy"
+            versionCode 7898
+            dimension "default"
+            versionName "3.2.0.0-$versionCode-P"
+            buildConfigField "boolean", "IS_DEV", "false"
+            buildConfigField "boolean", "IS_DBENCRYPT", "true"
+            buildConfigField "boolean", "IS_BYPASSROOT", "false"
+            buildConfigField "String", "IS_FLAVORS", "\"PRODUCT\""
+        }
+        trial {
+            applicationId "com.adins.mss.svy.trial"
+            versionCode 7898
+            dimension "default"
+            versionName "3.2.0.0-$versionCode-P"
+            buildConfigField "boolean", "IS_DEV", "false"
+            buildConfigField "boolean", "IS_DBENCRYPT", "true"
+            buildConfigField "boolean", "IS_BYPASSROOT", "false"
+            buildConfigField "String", "IS_FLAVORS", "\"TRIAL\""
+        }
+        cloud {
+            applicationId "com.adins.survey"
+            versionCode 7910
+            dimension "default"
+            versionName "3.2.0.2-$versionCode-P"
+            buildConfigField "boolean", "IS_DEV", "false"
+            buildConfigField "boolean", "IS_DBENCRYPT", "true"
+            buildConfigField "boolean", "IS_BYPASSROOT", "false"
+            buildConfigField "String", "IS_FLAVORS", "\"PRODUCT\""
+        }
+        clouddev {
+            applicationId "com.adins.mss.svy.cloud.dev"
+            versionCode 5294
+            dimension "default"
+            versionName "3.2.0.0-$versionCode-D"
+            buildConfigField "boolean", "IS_DEV", "true"
+            buildConfigField "boolean", "IS_DBENCRYPT", "false"
+            buildConfigField "boolean", "IS_BYPASSROOT", "true"
+            buildConfigField "String", "IS_FLAVORS", "\"DEVELOPER\""
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-annotations:28.0.0'
+    }
+}
+
+dependencies {
+    implementation project(':mssbase')
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'androidx.annotation:annotation:1.0.0'
+
+    implementation 'com.google.firebase:firebase-perf:19.0.8'
+    implementation 'com.google.firebase:firebase-core:17.5.0'
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.github.vihtarb:tooltip:0.2.0'
+    testImplementation 'junit:junit:4.12'
+    // Espresso UI Testing
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test:rules:1.1.0'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+
+    androidTestImplementation 'org.powermock:powermock-core:1.7.0RC2'
+    androidTestImplementation 'org.powermock:powermock-module-junit4:1.7.0RC2'
+    androidTestImplementation 'org.powermock:powermock-api-mockito2:1.7.0RC2'
+}
+
+//dependencies {
+//    debugimplementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+////    releaseimplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+//    testimplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+//}
+apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'com.google.gms.google-services'

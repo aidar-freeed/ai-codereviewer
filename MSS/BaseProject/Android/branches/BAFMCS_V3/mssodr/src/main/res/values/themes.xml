@@ -1,0 +1,89 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- the theme applied to the application or activity -->
+    <style name="CustomTheme"
+        parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/gradient_end</item>
+        <item name="colorPrimaryDark">@color/login_color</item>
+        <item name="colorAccent">@color/gradient_end</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:editTextStyle">@style/MyEditText</item>
+        <item name="android:textViewStyle">@style/MyTextView</item>
+        <item name="android:spinnerStyle">@style/MySpinner</item>
+        <item name="android:actionBarTabStyle">@style/MyActionBarTab</item>
+        <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>
+        <item name="ptrHeaderStyle">@style/PtrHeader</item>
+    </style>
+
+    <style name="CustomTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="PtrHeader" parent="@android:style/Widget">
+        <item name="ptrHeaderBackground">@drawable/actionbar_background</item>
+        <item name="ptrHeaderTitleTextAppearance">@style/TextAppearance.Custom.PtrHeader.Title</item>
+        <item name="ptrProgressBarStyle">inside</item>
+        <item name="ptrProgressBarColor">@android:color/holo_green_light</item>
+        <item name="ptrPullText">Pull to Refresh</item>
+        <item name="ptrRefreshingText">Loading ...</item>
+        <item name="ptrReleaseText">Let go if you want me to refresh!</item>
+    </style>
+
+    <style name="TextAppearance.Custom.PtrHeader.Title"
+        parent="android:TextAppearance.Large.Inverse">
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar"
+        parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:actionModeSplitBackground">@drawable/button_background</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBarTab"
+        parent="Widget.AppCompat.ActionBar.TabView">
+        <item name="android:background">@drawable/actionbar_tabindicator</item>
+        <item name="android:showDividers">none</item>
+    </style>
+
+    <style name="MyActionBarTabText" parent="Widget.AppCompat.ActionBar">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <!-- Popup styles -->
+    <style name="PopupMenu"
+        parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@android:color/white</item>
+        <item name="android:textColor">@color/tv_darker</item>
+        <item name="android:showDividers">middle|beginning|end</item>
+    </style>
+
+    <!-- Edittext styles -->
+    <style name="MyEditText"
+        parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/tv_darker</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:textColorHint">@color/shadowColor</item>
+    </style>
+
+    <!-- Text View styles -->
+    <style name="MyTextView"
+        parent="Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:textColor">@color/tv_darker</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <!-- Spinner styles -->
+    <style name="MySpinner"
+        parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@color/fontColorWhite</item>
+        <item name="android:popupBackground">@color/fontColorWhite</item>
+        <item name="android:padding">3dp</item>
+    </style>
+
+</resources>

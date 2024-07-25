@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questionTextLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/questionTextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0. label" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/questionTextAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:layout_weight="6"/>
+
+        <ImageButton
+            android:id="@+id/buttonSearchOnline"
+            android:layout_width="50dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/actionbar_background"
+            android:src="@drawable/ic_action_search"
+            />
+    </LinearLayout>
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

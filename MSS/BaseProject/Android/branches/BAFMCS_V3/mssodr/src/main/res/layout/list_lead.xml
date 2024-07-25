@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/txtStatusTaskAcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="STATUS"
+            android:padding="3dp"
+            android:drawableLeft="@drawable/ic_phone_color"
+            android:drawablePadding="6dp"
+            android:textColor="@color/fontColorDarkGrey"/>
+
+        <TextView
+            android:id="@+id/txtProductAcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PRODUCT"
+            android:padding="3dp"
+            android:drawableLeft="@drawable/ic_phone_color"
+            android:drawablePadding="6dp"
+            android:textColor="@color/fontColorDarkGrey"/>
+
+        <TextView
+            android:id="@+id/txtDateAcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_phone_color"
+            android:drawablePadding="6dp"
+            android:padding="3dp"
+            android:text="19-09-1999"
+            android:textColor="@color/fontColorDarkGrey" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/leadHistoryExpandedIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow_drop_down"
+        android:layout_weight="7"/>
+</LinearLayout>

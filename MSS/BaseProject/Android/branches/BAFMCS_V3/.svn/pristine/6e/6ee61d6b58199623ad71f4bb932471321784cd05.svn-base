@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgColor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:titleTextAppearance="?android:attr/textAppearanceSmall"
+        android:titleTextColor="@color/fontColorWhite"
+        android:background="@drawable/header" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btnSubmit"
+        android:layout_marginBottom="60dp"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="5dp"
+        app:cardElevation="@dimen/card_shadow"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/fontColorWhite">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/formName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_form_color"
+                    android:drawablePadding="5dp"
+                    android:padding="5dp"
+                    android:text="@string/form_name"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/gradient_end"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/formName"
+                    android:orientation="vertical">
+                    <ScrollView
+                        android:id="@+id/scrollView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/formName"
+                        android:layout_weight="0.5">
+                        <TableLayout
+                            android:id="@+id/orderDetailTable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:stretchColumns="1" />
+                    </ScrollView>
+                    <RelativeLayout
+                        android:id="@+id/Bottomlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+
+                        <Button
+                            android:id="@+id/btnLookupCMO"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="doLookupCMO"
+                            android:text="@string/btnLookupCMO"
+                            android:background="@drawable/button_background"
+                            android:textColor="@color/fontColorWhite"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/assignmentNotes"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/btnLookupCMO"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/lblNotes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/customer_notes_hint"
+                                android:drawableLeft="@drawable/ic_form_color"
+                                android:drawablePadding="5dp"
+                                android:paddingTop="5dp"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
+                            <EditText
+                                android:id="@+id/txtNotes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:textColor="@drawable/edit_text_selector"
+                                android:minLines="3"
+                                android:hint="@string/requiredField"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="doSubmit"
+        android:text="@string/btnSubmit"
+        android:background="@drawable/button_background"
+        android:textColor="@color/fontColorWhite"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

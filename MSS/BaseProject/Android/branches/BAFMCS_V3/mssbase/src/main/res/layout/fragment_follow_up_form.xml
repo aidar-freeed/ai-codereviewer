@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Follow-Up"
+            android:textSize="@dimen/textSizeLarge_openSource"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Konsumen" />
+
+            <EditText
+                android:id="@+id/namaKonsumen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/form_edittext_background"
+                android:enabled="false"
+                android:hint="(auto fill)"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nomor Perjanjian"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/nomorPerjanjian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="(auto fill)"
+                android:background="@drawable/form_edittext_background"
+                android:enabled="false"
+                android:padding="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Janji Bayar"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/tanggalJanjiBayar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="(auto fill)"
+                android:background="@drawable/form_edittext_background"
+                android:enabled="false"
+                android:padding="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Catatan"
+                android:layout_marginBottom="5dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/catatan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/form_edittext_background"
+                        android:inputType="textMultiLine"
+                        android:scrollbars="vertical"
+                        android:padding="5dp"
+                        android:gravity="top|start"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@+id/catatan"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="0.1"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/form_edittext_default">
+
+                        <Button
+                            android:id="@+id/button_scroll_up"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="▲"
+                            android:padding="0dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:textSize="14sp"
+                            android:layout_marginBottom="10dp"/>
+
+                        <Button
+                            android:id="@+id/button_scroll_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="▼"
+                            android:padding="0dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:textSize="14sp"
+                            android:layout_marginTop="10dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submitFormBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/btnSubmit"
+        android:textColor="@color/fontColorWhite"
+        android:background="@drawable/button_background"/>
+</LinearLayout>

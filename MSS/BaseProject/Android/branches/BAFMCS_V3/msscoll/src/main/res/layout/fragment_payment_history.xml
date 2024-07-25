@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/tv_white"
+              android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1">
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:padding="8dp">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/payment_history"
+                      android:textStyle="bold"
+                      android:textSize="24sp"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/label_agreement_number"
+                          android:textColor="#666"
+                          android:textSize="15sp"/>
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/dummy_number"
+                          android:id="@+id/agreementNumber"
+                          android:textColor="#666"
+                          android:textSize="15sp"/>
+            </LinearLayout>
+
+            <HorizontalScrollView android:id="@+id/horizontalScrollView1"
+                                  android:layout_width="fill_parent"
+                                  android:layout_height="wrap_content"
+                                  android:fillViewport="true">
+                <TableLayout android:layout_width="fill_parent"
+                             android:stretchColumns="1"
+                             android:layout_height="wrap_content"
+                             android:id="@+id/tablePaymentHeaders">
+                    <TableRow android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:paddingTop="8dp"
+                              android:gravity="center_vertical"
+                              android:background="@drawable/spinner_background"
+                              android:paddingBottom="8dp">
+                        <TextView android:text="@string/label_no"
+                                  android:textSize="12sp"
+                                  android:paddingRight="6dp"
+                                  android:paddingLeft="6dp"
+                                  android:textColor="@color/tv_white"
+                                  android:gravity="center"
+                                  android:textStyle="bold"/>
+                        <TextView android:text="@string/label_transaction_code"
+                                  android:textSize="12sp"
+                                  android:paddingLeft="6dp"
+                                  android:paddingRight="6dp"
+                                  android:textColor="@color/tv_white"
+                                  android:gravity="center_vertical"
+                                  android:textStyle="bold"/>
+                        <TextView android:text="@string/label_posting_date"
+                                  android:textSize="12sp"
+                                  android:paddingLeft="6dp"
+                                  android:paddingRight="6dp"
+                                  android:textColor="@color/tv_white"
+                                  android:gravity="center_vertical"
+                                  android:textStyle="bold"/>
+                        <TextView android:text="@string/label_amount_paid_2"
+                                  android:textSize="12sp"
+                                  android:paddingLeft="6dp"
+                                  android:paddingRight="6dp"
+                                  android:textColor="@color/tv_white"
+                                  android:gravity="center_vertical"
+                                  android:textStyle="bold"/>
+                        <TextView android:text="@string/label_amount_installment_2"
+                                  android:textSize="12sp"
+                                  android:paddingLeft="6dp"
+                                  android:paddingRight="6dp"
+                                  android:textColor="@color/tv_white"
+                                  android:gravity="center_vertical"
+                                  android:textStyle="bold"/>
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_gravity="bottom">
+        <ImageButton android:id="@+id/imageBtnDownload"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:src="@drawable/ic_download"
+                     android:background="@android:color/transparent"/>
+    </LinearLayout>
+</LinearLayout>

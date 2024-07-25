@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingBottom="10dp"
+              android:paddingLeft="25dp"
+              android:paddingTop="10dp"
+              android:background="@drawable/spinner_background">
+
+
+    <TextView
+            android:id="@+id/txtOrderList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/tv_white"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+
+</LinearLayout>
+

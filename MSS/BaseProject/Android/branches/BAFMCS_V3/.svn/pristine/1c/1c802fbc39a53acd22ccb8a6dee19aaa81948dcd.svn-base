@@ -1,0 +1,444 @@
+<resources>
+    <string name="app_name">CollAct</string>
+    <string name="appVersion">v2.1.0.1</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="collection_activity">AKTIVITAS PENGUMPULAN</string>
+    <string name="collection_activity_detail">DETAIL AKTIVITAS PENGUMPULAN</string>
+    <string name="summary_deposit_report">RINGKASAN LAPORAN DEPOSIT</string>
+    <string name="deposit_report">Laporan Deposit</string>
+    <string name="history_payment">HISTORI PEMBAYARAN</string>
+    <string name="installment_schedule">JADWAL ANGSURAN</string>
+    <string name="installment_schedule_detail">DETAIL JADWAL ANGSURAN</string>
+    <string name="payment_history">HISTORI PEMBAYARAN</string>
+    <string name="payment_history_detail">DETAIL HISTORI PEMBAYARAN</string>
+    <string name="receipt_history">HISTORI KUITANSI</string>
+    <string name="aboutCopyright">Copyright \u00A9 (2015) AdIns</string>
+    <string name="enableDevMode">AKTIFKAN MODE PENGEMBANGAN</string>
+    <string name="disableDevMode">MATIKAN MODE PENGEMBANGAN</string>
+    <!-- Deposit Report -->
+    <string name="label_batch_id">Batch ID</string>
+    <string name="label_transfer_by">Pembayaran Dengan</string>
+    <string name="label_bank">Bank</string>
+    <string name="label_bank_name">Nama Bank</string>
+    <string name="label_cashier_name">Nama Kasir</string>
+    <string name="label_account_number">Nomor Rekening</string>
+    <string name="label_transfer_evidence">Bukti Pembayaran</string>
+    <string name="label_agreement_no">Nomor Persetujuan</string>
+    <string name="label_deposit_amount">Jumlah Deposit</string>
+    <string name="label_recapitulation_list">Daftar Rekapitulasi</string>
+    <string name="label_recapitulate">REKAP</string>
+    <string name="label_recapitulation">Rekapitulasi</string>
+    <string name="label_total_task">Jumlah Tugas</string>
+    <string name="label_total_paid">Jumlah Dibayar</string>
+    <string name="label_total_visit">Jumlah Kunjungan</string>
+    <string name="label_total_fail">Jumlah Gagal</string>
+    <string name="label_paid">DIBAYAR</string>
+    <string name="label_visit">KUNJUNGAN</string>
+    <string name="label_fail">GAGAL</string>
+    <string name="label_detail">Detail</string>
+    <string name="label_account_number_2">Nomor Rekening :</string>
+    <string name="label_cashier_name_2">Nama Kasir :</string>
+    <string name="label_bank_name_2">Nama Bank :</string>
+    <string name="label_batch_id_2">ID Batch :</string>
+    <string name="label_transfer_evidence_2">Bukti Pembayaran :</string>
+    <string name="label_type_dep_name">Type of Deposit</string>
+    <string name="label_branch_payment">Branch Payment :</string>
+    <string name="branch_payment_hint">Cabang Pembayaran</string>
+    <string name="label_transfer_to">Transfer ke :</string>
+    <string name="label_transfer_evidence_pc">Bukti Pembayaran :</string>
+    <string name="label_form">Form :</string>
+    <string name="label_info_batch">Info Batch</string>
+    <string name="label_type_deposit">Jenis setoran :</string>
+    <string name="label_info_form">Nama form</string>
+    <string name="label_info_submitdate">Tanggal kirim</string>
+    <string name="label_info_total">Total</string>
+    <string name="label_transfer_to_pc">Bayar Melalui :</string>
+    <string name="label_transactioncode">Kode Transaksi :</string>
+    <string name="label_no_trasaction">No. Transaksi</string>
+    <string name="label_channel_name">Channel Name</string>
+
+    <!-- Collection -->
+    <string name="label_agreement_number">Nomor Persetujuan :</string>
+    <string name="label_activity_date">Tanggal Aktivitas</string>
+    <string name="label_action">Aktivitas</string>
+    <string name="label_collection_number">Nama Collector</string>
+    <string name="label_no">No</string>
+    <string name="label_field">Field</string>
+    <string name="label_value">Value</string>
+
+    <!-- Installment Schedule -->
+    <string name="label_due_date">Tanggal Jatuh Tempo</string>
+    <string name="label_amount_installment">Jumlah Angsuran</string>
+    <string name="label_amount_paid">Jumlah Pembayaran</string>
+
+    <!-- Payment History -->
+    <string name="label_transaction_code">Tipe\nTransaksi</string>
+    <string name="label_posting_date">Tanggal\nPengiriman</string>
+    <string name="label_amount_paid_2">Jumlah\nPembayaran</string>
+    <string name="label_amount_installment_2">Jumlah\nAngsuran</string>
+    <string name="label_transaction_code_2">Kode Transaksi :</string>
+    <string name="label_no_2">NO</string>
+    <string name="label_receipt_form_no">NOMOR\nKUITANSI</string>
+    <string name="label_value_date">TANGGAL\nNILAI</string>
+    <string name="label_post_date">TANGGAL\nPENGIRIMAN</string>
+    <string name="label_payment_amount">JUMLAH\nPEMBAYARAN</string>
+    <string name="label_installment_amount">JUMLAH\nANGSURAN</string>
+    <string name="label_installment_number">NOMOR\nANGSURAN</string>
+    <string name="label_wop_code">KODE WOP</string>
+    <string name="label_payment_allocation_name">NAMA ALOKASI\nPEMBAYARAN</string>
+    <string name="label_os_amount">JUMLAH OS</string>
+    <string name="label_receive_amount">JUMLAH\nDITERIMA</string>
+
+    <!-- Receipt History -->
+    <string name="label_contract_number">Nomor Kontak</string>
+    <string name="label_receipt_number">Nomor Kwitansi</string>
+    <string name="label_payment_date">Tanggal Bayar</string>
+    <string name="label_file">File</string>
+
+    <!-- Report Summary -->
+    <string name="summary_kunjungan">Rekap Kunjungan</string>
+    <string name="label_tanggal">Tanggal</string>
+    <string name="dummy_tanggal">21102014</string>
+    <string name="label_collector">Collector</string>
+    <string name="dummy_collector">Schinalon</string>
+    <string name="label_total_collected">Total yang Harus Dikumpulkan</string>
+    <string name="dummy_total_collected">Rp550.000</string>
+    <string name="dummy_total_paid">Rp98.000</string>
+
+    <!-- Loyalti Dashboard Competition -->
+    <string name="dashboard_competition_page_title">Daftar Rincian Program</string>
+    <string name="my_point_competition">Poin Saya (%1$s)</string>
+
+    <!-- Loyalti Monthly Point -->
+    <string name="monthly_point_page_title">Perolehan Poin Bulanan</string>
+
+    <!-- Loyalti Daily Point -->
+    <string name="daily_point_page_title">Perolehan Poin Harian</string>
+    <string name="daily_point_chart_title">Perolehan Poin Bulan %1$s</string>
+
+    <string name="average_point">Rata-Rata: %1$d</string>
+    <string name="y_axis_point_title">Total Poin</string>
+
+    <!-- Left Menu -->
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">close_drawer</string>
+
+    <!-- CHECK ORDER -->
+    <string name="btnLookupCMO">Lookup CMO</string>
+    <string name="btnLookupCMOMH">Lookup CMO / MH</string>
+
+    <string name="lblSearchBy">Search by</string>
+    <string name="lblStartDate">Start Date</string>
+    <string name="lblEndDate">End Date</string>
+    <string name="lblNomorOrder">Nomor Order</string>
+    <string name="btnSearchOrder">Cari</string>
+    <string name="menu">Main Menu</string>
+    <string name="cekOrder">Check Order</string>
+    <string name="btnOpen">Buka</string>
+    <string name="lblSearchByStatus">Status</string>
+    <string name="btnOk">OK</string>
+
+    <string-array name="cbSearcrBy">
+        <item >Date</item>
+        <item >Nomor Order</item>
+    </string-array>
+    <string-array name="cbSearcrByStatus">
+        <item >ALL</item>
+        <item >On Survey</item>
+        <item >On CA</item>
+    </string-array>
+    <string-array name="cbUpdateOrder">
+        <item >Open Order</item>
+        <item >Cancel Order</item>
+    </string-array>
+
+    <!-- 	Main Menu -->
+    <string name="title_mn_home">HALAMAN UTAMA</string>
+    <string name="title_mn_tasklist">DAFTAR TUGAS</string>
+    <string name="title_mn_log">LOG</string>
+    <string name="title_mn_reportsummary">RINGKASAN LAPORAN</string>
+    <string name="title_mn_depositreport">LAPORAN DEPOSIT</string>
+    <string name="title_mn_absentin">ABSEN MASUK</string>
+    <string name="title_mn_synchronize">SINKRONISASI</string>
+    <string name="title_mn_about">INFO</string>
+    <string name="title_mn_exit">KELUAR</string>
+    <string name="title_mn_newtask">TASK BARU</string>
+    <string name="title_mn_creditsimulation">SIMULASI KREDIT</string>
+    <string name="title_mn_changepassword">GANTI KATA SANDI</string>
+    <string name="title_mn_paymenthistory">HISTORI PEMBAYARAN</string>
+    <string name="title_mn_installmentschedule">JADWAL ANGSURAN</string>
+    <string name="title_mn_collectionactivity">AKTIVITAS PENGUMPULAN</string>
+    <string name="title_mn_paymenthistorydet">DETAIL JADWAL ANGSURAN</string>
+    <string name="title_mn_collectionactivitydet">DETAIL AKTIVITAS PENGUMPULAN</string>
+    <string name="title_mn_installmentscheduledet">DETAIL JADWAL ANGSURAN</string>
+    <string name="title_mn_setting">Pengaturan</string>
+    <string name="title_mn_guide">Ulangi Panduan User</string>
+
+    <string name="header__title">Ubah Gambar Header </string>
+    <string name="profile__title">Ubah Foto Profil</string>
+
+    <string name="btnTransfer">TRANSFER</string>
+    <string name="btnSend">Kirim</string>
+    <string name="btnCancel">Batal</string>
+    <string name="btnReject">Reject</string>
+    <string name="btnChange">Ubah</string>
+
+    <!-- Synchronize -->
+    <string name="sync_scheme">Sinkronisasi Skema</string>
+    <string name="sync_question_set">Sinkronisasi Daftar Pertanyaan</string>
+    <string name="sync_lookup">Sinkronisasi Lookup</string>
+    <string name="sync_holiday">Sinkronisasi Hari Libur</string>
+    <string name="synchronizing">Sinkronisasi</string>
+    <string name="sync_progress">Progress : 0%</string>
+
+    <!--     <string name="progressWait">Please wait...</string> -->
+    <!--     <string name="msgUnavaibleLocationCheckIn">Unable get location to check in</string> -->
+    <!--     <string name="msgUnavaibleLocationCheckOut">Unable get location to check out</string> -->
+
+    <string-array name="transfer_spinner">
+        <item>Melalui Bank</item>
+        <item>Melalui Kasir</item>
+    </string-array>
+
+    <string name="divider_dash">-</string>
+    <string name="divider_colon">:</string>
+    <string name="divider_equals_sign">=</string>
+    <string name="dummy_number"> -</string>
+    <string name="dummy_text"> -</string>
+    <string name="title">Title</string>
+    <string name="take_a_photo">AMBIL FOTO</string>
+    <string name="dummy_news_desc">Textview</string>
+    <string name="news_not_found">News not found</string>
+    <string name="dummy_customer_name">Customer Name</string>
+
+    <string name="login_desc">Login ke Aplikasi CollAct</string>
+
+    <string name="emergency_sent">Pesan Terkirim !</string>
+    <string name="emergency_sent_description">Kolektor sedang dalam mode darurat</string>
+
+    <string name="toast_crash">Ooooops ! MSSCOLL crashed, but a report has been sent to my developer to help fix the issue !</string>
+    <string name="title_activity_developer_option">Dev Options</string>
+    <string name="changelog_v230"><![CDATA[Perbaikan: <br/>
+1. Support Multilingual <br/>
+2. Update compatibility untuk Android M <br/>
+3. Mendukung refresh lokasi dengan mengetuk GPS Icon <br/>
+4. Peningkatan performa <br/>
+5. Perbaikan managemen memory <br/>
+6. Menampilkan radius accuracy di tampilan peta<br/>
+7. Menampilkan pertanyaan tidak relevan secara otomatis<br/>
+8. Mendukung menyalin jawaban dari pertanyaan lain <br/>
+9. Mendukung  validasi pertanyaan tingkat lanjut <br/>
+10. Mendukung Limit Cash On Hand dari parameter
+11. Pencarian Task di task list berdasarkan nama Form<br/>
+12. Penambahan Closing Task<br/>
+13. Penambahan Receive Voucher
+]]></string>
+
+    <string name="changelog_v200"><![CDATA[Perbaikan: <br/>
+1. Mendukung fitur linimasa tugas<br/>
+2. Mendukung menu navigasi]]></string>
+    <string name="changelog_v210"><![CDATA[Perbaikan: <br/>
+1. Mendukung fitur View All header<br/>
+2. Mendukung fitur melihat Peta untuk tasklist]]></string>
+    <string name="changelog_v220"><![CDATA[Perbaikan: <br/>
+1. Mendukung fitur Oauth<br/>
+2. Mendukung lebih banyak bluetooth printer]]></string>
+    <string name="title_mn_closing_task">TUTUP TUGAS</string>
+    <string name="msg_still_uploading_closing_task">Tidak bisa melakukan Closing Task karena masih mengupload data atau ada task yang masih berupa draft</string>
+    <string name="contract_number">Nomor Kontrak</string>
+    <string name="lkp_number">Nomor LKP</string>
+    <string name="changelog_v2310"><![CDATA[Perbaikan: <br/>
+1. Mendukung menyalin jawaban dengan kondisi tertentu <br/>
+2. Mendukung RV dalam pertanyaan]]></string>
+    <string name="changelog_v2320"><![CDATA[Perbaikan: <br/>
+1. perbaikan gambar profile dan gambar cover
+]]></string>
+    <string name="changelog_v2330"><![CDATA[Perbaikan: <br/>
+1. Perbaikan Sinkronisasi<br/>
+2. Perbaikan Linimasa untuk Absensi <br/>
+3. Perbaikan memuat jawaban pertanyaan<br/>
+4. Perbaikan pengiriman duplikasi di Deposit<br/>
+5. Menambahkan pengecekan root device]]></string>
+    <string name="changelog_v2340"><![CDATA[Perbaikan: <br/>
+1. Alphanumeric pada Password]]></string>
+    <string name="changelog_v2350"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v2360"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v2370"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug
+2. Perbaikan eror pada GPS]]></string>
+    <string name="changelog_v2380"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v2390"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23100"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23110"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23120"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23130"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23140"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23150"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23160"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23170"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23180"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23190"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v2400"><![CDATA[Perbaikan: <br/>
+1. Penambahan informasi terkait device di menu about<br/>
+2. Mendukung tipe jawaban online lookup<br/>
+3. Tampilan task list dapat berupa box atau list<br/>
+4. Mendukung multiprinter]]></string>
+    <string name="changelog_v2500"><![CDATA[Changes: <br/>
+1. Interaksi antarmuka baru<br/>
+2. Penambahan sinkronisasi data<br/>
+3. Perbaikan bug]]></string>
+    <string name="changelog_v3000"><![CDATA[Changes: <br/>
+1. Pesan dan informasi lebih mudah dibaca<br/>
+2. Mendukung konfigurasi tema<br/>
+3. Mendukung foto profil yang bulat<br/>
+4. Penambahan kode unik<br/>
+5. Penambahan timestamp foto<br/>
+6. Perbaikan bug]]></string>
+    <string name="changelog_v3001"><![CDATA[Changes: <br/>
+1. Menambah toggle untuk visibilitas password pada halaman ubah password<br/>
+2. Mengubah pesan error untuk connection timeout<br/>
+3. Perbaikan bug dialog nonaktifkan Fake GPS tidak muncul ketika menggunakan lokasi palsu<br/>
+4. Perbaikan bug pada pesan user tidak aktif<br/>
+5. Menambah Migrasi Database dari Versi 2.5 ke 3.0]]></string>
+    <string name="changelog_v3002"><![CDATA[Changes: <br/>
+1. Perbaikan Search Timeline tidak ada pilihan Uploading Task meskipun ada task yang statusnya uploading.<br/>
+2. Perbaikan bug tidak tampil semua option pada radio button dynamic form.<br/>
+3. Perbaikan bug dialog nonaktifkan Fake GPS tidak muncul ketika menggunakan lokasi palsu.<br/>
+4. Perbaikan bug tidak dapat memunculkan opsi developer pada kanan atas aplikasi.<br/>
+5. Perbaikan bug jawaban hilang ketika memulai task dari draft setelah ganti user.<br/>
+6. Penambahan pengecekan regex pada input nama customer.]]></string>
+    <string name="changelog_v3003"><![CDATA[Changes: <br/>
+1. Perbaikan google play service update bisa diabaikan.<br/>
+2. Penambahan submit lokasi untuk reschedule task.<br/>
+3. Perbaikan task list tidak update.<br/>
+4. Perbaikan notifikasi uploading.<br/>
+5. Disable logger saat print karena menyebabkan crash.<br/>
+6. Perbaikan log online.<br/>
+7. Penambahan notification channel untuk foreground service notification.<br/>
+8. Perbaikan pertanyaan tipe option dan multiple memiliki duplikasi jawaban.<br/>
+9. Perbaikan pertanyaan option choice filter tidak tampil.<br/>
+10.Penjagaan format datetime dengan panjang lebih dari 14 karakter pada DateTimePicker.<br/>
+11.Perbaikan print unique rv.<br/>
+12.Perbaikan crash saat submit task manual menggunakan long click.]]></string>
+    <string name="changelog_v3004"><![CDATA[Changes: <br/>
+1. Perbaikan fitur push tema.<br/>
+2. Menampilkan notifikasi aplikasi sedang berjalan.<br/>
+3. Perbaikan crash ketika membuka menu daftar task.<br/>
+4. Perbaikan fitur filter task.<br/>
+5. Perbaikan minor bugs.]]></string>
+    <string name="changelog_v3005"><![CDATA[Changes: <br/>
+1. Penambahan pengecekan saat print deposit report.<br/>
+2. Penambahan pengecekan untuk limit cash on hand.<br/>
+3. Perbaikan crash saat print.<br/>
+4. Perbaikan issue jawaban rv number tidak tampil pada log.(RV depan)<br/>
+5. Fix minor bugs.]]></string>
+    <string name="changelog_v3006"><![CDATA[Changes: <br/>
+1. Perbaikan fragment overlapped.<br/>
+2. Perbaikan deposit report.<br/>
+3. Perbaikan sync question set.<br/>
+4. Perbaikan filter status pending tidak ada hasil.]]></string>
+    <string name="changelog_v3007"><![CDATA[Changes: <br/>
+1. Perbaikan add taskd untuk log online.<br/>
+2. Perbaikan bug di viewholder.<br/>
+3. Perbaikan print bitmap.<br/>
+4. Menseragamkan format request submit task melalui force send, auto send, dan send biasa.<br/>
+5. Perbaikan bug timeline task header tertukar ketika diklik.<br/>
+6. Perbaikan minor bug.]]></string>
+    <string name="changelog_v3008"><![CDATA[Changes: <br/>
+1. Perbaikan print bitmap.<br/>
+2. Perbaikan minor bug.]]></string>
+    <string name="changelog_v3009"><![CDATA[Changes: <br/>
+1. Menyimpan dan mendapatkan data nomor rv hanya dari tabel Tr_Receiptvoucher.<br/>
+2. Menambah print logo multitenant.<br/>
+3. Menambah fitur bypass developer mode.<br/>
+4. Perbaikan crash saat mengolah pertanyaan dengan choice filter.<br/>
+5. Perbaikan minor bug.]]></string>
+    <string name="changelog_v30013"><![CDATA[Changes: <br/>
+1. Menambah support service lokasi untuk Android >= O.<br/>
+2. Menambah support service lokasi untuk perangkat oppo, vivo dan xiaomi.<br/>
+3. Perbaikan notifikasi update task untuk Android >= O.<br/>
+4. Perbaikan print gambar untuk Android >= O.<br/>
+5. Perbaikan minor bug.]]></string>
+    <string name="changelog_v3110"><![CDATA[Changes: <br/>
+1. Penambahan status TaskH FailedDraft ketika mendapatkan response code tertentu saat submit task dari web<br/>
+2. Penambahan user help .<br/>
+3. Pembetulan take picture failed di android 10 .<br/>
+4. App lemot saat Login-Logout-Login .<br/>
+5. Penyempurnaan answer type LuOnline .<br/>
+6. Pembetulan bug uploading task di timeline tidak muncul.<br/>
+7. Penambahan support untuk Android 10]]
+]]></string>
+    <string name="changelog_v3120">
+<![CDATA[ Changes: <br/>
+1. Pembetulan Cloud CSV tidak dapat diimport .<br/>
+2. Pembetulan service berhenti ketika keluar aplikasi.<br/>
+3. Pembetulan crash saat sinkronisasi .<br/>
+4. Pembetulan crash saat is_emergency mati .<br/>
+5. Penambahan fitur emergency .<br/>
+6. Pembetulan submit task dialog dapat dicancel .<br/>
+7. Pembetulan total paid dan visit di summary tidak sama. <br/>
+8. Pembetulan report summary \'total to be collected\' tidak muncul .<br/>
+9. Pembetulan transaction history \'transaction type\' tidak muncul .<br/>
+10. Pembetulan deposit report total 0 .<br/> ]]>
+</string>
+    <string name="changelog_v3130">
+<![CDATA[ Changes: <br/>
+1. Perbaikan issue user help.<br/>
+2. Fix warna timelin task tidak abu-abu setelah melakukan closing task.<br/>
+3. Tambah aksi panggil nomor telepon customer pada customer form.<br/>
+4. Perbaikan validasi tidak berjalan pada form dikarenakan regex.<br/>
+5. Tambahkan teks contoh pada user help data dinamis.<br/>
+]]>
+</string>
+<string name="changelog_v3140">
+<![CDATA[ Changes: <br/>
+1. Refactor beberapa kode.<br/>
+2. Perbaikan bug.<br/>
+3. Penambahan fitur today`s plan.<br/>
+4. Integrasi loyalti collection.<br/>
+5. Penambahan dashboard collection.<br/>]]>
+</string>
+    <string name="changelog_v3201">
+<![CDATA[ Changes: <br/>
+1. Penambahan Term and Condition.<br/>]]>
+</string>
+    <string name="success_deposit">Transfer Laporan Deposit Sukses</string>
+    <string name="prompt_printRV">Silahkan cetak struk atau masukan RV</string>
+    <string name="acc_no_required">Nomor Rekening wajib diisi\n</string>
+    <string name="bank_name_required">Nama Bank wajib diisi\n</string>
+    <string name="evidence_required">Bukti Pembayaran wajib disertakan</string>
+    <string name="cashier_required">Nama Kasir wajib diisi</string>
+    <string name="label_status">Status</string>
+    <string name="label_ptp">PTP</string>
+    <string name="label_notes">Catatan</string>
+    <string name="label_amount_paid_3">Jumlah Bayar</string>
+    <string name="label_result">Hasil</string>
+
+    <string name="changelog_v3202"><![CDATA[ Changes: <br/>
+1. Penambahan Privacy And Policy.<br/>]]></string>
+    <string name="changelog_v3301"><![CDATA[ Changes: <br/>
+1. Migrasi BAFMCS ke versi 3]]></string>
+
+    <string name="choose_one">- Pilih Rekening Tujuan -</string>
+    <string name="choose_one_pc">- Pilih Payment Channel -</string>
+    <string name="transfer_to_required">Rekening tujuan wajib diisi\n</string>
+    <string name="channel_to_required">Payment Channel wajib diisi\n</string>
+    <string name="transfer_code_required">Kode Transaksi wajib diisi\n</string>
+    <string name="evidence_pc_required">Bukti pembayaran wajib diisi</string>
+    <string name="branchpayment_required">Cabang pembayaran wajib diisi\n</string>
+    <string name="bankaccount_required">Back Account wajib diisi\n</string>
+</resources>

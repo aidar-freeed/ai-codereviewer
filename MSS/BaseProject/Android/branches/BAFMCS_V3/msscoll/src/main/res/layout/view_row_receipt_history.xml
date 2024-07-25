@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/contractNumber"
+        android:gravity="center"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/receiptNumber"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/paymentDate"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/file"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:textSize="12sp" />
+
+</TableRow>

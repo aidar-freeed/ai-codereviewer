@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questionLookupDukcapilLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/tv_white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tv_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/questionLookupDukcapilLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0. label" />
+
+            <Button
+                android:id="@+id/btnValidasiDukcapil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:background="@drawable/button_background"
+                android:textColor="@color/fontColorWhite"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/btnValidation"
+                android:editable="false"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/txtResult"
+                android:hint="@string/pressButtonValidation"
+                android:layout_span="2"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/txtResult"
+                android:background="@color/timelineLine"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

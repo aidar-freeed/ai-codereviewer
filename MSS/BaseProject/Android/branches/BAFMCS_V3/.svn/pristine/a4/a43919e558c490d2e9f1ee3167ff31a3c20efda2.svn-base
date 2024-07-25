@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questionImageLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/questionImageLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0. label" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/imgPhotoAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_camera"/>
+
+        <ImageView
+            android:id="@+id/imgLocationAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_absent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/questionImageAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

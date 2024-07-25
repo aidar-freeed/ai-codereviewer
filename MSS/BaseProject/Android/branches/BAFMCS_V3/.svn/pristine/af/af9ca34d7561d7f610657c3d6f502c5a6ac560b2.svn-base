@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/summaryReviewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tv_white"
+    android:padding="@dimen/padding_medium">
+
+    <TextView
+        android:id="@+id/questionNoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="@dimen/ptr_progress_bar_stroke_width"
+        android:text="0." />
+
+    <TextView
+        android:id="@+id/questionTextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/questionNoLabel"
+        android:text="label" />
+
+    <RelativeLayout
+        android:id="@+id/questionDropdownLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@id/questionTextLabel">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionSummaryDropdown"
+            android:spinnerMode="dropdown"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/dropdown_background"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_expand"
+            android:layout_alignRight="@+id/questionSummaryDropdown"
+            android:layout_alignBottom="@+id/questionSummaryDropdown"
+            android:layout_alignTop="@+id/questionSummaryDropdown"
+            android:layout_marginRight="10dp"
+            android:tint="@color/gradient_end"/>
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/reviewSummaryScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionDropdownLayout">
+
+        <TableLayout
+            android:id="@+id/reviewSummaryAnswerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+        </TableLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/questionTextAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reviewSummaryScroll"
+        android:layout_toEndOf="@+id/questionNoLabel"
+        android:layout_toRightOf="@+id/questionNoLabel"
+        android:text="answer"
+        android:textAppearance="@android:style/TextAppearance.Small" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_below="@+id/questionTextAnswer"
+        android:background="@color/tv_gray" />
+</RelativeLayout>

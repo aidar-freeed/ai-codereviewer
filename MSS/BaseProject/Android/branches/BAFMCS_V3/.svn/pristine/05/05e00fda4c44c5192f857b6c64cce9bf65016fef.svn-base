@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/questionLocationLayout">
+    <TextView
+        android:id="@+id/questionLocationLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0. Label"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+        <Button
+            android:id="@+id/btnSetLocation"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center|center_vertical"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/button_background"
+            android:text="@string/btnGPS"
+            android:textColor="@color/fontColorWhite"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        <ImageView
+            android:id="@+id/imgLocationAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_absent"
+            android:layout_gravity="center"
+            android:layout_weight="0.6"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/questionLocationAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="10dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone"/>
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

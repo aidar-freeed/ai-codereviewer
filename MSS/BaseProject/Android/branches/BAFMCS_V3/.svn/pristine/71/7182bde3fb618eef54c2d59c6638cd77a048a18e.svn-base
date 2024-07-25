@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/actionBarSize"
+            android:background="@color/tv_darker">
+
+        <TextView
+                android:id="@+id/lbl_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/defaultYourName"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="#ffffff"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/listPreferredItemHeightLarge"
+            android:background="#ffffff">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentLeft="true"
+                      android:layout_centerVertical="true"
+                      android:orientation="vertical">
+            <TextView
+                    android:id="@+id/txt_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/txt_view"
+                    android:text="@string/defaultTime"/>
+            <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/txt_view"
+                    android:text="@string/defaultDate"/>
+            <!-- 			    <TextView -->
+            <!-- 	                android:id="@+id/txt_desc" -->
+            <!-- 	                android:layout_width="match_parent" -->
+            <!-- 	                android:layout_height="wrap_content" -->
+            <!-- 	                android:gravity="center" -->
+            <!-- 	                android:textColor="@color/txt_view" -->
+            <!-- 	                android:text="desc" />			    -->
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tv_white">
+
+    <!-- <uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout -->
+    <!-- android:id="@+id/ptr_layout" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent"> -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <include
+            android:id="@+id/include1"
+            layout="@layout/header_profile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6" />
+
+        <include
+            android:id="@+id/includeOut"
+            layout="@layout/outstandingtask_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefreshtimeline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4">
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/timeline_item_layout" />
+            <!-- <LinearLayout -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="match_parent" -->
+            <!-- android:orientation="vertical" -->
+            <!-- android:weightSum="1"> -->
+
+
+            <!-- <include -->
+            <!-- android:id="@+id/include1" -->
+            <!-- android:layout_width="fill_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- layout="@layout/header_profile" -->
+            <!-- android:layout_weight="0.6" /> -->
+
+
+            <!-- <ListView -->
+            <!-- android:id="@android:id/list" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="match_parent" -->
+            <!-- android:divider="@android:color/transparent" -->
+            <!-- android:dividerHeight="5dp" -->
+            <!-- android:layout_weight="0.4" -->
+            <!-- android:footerDividersEnabled="true" -->
+            <!-- android:headerDividersEnabled="true" -->
+            <!-- android:scrollbarSize="1dp" -->
+            <!-- android:scrollbarStyle="outsideOverlay" /> -->
+            <!-- </LinearLayout> -->
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <!-- </uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout> -->
+        <!-- <Button -->
+        <!-- android:id="@+id/tmMessage" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_alignParentRight="true" -->
+        <!-- android:layout_alignParentBottom="true" -->
+        <!-- android:text="Button" /> -->
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/tv_gray"
+        android:clickable="false"
+        android:visibility="gone">
+
+        <requestFocus />
+
+        <RelativeLayout
+            android:id="@+id/btnLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:background="@color/ab_end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="48dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/btnSearch"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/search_timeline"></AutoCompleteTextView>
+
+            <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_button"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_search" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnLayout"
+            android:layout_marginLeft="5dp"
+            android:text="@string/timeline_type"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/tmMessage"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_alignRight="@+id/tmSubmit"
+            android:layout_below="@+id/tmServerTask"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/actionbar_background"
+            android:onClick="tmMessage"
+            android:text="@string/message"
+            android:textColor="@color/tv_white" />
+
+        <Button
+            android:id="@+id/tmSubmit"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/actionbar_background"
+            android:text="@string/submitted_task"
+            android:textColor="@color/tv_white" />
+
+        <Button
+            android:id="@+id/tmServerTask"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tmSubmit"
+            android:layout_alignBottom="@+id/tmSubmit"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tmSubmit"
+            android:background="@drawable/actionbar_background"
+            android:text="@string/server_task"
+            android:textColor="@color/tv_white" />
+
+        <Button
+            android:id="@+id/tmCheckin"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_alignRight="@+id/tmSubmit"
+            android:layout_below="@+id/tmServerTask"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/actionbar_background"
+            android:text="@string/check_in"
+            android:textColor="@color/tv_white" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@drawable/shadow_backgroun"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="A"
+                android:textSize="25dp"
+                android:layout_gravity="center"
+                android:id="@+id/huruf"
+                android:background="@color/slaRed"
+                />
+
+                <TextView
+                    android:id="@+id/angka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25dp"
+                    android:layout_gravity="center"
+                    android:text="1"
+                    android:gravity="center"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/arrowstatus"
+            android:layout_marginTop="1dp"
+            android:padding="3dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/arrowdownred"
+            />
+
+        <TextView
+            android:id="@+id/angkastatus"
+            android:textSize="14dp"
+            android:layout_marginLeft="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9999"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

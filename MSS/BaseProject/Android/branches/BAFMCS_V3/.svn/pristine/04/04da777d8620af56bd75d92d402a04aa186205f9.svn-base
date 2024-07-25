@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/checkin_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_grayscale"
+     >
+    <View
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/actionbar_background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <fragment
+            android:id="@+id/mapIn"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:tag="mapin" />
+
+        <ImageButton
+            android:id="@+id/btnRefreshCIn"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/circle_button"
+            android:src="@drawable/ic_refresh_maps" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/DescLayoutIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:background="@drawable/lowpriority_background">
+
+        <ImageView
+            android:id="@+id/addressImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_absent"
+            android:layout_gravity="center_vertical" />
+		<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp" 
+	        android:orientation="vertical">
+	        <TextView
+	            android:id="@+id/textLocalIn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text=""
+	            android:textColor="@color/tv_white"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	        <TextView
+	            android:id="@+id/textAddressIn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text=""
+	            android:textColor="@color/tv_white"
+	            android:textAppearance="?android:attr/textAppearanceSmall" />
+		</LinearLayout>
+    </LinearLayout>
+
+<!--     <Button -->
+<!--         android:id="@+id/btnRefreshCIn" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_marginRight="5dp" -->
+<!--         android:layout_marginTop="5dp" -->
+<!--         android:text="Refresh" -->
+<!--         android:layout_gravity="right" /> -->
+
+</LinearLayout>

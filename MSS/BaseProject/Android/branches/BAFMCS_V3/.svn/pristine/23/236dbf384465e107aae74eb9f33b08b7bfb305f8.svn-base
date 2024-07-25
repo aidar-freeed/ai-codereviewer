@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp"
+    >
+<!--     <uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout -->
+<!--             android:id="@+id/ptr_layout" -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="match_parent"> -->
+
+    <Spinner
+        android:id="@+id/priorityViewBy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+<!--     </uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout> -->
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swiperefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/priorityCounter"
+    android:padding="4dp" >
+
+    <GridView
+        android:id="@+id/gridPriority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:horizontalSpacing="4dp"
+        android:numColumns="3"
+        android:verticalSpacing="4dp" />
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+<TextView
+    android:id="@+id/priorityCounter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/priorityViewBy"
+    android:layout_below="@+id/priorityViewBy"
+    android:text="TextView" />
+
+</RelativeLayout>

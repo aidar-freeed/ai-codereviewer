@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dynamicform.form.FragmentQuestion"
+    android:fitsSystemWindows="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:cardElevation="@dimen/card_shadow"
+        android:layout_margin="@dimen/card_margin"
+        app:cardCornerRadius="5dp"
+        app:contentPadding="5dp"
+        android:background="@color/fontColorWhite">
+        <com.adins.mss.base.dynamicform.form.questions.viewholder.ExpandableRecyclerView
+            android:id="@+id/questionList"
+            android:name="com.adins.mss.base.dynamicform.form.QuestionFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            app:layoutManager="LinearLayoutManager" />
+        <com.adins.mss.base.dynamicform.form.questions.viewholder.ExpandableRecyclerView
+            android:id="@+id/reviewList"
+            android:name="com.adins.mss.base.dynamicform.form.QuestionFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layoutManager="LinearLayoutManager" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+

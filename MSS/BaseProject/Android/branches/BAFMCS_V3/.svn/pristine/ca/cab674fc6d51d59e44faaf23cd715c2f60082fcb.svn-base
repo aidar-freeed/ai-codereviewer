@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_grayscale">
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@drawable/actionbar_background">
+    </View>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/summary_kunjungan"
+                    android:textSize="16sp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold"/>
+
+            <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="0">
+
+                <TableRow android:background="#FDD">
+                    <TextView android:layout_column="0"
+                              android:text="@string/label_tanggal"
+                              android:padding="4dp"
+                              android:textSize="15sp"/>
+                    <TextView android:layout_column="1"
+                              android:text="@string/dummy_tanggal"
+                              android:padding="4dp"
+                              android:textSize="15sp"
+                              android:gravity="right"
+                              android:id="@+id/tanggal"/>
+                </TableRow>
+                <TableRow android:background="#FFF">
+                    <TextView android:layout_column="0"
+                              android:text="@string/label_collector"
+                              android:padding="4dp"
+                              android:textSize="15sp"/>
+                    <TextView android:layout_column="1"
+                              android:text="@string/dummy_collector"
+                              android:padding="4dp"
+                              android:textSize="15sp"
+                              android:gravity="right"
+                              android:id="@+id/collector"/>
+                </TableRow>
+                <TableRow android:background="#FDD">
+                    <TextView android:layout_column="0"
+                              android:text="@string/label_total_collected"
+                              android:padding="4dp"
+                              android:textSize="15sp"/>
+                    <TextView android:layout_column="1"
+                              android:text="@string/dummy_total_collected"
+                              android:padding="4dp"
+                              android:textSize="15sp"
+                              android:gravity="right"
+                              android:id="@+id/totalToBeCollected"/>
+                </TableRow>
+                <TableRow android:background="#FFF">
+                    <TextView android:layout_column="0"
+                              android:text="@string/label_total_paid"
+                              android:padding="4dp"
+                              android:textSize="15sp"/>
+                    <TextView android:layout_column="1"
+                              android:text="@string/dummy_total_paid"
+                              android:padding="4dp"
+                              android:textSize="15sp"
+                              android:gravity="right"
+                              android:id="@+id/totalPaid"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

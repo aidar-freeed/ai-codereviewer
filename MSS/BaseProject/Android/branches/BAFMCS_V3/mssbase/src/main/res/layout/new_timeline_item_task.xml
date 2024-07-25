@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/timelineContainer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:id="@+id/timelineItem">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/timelineLine" />
+            <ImageView
+                android:id="@+id/timelineIcon"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/task_highpriority"
+                android:padding="2dp"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/taskHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="5dp"
+                app:cardBackgroundColor="@color/fontColorWhite"
+                app:cardElevation="@dimen/card_shadow"
+                android:layout_margin="@dimen/card_margin">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/taskName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:layout_weight="0.8"
+                            android:text="Sample Name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:drawableLeft="@drawable/ic_person_color"
+                            android:drawablePadding="5dp"/>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2">
+                            <TextView
+                                android:id="@+id/taskTime"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:gravity="right"
+                                android:text="Time"
+                                android:textSize="10dp"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/taskAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/container"
+                        android:paddingBottom="5dp"
+                        android:text="Sample Address"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:drawableLeft="@drawable/ic_location_color"
+                        android:drawablePadding="5dp"/>
+                    <TextView
+                        android:id="@+id/taskCollResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/taskAddress"
+                        android:paddingBottom="5dp"
+                        android:text="@string/collection_result"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:drawableLeft="@drawable/ic_coll_result"
+                        android:drawablePadding="5dp"
+                        android:visibility="gone"/>
+                    <LinearLayout
+                        android:id="@+id/collectionInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@id/taskCollResult">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="0.5">
+                            <TextView
+                                android:id="@+id/taskAgreement"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:text="@string/lblAgreementNo"
+                                android:textSize="12dp"
+                                android:drawableLeft="@drawable/ic_form_color"
+                                android:drawablePadding="5dp"/>
+                            <TextView
+                                android:id="@+id/taskOverdue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Overdue"
+                                android:textSize="12dp"
+                                android:drawableLeft="@drawable/ic_date_color"
+                                android:drawablePadding="5dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="0.5">
+                            <TextView
+                                android:id="@+id/taskAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:text="Amount Due"
+                                android:textSize="12dp"
+                                android:drawableLeft="@drawable/ic_cash_color"
+                                android:drawablePadding="5dp"/>
+                            <TextView
+                                android:id="@+id/taskInst"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Installment No"
+                                android:textSize="12dp"
+                                android:drawableLeft="@drawable/ic_no_color"
+                                android:drawablePadding="5dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/taskAttendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="5dp"
+                app:cardBackgroundColor="@color/fontColorWhite"
+                app:cardElevation="@dimen/card_shadow"
+                android:layout_margin="@dimen/card_margin"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txtDesc"
+                        android:layout_toLeftOf="@+id/txtTime"
+                        android:text="Title"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/txtDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtTitle"
+                        android:text="Description"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:padding="5dp"/>
+
+                    <TextView
+                        android:id="@+id/attendanceTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/txtTitle"
+                        android:layout_alignBottom="@+id/txtTitle"
+                        android:layout_alignParentRight="true"
+                        android:text="Time"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+            />
+<!--            <LinearLayout-->
+<!--                android:id="@+id/taskStatus"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:id="@+id/taskStatusItem1"-->
+<!--                    android:visibility="gone">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <View-->
+<!--                            android:layout_width="1dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:background="@color/timelineLine" />-->
+<!--                        <ImageView-->
+<!--                            android:id="@+id/taskStatusIcon1"-->
+<!--                            android:layout_width="30dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:src="@drawable/task_submitted"-->
+<!--                            android:padding="3dp"/>-->
+<!--                    </RelativeLayout>-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:cardCornerRadius="10dp"-->
+<!--                        app:contentPadding="10dp"-->
+<!--                        app:cardElevation="@dimen/card_shadow"-->
+<!--                        android:layout_margin="@dimen/card_margin"-->
+<!--                        app:cardBackgroundColor="@color/fontColorWhite">-->
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtStatus1"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_toLeftOf="@+id/txtTime1"-->
+<!--                                android:text="Title"-->
+<!--                                android:textAppearance="?android:attr/textAppearanceSmall"/>-->
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtDesc1"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@id/txtStatus1"-->
+<!--                                android:text="Description"-->
+<!--                                android:textSize="11dp"-->
+<!--                                android:visibility="gone"/>-->
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtTime1"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_alignParentRight="true"-->
+<!--                                android:text="Time"-->
+<!--                                android:textAppearance="?android:attr/textAppearanceSmall"-->
+<!--                                android:textSize="10dp" />-->
+<!--                        </RelativeLayout>-->
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:id="@+id/taskStatusItem2"-->
+<!--                    android:visibility="gone">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <View-->
+<!--                            android:layout_width="1dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:background="@color/timelineLine" />-->
+<!--                        <ImageView-->
+<!--                            android:id="@+id/taskStatusIcon2"-->
+<!--                            android:layout_width="30dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:src="@drawable/task_submitted"-->
+<!--                            android:padding="3dp"/>-->
+<!--                    </RelativeLayout>-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:cardCornerRadius="10dp"-->
+<!--                        app:contentPadding="10dp"-->
+<!--                        app:cardElevation="@dimen/card_shadow"-->
+<!--                        android:layout_margin="@dimen/card_margin"-->
+<!--                        app:cardBackgroundColor="@color/fontColorWhite" >-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtStatus2"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_toLeftOf="@+id/txtTime"-->
+<!--                                android:text="Title"-->
+<!--                                android:textAppearance="?android:attr/textAppearanceSmall"/>-->
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtDesc2"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@id/txtStatus2"-->
+<!--                                android:text="Description"-->
+<!--                                android:textSize="11dp"-->
+<!--                                android:visibility="gone"/>-->
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtTime2"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_alignParentRight="true"-->
+<!--                                android:text="Time"-->
+<!--                                android:textAppearance="?android:attr/textAppearanceSmall"-->
+<!--                                android:textSize="10dp" />-->
+<!--                        </RelativeLayout>-->
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:id="@+id/taskStatusItem3"-->
+<!--                    android:visibility="gone">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <View-->
+<!--                            android:layout_width="1dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:background="@color/timelineLine" />-->
+<!--                        <ImageView-->
+<!--                            android:id="@+id/taskStatusIcon3"-->
+<!--                            android:layout_width="30dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:src="@drawable/task_submitted"-->
+<!--                            android:padding="3dp"/>-->
+<!--                    </RelativeLayout>-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:cardCornerRadius="10dp"-->
+<!--                        app:contentPadding="10dp"-->
+<!--                        app:cardElevation="@dimen/card_shadow"-->
+<!--                        android:layout_margin="@dimen/card_margin"-->
+<!--                        app:cardBackgroundColor="@color/fontColorWhite">-->
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtStatus3"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_toLeftOf="@+id/txtTime3"-->
+<!--                                android:text="Title"-->
+<!--                                android:textAppearance="?android:attr/textAppearanceSmall"/>-->
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtDesc3"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@id/txtStatus3"-->
+<!--                                android:text="Description"-->
+<!--                                android:textSize="11dp"-->
+<!--                                android:visibility="gone"/>-->
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtTime3"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_alignParentRight="true"-->
+<!--                                android:text="Time"-->
+<!--                                android:textAppearance="?android:attr/textAppearanceSmall"-->
+<!--                                android:textSize="10dp" />-->
+<!--                        </RelativeLayout>-->
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:id="@+id/taskStatusItem4"-->
+<!--                    android:visibility="gone">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <View-->
+<!--                            android:layout_width="1dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:background="@color/timelineLine" />-->
+<!--                        <ImageView-->
+<!--                            android:id="@+id/taskStatusIcon4"-->
+<!--                            android:layout_width="30dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:src="@drawable/task_submitted"-->
+<!--                            android:padding="3dp"/>-->
+<!--                    </RelativeLayout>-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:cardCornerRadius="10dp"-->
+<!--                        app:contentPadding="10dp"-->
+<!--                        app:cardElevation="@dimen/card_shadow"-->
+<!--                        android:layout_margin="@dimen/card_margin"-->
+<!--                        app:cardBackgroundColor="@color/fontColorWhite">-->
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtStatus4"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_toLeftOf="@+id/txtTime4"-->
+<!--                                android:text="Title"-->
+<!--                                android:textAppearance="?android:attr/textAppearanceSmall"/>-->
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtDesc4"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@id/txtStatus4"-->
+<!--                                android:text="Description"-->
+<!--                                android:textSize="11dp"-->
+<!--                                android:visibility="gone"/>-->
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtTime4"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_alignParentRight="true"-->
+<!--                                android:text="Time"-->
+<!--                                android:textAppearance="?android:attr/textAppearanceSmall"-->
+<!--                                android:textSize="10dp" />-->
+<!--                        </RelativeLayout>-->
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="10dp"
+        app:cardElevation="@dimen/card_shadow"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/fontColorWhite"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/data_not_found"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/timelineLine" />
+
+</LinearLayout>

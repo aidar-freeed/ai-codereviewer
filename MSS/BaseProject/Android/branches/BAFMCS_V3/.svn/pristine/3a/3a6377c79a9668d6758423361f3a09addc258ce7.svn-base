@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".dashboardcollection.view.DashboardCollResultDetail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"
+        android:id="@+id/dashCollResultListHeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/colH_3_1"
+            app:layout_constraintGuide_percent="0.33"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/colH_3_2"
+            app:layout_constraintGuide_percent="0.66"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/dashResultAgrNoHeader"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/colH_3_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:text="@string/lblAgreementNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/dashResultCustNoHeader"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/colH_3_1"
+            app:layout_constraintEnd_toStartOf="@id/colH_3_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="left"
+            android:text="@string/custName"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/dashResultHeader"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/colH_3_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="right"
+            android:text="PTP Date"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dashCollResultList"
+        app:layout_constraintTop_toBottomOf="@id/dashCollResultListHeader"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

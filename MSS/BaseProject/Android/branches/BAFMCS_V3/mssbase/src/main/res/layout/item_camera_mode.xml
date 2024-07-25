@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="#76000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/btn_takepicture"
+        android:layout_toStartOf="@+id/btn_takepicture">
+
+        <CheckBox
+            android:id="@+id/cb_camera_mode"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:tag="Rear"
+            android:background="@drawable/selector_camera_mode"
+            android:button="@android:color/transparent"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_takepicture"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/ic_take_camera"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/btn_takepicture"
+        android:layout_toEndOf="@+id/btn_takepicture">
+
+        <Button
+            android:id="@+id/btn_flash_mode"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:tag="Off"
+            android:background="@drawable/ic_camera_flash_off"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>

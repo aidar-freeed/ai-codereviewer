@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">    
+	<fragment
+            android:id="@+id/maps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:tag="maps" />
+
+	<Button
+	    android:id="@+id/buttonDirection"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:text="Get Direction" />
+
+	<Button
+	    android:id="@+id/buttonAnimate"
+	    android:visibility="gone"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:text="Show animate" />
+
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:orientation="vertical" >
+
+	    <TableLayout
+	        android:id="@+id/ResultValue"
+	        android:visibility="gone"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+
+	        <TableRow
+	            android:id="@+id/tableRow1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" >
+
+	            <TextView
+	                android:id="@+id/textView1"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Total Distance" />
+
+	            <TextView
+	                android:id="@+id/textDistance"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                />
+	        </TableRow>
+
+	        <TableRow
+	            android:id="@+id/tableRow2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" >
+
+	            <TextView
+	                android:id="@+id/textView3"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Total Time" />
+
+	            <TextView
+	                android:id="@+id/textTime"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                />
+	        </TableRow>
+	    </TableLayout>
+	</LinearLayout>
+
+	<CheckBox
+	    android:id="@+id/cbAvoidTolls"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="48dp"
+	    android:layout_alignParentLeft="true"
+	    android:text="avoid tolls" />
+
+</RelativeLayout>

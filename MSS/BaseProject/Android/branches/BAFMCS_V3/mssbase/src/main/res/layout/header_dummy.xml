@@ -1,0 +1,13 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/image_header"
+	    android:layout_width="fill_parent"
+	    android:layout_height="250dp"
+	    android:src="@drawable/dummy"
+	    android:adjustViewBounds="true"
+	    android:scaleType="centerCrop" />
+
+</RelativeLayout>

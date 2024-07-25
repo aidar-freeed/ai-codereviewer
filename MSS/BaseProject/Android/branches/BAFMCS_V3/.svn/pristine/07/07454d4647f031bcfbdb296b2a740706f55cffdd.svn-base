@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_grayscale"
+     >
+    <View
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/actionbar_background" />
+   <GridView
+        android:id="@+id/gridLog"
+        android:layout_below="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="3" 
+        android:padding="5dp"
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp">
+        
+    </GridView>
+<ImageButton
+    android:id="@+id/btnRefresh"
+    android:visibility="gone"
+    android:layout_margin="@dimen/padding_large"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:src="@drawable/ic_menu_refresh_white"
+    android:background="@drawable/button_background_round"/>
+</RelativeLayout>

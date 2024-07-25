@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+    <LinearLayout
+            android:id="@+id/previewContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="?android:attr/actionBarSize"
+            android:orientation="vertical" >
+
+        <CheckBox
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/ic_gps_off"
+                android:checked="false"
+                android:clickable="false"
+                android:text="@string/text_gps"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal" >
+
+        <Button
+                android:id="@+id/btBackCam"
+                android:layout_width="48sp"
+                android:layout_height="43sp"
+                android:layout_gravity="center_horizontal|center"
+                android:background="@drawable/ic_back_1"/>
+
+        <TextView
+                android:layout_width="30sp"
+                android:layout_height="50sp"
+                android:layout_gravity="center_horizontal|center"
+                android:textColor="@android:color/transparent" />
+
+        <Button
+                android:id="@+id/btCaptureCam"
+                android:layout_width="48sp"
+                android:layout_height="47sp"
+                android:layout_gravity="center_horizontal|center"
+                android:background="@drawable/ic_capture_1"/>
+
+        <TextView
+                android:layout_width="30sp"
+                android:layout_height="50sp"
+                android:layout_gravity="center_horizontal|center"
+                android:textColor="@android:color/transparent" />
+
+        <Spinner
+                android:id="@+id/spFlashCam"
+                android:layout_width="48sp"
+                android:layout_height="48sp"
+                android:background="@drawable/ic_flash_auto_white_1" />
+    </LinearLayout>
+
+</RelativeLayout>

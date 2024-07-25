@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="4dp"
+              android:id="@+id/itemBase"
+              android:background="@color/tv_gray">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="horizontal">
+        <TextView android:layout_width="150dp" android:layout_height="wrap_content"
+                  android:id="@+id/itemLabel"
+                  android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@string/divider_equals_sign"
+                  android:textStyle="bold"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                  android:id="@+id/itemValue"
+                  android:gravity="right"
+                  android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

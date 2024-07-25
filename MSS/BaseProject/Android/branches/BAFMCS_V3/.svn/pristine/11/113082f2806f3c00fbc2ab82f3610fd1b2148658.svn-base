@@ -1,0 +1,26 @@
+package com.adins.mss.svy.reassignment;
+
+
+import java.util.List;
+
+/**
+ * Created by winy.firdasari on 20/01/2015.
+ */
+public class OrderChecking {
+    public List<Order> orderList;
+
+    public OrderChecking(){
+
+    }
+
+
+    public List<Order> getOrderList() {
+        return orderList;
+    }
+
+
+
+    public void setOrderList(List<Order> orderList) {
+        this.orderList = orderList;
+    }
+}

@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/gradient_end</item>
+    </style>
+
+    <style name="Widget" />
+
+    <style name="Widget.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse" />
+
+    <style name="Widget.Light" />
+
+    <style name="Widget.Light.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid" />
+
+    <style name="Widget.ActionBar.Transparent">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.Light.ActionBar.Transparent">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="PageTextTitle" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/fontColorWhite</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FieldLabel" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/gradient_end</item>
+    </style>
+
+    <style name="ButtonSmooth" parent="android:Widget.Holo.Light.Button">
+        <item name="android:background">@color/gradient_start</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+    <style name="SmallButtonSmooth" parent="ButtonSmooth">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppTheme.NoTitle" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="DashboardCollTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+</resources>

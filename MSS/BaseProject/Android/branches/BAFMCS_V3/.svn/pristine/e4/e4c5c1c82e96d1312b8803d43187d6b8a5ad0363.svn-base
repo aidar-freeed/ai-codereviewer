@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" >
+        <shape>
+            <gradient
+                android:startColor="#ffffff"
+                android:endColor="#f0f0f0"
+                android:angle="90" />
+<!--             <solid android:color="@android:color/transparent" /> -->
+            <stroke
+                android:width="2dp"
+                android:color="@color/tv_darker" />
+            <corners
+                android:radius="4dp" />
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#ffffff"
+                android:endColor="#f0f0f0"
+                android:angle="90" />
+<!--             <solid android:color="@android:color/transparent" /> -->
+            <stroke
+                android:width="2dp" 
+                android:color="#c9c9c9"/>
+            
+            <corners
+                android:radius="4dp" />
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />
+        </shape>
+    </item>
+</selector>
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+
+<!-- <selector xmlns:android="http://schemas.android.com/apk/res/android"> -->
+<!--     <item android:state_focused="true" > -->
+<!--         <shape> -->
+<!--             <solid android:color="#60ffffff" /> -->
+<!--             <stroke -->
+<!--                 android:width="1dp" -->
+<!--                 android:color="#d40000" /> -->
+<!--             <corners -->
+<!--                 android:radius="4dp" /> -->
+<!--         </shape> -->
+<!--     </item> -->
+<!--     <item> -->
+<!--         <shape> -->
+<!--             <solid android:color="#60ffffff" /> -->
+<!--             <corners -->
+<!--                 android:radius="4dp" /> -->
+<!--         </shape> -->
+<!--     </item> -->
+<!-- </selector> -->

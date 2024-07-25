@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="com.adins.mss.base.todolist.form.PriorityTabFragment"
+    tools:context="com.adins.mss.base.todolist.form.PriorityTabFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+    <Spinner
+        android:id="@+id/priorityViewByForm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"/>
+
+    <Spinner
+        android:id="@+id/priorityViewBy"
+        android:layout_below="@+id/priorityViewByForm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/priorityCounter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/priorityViewBy"
+        android:layout_below="@+id/priorityViewBy"
+        android:text="TextView"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cashCounter"
+        android:padding="4dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layoutManager="GridLayoutManager"
+            tools:listitem="@layout/fragment_priority_item_list" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/cashCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cashcount"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:layout_below="@+id/priorityCounter"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="@dimen/exr_iconSize"
+        android:layout_height="@dimen/exr_iconSize"
+        android:layout_gravity="center_vertical"
+        android:tint="@color/tv_white"
+        app:srcCompat="@drawable/ic_expand_more_24dp"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/priorityViewByForm"
+        android:layout_alignParentTop="true" />
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="@dimen/exr_iconSize"
+        android:layout_height="@dimen/exr_iconSize"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:tint="@color/tv_white"
+        app:srcCompat="@drawable/ic_expand_more_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/priorityViewBy"
+        android:layout_below="@+id/priorityViewByForm" />
+
+</RelativeLayout>
+

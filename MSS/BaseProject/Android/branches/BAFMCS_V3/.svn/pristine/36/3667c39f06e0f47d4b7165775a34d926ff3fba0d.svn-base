@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical" android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:visibility="visible"
+                android:id="@+id/checkOrderLayout">
+
+    <ScrollView android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:layout_alignParentTop="true">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                >
+
+            <LinearLayout android:orientation="vertical"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:visibility="visible"
+                          android:gravity="center_horizontal"
+                          android:id="@+id/searchBy">
+
+                <TextView
+                        android:text="@string/lblSearchBy"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000000"
+                        android:layout_marginTop="37dp"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:ems="10"/>
+
+                <Spinner
+                        android:id="@+id/cbSearchBy"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:ems="10"
+                        android:entries="@array/cbSearcrBy" />
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/byDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:gravity="center_horizontal" >
+
+                <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:ems="10"
+                        android:text="@string/lblStartDate"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000" />
+
+                <EditText android:hint="@string/requiredField"
+                          android:id="@+id/txtStartDate"
+                          android:editable="false"
+                          android:layout_width="300dp"
+                          android:layout_height="wrap_content"
+                          android:layout_centerHorizontal="true"
+                          android:ems="10" />
+
+                <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:ems="10"
+                        android:text="@string/lblEndDate"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000"/>
+
+                <EditText android:hint="@string/requiredField"
+                          android:id="@+id/txtEndDate"
+                          android:layout_width="300dp"
+                          android:layout_height="wrap_content"
+                          android:layout_centerHorizontal="true"
+                          android:ems="10"
+                          android:editable="false" />
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/byNoOrder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    android:gravity="center_horizontal" >
+                <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:ems="10"
+                        android:text="@string/lblNomorOrder"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000"/>
+
+                <EditText android:id="@+id/txtNomorOrder"
+                          android:layout_width="300dp"
+                          android:layout_height="wrap_content"
+                          android:layout_centerHorizontal="true"
+                          android:ems="10"
+                          android:hint="@string/requiredField" android:maxLength="12"
+                          android:singleLine="true"
+                          android:inputType="number"/>
+            </LinearLayout>
+            <LinearLayout  android:orientation="vertical"
+                           android:id="@+id/buttons"
+                           android:layout_width="fill_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_alignParentBottom="true"
+                           android:gravity="center_horizontal"
+                           android:layout_below="@+id/byNoOrder" >
+
+                <View android:layout_width="fill_parent"
+                      android:layout_height="20dp"
+                      android:background="@android:color/transparent"/>
+
+                <Button
+                        android:id="@+id/btnSearchOrder"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:ems="10"
+                        android:layout_weight="1"
+                        android:text="@string/btnSearchOrder"
+                        android:textColor="#ffffff"
+                        android:layout_marginBottom="37dp">
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menuItem"
+        android:title="Main Menu"
+        android:icon="@drawable/more"
+
+        app:showAsAction="ifRoom">
+        <menu >
+    		<item android:id="@+id/about"
+    		    android:title="@string/aboutTitle"
+    		    app:showAsAction="ifRoom"
+    		    android:icon="@drawable/ic_menu_about"
+    		    android:visible="false"
+    		/>
+    		<item 
+		        android:id="@+id/serverLink"
+		        android:title="@string/lblServerLinkId"
+		        app:showAsAction="ifRoom"
+		        android:icon="@drawable/ic_menu_serverlink"
+		        android:visible="false"   
+		    />
+			<item
+				android:id="@+id/devOption"
+				android:title="@string/lblDevOption"
+				app:showAsAction="ifRoom"
+				android:icon="@drawable/ic_settings_48px"
+				android:visible="false"
+				/>
+		    <item 
+		        android:id="@+id/checkIn"
+		        android:title="@string/checkIn"
+		        app:showAsAction="ifRoom"
+		        android:icon="@drawable/ic_menu_checkin"
+		        android:visible="false"
+		    />
+
+		    <item 
+		        android:id="@+id/refresh"
+		        android:title="@string/refresh"
+		        app:showAsAction="ifRoom"
+		        android:icon="@drawable/ic_menu_refresh"
+		        android:visible="false"
+		    />
+		    <item 
+		        android:id="@+id/save"
+		        android:title="@string/mnSave"
+		        app:showAsAction="ifRoom"
+		        android:icon="@drawable/ic_menu_save"
+		        android:visible="false"
+		        
+		    />
+		    <item 
+		        android:id="@+id/pending"
+		        android:title="@string/mnPending"
+		        app:showAsAction="ifRoom"
+		        android:icon="@drawable/ic_menu_pending"
+		        android:visible="false"
+		    />
+		    <item 
+		        android:id="@+id/send"
+		        android:title="@string/mnSend"
+		        app:showAsAction="ifRoom"
+		        android:icon="@drawable/ic_menu_send"
+		        android:visible="false"
+		    />
+		    <item 
+		        android:id="@+id/copyImage"
+		        android:title="@string/mnCpImage"
+		        app:showAsAction="ifRoom"
+		        android:icon="@drawable/ic_menu_copyimage"
+		        android:visible="false"
+		    />
+  
+        </menu>
+    </item>
+
+</menu>
