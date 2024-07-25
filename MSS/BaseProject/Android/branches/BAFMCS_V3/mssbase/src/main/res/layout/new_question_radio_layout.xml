@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/questionRadioLayout">
+    <TextView
+        android:id="@+id/questionRadioLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0. Label"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+    <TextView
+        android:id="@+id/questionRadioEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The list is not available, contact your administrator"
+        android:padding="10dp"
+        android:textSize="11dp"
+        android:visibility="gone"/>
+    <RadioGroup
+        android:id="@+id/radioQuestionList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"/>
+    <EditText
+        android:id="@+id/questionRadioDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="gone"/>
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

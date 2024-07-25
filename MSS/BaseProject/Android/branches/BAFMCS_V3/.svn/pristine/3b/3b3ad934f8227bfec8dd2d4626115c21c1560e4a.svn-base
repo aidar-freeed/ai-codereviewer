@@ -1,0 +1,159 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    lintOptions {
+        disable 'MissingTranslation'
+        checkReleaseBuilds false
+    }
+
+//    change with your msmkey storeFile
+    signingConfigs {
+        msmkey {
+            keyAlias 'aitmsskey'
+            keyPassword 'AdIns2020'
+            storeFile file('keystore2020.jks')
+            storePassword 'AdIns2020'
+        }
+    }
+
+    compileSdkVersion 30
+    buildToolsVersion '29.0.2'
+
+    defaultConfig {
+        applicationId "com.adins.mss.coll.baf"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 7910
+        versionName "3.3.0.1-$versionCode"
+        multiDexEnabled true
+        useLibrary 'org.apache.http.legacy'
+        archivesBaseName = "MSSCOLL-$versionName"
+        vectorDrawables.useSupportLibrary = true
+        ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
+    }
+    dexOptions {
+        javaMaxHeapSize "5g"
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.msmkey
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions{
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+    flavorDimensions "default"
+    productFlavors {
+        developer {
+            applicationId "com.adins.mss.coll.baf.dev"
+            versionCode 7910
+            dimension "default"
+            versionName "3.3.0.1-$versionCode-D"
+            buildConfigField "boolean", "IS_DEV", "true"
+            buildConfigField "boolean", "IS_DBENCRYPT", "false"
+            buildConfigField "boolean", "IS_BYPASSROOT", "true"
+            buildConfigField "String", "IS_FLAVORS", "\"DEVELOPER\""
+        }
+        product {
+            applicationId "com.adins.mss.coll.baf"
+            versionCode 7910
+            dimension "default"
+            versionName "3.3.0.1-$versionCode-P"
+            buildConfigField "boolean", "IS_DEV", "false"
+            buildConfigField "boolean", "IS_DBENCRYPT", "true"
+            buildConfigField "boolean", "IS_BYPASSROOT", "false"
+            buildConfigField "String", "IS_FLAVORS", "\"PRODUCT\""
+        }
+        uat {
+            applicationId "com.adins.mss.coll.baf.uat"
+            versionCode 7910
+            dimension "default"
+            versionName "3.3.0.1-$versionCode-U"
+            buildConfigField "boolean", "IS_DEV", "false"
+            buildConfigField "boolean", "IS_DBENCRYPT", "true"
+            buildConfigField "boolean", "IS_BYPASSROOT", "false"
+            buildConfigField "String", "IS_FLAVORS", "\"UAT\""
+        }
+        trial {
+            applicationId "com.adins.mss.coll.baf.trial"
+            versionCode 7910
+            dimension "default"
+            versionName "3.3.0.1-$versionCode-P"
+            buildConfigField "boolean", "IS_DEV", "false"
+            buildConfigField "boolean", "IS_DBENCRYPT", "true"
+            buildConfigField "boolean", "IS_BYPASSROOT", "false"
+            buildConfigField "String", "IS_FLAVORS", "\"TRIAL\""
+        }
+        cloud {
+            applicationId "com.adins.mss.coll.baf.cloud"
+            versionCode 7910
+            dimension "default"
+            versionName "3.3.0.1-$versionCode-P"
+            buildConfigField "boolean", "IS_DEV", "false"
+            buildConfigField "boolean", "IS_DBENCRYPT", "true"
+            buildConfigField "boolean", "IS_BYPASSROOT", "false"
+            buildConfigField "String", "IS_FLAVORS", "\"PRODUCT\""
+        }
+        clouddev {
+            applicationId "com.adins.mss.coll.baf.cloud.dev"
+            versionCode 7910
+            dimension "default"
+            versionName "3.3.0.1-$versionCode-D"
+            buildConfigField "boolean", "IS_DEV", "true"
+            buildConfigField "boolean", "IS_DBENCRYPT", "false"
+            buildConfigField "boolean", "IS_BYPASSROOT", "true"
+            buildConfigField "String", "IS_FLAVORS", "\"DEVELOPER\""
+        }
+        cloudtrial {
+            applicationId "com.adins.mss.coll.baf.cloud.trial"
+            versionCode 7910
+            dimension "default"
+            versionName "3.3.0.1-$versionCode-P"
+            buildConfigField "boolean", "IS_DEV", "false"
+            buildConfigField "boolean", "IS_DBENCRYPT", "true"
+            buildConfigField "boolean", "IS_BYPASSROOT", "false"
+            buildConfigField "String", "IS_FLAVORS", "\"TRIAL\""
+        }
+    }
+}
+
+dependencies {
+    implementation project(':mssbase')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'com.google.firebase:firebase-core:17.5.0'
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+    implementation 'com.google.firebase:firebase-perf:19.1.1'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
+    implementation 'com.github.vihtarb:tooltip:0.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+}
+
+//dependencies {
+//    debugimplementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+//    releaseimplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+//    testimplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+//}
+
+apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android-extensions'

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layoutOutstanding"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/spinner_background"
+              android:orientation="horizontal"
+              android:paddingRight="10dp"
+              android:paddingLeft="10dp"
+              android:paddingTop="5dp"
+              android:paddingBottom="5dp">
+
+    <TextView
+            android:id="@+id/txtOutstanding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="7.5"
+            android:text="@string/outstanding_task"
+            android:textColor="@color/tv_white"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+            android:id="@+id/txtJumlahOutstanding"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:text="@string/dummy_quantity"
+            android:background="@drawable/counter_rectangle"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</LinearLayout>

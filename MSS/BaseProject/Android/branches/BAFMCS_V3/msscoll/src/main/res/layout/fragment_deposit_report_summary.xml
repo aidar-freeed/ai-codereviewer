@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:background="@drawable/bg_grayscale"
+        android:layout_height="match_parent">
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@drawable/actionbar_background">
+    </View>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <TextView
+                style="@style/PageTextTitle"
+                android:text="@string/summary_deposit_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/tv_gray"
+                android:padding="4dp">
+
+            <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_total_task"
+                    android:id="@+id/totalTask"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/divider_colon"/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalTaskValue"
+                    android:gravity="right"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"            
+            android:orientation="horizontal"
+            android:padding="4dp" >
+
+            <TextView
+                android:id="@+id/totalVisit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_total_visit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/divider_colon" />
+
+            <TextView
+                android:id="@+id/visitValue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/label_visit" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tv_gray"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+            <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_total_paid"
+                    android:id="@+id/totalPaid"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/divider_colon"/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/paidValue"
+                    android:text="@string/label_paid"
+                    android:textColor="#7B3"
+                    android:gravity="right"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FFF"
+                android:padding="4dp">
+
+            <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_total_fail"
+                    android:id="@+id/totalFail"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/divider_colon"/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/failValue" android:textColor="#E11"
+                    android:text="@string/label_fail"
+                    android:gravity="right"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FFF"
+                android:padding="4dp">
+
+            <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/label_detail"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text=""/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#E11"
+                    android:text=""
+                    android:gravity="right"/>
+
+        </LinearLayout>
+        <ListView
+                android:layout_height="fill_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/listOfBatch">
+        </ListView>
+    </LinearLayout>
+</LinearLayout>

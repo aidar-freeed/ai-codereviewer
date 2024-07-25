@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemBase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/agreementNumber_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/itemLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/textView1"
+            android:layout_weight="0.2"
+            android:text="@string/label_agreement_no"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.1"
+            android:text="@string/divider_colon"/>
+
+        <TextView
+            android:id="@+id/itemValueAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView1"
+            android:layout_weight="0.7" />
+
+    </RelativeLayout>
+	<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/itemLabel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/textView3"
+            android:layout_weight="0.2"
+            android:text="@string/label_deposit_amount"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.1"
+            android:text="@string/divider_colon"/>
+
+        <TextView
+            android:id="@+id/itemValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView3"
+            android:layout_weight="0.7"
+            android:gravity="right" />
+
+    </RelativeLayout>
+<!--     <LinearLayout -->
+<!--         android:layout_width="fill_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:orientation="horizontal" -->
+<!--         android:weightSum="1" > -->
+
+<!--         <TextView -->
+<!--             android:id="@+id/itemLabel" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_weight="0.2" -->
+<!--             android:text="Deposit Amount" -->
+<!--             android:layout_height="wrap_content" /> -->
+
+<!--         <TextView -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_weight="0.1" -->
+<!--             android:text=": " /> -->
+
+<!--         <TextView -->
+<!--             android:id="@+id/itemValue" -->
+<!--             android:layout_weight="0.7" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:gravity="right" /> -->
+<!--     </LinearLayout> -->
+
+</LinearLayout>

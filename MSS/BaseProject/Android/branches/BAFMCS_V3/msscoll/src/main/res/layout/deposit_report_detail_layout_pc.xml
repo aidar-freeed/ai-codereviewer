@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_grayscale"
+    android:padding="8dp" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPrintDepReport"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <TableRow
+            android:id="@+id/rowBatchId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/tv_gray"
+            android:paddingBottom="4dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="4dp" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/label_batch_id"/>
+
+            <TextView
+                android:id="@+id/divider2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="@string/divider_colon"/>
+
+            <TextView
+                android:id="@+id/txtBatchId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/label_batch_id"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowNoTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/tv_gray_light"
+            android:paddingBottom="4dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="4dp" >
+
+            <TextView
+                android:id="@+id/textViewTransaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/label_no_trasaction"/>
+
+            <TextView
+                android:id="@+id/divider7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="@string/divider_colon"/>
+
+            <TextView
+                android:id="@+id/txtNoTransaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/label_no_trasaction"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowBankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/tv_gray"
+            android:paddingBottom="8dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/label_channel_name"/>
+
+            <TextView
+                android:id="@+id/divider6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="@string/divider_colon"/>
+
+            <TextView
+                android:id="@+id/txtBankName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/label_bank_name"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowEvidenceTransfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/tv_gray_light"
+            android:paddingBottom="8dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/label_transfer_evidence_pc"/>
+
+            <TextView
+                android:id="@+id/divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="@string/divider_colon"/>
+
+            <ImageView
+                android:id="@+id/imgEvidenceTransfer"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_weight="0.25"
+                android:scaleType="fitStart"
+                android:src="@drawable/profile_image" />
+        </TableRow>
+    </TableLayout>
+    </ScrollView>
+
+<!--     <ListView -->
+<!--         android:id="@+id/recapitulationList" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="fill_parent" -->
+<!--         android:layout_below="@+id/textView2" -->
+<!--         android:layout_weight="1" > -->
+<!--     </ListView> -->
+
+    <ImageButton
+        android:id="@+id/btnPrintDepReport"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_print" />
+
+</RelativeLayout>

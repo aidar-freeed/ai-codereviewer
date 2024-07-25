@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dfdfdf"
+    android:padding="5dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contract_number"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/divider_colon"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_no_kontrak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:textColor="@android:color/black"
+                android:text="@string/divider_dash"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="@string/customer_name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/divider_colon"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:text="@string/divider_dash"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:visibility="gone"
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="@string/lkp_number"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@android:color/black"
+                android:text="@string/divider_colon"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_no_lkp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"
+                android:maxLines="5"
+                android:text="@string/divider_dash"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

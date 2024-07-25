@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_lookup_filter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context="com.adins.mss.base.dynamicform.form.questions.viewholder.LookupFilterActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/filterLayout">
+
+        <TextView
+            android:id="@+id/txtFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/keyword" />
+
+        <EditText
+            android:id="@+id/edtFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtFilter"
+            android:ems="10"
+            android:inputType="text"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/criteriaRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/filterLayout"
+        android:layout_above="@id/btnSearch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <Button
+        android:text="@string/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/button_background"
+        android:textColor="@color/fontColorWhite"
+        android:id="@+id/btnSearch" />
+</RelativeLayout>

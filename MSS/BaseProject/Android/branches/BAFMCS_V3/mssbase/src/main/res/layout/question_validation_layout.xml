@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questionValidationLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/questionValidationLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0. label" />
+
+        <EditText
+            android:id="@+id/questionValidationAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.1"
+            android:hint="Nomor Telepon"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@drawable/edit_text_selector"
+            android:textColorHint="@color/shadowColor" />
+
+        <Button
+            android:id="@+id/btnCheckValidation"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/button_background"
+            android:text="Check"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/fontColorWhite" />
+
+    </LinearLayout>
+
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

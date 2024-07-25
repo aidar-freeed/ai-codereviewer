@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textReviewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tv_white"
+    android:padding="@dimen/padding_medium">
+
+    <TextView
+        android:id="@+id/questionNoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="@dimen/ptr_progress_bar_stroke_width"
+        android:text="0." />
+
+    <TextView
+        android:id="@+id/questionTextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/questionNoLabel"
+        android:text="label" />
+
+    <RelativeLayout
+        android:id="@+id/answerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/questionTextLabel"
+        android:layout_toEndOf="@+id/questionNoLabel"
+        android:layout_toRightOf="@+id/questionNoLabel"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/questionTextAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/imgLocationAnswer"
+            android:text="answer"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+
+        <ImageView
+            android:id="@+id/imgLocationAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_absent" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_below="@+id/answerLayout"
+        android:background="@color/tv_gray" />
+</RelativeLayout>

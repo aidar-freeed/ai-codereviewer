@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AITMSS-v2.5.0.0_NEW_UI.iml" filepath="$PROJECT_DIR$/AITMSS-v2.5.0.0_NEW_UI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/databasegenerator/databasegenerator.iml" filepath="$PROJECT_DIR$/databasegenerator/databasegenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/for-testing-only/for-testing-only.iml" filepath="$PROJECT_DIR$/for-testing-only/for-testing-only.iml" />
+      <module fileurl="file://$PROJECT_DIR$/google-play-services/google-play-services.iml" filepath="$PROJECT_DIR$/google-play-services/google-play-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mssbase/mssbase.iml" filepath="$PROJECT_DIR$/mssbase/mssbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msscoll/msscoll.iml" filepath="$PROJECT_DIR$/msscoll/msscoll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mssodr/mssodr.iml" filepath="$PROJECT_DIR$/mssodr/mssodr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msssvy/msssvy.iml" filepath="$PROJECT_DIR$/msssvy/msssvy.iml" />
+    </modules>
+  </component>
+</project>

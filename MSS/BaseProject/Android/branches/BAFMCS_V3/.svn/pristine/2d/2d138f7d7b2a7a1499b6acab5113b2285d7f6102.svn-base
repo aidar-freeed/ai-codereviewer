@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*
+** Copyright 2010, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+
+https://github.com/android/platform_frameworks_base/blob/master/core/res/res/layout/alert_dialog_holo.xml
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dialog_padding"
+    android:paddingRight="@dimen/dialog_padding">
+
+    <LinearLayout
+
+        android:id="@+id/parentPanelT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_bg"
+        android:clickable="false"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/topPanelT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#22000000"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/title_templateT"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                
+                android:layout_margin="16dip">
+
+                <ImageView
+                    android:id="@+id/iconT"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dip"
+                    android:scaleType="centerInside"
+                    android:src="@null" />
+
+                <TextView
+                    android:id="@+id/alertTitleT"
+                    style="@style/DialogWindowTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="8dip"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/titleDividerT"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_color"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contentPanelT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ChoiceTaskList"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/Choice1"
+                    style="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:padding="16dip"
+                    android:paddingBottom="8dip"
+                    android:paddingTop="8dip"
+                    android:text="Task List"
+                    android:textColor="@color/msg_color"
+                    android:textIsSelectable="true" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ChoiceVerificationlist"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/Choice2"
+                    style="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:padding="16dip"
+                    android:paddingBottom="8dip"
+                    android:paddingTop="8dip"
+                    android:text="Verification List"
+                    android:textColor="@color/msg_color"
+                    android:textIsSelectable="true" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ChoiceApprovalList"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/Choice3"
+                    style="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:padding="16dip"
+                    android:paddingBottom="8dip"
+                    android:paddingTop="8dip"
+                    android:text="Approval List"
+                    android:textColor="@color/msg_color"
+                    android:textIsSelectable="true" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/messageT"
+                style="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingBottom="8dip"
+                android:padding="16dip"
+                
+                android:paddingTop="8dip"
+                android:textColor="@color/msg_color"
+                android:textIsSelectable="true" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/customPanelT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:id="@+id/voiceLayout"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ToggleButton
+                    android:id="@+id/btnVoiceNotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_voice_note"
+                    android:textColor="@color/tv_darker"
+                    android:textOff="Record"
+                    android:textOn="Stop" />
+
+                <TextView
+                    android:id="@+id/txtNoVoiceNote"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center_horizontal"
+                    android:maxLength="500"
+                    android:shadowColor="@color/tv_darker"
+                    android:text="Voice Notes Not Available"
+                    android:textColor="#555555"
+                    android:visibility="gone" >
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/recorderLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <ImageButton
+                        android:id="@+id/btnPlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/circle_button"
+                        android:src="@drawable/ic_play" />
+
+                    <ImageButton
+                        android:id="@+id/btnStop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/circle_button"
+                        android:src="@drawable/ic_stop" />
+                </LinearLayout>
+            </LinearLayout>
+            
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp">
+
+            <Button
+                android:id="@+id/button1T"
+                style="@style/dialog_btn"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:text="OK"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button2T"
+                style="@style/dialog_btn"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:text="Cancle"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

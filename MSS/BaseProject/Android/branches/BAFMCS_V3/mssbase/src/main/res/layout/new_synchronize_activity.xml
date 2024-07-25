@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/synchronize_activity"
+    android:background="@drawable/bg_sync_survey">
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/footer" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp">
+
+            <ImageView
+                android:id="@+id/ring2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_loading_ring2"/>
+
+            <ImageView
+                android:id="@+id/ring1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_loading_ring" />
+
+            <TextView
+                android:id="@+id/progressLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="24dp"
+                android:textColor="@color/fontColorWhite"
+                android:layout_marginTop="85dp"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/syncLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/synchronizing"
+            android:textSize="16dp"
+            android:textColor="@color/fontColorWhite"
+            android:shadowColor="@color/fontColor"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

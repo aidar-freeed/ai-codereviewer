@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bgColorWhite"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/imageView3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_thumbnail"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/txtThumbnailCircleAccDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="MA"
+                    android:textSize="27dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/fontColorWhite"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtNameAccDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Muhammad Audi"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/fontColorDarkGrey"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="1dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Address"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:drawableLeft="@drawable/ic_location_color"
+                        android:drawablePadding="4dp"
+                        android:textStyle="bold"
+                        android:textSize="17dp"
+                        android:textColor="@color/fontColorDarkGreen"/>
+
+                    <EditText
+                        android:id="@+id/txtAddressAccDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Jl. Raya Kb. Jeruk No.80 Jakarta Barat"
+                        android:textSize="14dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="26dp"
+                        android:textColor="@color/fontColorDarkGrey"
+                        android:background="@android:color/transparent"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Phone"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:drawableLeft="@drawable/ic_phone_color"
+                        android:drawablePadding="6dp"
+                        android:textStyle="bold"
+                        android:textSize="17dp"
+                        android:textColor="@color/fontColorDarkGreen"/>
+
+                    <EditText
+                        android:id="@+id/txtNumber1Acc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="0812345678910"
+                        android:textColor="@color/fontColorDarkGrey"
+                        android:textSize="14dp"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/txtNumber2Acc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="0812345678910"
+                        android:textSize="14dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="@color/fontColorDarkGrey"
+                        android:background="@android:color/transparent"
+                        android:inputType="number"/>
+                    <EditText
+                        android:id="@+id/txtNumber3Acc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="0812345678910"
+                        android:textSize="14dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="@color/fontColorDarkGrey"
+                        android:background="@android:color/transparent"
+                        android:inputType="number"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnNewProspectAcc"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_background"
+            android:text="@string/btnNewProspect"
+            android:textColor="@color/fontColorDarkGrey"
+            android:textSize="17dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.96">
+
+            <com.adins.mss.base.dynamicform.form.questions.viewholder.ExpandableRecyclerView
+                android:id="@+id/btnOpportunities"
+                android:name="com.adins.mss.base.dynamicform.form.QuestionFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="false"
+                app:layoutManager="LinearLayoutManager"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questionLookupLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/questionLookupLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0. label" />
+
+            <Button
+                android:id="@+id/btnChooseLookup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="@string/chooseLookup" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSelectedAnswer"
+                android:text="@string/selectedAnswer"
+                android:layout_span="2"/>
+            <TableLayout
+
+                android:id="@+id/questionLookupAnswerLayout"
+                android:layout_width="match_parent"
+                android:stretchColumns="1"
+                android:layout_height="wrap_content">
+
+
+
+            </TableLayout>
+            <TextView
+                android:id="@+id/questionLookupAnswer"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

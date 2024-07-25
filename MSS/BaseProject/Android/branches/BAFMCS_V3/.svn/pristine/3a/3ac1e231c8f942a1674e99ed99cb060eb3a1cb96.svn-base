@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmergencyLockActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/animate_pending"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/em_pending_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_pending"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/em_pending"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/animate_success"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/em_submitted_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/image_success"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:drawable="@drawable/em_check_with_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/text_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/emergency_sent"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_success"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.3"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/text_success_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/emergency_sent_description"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_success"
+        app:layout_constraintVertical_bias="0.0400000"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <TextView
+        android:id="@+id/text_pending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/emergency_sent"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.3"/>
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/image_pending"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/transparent_bg_bordered_button"
+        android:text="CANCEL"
+        android:onClick="doCancel"
+        android:visibility="gone"
+        android:textColor="#B22222" />
+</androidx.constraintlayout.widget.ConstraintLayout>

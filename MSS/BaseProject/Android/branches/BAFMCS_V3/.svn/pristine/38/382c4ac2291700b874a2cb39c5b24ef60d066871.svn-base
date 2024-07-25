@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/timelineNav"
+        android:title="Timeline"
+        android:icon="@drawable/ic_timeline"
+        />
+    <item
+        android:id="@+id/menuNav"
+        android:title="Menu"
+        android:icon="@drawable/ic_menu_black"
+        />
+    <item
+        android:id="@+id/taskListNav"
+        android:title="Task List"
+        android:icon="@drawable/ic_task_list"
+        />
+</menu>

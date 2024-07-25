@@ -1,0 +1,146 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="DialogWindowTitle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="dialog_tran" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+    <style name="dialog_untran" parent="dialog_tran">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="dialog_btn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/btn_selector</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="my_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#c0392b</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:onClick">dialogShow</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Theme.SmoothProgressBarDefaults" parent="android:Theme">
+        <item name="spbStyle">@style/SmoothProgressBar</item>
+    </style>
+
+    <style name="SmoothProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="spb_color">@color/spb_default_color</item>
+        <item name="spb_sections_count">@integer/spb_default_sections_count</item>
+        <item name="spb_speed">@string/spb_default_speed</item>
+        <item name="spb_stroke_width">@dimen/spb_default_stroke_width</item>
+        <item name="spb_stroke_separator_length">@dimen/spb_default_stroke_separator_length</item>
+        <item name="spb_reversed">@bool/spb_default_reversed</item>
+        <item name="spb_mirror_mode">@bool/spb_default_mirror_mode</item>
+        <item name="spb_interpolator">@integer/spb_default_interpolator</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxHeight">48dp</item>
+    </style>
+
+    <!--     Cropping image -->
+    <style name="Crop"></style>
+
+    <style name="Crop.DoneCancelBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/crop__bar_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:divider">@drawable/crop__divider</item>
+        <item name="android:showDividers" tools:ignore="NewApi">middle</item>
+        <item name="android:dividerPadding" tools:ignore="NewApi">12dp</item>
+        <item name="android:background">@color/crop__button_bar</item>
+    </style>
+
+    <style name="Crop.ActionButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/crop__selectable_background</item>
+    </style>
+
+    <style name="Crop.ActionButtonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">20dp</item> <!-- Offsets left drawable -->
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textColor">@color/crop__button_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Crop.ActionButtonText.Done">
+        <item name="android:drawableLeft">@drawable/crop__ic_done</item>
+        <item name="android:text">@string/crop__done</item>
+    </style>
+
+    <style name="Crop.ActionButtonText.Cancel">
+        <item name="android:drawableLeft">@drawable/crop__ic_cancel</item>
+        <item name="android:text">@string/crop__cancel</item>
+    </style>
+
+    <style name="Crop.ActionButtonText.Rotate">
+        <item name="android:drawableLeft">@drawable/crop__ic_rotate</item>
+        <item name="android:text">@string/crop__rotate</item>
+    </style>
+
+    <style name="Dialog.NoTitle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="DialogAnimation2">
+        <item name="android:windowEnterAnimation">@anim/activity_open_translate</item>
+        <item name="android:windowExitAnimation">@anim/activity_close_translate</item>
+    </style>
+
+    <style name="TasklistTab" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13sp</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+
+</resources>

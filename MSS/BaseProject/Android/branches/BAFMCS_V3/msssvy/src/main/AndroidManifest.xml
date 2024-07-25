@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.adins.mss.svy"
+    android:installLocation="internalOnly">
+
+    <!--<uses-permission android:name="android.permission.RECORD_AUDIO" />-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> <!-- External storage for caching. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- My Location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- <uses-permission android:name="android.permission.CALL_PHONE" /> -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.adins.mss.main.MSMApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@drawable/icon_launcher_check_id"
+        android:label="@string/app_name"
+        android:logo="@drawable/logo_mss"
+        android:supportsRtl="true"
+        android:theme="@style/CustomTheme"
+        android:usesCleartextTraffic="true">
+        <receiver
+            android:name="com.services.RestartAutoSendLocationReceiver"
+            android:enabled="true"
+            android:exported="false">
+
+            <intent-filter>
+                <action android:name="com.adins.intent.action_RESTART_AUTOSEND_LOCATION" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.services.MSLocationTrackingService"
+            android:foregroundServiceType="location"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver android:name="com.services.MSLocationTrackingService$UserLogoutReceiver">
+            <intent-filter>
+                <action android:name="com.adins.mss.action_USER_LOGOUT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MSLoginActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NewMSMainActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.adins.mss.base.ServerLinkActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:label="@string/title_server_link"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".MSSynchronizeActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".MSMainMenuActivity"
+            android:configChanges="locale|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme.TranslucentActionBar" />
+        <activity
+            android:name="com.adins.mss.base.dynamicform.VoiceNotePage"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.adins.mss.foundation.image.ViewImageActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity
+            android:name="com.adins.mss.base.timeline.comment.activity.CommentActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.adins.mss.base.dynamicform.DynamicFormActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:parentActivityName=".NewMSMainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NewMSMainActivity" />
+        </activity>
+        <activity
+            android:name="com.adins.mss.base.dynamicform.SendResultActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".reassignment.OrderReassignmentResult"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".assignment.LookupAssignment"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".assignment.OrderAssignmentResult"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.adins.mss.base.timeline.MapsViewer"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.adins.mss.base.ChangePasswordActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.adins.mss.foundation.image.CroppingImageActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize" />
+        <activity android:name="com.adins.mss.base.PrintActivity" />
+        <activity
+            android:name="com.adins.mss.base.todolist.form.ViewMapActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.adins.mss.foundation.questiongenerator.form.LocationTagingView"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.adins.mss.foundation.questiongenerator.form.FingerDrawingActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.adins.mss.base.todolist.form.AllHeaderViewerActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.adins.mss.foundation.camera2.Camera2BasicRealActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTitle" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyA2V50uQBKw5_w2f3BEEbcNkmwofZyt-Io" /> <!-- android:value="AIzaSyDEK_F1pp8MEVvkCLtVs4R9spdm_JColds" /> -->
+        <!-- android:value="AIzaSyDbW6WbmyOF7-QtIPPja1xFT6VNvpBNEC0" /> -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
+
+        <service android:name="com.tracking.LocationTrackingService" />
+        <service android:name="com.services.AutoSendImageService" />
+        <service android:name="com.services.AutoSendTaskService" />
+        <service android:name="com.services.NotificationService" />
+        <service android:name="com.services.SurveyVerificationService" />
+        <service android:name="com.services.SurveyApprovalService" />
+
+        <activity
+            android:name=".SurveyVerificationActionActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:label="@string/title_activity_survey_verification_action" />
+        <activity
+            android:name="com.adins.mss.base.DeveloperOptionActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:label="@string/title_developer_option"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.adins.mss.base.mainmenu.settings.SettingActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.adins.mss.foundation.camerainapp.CameraActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTitle" />
+
+        <service android:name="com.services.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.services.RefreshToken">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questionSummaryLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/questionSummaryLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0. label" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/questionSummaryDropdown"
+                    android:spinnerMode="dropdown"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/dropdown_background"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_expand"
+                    android:layout_alignRight="@+id/questionSummaryDropdown"
+                    android:layout_alignBottom="@+id/questionSummaryDropdown"
+                    android:layout_alignTop="@+id/questionSummaryDropdown"
+                    android:layout_marginRight="10dp"
+                    android:tint="@color/gradient_end"/>
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:id="@+id/questionSummaryAnswerLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1">
+                </TableLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/questionInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/no_answer_found"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

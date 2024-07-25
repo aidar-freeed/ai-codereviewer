@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/documentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Document Name"
+        android:padding="2dp"/>
+    <Button
+        android:id="@+id/documentViewBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_view_background"
+        android:text="@string/btnView"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:minHeight="0dp"
+        android:padding="10dp"
+        />
+</LinearLayout>

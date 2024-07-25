@@ -1,0 +1,303 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+    <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:weightSum="1"
+            android:background="@drawable/actionbar_background"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+        <LinearLayout
+                android:id="@+id/btnBackLayout"
+                android:orientation="vertical"
+                android:layout_weight="0.2"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/circle_button"/>
+            <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/btnBack"
+                    android:textSize="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/btnSaveLayout"
+                android:orientation="vertical"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@drawable/ic_save"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/circle_button"/>
+            <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/btnSave"
+                    android:textSize="10dp" />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/btnSendLayout"
+                android:orientation="vertical"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageButton
+                    android:id="@+id/btnSend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:clickable="false"
+                    android:src="@drawable/ic_send_off"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/circle_button"/>
+            <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/btnSend"
+                    android:textSize="10dp" />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/btnSearchLayout"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ToggleButton
+                    android:id="@+id/btnSearchBar"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.2"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/ic_search"
+                    android:background="@drawable/circle_button" />
+            <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/btnSearch"
+                    android:textSize="10dp" />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/btnVerifiedLayout"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageButton
+                    android:id="@+id/btnVerified"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:clickable="false"
+                    android:src="@drawable/ic_approve"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/circle_button"/>
+            <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/btnVerify"
+                    android:textSize="10dp" />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/btnRejectLayout"
+                android:orientation="vertical"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+            <ImageButton
+                    android:id="@+id/btnReject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@drawable/ic_reject"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/circle_button"/>
+            <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/btnReject"
+                    android:textSize="10dp" />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/btnApproveLayout"
+                android:orientation="vertical"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+            <ImageButton
+                    android:id="@+id/btnApprove"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@drawable/ic_approve"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/circle_button"/>
+
+            <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/btnApprove"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10dp" />
+
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/btnNextLayout"
+                android:orientation="vertical"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageButton
+                    android:id="@+id/btnNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@drawable/ic_next"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/circle_button"/>
+            <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/btnNext"
+                    android:textSize="10dp" />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/btnCloseLayout"
+                android:orientation="vertical"
+                android:layout_weight="0.2"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageButton
+                    android:id="@+id/btnClose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@drawable/ic_reject"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/circle_button"/>
+            <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/btnClose"
+                    android:textSize="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+            android:id="@+id/scrollContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/searchLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+
+        <LinearLayout
+                android:id="@+id/questionContainer"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+            android:id="@+id/scrollContainer2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/searchLayout"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:layout_alignParentTop="true" >
+
+        <LinearLayout
+                android:id="@+id/reviewContainer"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/buttonContainer"
+            android:layout_alignParentLeft="true"
+            android:background="@color/ab_end"
+            android:padding="3dp" >
+
+        <AutoCompleteTextView
+                android:id="@+id/autoCompleteSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/edittext_background"
+                android:layout_toLeftOf="@+id/btnSearch"
+                android:hint="@string/search_question" >
+        </AutoCompleteTextView>
+
+        <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_button"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_search" />
+    </RelativeLayout>
+
+</RelativeLayout>

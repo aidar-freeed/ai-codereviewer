@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/questionTwsLayout">
+    <TextView
+        android:id="@+id/questionTwsLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0. Label"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+    <AutoCompleteTextView
+        android:id="@+id/questionTwsAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColorHint="@color/shadowColor"
+        android:textColor="@drawable/edit_text_selector"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

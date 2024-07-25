@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/tv_white">
+    <ScrollView android:layout_width="match_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:padding="8dp">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/collection_activity_detail"
+                      android:textStyle="bold"
+                      android:textSize="24sp"
+                      android:layout_marginBottom="8dp"/>
+
+            <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true">
+                <TableLayout android:layout_width="match_parent"
+                             android:layout_height="fill_parent"
+                             android:stretchColumns="2"
+                             android:id="@+id/tableCollectionDetail">
+                    <TableRow android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:paddingTop="8dp"
+                              android:paddingBottom="8dp"
+                              android:background="@drawable/spinner_background">
+                        <TextView android:text="@string/label_no"
+                                  android:textSize="12sp"
+                                  android:paddingRight="6dp"
+                                  android:paddingLeft="6dp"
+                                  android:gravity="center"
+                                  android:textColor="@color/tv_white"
+                                  android:textStyle="bold"/>
+                        <TextView android:text="@string/label_field"
+                                  android:minWidth="120dp"
+                                  android:textSize="12sp"
+                                  android:paddingLeft="6dp"
+                                  android:paddingRight="6dp"
+                                  android:textColor="@color/tv_white"
+                                  android:textStyle="bold"/>
+                        <TextView android:text="@string/label_value"
+                                  android:textSize="12sp"
+                                  android:paddingLeft="6dp"
+                                  android:paddingRight="6dp"
+                                  android:textColor="@color/tv_white"
+                                  android:textStyle="bold"/>
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/header"
+        app:titleTextAppearance="?android:attr/textAppearanceSmall"
+        android:titleTextColor="@color/fontColorWhite"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_collapseMode="pin"
+        android:fitsSystemWindows="true" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="10dp"
+        app:cardElevation="@dimen/card_shadow"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/fontColorWhite">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+                <TableLayout android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:stretchColumns="4"
+                    android:id="@+id/tableCollectionDetail">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="@string/label_no"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:gravity="center_horizontal"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/timelineLine" />
+                        <TextView
+                            android:text="@string/label_field"
+                            android:minWidth="120dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:gravity="center_horizontal"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/timelineLine" />
+                        <TextView
+                            android:text="@string/label_value"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:gravity="center_horizontal"/>
+                    </TableRow>
+                    <TableRow>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/timelineLine"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/timelineLine"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/timelineLine"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/timelineLine"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/timelineLine"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/timelineLine" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/timelineLine" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                    </TableRow>
+                </TableLayout>
+
+            </HorizontalScrollView>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,465 @@
+<resources>
+    <string name="app_name">CollAct</string>
+    <string name="appVersion">v2.1.0.1</string>
+    <string name="action_settings">Settings</string>
+    <string name="collection_activity">Collection Activity</string>
+    <string name="collection_activity_detail">Collection Activity Detail</string>
+    <string name="summary_deposit_report">Deposit Report Summary</string>
+    <string name="deposit_report">Deposit Report</string>
+    <string name="history_payment">History Payment</string>
+    <string name="installment_schedule">Installment Schedule</string>
+    <string name="installment_schedule_detail">Installment Schedule Detail</string>
+    <string name="payment_history">Payment History</string>
+    <string name="payment_history_detail">Payment History Detail</string>
+    <string name="receipt_history">Receipt History</string>
+    <string name="aboutCopyright">Copyright \u00A9 (2015) AdIns</string>
+    <string name="enableDevMode">ENABLE DEVELOPER MODE</string>
+    <string name="disableDevMode">DISABLE DEVELOPER MODE</string>
+    <!-- Deposit Report -->
+    <string name="label_batch_id">Batch ID</string>
+    <string name="label_transfer_by">Transfer By</string>
+    <string name="label_bank">Bank</string>
+    <string name="label_bank_name">Bank Name</string>
+    <string name="label_cashier_name">Cashier Name</string>
+    <string name="label_account_number">Account Number</string>
+    <string name="label_transfer_evidence">Transfer Evidence</string>
+    <string name="label_agreement_no">Agreement No</string>
+    <string name="label_deposit_amount">Deposit Amount</string>
+    <string name="label_recapitulation_list">Recapitulation List</string>
+    <string name="label_recapitulate">RECAPITULATE</string>
+    <string name="label_recapitulation">Recapitulation</string>
+    <string name="label_total_task">Total Task</string>
+    <string name="label_total_paid">Total Paid</string>
+    <string name="label_total_visit">Total Visit</string>
+    <string name="label_total_fail">Total Fail</string>
+    <string name="label_paid">PAID</string>
+    <string name="label_visit">VISIT</string>
+    <string name="label_fail">FAIL</string>
+    <string name="label_detail">Detail</string>
+    <string name="label_account_number_2">Account Number :</string>
+    <string name="label_cashier_name_2">Cashier Name :</string>
+    <string name="label_bank_name_2">Bank Name :</string>
+    <string name="label_batch_id_2">Batch ID :</string>
+    <string name="label_transfer_evidence_2">Transfer Evidence :</string>
+    <string name="label_type_dep_name">Type of Deposit</string>
+    <string name="label_branch_payment">Branch Payment :</string>
+    <string name="branch_payment_hint">Branch Payment</string>
+    <string name="label_transfer_to">Transfer to :</string>
+    <string name="label_transfer_evidence_pc">Payment Evidence :</string>
+    <string name="label_form">Form :</string>
+    <string name="label_info_batch">Info Batch</string>
+    <string name="label_type_deposit">Types Of Deposit :</string>
+    <string name="label_info_form">Form\'s name</string>
+    <string name="label_info_submitdate">Submit date</string>
+    <string name="label_info_total">Total</string>
+    <string name="label_transfer_to_pc">Pay to :</string>
+    <string name="label_transactioncode">Transaction\'s code :</string>
+    <string name="label_no_trasaction">No. Transaction</string>
+    <string name="label_channel_name">Channel Name</string>
+
+    <!-- Collection -->
+    <string name="label_agreement_number">Agreement Number :</string>
+    <string name="label_activity_date">Activity Date</string>
+    <string name="label_action">Activity</string>
+    <string name="label_collection_number">Collector Name</string>
+    <string name="label_no">No</string>
+    <string name="label_field">Field</string>
+    <string name="label_value">Value</string>
+    <string name="failed_get_data_try_again">Fail to get data. Please try again later</string>
+
+    <!-- Installment Schedule -->
+    <string name="label_due_date">Due Date</string>
+    <string name="label_amount_installment">Installment Amount</string>
+    <string name="label_amount_paid">Amount Paid</string>
+
+    <!-- Payment History -->
+    <string name="label_transaction_code">Transaction\nType</string>
+    <string name="label_posting_date">Post\nDate</string>
+    <string name="label_amount_paid_2">Receive\nAmount</string>
+    <string name="label_amount_installment_2">Installment\nAmount</string>
+    <string name="label_transaction_code_2">Transaction Code :</string>
+    <string name="label_no_2">NO</string>
+    <string name="label_receipt_form_no">RECEIPT\nFORM NO</string>
+    <string name="label_value_date">VALUE\nDATE</string>
+    <string name="label_post_date">POST\nDATE</string>
+    <string name="label_payment_amount">PAYMENT\nAMOUNT</string>
+    <string name="label_installment_amount">INSTALLMENT\nAMOUNT</string>
+    <string name="label_installment_number">INSTALLMENT\nNUMBER</string>
+    <string name="label_wop_code">WOP CODE</string>
+    <string name="label_payment_allocation_name">PAYMENT\nALLOCATION NAME</string>
+    <string name="label_os_amount">OS AMOUNT\nOVER DUE\nAS OF</string>
+    <string name="label_receive_amount">RECEIVE\nAMOUNT</string>
+
+    <!-- Receipt History -->
+    <string name="label_contract_number">Contract Number</string>
+    <string name="label_receipt_number">Receipt Number</string>
+    <string name="label_payment_date">Payment Date</string>
+    <string name="label_file">File</string>
+
+    <!-- Report Summary -->
+    <string name="summary_kunjungan">Visit Summary</string>
+    <string name="label_tanggal">Date</string>
+    <string name="dummy_tanggal">21102014</string>
+    <string name="label_collector">Collector</string>
+    <string name="dummy_collector">Schinalon</string>
+    <string name="label_total_collected">Total to be Collected</string>
+    <string name="dummy_total_collected">Rp550.000</string>
+    <string name="dummy_total_paid">Rp98.000</string>
+
+    <!-- Loyalti Dashboard Competition -->
+    <string name="dashboard_competition_page_title">List Detail Programs</string>
+    <string name="my_point_competition">My Points (%1$s)</string>
+
+    <!-- Loyalti Monthly Point -->
+    <string name="monthly_point_page_title">Monthly Points Acquisition</string>
+
+    <!-- Loyalti Daily Point -->
+    <string name="daily_point_page_title">Daily Points Acquisition</string>
+    <string name="daily_point_chart_title">Points Earned In %1$s</string>
+
+    <string name="average_point">Average: %1$d</string>
+    <string name="y_axis_point_title">Total Points</string>
+
+
+    <!-- Left Menu -->
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">close_drawer</string>
+
+    <!-- CHECK ORDER -->
+    <string name="btnLookupCMO">Lookup CMO</string>
+    <string name="btnLookupCMOMH">Lookup CMO / MH</string>
+
+    <string name="lblSearchBy">Search by</string>
+    <string name="lblStartDate">Start Date</string>
+    <string name="lblEndDate">End Date</string>
+    <string name="lblNomorOrder">Nomor Order</string>
+    <string name="btnSearchOrder">Search</string>
+    <string name="menu">Main Menu</string>
+    <string name="cekOrder">Check Order</string>
+    <string name="btnOpen">Open</string>
+    <string name="lblSearchByStatus">Status</string>
+    <string name="btnOk">OK</string>
+
+    <string-array name="cbSearcrBy">
+        <item>Date</item>
+        <item>Nomor Order</item>
+    </string-array>
+    <string-array name="cbSearcrByStatus">
+        <item>ALL</item>
+        <item>On Survey</item>
+        <item>On CA</item>
+    </string-array>
+    <string-array name="cbUpdateOrder">
+        <item>Open Order</item>
+        <item>Cancel Order</item>
+    </string-array>
+
+    <!-- 	Main Menu -->
+    <string name="title_mn_home">HOME</string>
+    <string name="title_mn_tasklist">TASK LIST</string>
+    <string name="title_mn_log">LOG</string>
+    <string name="title_mn_reportsummary">REPORT SUMMARY</string>
+    <string name="title_mn_depositreport">DEPOSIT REPORT</string>
+    <string name="title_mn_absentin">ATTENDANCE IN</string>
+    <string name="title_mn_synchronize">SYNCHRONIZE</string>
+    <string name="title_mn_about">ABOUT</string>
+    <string name="title_mn_exit">EXIT</string>
+    <string name="title_mn_newtask">NEW TASK</string>
+    <string name="title_mn_changepassword">CHANGE PASSWORD</string>
+    <string name="title_mn_paymenthistory">PAYMENT HISTORY</string>
+    <string name="title_mn_collectionactivity">COLLECTION ACTIVITY</string>
+    <string name="title_mn_installmentschedule">INSTALLMENT SCHEDULE</string>
+    <string name="title_mn_paymenthistorydet">PAYMENT HISTORY DETAIL</string>
+    <string name="title_mn_collectionactivitydet">COLLECTION ACTIVITY DETAIL</string>
+    <string name="title_mn_installmentscheduledet">INSTALLMENT SCHEDULE DETAIL</string>
+    <string name="title_mn_absentout">CHECK OUT</string>
+    <string name="title_mn_setting">Settings</string>
+    <string name="title_mn_guide">Repeat User Guide</string>
+
+    <string name="header__title">Change Header Picture</string>
+    <string name="profile__title">Change Profile Picture</string>
+
+    <string name="btnTransfer">TRANSFER</string>
+    <string name="btnSend">SEND</string>
+    <string name="btnCancel">CANCEL</string>
+    <string name="btnReject">REJECT</string>
+    <string name="btnChange">CHANGE</string>
+
+    <!-- Synchronize -->
+    <string name="sync_scheme">Synchronize Scheme</string>
+    <string name="sync_question_set">Synchronize Question Set</string>
+    <string name="sync_lookup">Synchronize Lookup</string>
+    <string name="sync_holiday">Synchronize Holiday</string>
+    <string name="synchronizing">Synchronizing</string>
+    <string name="sync_progress">Progress : 0%</string>
+
+    <!--     <string name="progressWait">Please wait...</string> -->
+    <!--     <string name="msgUnavaibleLocationCheckIn">Unable get location to check in</string> -->
+    <!--     <string name="msgUnavaibleLocationCheckOut">Unable get location to check out</string> -->
+
+
+    <string-array name="transfer_spinner">
+        <item>By Bank</item>
+        <item>By Cashier</item>
+    </string-array>
+
+    <string name="divider_dash">-</string>
+    <string name="divider_colon">:</string>
+    <string name="divider_equals_sign">=</string>
+    <string name="dummy_number"> -</string>
+    <string name="dummy_text"> -</string>
+    <string name="title">Title</string>
+    <string name="take_a_photo">TAKE A PHOTO</string>
+    <string name="dummy_news_desc">Textview</string>
+    <string name="news_not_found">News not found</string>
+    <string name="dummy_customer_name">Customer Name</string>
+
+    <string name="login_desc">Login to CollAct Application</string>
+
+    <string name="emergency_sent">Message Sent !</string>
+    <string name="emergency_sent_description">Collector is in emergency mode</string>
+
+    <string name="toast_crash">Ooooops ! MSSCOLL crashed, but a report has been sent to my developer to help fix the issue !</string>
+    <string name="title_activity_developer_option">Dev Options</string>
+    <string name="changelog_v230"><![CDATA[Changes: <br/>
+1. Support Multilingual <br/>
+2. Update compatibility for Android M <br/>
+3. Support refresh location by tap GPS Icon <br/>
+4. Increase performance <br/>
+5. Decrease memory usage <br/>
+6. Add cirle radius in map viewer if accuracy available <br/>
+7. Loading not relevant Questions automatically <br/>
+8. Support Copy value from other questions <br/>
+9. Support advanced question validation <br/>
+10. Add parameterized Limit Cash On Hand  <br/>
+11. Search by form name in task list <br/>
+12. Add Closing Task Feature <br/>
+13. Add Receive Voucher
+]]></string>
+    <string name="changelog_v200"><![CDATA[Changes: <br/>
+1. Add support for Timeline Task <br/>
+2. Add support for navigation menu]]></string>
+    <string name="changelog_v210"><![CDATA[Changes: <br/>
+1. Add Support for View All header in tasklist<br/>
+2. Add support maps viewer for tasklist]]></string>
+    <string name="changelog_v220"><![CDATA[Changes: <br/>
+1. Add Support for Oauth<br/>
+2. Add support for more bluetooth Printer]]></string>
+
+    <string name="title_mn_closing_task">CLOSING TASK</string>
+    <string name="msg_still_uploading_closing_task">Can\'t Closing Task Because Still Uploading Data or there\'s task on draft</string>
+    <string name="contract_number">Contract Number</string>
+    <string name="lkp_number">LKP Number</string>
+    <string name="changelog_v2310"><![CDATA[Changes: <br/>
+1. Support copy value with condition<br/>
+2. Support RV in Question
+]]></string>
+    <string name="changelog_v2320"><![CDATA[Changes: <br/>
+1. Fixing profile and cover image if exit
+]]></string>
+    <string name="changelog_v2330"><![CDATA[Changes: <br/>
+1. Fixing Synchronize<br/>
+2. Fixing Timeline for Attendance <br/>
+3. Fixing load question answer<br/>
+4. Fixing duplicate send in Deposit Report<br/>
+5. Add check root device]]></string>
+    <string name="changelog_v2340"><![CDATA[Changes: <br/>
+1. Aplhanumeric Password requirement]]></string>
+    <string name="changelog_v2350"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v2360"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v2370"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes<br/>
+2. Fixing GPS issues]]></string>
+    <string name="changelog_v2380"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v2390"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23100"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23110"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23120"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23130"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23140"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23150"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23160"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23170"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23180"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23190"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v2400"><![CDATA[Changes: <br/>
+1. Add device information at about<br/>
+2. Support online lookup<br/>
+3. Task list view : box or list<br/>
+4. Support multiprinter]]></string>
+    <string name="changelog_v2500"><![CDATA[Changes: <br/>
+1. New user interface<br/>
+2. Add file synchronize<br/>
+3. Minor bug fixes]]></string>
+    <string name="changelog_v3000"><![CDATA[Changes: <br/>
+1. More readable messages and information<br/>
+2. Support push themes<br/>
+3. Support round profile picture<br/>
+4. Add unique code<br/>
+5. Add image timestamp<br/>
+6. Minor bug fixes]]></string>
+    <string name="changelog_v3001"><![CDATA[Changes: <br/>
+1. Add toggle password visibiliy in Change Password popup<br/>
+2. Change connection timeout message<br/>
+3. Fix bug Fake GPS Deactivation dialog does not showing up when using mock up location<br/>
+4. Fix bug warning message for user inactive<br/>
+5. Add Database Migration from Version 2.5 to 3.0]]></string>
+    <string name="changelog_v3002"><![CDATA[Changes: <br/>
+1. Fix Search Timeline Uploading Task option not showing up although there are tasks that have uploading status.<br/>
+2. Fix bug not all options appear in radio button question dynamic form.<br/>
+3. Fix bug Fake GPS Deactivation dialog does not showing up when using mock up location.<br/>
+4. Fix bug developer option at top right not showing up.<br/>
+5. Fix bug task answers are disappeared when start doing task from draft after change user.<br/>
+6. Add regex checking for customer name input.]]></string>
+    <string name="changelog_v3003"><![CDATA[Changes: <br/>
+1. Perbaikan google play service update bisa diabaikan.<br/>
+2. Penambahan submit lokasi untuk reschedule task.<br/>
+3. Perbaikan task list tidak update.<br/>
+4. Perbaikan notifikasi uploading.<br/>
+5. Disable logger saat print karena menyebabkan crash.<br/>
+6. Perbaikan log online.<br/>
+7. Penambahan notification channel untuk foreground service notification.<br/>
+8. Perbaikan pertanyaan tipe option dan multiple memiliki duplikasi jawaban.<br/>
+9. Perbaikan pertanyaan option choice filter tidak tampil.<br/>
+10.Penjagaan format datetime dengan panjang lebih dari 14 karakter pada DateTimePicker.<br/>
+11.Perbaikan print unique rv.<br/>
+12.Perbaikan crash saat submit task manual menggunakan long click.]]></string>
+    <string name="changelog_v3004"><![CDATA[Changes: <br/>
+1. Fix push theme.<br/>
+2. Show application running notification.<br/>
+3. Fix crash when open task list.<br/>
+4. Fix task filter feature.<br/>
+5. Fix minor bugs.]]></string>
+    <string name="changelog_v3005"><![CDATA[Changes: <br/>
+1. Penambahan pengecekan saat print deposit report.<br/>
+2. Penambahan pengecekan untuk limit cash on hand.<br/>
+3. Perbaikan crash saat print.<br/>
+4. Perbaikan issue jawaban rv number tidak tampil pada log.(RV depan)<br/>
+5. Fix minor bugs.]]></string>
+    <string name="changelog_v3006"><![CDATA[Changes: <br/>
+1. Perbaikan fragment overlapped.<br/>
+2. Perbaikan deposit report.<br/>
+3. Perbaikan sync question set.<br/>
+4. Perbaikan filter status pending tidak ada hasil.]]></string>
+    <string name="changelog_v3007"><![CDATA[Changes: <br/>
+1. Perbaikan add taskd untuk log online.<br/>
+2. Perbaikan bug di viewholder.<br/>
+3. Perbaikan print bitmap.<br/>
+4. Menseragamkan format request submit task melalui force send, auto send, dan send biasa.<br/>
+5. Perbaikan bug timeline task header tertukar ketika diklik.<br/>
+6. Perbaikan minor bug.]]></string>
+    <string name="changelog_v3008"><![CDATA[Changes: <br/>
+1. Perbaikan print bitmap.<br/>
+2. Perbaikan minor bug.]]></string>
+    <string name="changelog_v3009"><![CDATA[Changes: <br/>
+1. Save and get list of rv numbers only at table Tr_ReceiptVoucher.<br/>
+2. Add multitenant print logo.<br/>
+3. Add bypass developer mode feature.<br/>
+4. Fix timeline when upgrading from 2.5 to 3.0 version.<br/>
+5. Fix crash handle question with choice filter.<br/>
+6. Fix minor bug.]]></string>
+    <string name="changelog_v30013"><![CDATA[Changes: <br/>
+1. Add support location service in Android >= O.<br/>
+2. Add support location service for oppo, vivo and xiaomi devices.<br/>
+3. Fix notification new task in Android >= O.<br/>
+4. Fix image printing on Android >= O.<br/>
+5. Fix minor bug.]]></string>
+    <string name="changelog_v30017"><![CDATA[Changes: <br/>
+1. Add support 64bit architecture.<br/>
+2. Fix delete task from Timeline.<br/>
+3. Fix duplicate customer name on view map.<br/>
+4. Fix upgrade database from v2.5 to v3.0<br/>
+5. Remove audio permission.<br/>
+6. Minor bug fixes.]]></string>
+    <string name="changelog_v30029"><![CDATA[Changes: <br/>
+1. Fix bug crash ketika buka Timeline setelah check in Attendance]]></string>
+    <string name="changelog_v3110"><![CDATA[Changes: <br/>
+1. Add FailedDraft status on TaskH when there is specific response code is received from server .<br/>
+2. Add user help .<br/>
+3. Fix take picture failed on android 10 .<br/>
+4. App slow on Login-Logout-Login .<br/>
+5. Enhancement for answer type LuOnline.<br/>
+6. Fix bug uploading task on timeline not showing.<br/>
+7. Add support for Android 10
+]]></string>
+    <string name="changelog_v3120">
+<![CDATA[ Changes: <br/>
+1. Fix bug Cloud CSV can\'t be imported .<br/>
+2. Fix bug application running service stopped caused by close application .<br/>
+3. Fix synchronize crash .<br/>
+4. Fix crash when is_tracking off .<br/>
+5. Add emergency feature .<br/>
+6. Fix submit task dialog can be cancelled .<br/>
+7. Fix total paid and visit in summary not equal. <br/>
+8. Fix report summary \'total to be collected\' not showing .<br/>
+9. Fix transaction history \'transaction type\' not showing .<br/>
+10. Fix deposit report total 0 .<br/> ]]>
+</string>
+    <string name="changelog_v3130">
+<![CDATA[ Changes: <br/>
+1. Fix user help issues.<br/>
+2. Fix color of timeline type task is not grey after closing task.<br/>
+3. Add call customer phone number action at customer form.<br/>
+4. Fix validation not working at form because of regex.<br/>
+5. Add sample text at user help with dynamic data.<br/>
+]]>
+</string>
+<string name="changelog_v3140">
+<![CDATA[ Changes: <br/>
+1. Refactor some codes.<br/>
+2. Fix some bugs.<br/>
+3. Add today`s plan feature.<br/>
+4. Add collection loyalty integration<br/>
+5. Add dashboard collection<br/>]]>
+</string>
+
+    <string name="changelog_v3201">
+<![CDATA[ Changes: <br/>
+1. Add Term & Condition.<br/>]]>
+</string>
+
+
+    <string name="success_deposit">Transfer Deposit Report Success</string>
+    <string name="prompt_printRV">Please print receipt/RV</string>
+    <string name="acc_no_required">Account Number required\n</string>
+    <string name="bank_name_required">Bank Name required\n</string>
+    <string name="evidence_required">Transfer evidence required</string>
+    <string name="cashier_required">Cashier Name required</string>
+    <string name="label_status">Status</string>
+    <string name="label_ptp">PTP</string>
+    <string name="label_notes">Notes</string>
+    <string name="label_amount_paid_3">Amount Paid</string>
+    <string name="label_result">Result</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="changelog_v3202"><![CDATA[ Changes: <br/>
+1. Add Privacy & Policy.<br/>]]></string>
+    <string name="changelog_v3301"><![CDATA[ Changes: <br/>
+1. Migrate BAFMCS to version 3]]></string>
+
+    <string name="choose_one">- Choose Account Destination -</string>
+    <string name="choose_one_pc">- Choose Payment Channel -</string>
+    <string name="transfer_to_required">Account Destination required\n</string>
+    <string name="channel_to_required">Payment Channel required\n</string>
+    <string name="transfer_code_required">Transaction\'s code required\n</string>
+    <string name="evidence_pc_required">Payment evidence required</string>
+    <string name="branchpayment_required">Branch payment required\n</string>
+    <string name="bankaccount_required">Back Account required\n</string>
+</resources>

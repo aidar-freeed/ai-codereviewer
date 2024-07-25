@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "704968583093",
+    "project_id": "bafmcs-v3",
+    "storage_bucket": "bafmcs-v3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704968583093:android:b6d5a55c6d0b9516b0dbfc",
+        "android_client_info": {
+          "package_name": "com.adins.mss.coll.baf"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtlePqW9xuNurZXgJheQVtBqBC3Kwyh80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704968583093:android:88edd1524719ca55b0dbfc",
+        "android_client_info": {
+          "package_name": "com.adins.mss.coll.baf.cloud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtlePqW9xuNurZXgJheQVtBqBC3Kwyh80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704968583093:android:40ba1109f2857f8ab0dbfc",
+        "android_client_info": {
+          "package_name": "com.adins.mss.coll.baf.cloud.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtlePqW9xuNurZXgJheQVtBqBC3Kwyh80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704968583093:android:a086889bc73ff0f3b0dbfc",
+        "android_client_info": {
+          "package_name": "com.adins.mss.coll.baf.cloud.trial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtlePqW9xuNurZXgJheQVtBqBC3Kwyh80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704968583093:android:abffaf68794a4afeb0dbfc",
+        "android_client_info": {
+          "package_name": "com.adins.mss.coll.baf.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtlePqW9xuNurZXgJheQVtBqBC3Kwyh80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704968583093:android:342ce6d0298a653fb0dbfc",
+        "android_client_info": {
+          "package_name": "com.adins.mss.coll.baf.trial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtlePqW9xuNurZXgJheQVtBqBC3Kwyh80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704968583093:android:4c7ee739daa1cebeb0dbfc",
+        "android_client_info": {
+          "package_name": "com.adins.mss.coll.baf.uat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtlePqW9xuNurZXgJheQVtBqBC3Kwyh80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

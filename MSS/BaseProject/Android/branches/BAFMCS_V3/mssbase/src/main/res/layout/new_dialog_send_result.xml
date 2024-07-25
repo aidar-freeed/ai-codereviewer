@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog2_bg">
+
+    <ImageView
+        android:id="@+id/imgHeader"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_success"
+        android:background="@drawable/button_background_round"/>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/dummy_result"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/txtTimeSent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:text="@string/dummy_time_sent"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/txtDataSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/dummy_data_size"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_background"
+            android:text="@string/btnOk"
+            android:layout_margin="5dp"
+            android:textColor="@color/fontColorWhite"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <Button
+            android:id="@+id/btnPrintPage"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_background"
+            android:text="@string/btnPrint"
+            android:layout_margin="5dp"
+            android:textColor="@color/fontColorWhite"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+    </LinearLayout>
+</LinearLayout>

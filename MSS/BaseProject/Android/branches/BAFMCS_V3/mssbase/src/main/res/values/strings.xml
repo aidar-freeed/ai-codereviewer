@@ -1,0 +1,1227 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">Mobile Base</string>
+    <string name="app_name_order">LeadIn v2.0</string>
+    <string name="app_name_collection">CollAct v2.0</string>
+    <string name="app_name_survey">CheckId v2.0</string>
+
+    <string name="app_desc_order">LeadIn Description</string>
+    <string name="app_desc_collection">CollAct Description</string>
+    <string name="app_desc_survey">CheckId Description</string>
+
+    <!-- SERVER LINK -->
+    <string name="lblServerLinkId">Server Link</string>
+    <string name="btnSaveLink">SAVE</string>
+    <!-- LOGIN -->
+    <string name="lblLoginId">User ID</string>
+    <string name="lblLoginPassword">Password</string>
+    <string name="btnLogin">LOGIN</string>
+    <string name="btnExit">EXIT</string>
+    <string name="lblOldPassword">Old Password</string>
+    <string name="lblCurrentPassword">Current Password</string>
+    <string name="lblNewPassword">New Password</string>
+    <string name="lblShowPassword">Show Password</string>
+    <string name="lblConfirmPassword">Confirm Password</string>
+    <string name="hintOldPassword">Enter your old password</string>
+    <string name="hintNewPassword">Enter new password</string>
+    <string name="hintConfirmPassword">Re-enter new password</string>
+    <string name="hintRetypePassword">Retype Password</string>
+    <string name="lblRememberMe">Remember Me</string>
+    <string name="enableDevMode">ENABLE DEVELOPER MODE</string>
+    <string name="disableDevMode">DISABLE DEVELOPER MODE</string>
+    <string name="androidIdnotregistered">Register the following Android Id to Administrator</string>
+    <string name="turn_on">Turn On</string>
+    <string name="use_your_location">Need Your Location</string>
+    <string name="location_explanation">Your background location is required by your supervisor for monitoring purpose</string>
+    <string name="hintDigitalReceipt">Request to server for generate</string>
+    <string name="btnDigitalReceipt">Generate Receipt</string>
+
+    <!-- MAIN MENU -->
+    <string name="menuSurveyList">Task List</string>
+    <string name="menuNewSurvey">New Task</string>
+    <string name="menuSentSurvey">Log</string>
+    <string name="mnChangePassword">CHANGE PASSWORD</string>
+    <string name="mnPending">Pending</string>
+    <string name="mnCpImage">Copy Image</string>
+    <!-- Glen 7 Aug 2014 menu inquiry -->
+    <string name="menuInquiry">Inquiry</string>
+    <!-- Glen 2 Oct 2014 menu sync -->
+    <string name="mnSync">Synchronize</string>
+    <!-- Glen 2 Oct 2014 menu sync -->
+    <string name="mnAttendance">Attendance</string>
+    <!-- SURVEY LIST -->
+    <string name="msgNoSurvey">No task found from server</string>
+    <string name="btnEdit">EDIT</string>
+    <string name="btnSend">SEND</string>
+    <string name="btnDelete">DELETE</string>
+    <!-- DOWNLOAD ALL -->
+    <string name="msgAllDownloaded">All task downloaded successfully</string>
+    <string name="msgSomeDownloaded">Some task failed to be downloaded</string>
+
+    <!-- FORM LIST -->
+    <string name="msgNoForm">No form template found from server</string>
+    <string name="msgFormAllRelevant">Form template are all relevant questions</string>
+    <!--Glen 24 Oct 2014 -->
+    <!-- DYNAMIC -->
+    <string name="btnFinish">Finish</string>
+    <string name="btnDate">SELECT THE DATE</string>
+    <string name="btnTime">SELECT THE TIME</string>
+    <string name="btnDateTime">SELECT THE DATE AND TIME</string>
+    <string name="btnLookup">START SEARCH</string>
+    <string name="btn_reset_password">RESET PASSWORD</string>
+    <string name="promptSelectOne">select one</string>
+    <string name="promptChooseOne">Choose One</string>
+    <string name="lblFinish">Preview</string>
+    <string name="lblHeader">Header</string>
+    <string name="lblStatus">Status</string>
+    <string name="lblStatusPrint">Status</string>
+    <string name="mnSend">Send</string>
+    <string name="alertExitSurvey">Are you sure you want to exit current task?</string>
+    <string name="carModel">Car Model</string>
+    <string name="btnGPS">SET THE LOCATION</string>
+    <string name="btnGPSnLBS">set the location</string>
+
+    <!-- RESULT -->
+    <string name="time">Time Sent Data :\u0020</string>
+    <string name="size">Data Size :\u0020</string>
+    <string name="result">Return Message :\u0020</string>
+    <string name="print">Print</string>
+    <string name="printResultNull">There is No Print Result For This Task</string>
+    <!-- Glen 6 Aug 2014, show prospect ID -->
+    <string name="theProspectID">Prospect ID :\u0020</string>
+
+    <!-- PAINT -->
+    <string name="infoDraw">Touch to draw / erase</string>
+    <string name="mnPaint">Paint</string>
+    <string name="mnErase">Erase</string>
+    <string name="mnClear">Clear</string>
+    <string name="mnSave">Save</string>
+    <!-- LOOKUP -->
+    <string name="lovCriteria">Search criteria</string>
+    <string name="lovCriteriaEmpty">No search criteria found from server</string>
+    <string name="lovHint">Search keyword</string>
+    <string name="lovSearch">Search</string>
+    <string name="lovEmpty">No result found</string>
+    <!-- CUSTOMER -->
+    <string name="lblCustomerName">Customer Name</string>
+    <string name="lblCustomerPhone">Customer Phone Number</string>
+    <string name="lblCustomerAddress">Customer Address</string>
+    <string name="lblNotes">Customer Notes</string>
+    <string name="survey_location">Survey Location</string>
+    <string name="survey_location_hint">Survey Location</string>
+    <string name="btnStartSurvey">Start Survey</string>
+    <string name="closedTaskMsg">This task has been closed</string>
+
+    <!-- Glen 8 Aug 2014 -->
+    <string name="btnViewOnMap">View Location</string>
+    <string name="btnEditSurvey">Edit</string>
+    <string name="btnViewSurvey">View detail</string>
+    <!-- SENT -->
+    <string name="msgNoSent">You have no sent task</string>
+    <string name="msgNoVerification">You have no Verification task</string>
+    <string name="msgNoApproval">You have no Approval task</string>
+    <!-- PRINT -->
+    <string name="msgNoPrintItem">No printing format found</string>
+    <string name="connectFailed">Could not connect to the bluetooth printer</string>
+    <string name="bt_off">Bluetooth is currenty turned off. Please turn on to continue print task</string>
+    <string name="mnConnect">Connect</string>
+    <string name="connected">Connected</string>
+    <string name="mnPrint">Print</string>
+    <string name="mnDisconnect">Disconnect</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="not_connected">Not connected</string>
+    <!-- GLOBAL -->
+    <string name="btnSave">SAVE</string>
+    <string name="btnCancel">CANCEL</string>
+    <string name="btnBack">BACK</string>
+    <string name="btnNext">NEXT</string>
+    <string name="btnOk">OK</string>
+    <string name="btnReset">RESET</string>
+    <string name="btnStart">START</string>
+    <string name="btnRevisit">REVISIT</string>
+    <string name="btnView">VIEW</string>
+    <string name="btnGone">GONE</string>
+    <string name="btnPrint">PRINT</string>
+    <string name="btnSearch">SEARCH</string>
+    <string name="btnAdvancedSearch">Advanced Search</string>
+    <string name="btnVerify">VERIFY</string>
+    <string name="btnReject">REJECT</string>
+    <string name="btnApprove">APPROVE</string>
+    <string name="btnClose">CLOSE</string>
+    <string name="btnSubmit">SUBMIT</string>
+    <string name="btnChange">CHANGE</string>
+    <string name="btnChangePlan">CHANGE PLAN</string>
+    <string name="description">Description</string>
+    <string name="license">License</string>
+    <string name="checkUpdate">CHECK UPDATE</string>
+    <string name="comment">Comment</string>
+    <string name="title">Title</string>
+    <string name="defaultTime">00:00</string>
+    <string name="defaultDate">1 Jan 2015</string>
+    <string name="defaultComment">0 comment</string>
+    <string name="defaultYourName">Your name</string>
+    <string name="msgErrMaps">Google Maps Error or Not Installed</string>
+    <string name="msgInvalidChar">Invalid Character</string>
+    <string name="msgRequired">is required</string>
+    <string name="dropdownmsgRequired">Please choose option at </string>
+    <string name="msgInvalid">is not valid</string>
+    <string name="msgLoginFailed">Login failed</string>
+    <string name="msgErrConcurrentSend">Data is being sent by background service</string>
+    <string name="msgWrongOldPassword">Old password is wrong</string>
+    <string name="msgWrongConfirmPassword">Confirm password doesn\'t match with new password</string>
+    <string name="msgPasswordChanged">Your password has been changed</string>
+    <string name="msgRelogin">Login Failed Please re-login</string>
+    <string name="alertExit">Are you sure you want to exit?</string>
+    <string name="alertUpdate">Newer build version found from server. Build:</string>
+    <string name="progressWait">Please wait...</string>
+    <string name="progressSave">Saving...</string>
+    <string name="progressSend">Sending...</string>
+    <string name="progressDelete">Deleting...</string>
+    <string name="progressLocation">Retrieving location...</string>
+    <string name="refresh">Refresh</string>
+    <string name="capture">Capture</string>
+    <string name="picSize">Picture size</string>
+    <string name="requiredField">this field is required</string>
+    <string name="notification">You have %1$d outstanding task</string>
+    <string name="push_notification_info">You have a Notification</string>
+    <string name="msgNoServerResponeString">Server not return valid result, please try again</string>
+    <string name="msgStillUploading">Can\'t Exit Because Still Uploading Data</string>
+    <string name="msgNoList">No List found</string>
+    <string name="msgNoDetail">No Detail found</string>
+    <!-- Glen 6 Aug 2014, new message -->
+    <string name="msgConnectionFailed">Fail to connect to server\nPlease try again</string>
+
+    <!-- ABOUT -->
+    <string name="aboutTitle">About Application</string>
+    <string name="aboutCopyright">Copyright \u00A9 (2015) AdIns</string>
+    <string name="checkIn">Check in Location</string>
+    <string name="msgUnavaibleLocation">Unable to get location</string>
+    <string name="msgNoNewVersion">This current version is the latest version</string>
+
+    <!-- GPS Dialog -->
+    <string name="enable_gps">Enable GPS</string>
+    <string name="enable_gps_dialog">GPS provider not enabled. Would you like to enable it?</string>
+    <string name="title_activity_synchronize">SynchronizeActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="version">Version</string>
+
+    <!-- Library -->
+    <string name="library_name">libraryname</string>
+    <string name="library_creator">librarycreator</string>
+    <string name="library_version">libraryversion</string>
+
+    <!-- Comment Item -->
+    <string name="comment_item_name">Name</string>
+    <string name="comment_item_date">Date</string>
+    <string name="comment_hint">Write a comment...</string>
+
+    <!--     Check in Check Out  -->
+    <string name="msgUnavaibleLocationCheckIn">Unable get location to check in</string>
+    <string name="msgUnavaibleLocationCheckOut">Unable get location to check out</string>
+    <string name="msgUnavailableAddress">Unable to resolve address</string>
+
+    <string name="action_search">Search</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world! bla bla bla n application designed around individuals who keep track of
+        their fill history on their vehicles: from price, gallons, date purchased, and miles traveled.
+    </string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">close_drawer</string>
+    <string name="title_action_items">Action Items</string>
+    <string name="sum_action_items">Showcasing items on the ActionBar (including appcompat and ActionBarSherlock)
+    </string>
+    <string name="title_action_bar">Action Views</string>
+    <string name="title_multiple">Multiple Showcases</string>
+    <string name="title_fragments">Fragments</string>
+    <string name="title_animations">Animations</string>
+    <string name="sum_animations">Using ObjectAnimators to animate ShowcaseViews</string>
+    <string name="anim_third">Finally this!</string>
+    <string name="title_memory">Memory management</string>
+
+    <string name="title_single_shot">Single shot</string>
+    <string name="sum_single_shot">Demonstrate how to make a ShowcaseView show only once</string>
+
+    <!--     cropping image -->
+    <string name="crop__saving">Saving picture...</string>
+    <string name="crop__wait">Please wait...</string>
+    <string name="crop__pick_error">No image sources available</string>
+
+    <string name="crop__done">DONE</string>
+    <string name="crop__cancel" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="crop__rotate">ROTATE</string>
+    <string name="rotate">Rotate</string>
+
+    <!--     Update image -->
+    <string name="header__title">Change Header Picture</string>
+    <string name="header__message">Are you sure you want to change Header Picture?</string>
+    <string name="profile__title">Change Profile Picture</string>
+    <string name="profile__message">Are you sure you want to change Profile Picture?</string>
+
+    <string name="btn_camera">Take a Photo</string>
+    <string name="btn_galery">Albums</string>
+
+    <string name="title_mn_main_menu">Main Menu</string>
+
+    <string name="title_mn_other">Other</string>
+
+    <!-- Main Menu -->
+    <string name="title_mn_home">HOME</string>
+    <string name="title_mn_tasklist">TASK LIST</string>
+    <string name="title_mn_verification_list">VERIFICATION LIST</string>
+    <string name="title_mn_approval_list">APPROVAL LIST</string>
+    <string name="title_mn_log">LOG</string>
+    <string name="title_mn_reportsummary">REPORT SUMMARY</string>
+    <string name="title_mn_depositreport">DEPOSIT REPORT</string>
+    <string name="title_mn_depositreportAC">DEPOSIT REPORT ANTAR CABANG</string>
+    <string name="title_mn_depositreportPC">DEPOSIT REPORT PAYMENT CHANNEL</string>
+    <string name="title_mn_absentin">ATTENDANCE IN</string>
+    <string name="title_mn_synchronize">SYNCHRONIZE</string>
+    <string name="title_mn_about">ABOUT</string>
+    <string name="title_mn_dashboard">MY POINTS</string>
+    <string name="title_mn_dashboard_collection">DASHBOARD</string>
+    <string name="title_mn_guideline_faq">Guideline &amp; FAQ</string>
+    <string name="title_mn_exit">EXIT</string>
+    <string name="title_mn_newtask">NEW TASK</string>
+    <string name="title_mn_neworder">NEW ORDER</string>
+    <string name="title_mn_surveyperformance">SURVEY PERFORMANCE</string>
+    <string name="title_mn_surveyverification">SURVEY VERIFICATION</string>
+    <string name="title_mn_surveyapproval">SURVEY APPROVAL</string>
+    <string name="title_mn_checkorder">CHECK ORDER</string>
+    <string name="title_mn_creditsimulation">CREDIT SIMULATION</string>
+    <string name="title_mn_news">NEWS</string>
+    <string name="title_mn_promo">PROMO</string>
+    <string name="title_mn_orderassign">ORDER ASSIGNMENT</string>
+    <string name="title_mn_orderreassign">ORDER RE-ASSIGNMENT</string>
+    <string name="title_mn_cancelorder">CANCEL ORDER</string>
+    <string name="title_mn_surveyassign">SURVEY ASSIGNMENT</string>
+    <string name="title_mn_surveyreassign">SURVEY RE-ASSIGNMENT</string>
+    <string name="title_mn_changepassword">CHANGE PASSWORD</string>
+    <string name="title_mn_resetpassword">RESET PASSWORD</string>
+    <string name="title_mn_paymenthistory">PAYMENT HISTORY</string>
+    <string name="title_mn_request_new_task">REQUEST NEW TASK</string>
+    <string name="title_mn_installmentschedule">INSTALLMENT SCHEDULE</string>
+    <string name="title_mn_absentout">CHECK OUT</string>
+    <string name="title_mn_setting">SETTINGS</string>
+    <string name="title_mn_guide">REPEAT USER GUIDE</string>
+    <string name="title_mn_verification_bybranch">VERIFICATION BY BRANCH</string>
+    <string name="title_mn_approval_bybranch">APPROVAL BY BRANCH</string>
+    <string name="title_mn_closing_task">CLOSING TASK</string>
+    <string name="title_mn_customer_form">CUSTOMER FORM</string>
+    <string name="title_mn_map">TASK LIST</string>
+    <string name="title_mn_account">ACCOUNTS</string>
+    <string name="title_mn_newlead">NEW LEAD</string>
+    <string name="title_mn_products">PRODUCTS</string>
+    <string name="title_mn_followup">FOLLOW UP</string>
+    <string name="title_mn_marketingreport">MARKETING REPORT</string>
+    <string name="title_mn_catalogue">PROMO CATALOGUE</string>
+    <string name="title_mn_opportunities">OPPORTUNITIES</string>
+    <string name="title_mn_taskApproval">TASK APPROVAL</string>
+
+    <string name="mn_tasklist">TASK LIST</string>
+    <string name="mn_verification_list">VERIFICATION LIST</string>
+    <string name="mn_plantask">PLAN TASK</string>
+
+    <!--Screen Name-->
+    <string name="screen_name_customer_detail">Customer Detail</string>
+    <string name="screen_name_odr_main_menu">Order Main Menu</string>
+    <string name="screen_name_svy_main_menu">Survey Main Menu</string>
+    <string name="screen_name_coll_main_menu">Collection Main Menu</string>
+    <string name="screen_name_odr_login">Order Login Page</string>
+    <string name="screen_name_svy_login">Survey Login Page</string>
+    <string name="screen_name_coll_login">Collection Login Page</string>
+    <string name="screen_name_camera">Camera Page</string>
+    <string name="screen_name_location_tagging">Location Tagging Page</string>
+    <string name="screen_name_odr_synchronize">Order Synchronize</string>
+    <string name="screen_name_svy_synchronize">Survey Synchronize</string>
+    <string name="screen_name_coll_synchronize">Collection Synchronize</string>
+    <string name="screen_name_payment_history">Payment History</string>
+    <string name="screen_name_image_viewer">Image Viewer Page</string>
+    <string name="screen_name_server_link">Server Link Page</string>
+    <string name="screen_name_device_list">Device List Page</string>
+    <string name="screen_name_collection_act">Collection Activity</string>
+    <string name="screen_name_deposit_report_detail">Deposit Report Detail</string>
+    <string name="screen_name_collection_detail_act">Collection Detail Page</string>
+    <string name="screen_name_cropping_image">Cropping Image Page</string>
+    <string name="screen_name_emergency_lock">Emergency Page</string>
+    <string name="screen_name_change_password">Change Password Page</string>
+    <string name="screen_name_payment_history_detail">Payment History Detail</string>
+    <string name="screen_name_verification_activity">Survey Verification</string>
+    <string name="screen_name_signature_canvas">Signature Canvas</string>
+    <string name="screen_name_timeline">Timeline Page</string>
+    <string name="screen_name_lookup_criteria">Lookup Page</string>
+    <string name="screen_name_installment_schedule">Installment Schedule Page</string>
+    <string name="screen_name_print">Print Page</string>
+    <string name="screen_name_survey_performance">Survey Performance Page</string>
+    <string name="screen_name_plan_task">Plan Task Page</string>
+    <string name="screen_name_task_list">Task List Page</string>
+    <string name="screen_name_about">About Page</string>
+    <string name="screen_name_developer_option">Developer Option Page</string>
+    <string name="screen_name_attendance_in">Attendance Page</string>
+    <string name="screen_name_my_points">My Points Page</string>
+    <string name="screen_name_monthly_graph">Monthly Point Page</string>
+    <string name="screen_name_daily_graph">Daily Point Page</string>
+    <string name="screen_name_dashboard_coll">Dashboard Collection Page</string>
+    <string name="screen_name_report_summary">Report Summary Page</string>
+    <string name="screen_name_deposit_report">Deposit Report Page</string>
+    <string name="screen_name_closing_task">Closing Task Page</string>
+    <string name="screen_name_new_task">New Task Page</string>
+    <string name="screen_name_log">Log Result Page</string>
+    <string name="screen_name_survey_verification">Survey Verification Page</string>
+    <string name="screen_name_survey_approval">Survey Approval Page</string>
+    <string name="screen_name_order_assignment">Order Assignment Page</string>
+    <string name="screen_name_survey_assignment">Survey Assignment Page</string>
+    <string name="screen_name_order_assignment_result">Order Assignment Result Page</string>
+    <string name="screen_name_survey_assignment_result">Survey Assignment Result Page</string>
+    <string name="screen_name_order_reassignment">Order Re-Assignment Page</string>
+    <string name="screen_name_survey_reassignment">Survey Re-Assignment Page</string>
+    <string name="screen_name_verif_by_branch">Verification by Branch Page</string>
+    <string name="screen_name_cancel_order">Cancel Order Page</string>
+    <string name="screen_name_check_order">Check Order Page</string>
+    <string name="screen_name_promo">Promo Page</string>
+    <string name="screen_name_new_lead">New Lead Page</string>
+    <string name="screen_name_account_list">Account List Page</string>
+    <string name="screen_name_follow_up">Follow Up Page</string>
+    <string name="screen_name_marketing_report">Marketing Report Page</string>
+    <string name="screen_name_promo_catalogue">Promo Catalogue Page</string>
+    <string name="screen_name_product_page">Product Page</string>
+    <string name="screen_name_opportunities_page">Opportunities Page</string>
+    <string name="screen_name_new_order">New Order Page</string>
+
+    <!-- Match Menu -->
+    <string name="mn_approval_list">APPROVAL LIST</string>
+    <string name="mn_log">LOG</string>
+    <string name="mn_reportsummary">REPORT SUMMARY</string>
+    <string name="mn_depositreport">DEPOSIT REPORT</string>
+    <string name="mn_absentin">ATTENDANCE IN</string>
+    <string name="mn_synchronize">SYNCHRONIZE</string>
+    <string name="mn_about">ABOUT</string>
+    <string name="mn_guideline_faq">Guideline &amp; FAQ</string>
+    <string name="mn_exit">EXIT</string>
+    <string name="mn_newtask">NEW TASK</string>
+    <string name="mn_neworder">NEW ORDER</string>
+    <string name="mn_surveyperformance">SURVEY PERFORMANCE</string>
+    <string name="mn_surveyverification">SURVEY VERIFICATION</string>
+    <string name="mn_surveyapproval">SURVEY APPROVAL</string>
+    <string name="mn_checkorder">CHECK ORDER</string>
+    <string name="mn_promo">PROMO</string>
+    <string name="mn_orderassign">ORDER ASSIGNMENT</string>
+    <string name="mn_orderreassign">ORDER RE-ASSIGNMENT</string>
+    <string name="mn_cancelorder">CANCEL ORDER</string>
+    <string name="mn_surveyassign">SURVEY ASSIGNMENT</string>
+    <string name="mn_surveyreassign">SURVEY RE-ASSIGNMENT</string>
+    <string name="mn_changepassword">CHANGE PASSWORD</string>
+    <string name="mn_dashboard">MY POINTS</string>
+    <string name="mn_dashboard_collection">DASHBOARD</string>
+    <string name="mn_depositreport_ac">DEPOSIT REPORT ANTAR CABANG</string>
+    <string name="mn_depositreport_pc">DEPOSIT REPORT PAYMENT CHANNEL</string>
+    <string name="mn_paymenthistory">Payment History</string>
+    <string name="mn_installmentschedule">Installment Schedule</string>
+    <string name="mn_collectionactivity">Collection Activity</string>
+    <string name="mn_viewmap">View Map</string>
+    <string name="mn_recapitulation">Recapitulation</string>
+    <string name="mn_summary">Summary</string>
+    <string name="mn_absentout">CHECK OUT</string>
+    <string name="mn_setting">SETTINGS</string>
+    <string name="mn_verification_bybranch">VERIFICATION BY BRANCH</string>
+    <string name="mn_approval_bybranch">APPROVAL BY BRANCH</string>
+    <string name="mn_closing_task">CLOSING TASK</string>
+    <string name="mn_products">PRODUCTS</string>
+    <string name="mn_opportunities">OPPORTUNITIES</string>
+    <string name="mn_account">ACCOUNTS</string>
+    <string name="mn_newlead">NEW LEAD</string>
+    <string name="mn_followup">FOLLOW UP</string>
+    <string name="mn_marketingreport">MARKETING REPORT</string>
+    <string name="mn_catalogue">PROMO CATALOGUE</string>
+    <string name="mn_orderprogress">ORDER PROGRESS</string>
+    <string name="mn_creditsimulation">CREDIT SIMULATION</string>
+    <string name="mn_taskApproval">TASK APPROVAL</string>
+
+    <string name="header_mn_account_detail">ACCOUNT DETAIL</string>
+    <string name="header_mn_product_detail">PRODUCT DETAIL</string>
+
+    <string name="push_notification">Notification</string>
+    <string name="outstanding_task">Outstanding Task</string>
+
+    <string name="customer_task_id">Task ID</string>
+    <string name="customer_name">Customer Name</string>
+
+    <!-- Customer -->
+    <string name="customer_phone_number">Phone Number</string>
+    <string name="customer_address">Customer Address</string>
+    <string name="customer_zip_code">Zip Code</string>
+    <string name="customer_notes">Customer Notes</string>
+    <string name="customer_notes_hint">Notes</string>
+    <string name="review_label_nama">Nama Customer :</string>
+    <string name="review_label_alamat">Alamat Customer :</string>
+
+    <!-- Review -->
+    <string name="review_label_rt_rw">RT/RW :</string>
+    <string name="review_label_kabupaten">Kabupaten :</string>
+    <string name="review_label_kode_pos">Kode Pos :</string>
+    <string name="review_label_reputasi_konsumen">Reputasi Konsumen :</string>
+    <string name="dummy_review_label_nama">Adicipta</string>
+    <string name="dummy_review_label_alamat">Jalan Kebon Jeruk Raya No. 80</string>
+    <string name="dummy_review_label_rt_rw">008/007</string>
+    <string name="dummy_review_label_kabupaten">Jakarta Barat</string>
+    <string name="dummy_review_label_kode_pos">11000</string>
+    <string name="dummy_review_label_reputasi_konsumen">Bagus</string>
+    <string name="voice_notes">Voice Notes</string>
+    <string name="voice_notes_not_available">Voice notes not available</string>
+
+    <!-- Voice Notes -->
+    <string name="voice_notes_record">Tap to Record</string>
+    <string name="voice_notes_stop">Tap to Stop</string>
+    <string name="sync_scheme">Synchronize Scheme</string>
+    <string name="sync_question_set">Synchronize Question Set</string>
+
+    <!-- Synchronize -->
+    <string name="sync_lookup">Synchronize Lookup</string>
+    <string name="sync_channel">Synchronize Payment Channel</string>
+    <string name="sync_holiday">Synchronize Holiday</string>
+    <string name="synchronizing">Synchronizing</string>
+    <string name="sync_progress">Progress : 0%</string>
+    <string name="search_timeline">Search Timeline</string>
+    <string name="timeline_type">Timeline Type</string>
+
+    <!-- Timeline -->
+    <string name="message">Message</string>
+    <string name="submitted_task">Submitted Task</string>
+    <string name="server_task">Server Task</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+
+    <!-- Status, Dialog, Error, Warning -->
+    <string name="error_capital">ERROR</string>
+    <string name="warning_capital">WARNING</string>
+    <string name="info_capital">INFO</string>
+    <string name="error_unknown">Unknown error, try again later</string>
+    <string name="error_occured">Error occured: \u0020</string>
+    <string name="gps_unable">GPS Unable</string>
+    <string name="gps_warning">GPS must be enabled</string>
+    <string name="gps_button">Enable GPS</string>
+    <string name="login_mandatory">Enter username and password</string>
+    <string name="please_wait">Please Wait...</string>
+    <string name="generate_image_data">Generating data from photo</string>
+    <string name="db_corrupt">Local database is corrupt.
+        You must uninstall and reinstall application.
+    </string>
+    <string name="connection_failed">Connection failed - Please check your connection</string>
+    <string name="connection_failed_http">Connection failed with HTTP\u0020</string>
+    <string name="connection_timeout">Connection timed out. Please try again later.</string>
+    <string name="server">Server</string>
+    <string name="critical_update">Critical update required, you won\'t be able to use the app before update.</string>
+    <string name="update">Update</string>
+    <string name="update_failed">Failed to download update! Please try again later!</string>
+    <string name="application_is_running">Application is running...</string>
+    <string name="inactive_user">User %1$s is not active. You can not use this application further. Please uninstall the application or contact your administrator</string>
+    <string name="change_password_required">You must change your password</string>
+    <string name="update_available">Update is available.</string>
+    <string name="later">Later</string>
+    <string name="plugin_required">Activity plugin requires activity context.</string>
+    <string name="size_w">The Android Screen is: W=</string>
+    <string name="size_h">\u0020x H=</string>
+    <string name="picture_size">Picture Size</string>
+    <string name="picture_size_label">Picture size :\u0020</string>
+    <string name="password_expired">Password has been expired</string>
+    <string name="old_password_incorrect">Old password is incorrect</string>
+    <string name="current_password_mandatory">Current password can not be empty</string>
+    <string name="new_password_mandatory">New password can not be empty</string>
+    <string name="new_password_equal">New password and the retyped password is not equal</string>
+    <string name="new_password_different">New password should be different from current password</string>
+    <string name="contact_server">Connecting server...</string>
+    <string name="error_label">Error:\u0020</string>
+    <string name="password_changed">Password successfully changed</string>
+    <string name="text_empty">Empty</string>
+    <string name="txtempty"></string>
+    <string name="masuk_on_change">Masuk on Change</string>
+    <string name="masuk_on_status_change">Masuk on Status Change</string>
+    <string name="masuk_on_provider_change">Masuk on Provider Change</string>
+    <string name="device_not_supported">This device is not supported.</string>
+    <string name="get_services">Get Google Play services</string>
+    <string name="get_services_message">This app won\'t run without Google Play services, which are missing from your phone.</string>
+    <string name="download_services">market://details?id=com.google.android.gms</string>
+    <string name="success_label">Success!</string>
+    <string name="test_label">Test</string>
+    <string name="datetime_format">ddMMyyyyHHmmss</string>
+    <string name="label_done">done</string>
+    <string name="label_on_progress">on progress</string>
+    <string name="sync_on_progress">Progress :\u0020</string>
+    <string name="syncing">On progress</string>
+    <string name="sync_completed">Progress : 100 %</string>
+    <string name="sync_error">Synchronize error</string>
+    <string name="try_again">Try Again</string>
+    <string name="select_cmo">Select Lookup CMO first !</string>
+    <string name="path_no_received">ERROR: path not received</string>
+    <string name="task_submitted">Task has been Submitted</string>
+    <string name="input_not_valid">Input not valid</string>
+    <string name="data_range_not_allowed">Date range exceed allowed range of 1 to 7 days.</string>
+    <string name="enter_valid_date">Please enter a valid date.</string>
+    <string name="date_greater_than_today">Date should not be greater than today</string>
+    <string name="server_down">The server may be down or you didn\'t have internet connection.</string>
+    <string name="start_date_required">Start Date is required\n</string>
+    <string name="end_date_required">End Date is required</string>
+    <string name="nomor_order_rewuired">Nomor Order is required</string>
+    <string name="data_not_found">Data is empty.</string>
+    <string name="expanded">Expanded</string>
+    <string name="collapsed">Collapsed</string>
+    <string name="no_image">Cannot get image</string>
+    <string name="scheme_not_found">Some Task not Inserted, Scheme not Found</string>
+    <string name="no_scheme_found">Scheme not Found</string>
+    <string name="scheme_not_found_verification">Some Verification Task not Inserted, Scheme not Found</string>
+    <string name="task_hasnt_finished_sync">Tasks haven\'t fully synchronized with server, try again later</string>
+    <string name="tasks_label">You have\u0020</string>
+    <string name="tasks_label_2">\u0020Tasks,\u0020</string>
+    <string name="tasks_remaining">\u0020Tasks</string>
+    <string name="approval_tasks">%1$d Approval Tasks</string>
+    <string name="approval_tasks_remaining">You have %1$d Approval Tasks to do.</string>
+    <string name="incoming_news">\u0020Incoming News</string>
+    <string name="incoming_news_remaining">\u0020incoming News.</string>
+    <string name="click_to_open_approval">Click Menu and Survey Approval to open</string>
+    <string name="click_to_open_approval_branch">Click Menu and Approval by Branch to open</string>
+    <string name="verification_tasks">%1$d Verification Tasks</string>
+    <string name="verification_tasks_remaining">You have %1$d Verification Tasks to do.</string>
+    <string name="click_to_open_verification">Click Menu and Survey Verification to open</string>
+    <string name="click_to_open_verification_branch">Click Menu and Verification by branch to open</string>
+    <string name="click_to_open_news">Click Menu and News to open that.</string>
+    <string name="no_address_associated">No address associated with hostname</string>
+    <string name="use_offline_mode">No Internet Access, Use Offline Mode</string>
+    <string name="data_expired">Data has Expired</string>
+    <string name="intent_detected">Intent Detected.</string>
+    <string name="latitude_label">Latitude:\u0020</string>
+    <string name="longitude_label">Longitude:\u0020</string>
+    <string name="cancel_order_error">Can not Cancel order, please try again later</string>
+    <string name="order_canceled">Order was canceled</string>
+    <string name="no_result_from_server">Can not get result from server</string>
+    <string name="order_rejected">Order was rejected</string>
+    <string name="data_saved">Data Saved</string>
+    <string name="failed_save_data">Cannot saved data if no data or no internet connection</string>
+    <string name="failed_send_data">Cannot Send data if no data or no internet connection</string>
+    <string name="no_data_found_offline">No Data found in offline mode, Connect your internet</string>
+    <string name="server_error">Server Error</string>
+    <string name="cashier">Cashier</string>
+    <string name="bank">Bank</string>
+    <string name="detail">Detail</string>
+    <string name="upload_avatar">Upload Avatar: </string>
+    <string name="transfer_failed">Can\'t transfer, Total = 0</string>
+    <string name="nothing_to_report">Nothing to report</string>
+    <string name="total">Total</string>
+    <string name="empty_data">The server sends empty data.</string>
+    <string name="no_data_available">No Data Available</string>
+    <string name="batch_id">Batch ID</string>
+    <string name="account_number_required">Account Number required\n</string>
+    <string name="http_status_400">Bad Request.</string>
+    <string name="http_status_401">Unauthorized.</string>
+    <string name="http_status_403">Forbidden.</string>
+    <string name="http_status_404">Request Not Found.</string>
+    <string name="http_status_408">Request Timeout.</string>
+    <string name="http_status_409">Conflict.</string>
+    <string name="http_status_500">Internal Server Error.</string>
+    <string name="http_status_502">Bad Gateway.</string>
+    <string name="http_status_503">Service Unavailable.</string>
+    <string name="dummy_header_name">ADI ADICIPTA</string>
+    <string name="dummy_header_name_2">Adi Adicipta</string>
+    <string name="auto_save_still_running">Auto save is still running, please try again later</string>
+    <string name="allow_all_permission">Please allow all required permissions</string>
+    <string name="please_wait_rv_mobile">Requesting to server...</string>
+    <string name="please_wait_misscall">Making a call to number %1$s. Please Wait...</string>
+    <string name="click_button_misscall_required">Clicked Button Get Miscall OTP required</string>
+    <string name="finished_deposit">Finished Deposit!</string>
+    <string name="submit_deposit">Submit deposit first</string>
+    <string name="all_tenor">All tenor field must be filled</string>
+    <string name="all_os">All OS field must be filled</string>
+    <string name="failed_start_task">Failed Start Task</string>
+    <string name="failed_change_plan">Failed Change Plan</string>
+
+
+    <!-- Dummy -->
+    <string name="dummy_header_scheme">Surveyor</string>
+    <string name="dummy_header_dealer">Dealer Kebon Jeruk</string>
+    <string name="dummy_header_job">Surveyor</string>
+    <string name="dummy_task_id">10029</string>
+    <string name="dummy_form_id">Form Id</string>
+    <string name="dummy_date_time">01/01/2015 00:00</string>
+    <string name="dummy_date">21-12-2012</string>
+    <string name="dummy_quantity">0</string>
+    <string name="dummy_quantity_task">2 TASKS</string>
+    <string name="dummy_priority">Priority disable</string>
+    <string name="dummy_status_task">Draft</string>
+    <string name="dummy_scheme_name">Scheme Name</string>
+    <string name="dummy_result">Data Berhasil Dikirim</string>
+    <string name="dummy_time_sent">Time Sent Data : 05 Second</string>
+    <string name="dummy_data_size">"Data Size : 231 Bytes</string>
+    <string name="dummy_text">Aditya Avaga</string>
+    <string name="dummy_text_2">The Titan</string>
+    <string name="dummy_text_3">Dummy Text</string>
+    <string name="dummy_number">12345678</string>
+    <string name="divider_dash">-</string>
+    <string name="divider_colon">:</string>
+
+    <string name="divider_vertical_bar">\u0020|\u0020</string>
+    <string name="divider_percent">%</string>
+    <string name="check_in">Check In</string>
+    <string name="change_profile_picture">Change Profile Picture</string>
+
+    <string name="search_question">Search Question</string>
+    <string name="task_id">taskId</string>
+    <string name="save_task_id">lastTaskId</string>
+    <string name="title_priority">Priority</string>
+    <string name="title_status">Status</string>
+    <string name="login_desc">Login to CheckId Application</string>
+    <string name="watermark">ADI Mobile App</string>
+    <string name="msgNoTaskList">No Task List Found</string>
+    <string name="tag_paymenthistoryDetail">paymenthistoryDetail</string>
+    <string name="tag_transactioncode">transactioncode</string>
+    <string name="no_data_from_server">No Data from server</string>
+    <string name="no_promo_try_again">Currently there is no promo ! Please try again later.</string>
+    <string name="toast_crash">Ooooops ! I crashed, but a report has been sent to my developer to help fix the issue !
+    </string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="message_sending_success">Data successfully sent</string>
+    <string name="copied">Copied !</string>
+    <string name="message_sending_failed">Data failed to send</string>
+    <string name="message_sending_deleted">Task can\'t be sent</string>
+    <string name="message_verification_success">Data successfully verified</string>
+    <string name="message_verification_failed">Data fails to be verified</string>
+    <string name="message_verification_deleted">Task can\'t be verified</string>
+    <string name="message_no_task_id_from_server">No Task ID from Server</string>
+    <string name="message_task_not_mapping">Task not mapping</string>
+    <string name="message_imei_not_registered">IMEI not registered</string>
+    <string name="message_android_id_not_registered">AndroidID not registered</string>
+    <string name="title_activity_action_on_verification">Survey Verification</string>
+    <string name="selectOne">Select One</string>
+
+    <string name="msgLogout">Your account can not use this application further, Please Exit and login again or contact your administrator</string>
+
+    <string name="appVersion">v2.1.5 / 20160321</string>
+    <string name="jsonParseFailed">Failed to get response from server, try again later</string>
+
+    <string name="title_activity_developer_option">Developer Option</string>
+    <string name="reject_failed">Rejection Task Failed</string>
+    <string name="reject_success">Task Rejected</string>
+    <string name="approve_failed">Approval Task Failed</string>
+
+    <string name="approve_success">Task Approved</string>
+    <string name="get_suggestion_user">Getting Suggestion User...</string>
+    <string name="request_error">An error occurred for this requests, please try again</string>
+    <string name="view_task_reschedule">Rescheduled task, details can not be seen</string>
+    <string name="phone_validasi">Input the phone number must be contain at least 8 digits</string>
+    <string name="geodata_error">Can\'t get Geo data from sim card</string>
+    <string name="gps_error">Can\'t get GPS location</string>
+    <string name="camera_error">Can\'t get image from camera, please try again</string>
+    <string name="processing_image_error">Error processing image, Out of Memory, try again later</string>
+    <string name="save_on_relevant">You have changed answer in relevant question, Please save again to save task</string>
+    <string name="question_not_found">Question List Not Found</string>
+    <string name="customer_header_error">Customer Header can not be read, try again later</string>
+    <string name="recording_not_allowed">Recording Not Allowed</string>
+    <string name="task_count">Task Count :</string>
+    <string name="task_cant_seen">This task can not be seen, scheme not found.</string>
+    <string name="task_cant_seen2">This task can not be seen, Contact your administrator</string>
+    <string name="task_cant_seen_form">This task can not be seen, form not published.</string>
+    <string name="select_reschedule_time">Select rescheduling time</string>
+    <string name="date_after_today">Selected date must after today!</string>
+    <string name="reschedule_success">Task %1$s successfully rescheduled</string>
+    <string name="reschedule_failed">Reschedulling task %1$s failed</string>
+    <string name="failed">failed</string>
+    <string name="sending_reschedule_progress">Sending Reschedule Task</string>
+    <string name="scheme_gone">Scheme not found, please synchronize again or contact your administrator.</string>
+    <string name="confirm_delete">Are you sure you want to Delete</string>
+    <string name="confirm_upload">Are you sure you want to force upload task</string>
+    <string name="btnYes">YES</string>
+    <string name="upload_on_queue">Uploading image was running, your Task will be queued</string>
+    <string name="not_allowed">not allowed</string>
+    <string name="date_must_after_today">must after today!</string>
+    <string name="date_must_before_today">must before today!</string>
+    <string name="more_than">more than</string>
+    <string name="less_than">less than</string>
+    <string name="day">day(s)</string>
+    <string name="upload_failed">Upload image failed, your Task will be queued</string>
+    <string name="upload_complete">Uploading Complete</string>
+    <string name="btnReschedule">RESCHEDULE</string>
+    <string name="ptsDate">PTS Date</string>
+    <string name="time_unable">Time Provider</string>
+    <string name="time_warning">Date and Time by Provider not enabled</string>
+    <string name="time_button">Enable Time Provider</string>
+
+    <!--time dialog-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_language_setting">Language settings :</string>
+    <string name="english_language">English</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="indonesian_language">Bahasa Indonesia</string>
+    <string name="click_to_open_tasklist">Click Menu and Task List to open</string>
+    <string name="click_to_open">Click to open</string>
+    <string name="mnViewAllHeader">View All Header</string>
+    <string name="mnViewData">View Data</string>
+    <string name="title_mn_collection_history">Collection History</string>
+    <string name="mock_location">Mock locations</string>
+    <string name="mock_location_alert">\'Allow mock locations\' must be turned off</string>
+    <string name="dev_option">Developer Option</string>
+    <string name="authentication_user">Authentication User...</string>
+    <string name="password_not_match">IMEI or Password is not synchronized with the server. Please Exit and login again or contact your administrator !</string>
+    <string name="timeline_type_task">Task Priority</string>
+    <string name="timeline_type_savedraft">Draft Task</string>
+    <string name="timeline_type_failed_draft_task">Failed Draft Task</string>
+    <string name="timeline_type_submitted">Submitted Task</string>
+    <string name="timeline_type_uploading">Uploading Task</string>
+    <string name="timeline_type_verified">Verified Task</string>
+    <string name="timeline_type_push_notification">Notification</string>
+    <string name="timeline_type_failed_sent_task">Failed Sent Task</string>
+    <string name="timeline_type_pending">Failed Submit Task</string>
+    <string name="timeline_type_rejected">Rejected Task</string>
+    <string name="timeline_type_changed">Task Status Changed</string>
+    <string name="timeline_type_approved">Approved Task</string>
+    <string name="timeline_type_verification">Verification Task</string>
+    <string name="timeline_type_approval">Approval Task</string>
+    <string name="timeline_type_checkin">Attendance In</string>
+    <string name="timeline_type_checkout">Check Out</string>
+    <string name="timeline_type_message">Messages</string>
+    <string name="upload_queue">Upload image hold, your Task will be queued</string>
+    <string name="task_failed_draft">Submit task failed, your task now in timeline</string>
+    <string name="task_not_available">Task not available or has been deleted by system</string>
+    <string name="task_reassign_svy">Task not available or maybe reassign to other Surveyor, Contact your Administrator</string>
+    <string name="task_reassign_col">Task not available or maybe reassign to other Collector, Contact your Administator</string>
+    <string name="task_not_available2">Task not available, Contact your Administrator</string>
+    <string name="task_verified">Task was Verified</string>
+    <string name="task_approved_view">Can not View Detail of Approved Task</string>
+    <string name="task_rejected_view">Can not View Detail of Rejected Task</string>
+    <string name="minute_ago">minutes ago</string>
+    <string name="hour_ago">hours ago</string>
+    <string name="moment_ago">at the moment ago</string>
+    <string name="btnNo">NO</string>
+    <string name="uploading_image">Uploading Image</string>
+    <string name="progress_uploading">Uploading in progress</string>
+    <string name="uploading_image_counter">Uploading %1$d / %2$d  images</string>
+    <string name="uploading_image_title">Uploading Image %1$s</string>
+    <string name="auto_start_visit_title">Visit Plan Service</string>
+    <string name="auto_start_visit_content">Sending your visit plan to server.</string>
+    <string name="auto_changeplan_title">Change Plan Service</string>
+    <string name="auto_changeplan_content">Sending your pending change plan to server.</string>
+    <string name="picture_option">Picture Option</string>
+    <string name="btnRetake">Retake</string>
+    <string name="take_foto_first">Take a Photo First!</string>
+    <string name="lblDevOption">Dev Options</string>
+    <string name="address_not_found">Address not found</string>
+    <string name="contact_administrator">contact your Administrator</string>
+    <string name="recording_done">Recording Done</string>
+    <string name="no_selected_field">- There is no selected field -</string>
+    <string name="scheme_not_found_sync">Scheme not found, please synchronize again or contact your administrator.</string>
+    <string name="data_corrupt">data has been corrupted. Please exit the application and relogin.</string>
+    <string name="select_outstanding">Select Outstanding</string>
+    <string name="notes_not_available">Notes description not available</string>
+    <string name="lookup_not_available">%1$s parameters not available in server, contact your administrator</string>
+    <string name="get_lookup_failed">Can not get %1$s parameters from server, contact your administrator</string>
+    <string name="lookup_progress">Downloading %1$s parameters</string>
+    <string name="permission_required">Without grant all permission, the app is unable to use. You must grant all permission.</string>
+    <string name="background_location_permission_required">Please ENABLE Location permission before using the app.\n Click OK -> Permissions -> Location -> Allow all the time</string>
+    <string name="need_permision">You need to grant access to</string>
+    <string name="connection_failed_wifi">Check your internet status</string>
+    <string name="data_saved_failed">Data failed to save, try again later.</string>
+    <string name="taskd_was_gone">Task %1$s was damage/corrupt, you must re-answer the questions</string>
+    <string name="gps_gd_error">GPS Location not available, please retake foto for best result</string>
+    <string name="coordinat_not_available">Location Coordinat not available</string>
+    <string name="lbs_gd_error">Failed to get photo coordinates, refresh GPS and take photos again</string>
+    <string name="freeup_space">Free up your space</string>
+    <string name="freeup_space_detail">Your internal storage is running low on space. Free up your internal storage more than 300 MB for use this application safely.</string>
+    <string name="processing_image">Processing image...</string>
+    <string name="btnValidation">Validation</string>
+    <string name="pressButtonValidation">Press Button Validation</string>
+    <string name="sync_dialog">Application updated</string>
+    <string name="sync_dialog_message">Application has been updated to the newest version. Please synchronize to use this application</string>
+    <string name="failed_refresh_token">Invalid token. Please exit the application and relogin.</string>
+
+    <string name="faild_save_image">failed save image, try again later</string>
+    <string name="not_available">not available</string>
+    <string name="lookup_not_found">The list is not available, contact your administrator</string>
+    <string name="no_answer_found">- You have no answer -</string>
+    <string name="copy_value_failed">Copy value failed</string>
+    <string name="copy_value_dkcp_failed">Can\'t get generated data, please input manually</string>
+    <string name="calculate_failed">Calculation formula error, contact your administrator.</string>
+    <string name="cashcount">Cash Count :</string>
+    <string name="lblCashOnHand">Current COH : %1$s</string>
+    <string name="lblLimitCOH">Limit COH : %1$s</string>
+    <string name="lblCashOnHand_wo_limit">Current COH : %1$s</string>
+    <string name="limit_coh">Can\'t process task. You\'re at cash limit. Please do deposit first.</string>
+    <string name="msgErrorParsingJson">Failed to get response from server, try again later</string>
+    <string name="no_paired_device">No paired devices</string>
+    <string name="input_rv_number_failed">Failed get response from server</string>
+    <string name="connecting">Connecting</string>
+    <string name="label_device_name">Printer name</string>
+    <string name="connect_failed">Connect Failed</string>
+    <string name="reconnect_message">Want to try to Re-connect?</string>
+    <string name="reconnect">Re-connect</string>
+    <string name="input_rv">Input RV</string>
+    <string name="sync_rv_failed">Failed get RV Number. Please check your internet connection and try again</string>
+    <string name="rv_number_not_empty">You already using RV Number for this task</string>
+    <string name="rv_task_h_not_found">Task not found</string>
+    <string name="sync_rv_number">Sync RV Number</string>
+    <string name="select_dealer">Select Lookup Dealer first !</string>
+    <string name="select_rv_number">Select RV Number</string>
+    <string name="no_rv_number">No RV Number</string>
+    <string name="logout_dialog">Logout...</string>
+    <string name="rv_send_failed">Your RV will be queued</string>
+    <string name="input_rv_number">Please input RV Number</string>
+    <string name="input_rv_number_title">Input RV Number</string>
+    <string name="input_rv_number_hint">RV Number</string>
+    <string name="input_rv_number_error">Please select RV Number</string>
+    <string name="input_rv_number_confirm_title">Confirm</string>
+    <string name="input_rv_number_confirm_message">RV Number : %1$s </string>
+    <string name="assignment_task">Assignment Task</string>
+    <string name="notification_assignment">You have %1$d assignment task</string>
+    <string name="click_to_open_assignment_task">Click to open Assignment Task</string>
+    <string name="failed_get_taskd">Unable to retrieve the data from server. Try again later.</string>
+    <string name="chooseLookup">CHOOSE ANSWER</string>
+    <string name="select_answer">Select one :</string>
+    <string name="message_preview_failed">Review Failed</string>
+    <string name="keyword">Keyword :</string>
+    <string name="selectedAnswer">Selected answer :</string>
+    <string name="change_answer">CHANGE ANSWER</string>
+    <string name="titleProposal">List Proposal</string>
+    <string name="titleSubsidi">List Subsidi</string>
+    <string name="titleRecipient">List Recipient</string>
+    <string name="alpha_numeric_warning">Password must be contain minimum 8 characters at least one number and one letter</string>
+    <string name="more_than_date">only receive not less than %1$s</string>
+    <string name="less_than_date">only receive not more than %1$s</string>
+    <string name="ktp_notice">KTP number must be filled in</string>
+    <string name="validation_required">Please validate your ID first</string>
+    <string name="title_paired_devices" />
+    <string name="title_other_devices" />
+    <string name="button_scan">Scan</string>
+    <string name="delete_backup_progress">Deleting irrelevant task on backup data</string>
+    <string name="delete_backup_success">Irrelevant Task was successfully deleted on backup data</string>
+    <string name="delete_backup_failed">Failed to delete irrelevant task</string>
+    <string name="update_backup_progress">Updating task on backup data</string>
+    <string name="update_backup_success">Task was successfully updated on backup data</string>
+    <string name="update_backup_failed">Failed to update task on backup data</string>
+    <string name="restore_backup_progress">Restoring all task from backup data</string>
+    <string name="restore_backup_success">Task has been restored from backup data, task count : </string>
+    <string name="restore_backup_failed">There is no restored task from backup data</string>
+    <string name="delete_backup_half_failed">Failed to delete some irrelevant task</string>
+
+    <!-- Connect Printer -->
+    <string name="devicelist_action_button_text_scan">Scan</string>
+    <string name="devicelist_action_button_text_cancel">Cancel</string>
+    <string name="none_paired">None Paired</string>
+    <string name="scanning">Scanning</string>
+    <string name="select_device">Select Device</string>
+    <string name="none_found">None Found</string>
+    <string name="title_activity_main_winson">main_winson</string>
+    <string name="connect">CONNECT</string>
+    <string name="disconnect">DISCONNECT</string>
+    <string name="msg_state">Input Error!</string>
+    <string name="Connecting">Device is connected to the Bluetooth printer</string>
+    <string name="empty1">Input is empty, in the text box to enter the content to be converted &#8230;</string>
+
+    <!--Message Connect Printer-->
+    <string name="bt_not_enabled_leaving">Bluetooth failed to start, exiting application</string>
+    <string name="empty">Input is empty</string>
+    <string name="title_connecting">connecting…</string>
+    <string name="title_connected_to">connected: </string>
+    <string name="title_not_connected">Is not connected</string>
+    <string name="msg_statev1">Without a picture</string>
+    <string name="strLang">en</string>
+    <string name="camer">No pictures</string>
+    <string name="bt_notavail">Bluetooth is not available</string>
+    <string name="failed_to_connect_bluetooth">Failed to search via bluetooth, please try again</string>
+    <string name="tabDevice">DEVICE</string>
+    <string name="tabApplication">APPLICATION</string>
+    <string name="appVer">Application\'s Version</string>
+    <!--<string name="appName">AFMCS</string>-->
+
+    <string name="androidVersion">Android Version</string>
+    <string name="batteryPercen">Battery Percentage</string>
+    <string name="appStorage">Application Storage Usage</string>
+    <string name="dataUsage">Mobile Data Usage</string>
+    <string name="deviceStorage">Device Storage Available</string>
+    <string name="androidID">Android ID</string>
+    <string name="choosePrinter">Choose Printer Driver</string>
+    <string name="changeLanguage">CHANGE LANGUAGE</string>
+    <string name="printerName">Printer Name</string>
+
+    <string name="title_print">PRINT</string>
+    <string name="title_question_form">QUESTION FORM</string>
+    <string name="title_question_review">QUESTION REVIEW</string>
+    <string name="title_server_link">SERVER LINK</string>
+    <string name="title_developer_option">DEVELOPER OPTION</string>
+    <string name="cust_name_required">Customer Name is required</string>
+    <string name="cust_name_minimun_required">Customer Name minimum 3 character</string>
+    <string name="failed_to_connect">Failed to Connect, Try Again Later</string>
+    <string name="edit_still_pending">There is task with the same ID that still pending</string>
+    <string name="menuUnavailable">This menu is currently unavailable</string>
+    <string name="cantPrint">Can\'t print this task. You already input the RV number.</string>
+    <string name="selectForm">Select Form :</string>
+
+    <string name="selectAction">Select Action :</string>
+    <string name="surveyorList">Surveyor List :</string>
+    <string name="verifyBtn">VERIFY</string>
+    <string name="approveBtn">APPROVE</string>
+    <string name="tabDetail">DETAIL</string>
+    <string name="tabContact">CONTACTS</string>
+    <string name="tabOppor">OPPORTUNITY</string>
+    <string name="txtDay"> day(s)</string>
+    <string name="chooseAcc">Choose Account</string>
+    <string name="lbltopic">Note / Topic</string>
+    <string name="msgFollowupFailed">Failed to follow up task(s)</string>
+    <string name="msgNoneSelected">Please select at least one task to be requested</string>
+    <string name="msgNoneOptionSelected">Please select at least one option</string>
+    <string name="optimize_battery">Optimize Battery Setting</string>
+    <string name="optimize_battery_alert">Do not optimize battery usage. This app will be able to run in the background and its battery usage will stop being optimized. </string>
+    <string name="lblStartDate">Start Date</string>
+    <string name="lblEndDate">End Date</string>
+    <string name="requestSent">Your follow up request has been sent</string>
+
+    <string name="branchName">Branch Name</string>
+    <string name="applNo">Application Number</string>
+    <string name="submitDate">Submit Date</string>
+    <string name="assignDate">Assign Date</string>
+    <string name="approvalId">Approval Id</string>
+    <string name="slaTime">SLA Time</string>
+    <string name="downloadDate">Download Date</string>
+    <string name="customerName">Customer Name</string>
+
+    <string name="reqFollowup">Request Follow Up</string>
+    <string name="reqOppor">Request Opportunity List</string>
+    <string name="btnOpportunities">OPPORTUNITIES</string>
+    <string name="txtTodo">Activity to do :</string>
+    <string name="txtHistory">Activity\'s history :</string>
+    <string name="btnNewProspect">NEW PROSPECT</string>
+    <string name="task_corrupt">Cant process these task right now, please try again later!</string>
+
+    <string name="error_camera_device">Camera Device is Error</string>
+    <string name="error_camera_disabled">Camera Disabled</string>
+    <string name="error_camera_in_use">Other Application Using the Camera</string>
+
+    <string name="no_new_files">No new files to download</string>
+
+    <string name="getting_file_list">Getting file list from server, Please wait...</string>
+
+    <string name="failed_to_get_file">Failed to get file list, please check your connection and try again</string>
+
+    <string name="no_links_found">No links found for file ID # %1$d Please contact administrator</string>
+    <string name="downloading_file">Downloading file %1$d out of %2$d files</string>
+    <string name="import_file_to">Importing file %1$d out of %2$d files.</string>
+    <string name="updating_apk">Downloading update...</string>
+    <string name="updating_error">Updating failed</string>
+    <string name="userhelp_download_error">User help data download failed, filename: </string>
+    <string name="userhelp_exception">User help download failed</string>
+    <string name="userhelp_loading">User help is being downloaded</string>
+    <!--FileSync-->
+    <string name="device_rooted">Device is Rooted</string>
+    <string name="device_rooted_uninstall">Your Device is Rooted, Please Uninstall APK</string>
+    <string name="uninstall_apk">Uninstall APK</string>
+    <string name="check_in_failed">Cannot do attendance in</string>
+    <string name="lblAgreementNo">Agreement No</string>
+    <string name="lblAmountDue">Amount Due</string>
+    <string name="getting_brochure">Getting file brochure from server, Please wait...</string>
+
+    <!--Dialog-->
+    <string name="lblOverdue">Overdue</string>
+    <string name="lblInstallment">Installment No</string>
+    <string name="lblCoord">Coord : </string>
+    <string name="please_wait_dialog">Please Wait</string>
+    <string name="lblAcc">Accuracy : </string>
+    <string name="please_wait_almost_done">Please Wait, Almost Done</string>
+    <string name="something_went_wrong">Something went wrong, Please contact administrator.</string>
+    <string name="retryCallAgain">You can make call again after %1$s</string>
+
+    <!--Collection-->
+    <string name="submit_follow_up_success">Follow-Up notes submitted!</string>
+    <string name="notes_required">Notes is required</string>
+    <string name="set_location">Set Location First!</string>
+    <string name="processing_failed">Processing failed, Out of memory</string>
+    <string name="offline_mode">USE OFFLINE MODE</string>
+    <string name="label_agreement_number">Agreement Number :</string>
+    <string name="label_customer_name">Customer Name :</string>
+    <string name="label_chassis_number">Chassis Number :</string>
+    <string name="label_license_plate_number">Police Number :</string>
+    <string name="label_engine_number">Engine Number :</string>
+    <string name="paymentchannel_alert">Current amount for this batch: %1$s.\nTotal Bill for this task: %2$s.\n\nSome payment channel %3$s have been reached their limit and will be unavailable for deposit. If you want to use these payment channel, do deposit first</string>
+    <string name="msgUnavaibleCodeTransaction">Cannot get Transaction\'s code from Server</string>
+
+    <string name="paymentchannel_limit">Current amount for this batch have been reached their limit for this payment channel</string>
+
+    <string name="view_pdf">View PDF</string>
+    <string name="failed_view_lu_online">Failed to View Lu Online</string>
+
+    <string name="menu_not_available">Menu %1$s is not available now</string>
+    <string name="database_is_uptodate">Database is up to date!.</string>
+    <string name="database_has_been_updated">Database has been updated!</string>
+
+    <string name="comment_cannot_be_empty">Comments can not be empty.</string>
+    <string name="change_password_error">Change Password Error</string>
+    <string name="options_saved">Options Saved</string>
+    <string name="no_pdf_viewer">No pdf Viewer found</string>
+    <string name="error_reading">Error Reading Image</string>
+    <string name="error_image_invalid">Image invalid</string>
+    <string name="picture_resolution">Picture size : %1$s</string>
+    <string name="error_occure1">Error occurred : %1$s</string>
+    <string name="error_occure2">Error occurred : %1$s - %2$s</string>
+    <string name="title_developer_mode">Developer Mode</string>
+    <string name="text_turn_off_dev_mode">Developer Mode must be turned off</string>
+    <string name="title_mn_printing">Printing</string>
+    <string name="message_remove_default_printer">Are you sure want to remove %1s</string>
+    <string name="message_confirm_unpair_bluetooth">Are you sure want to unpair this bluetooth printer?</string>
+    <string name="btnConfirm">Confirm</string>
+    <string name="title_printing_service">Printing Service</string>
+    <string name="menu_desc_print_default">Default print service</string>
+    <string name="action_choose_printer">Choose printer</string>
+    <string name="action_print_test">Print test</string>
+    <string name="menu_setting_printing">Printing</string>
+    <string name="menu_setting_language">Language</string>
+    <string name="btnSetting">Setting</string>
+    <string name="action_user_logout" translatable="false">com.adins.mss.action_USER_LOGOUT</string>
+    <string name="security_prefs" translatable="false">SecurityPrefs</string>
+    <string name="channel_new_task" translatable="false">NEWTASK</string>
+    <string name="notification_new_task" translatable="false">Update Tasks</string>
+    <string name="intent_action_restart_location_tracking">com.adins.intent.action_RESTART_AUTOSEND_LOCATION</string>
+    <string name="intent_action_dynamic_question">com.adins.mss.ACTION_ENTER_DYNAMIC_FORM</string>
+    <string name="intent_action_exit_dynamic_form">com.adins.mss.ACTION_EXIT_DYNAMIC_FORM</string>
+    <string name="import_from_csv_failed">An Error Occurred While Importing Data from CSV</string>
+    <string name="action_location_listener" translatable="false">com.adins.mss.tracking.ACTION_LOCATION_CHANGE</string>
+    <string name="bluetooth_message">Activation bluetooth</string>
+    <string name="news_desc">TextView</string>
+    <string name="action_turn_off_mocklocation">com.adins.mss.ACTION.TURN_OFF_MOCKLOCATION</string>
+    <string name="action_send_rv_result">com.adins.mss.ACTION_SENDRV_RESULT</string>
+    <string name="print_message">It have reached the maximum print limit</string>
+    <string name="info_failgetdata">No competition found. Please re-sync to open your details achievement</string>
+    <string name="failed_get_data_try_again">Failed to get data. Please try again later</string>
+    <string name="collector_dashboard">Collector Dashboard</string>
+    <string name="target_collected">Target Collected</string>
+    <string name="collection_result">Collection Result</string>
+    <string name="collection_result_detail">Collection Result Detail</string>
+    <string name="emergency">Emergency !</string>
+
+    <!-- Task Plan -->
+    <string name="selected">selected</string>
+    <string name="tasklist_tab_page">Task List</string>
+    <string name="todays_plan_tab_page">Today\'s Plan</string>
+    <string name="have_not_plan_task">You haven\'t plan a task. Please select tasks to create a plan.</string>
+    <string name="cannot_change_revisit">Cannot change plan revisit</string>
+    <string name="error_change_plan">Error Change Plan</string>
+    <string name="create_plan">Create Plan</string>
+    <string name="pls_add_task">Please add task to the plan first</string>
+    <string name="pls_start_visit">Please start visit first</string>
+    <string name="start_visit">Start Visit</string>
+    <string name="add_todays_plan">Add to today\'s plan</string>
+    <string name="all_form_all_task">All Form . All Task</string>
+    <string name="all_form">All Form</string>
+    <string name="plan_started">Plan is successfully started</string>
+    <string name="added_todays_plan">Added to Today’s Plan</string>
+    <string name="add_customer_to_todays_plan">Do you want to add %1$s task to today\'s plan</string>
+    <string name="from_todays_plan">from today\'s plan</string>
+    <string name="change_plan_success">Change Plan Success</string>
+    <string name="successfully_removed_task">Successfully removed task %1$s from Today\'s Plan</string>
+
+    <!-- Loyalti Dashboard Competition -->
+    <string name="dashboard_competition_page_title">List Detail Programs</string>
+    <string name="my_point_competition">My Point (%1$s)</string>
+    <string name="my_rank">Rank (%1$s)</string>
+    <string name="custName">Customer Name</string>
+    <string name="amount_paid">Amount Paid</string>
+    <string name="ptp_date">PTP Date</string>
+    <string name="notes">Notes</string>
+
+    <!-- Loyalti Monthly Point -->
+    <string name="monthly_point_page_title">Monthly Points Acquisition</string>
+
+    <!-- Loyalti Daily Point -->
+    <string name="daily_point_page_title">Daily Points Acquisition</string>
+    <string name="daily_point_chart_title">Points Earned In %1$s</string>
+    <string name="average_point">Average: %1$d</string>
+    <string name="y_axis_point_title">Total Points</string>
+
+    <!-- My Point -->
+    <string name="points_detail_not_found">Points Detail Not Found</string>
+    <string name="daily_points">Daily Points</string>
+    <string name="monthly_points">Monthly Points</string>
+    <string name="total_points">Total Points</string>
+    <string name="month_total_points">%1$s Total Points</string>
+    <string name="current_month_point">Current Month Point</string>
+    <string name="daily_avg_period">Daily Average Period</string>
+    <string name="daily_avg_month">Daily Average Month</string>
+
+    <!--Firebase Trace-->
+    <string name="plan_task_trace">Plan Task Trace</string>
+    <string name="task_list_trace">Task List Trace</string>
+    <string name="synchronize_trace_order">Order Synchronize Trace</string>
+    <string name="synchronize_trace_survey">Survey Synchronize Trace</string>
+    <string name="synchronize_trace_coll">Collection Synchronize Trace</string>
+    <string name="customer_header_trace">Customer Header Trace</string>
+    <string name="customer_detail_trace">Customer Detail Trace</string>
+    <string name="question_form_trace">Question Form Do Next Trace</string>
+
+    <string name="planned_info">%1$d of %2$d planned</string>
+    <string name="termAndCondition">Terms &amp; Conditions</string>
+    <string name="privacyAndPolicy">Privacy Policy</string>
+    <string name="camera_message">Please make sure the ID card in the box and photos are clear</string>
+    <string-array name="cbSearchBy">
+        <item>Date</item>
+        <item>Month</item>
+        <item>Estimation Days</item>
+    </string-array>
+    <string-array name="cbSearchByMonth">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string-array name="cbPriorityBy">
+        <item>All Priority</item>
+        <item>High Priority</item>
+        <item>Normal Priority</item>
+        <item>Low Priority</item>
+    </string-array>
+    <string-array name="dropdownSearchTask">
+        <item>All Task</item>
+        <item>High Priority</item>
+        <item>Medium Priority</item>
+        <item>Low Priority</item>
+        <item>Submitted Task</item>
+        <item>Pending Task</item>
+        <item>Uploading Task</item>
+        <item>Draft Task</item>
+        <item>Failed Draft Task</item>
+    </string-array>
+    <string-array name="dropdownSearchTaskSPV">
+        <item>All Task</item>
+        <item>Submitted Task</item>
+        <item>Pending Task</item>
+        <item>Uploading Task</item>
+        <item>Draft Task</item>
+        <item>Failed Draft Task</item>
+    </string-array>
+    <string-array name="taskSearch">
+        <item>All Task</item>
+        <item>High Priority</item>
+        <item>Medium Priority</item>
+        <item>Low Priority</item>
+        <item>Pending Task</item>
+        <item>Uploading Task</item>
+        <item>Draft Task</item>
+    </string-array>
+    <string-array name="taskPtp">
+        <item>All PTP</item>
+        <item>Broken PTP</item>
+        <item>Today</item>
+        <item>Tomorrow</item>
+    </string-array>
+    <string-array name="dropdownSearchOrder">
+        <item>All Task</item>
+        <item>Submitted Task</item>
+        <item>Pending Task</item>
+        <item>Uploading Task</item>
+        <item>Draft Task</item>
+        <item>Failed Draft Task</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/checkin_layout"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+        >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+
+        <fragment
+            android:id="@+id/mapTagging"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_above="@+id/btnOK"
+            android:layout_alignParentTop="true"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:tag="mapTagging" />
+
+        <ImageButton
+            android:id="@+id/btnRefresh"
+            android:layout_margin="10dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:elevation="5dp"
+            android:background="@drawable/button_background_round"
+            android:src="@drawable/ic_menu_refresh_white" />
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_background"
+            android:textColor="@color/fontColorWhite"
+            android:text="@string/btnOk" />
+
+    </RelativeLayout>
+
+</LinearLayout>

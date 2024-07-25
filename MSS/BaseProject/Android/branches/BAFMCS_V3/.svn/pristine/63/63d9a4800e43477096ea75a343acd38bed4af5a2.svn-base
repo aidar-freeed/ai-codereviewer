@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:visibility="visible"
+    android:id="@+id/checkOrderLayout"
+    android:background="@drawable/bg_grayscale">
+        <View
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/actionbar_background" />
+
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="8dp"
+	    android:layout_below="@+id/actionbar" >
+
+		<LinearLayout 
+		    android:orientation="vertical"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+		    android:gravity="center_horizontal"
+			>
+			
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+				android:visibility="visible"
+				android:gravity="center_horizontal"
+				android:id="@+id/searchBy">
+			    
+			    <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:ems="10"
+                    android:text="@string/lblSearchBy"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
+			    <RelativeLayout
+                    android:id="@+id/filterBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" >
+
+                    <Spinner
+                        android:id="@+id/cbSearchBy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:ems="10"
+                        android:entries="@array/cbSearcrBy"
+                         />
+					
+                    <ImageButton
+                        android:id="@+id/btnRefresh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/cbSearchBy"
+                        android:layout_alignRight="@+id/cbSearchBy"
+                        android:layout_margin="4dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/dropdown_right" />
+                </RelativeLayout>
+			    <TextView
+					android:text="@string/lblSearchByStatus"
+					android:id="@+id/lblSearchByStatus"
+					android:textAppearance="?android:attr/textAppearanceMedium"
+			    	android:visibility="gone"
+			        android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
+					android:ems="10"/>
+			    <RelativeLayout
+                    android:id="@+id/filterByStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp" >
+
+                    <Spinner
+                        android:id="@+id/cbSearcrByStatus"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:ems="10"
+                        android:entries="@array/cbSearcrByStatus"
+                         />
+
+                    <ImageButton
+                        android:id="@+id/btnRefresh2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/cbSearcrByStatus"
+                        android:layout_alignRight="@+id/cbSearcrByStatus"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/dropdown_right" />
+                </RelativeLayout>
+				
+		    </LinearLayout>
+		    
+		    <RelativeLayout
+                android:id="@+id/byDate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/startdate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:ems="10"
+                    android:text="@string/lblStartDate"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/txtStartDate"
+                    android:hint="@string/requiredField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/startdate"
+                    android:layout_toLeftOf="@+id/btnStartDate"
+                    android:editable="false"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/enddate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtStartDate"
+                    android:layout_centerHorizontal="true"
+                    android:ems="10"
+                    android:text="@string/lblEndDate"                   
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/txtEndDate"
+                    android:hint="@string/requiredField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/txtStartDate"
+                    android:layout_below="@+id/enddate"                    
+                    android:editable="false"
+                    android:ems="10" />
+
+                <ImageButton
+                    android:id="@+id/btnStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtStartDate"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/ic_calendar" />
+
+                <ImageButton
+                    android:id="@+id/btnEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtEndDate"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/ic_calendar" />
+            </RelativeLayout>
+            
+		    <LinearLayout
+		        android:id="@+id/byNoOrder"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:visibility="gone"
+		        android:gravity="center_horizontal" >
+		        <TextView
+		            android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
+					android:ems="10"
+		            android:text="@string/lblNomorOrder"
+		            android:textAppearance="?android:attr/textAppearanceMedium"
+        			android:textColor="#000000"/>
+		
+		        <EditText android:id="@+id/txtNomorOrder"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
+					android:ems="10"
+					android:hint="@string/requiredField"
+					android:singleLine="true"
+					android:inputType="number"/>
+		    </LinearLayout>
+		    
+		   <LinearLayout
+                android:id="@+id/buttons"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/byDay"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp" >
+
+                <Button
+                    android:id="@+id/btnSearchOrder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:ems="10"
+                    android:text="@string/btnSearchOrder"
+                    android:textColor="#ffffff" >
+                </Button>
+            </LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>

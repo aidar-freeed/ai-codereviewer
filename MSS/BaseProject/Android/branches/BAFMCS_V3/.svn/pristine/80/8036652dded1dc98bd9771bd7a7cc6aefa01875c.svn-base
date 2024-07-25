@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questionRadioLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0. label"
+        android:id="@+id/questionRadioLabel" />
+
+    <TextView
+        android:id="@+id/questionRadioEmpty"
+        android:layout_width="match_parent"
+        android:text="@string/lookup_not_found"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/radioQuestionList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/questionRadioDescription"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

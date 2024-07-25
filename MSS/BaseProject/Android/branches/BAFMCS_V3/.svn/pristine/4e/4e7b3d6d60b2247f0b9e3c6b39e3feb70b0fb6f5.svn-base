@@ -1,0 +1,296 @@
+<resources>
+    <string name="app_name">CheckId</string>
+    <string name="appVersion">v2.1.0.1</string>
+
+    <string name="action_settings">Pengaturan</string>
+
+    <!-- Left Menu -->
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">close_drawer</string>
+
+    <!-- CHECK ORDER -->
+
+    <string name="btnLookupCMO">Lookup CMO</string>
+    <string name="btnLookupCMOMH">Lookup CMO / MH</string>
+    <string name="lblSearchBy">Pilih Pencarian</string>
+    <string name="lblStartDate">Tanggal Awal</string>
+    <string name="lblEndDate">Tanggal Akhir</string>
+    <string name="lblNomorOrder">Nomor Order</string>
+    <string name="btnSearchOrder">Cari</string>
+    <string name="menu">Main Menu</string>
+    <string name="cekOrder">Check Order</string>
+    <string name="btnOpen">Buka</string>
+    <string name="lblSearchByStatus">Status</string>
+    <string name="btnOk">OK</string>
+
+    <!-- SURVEY VERIFICATION-->
+
+    <string name="chooseOne"> Pilih Satu </string>
+    <string name="workflowByForm"> Alur Kerja dengan Form</string>
+    <string name="pleaseChooseOne">Silahkan memilih salah satu aksi</string>
+
+    <string-array name="cbSearchByStatus">
+        <item>ALL</item>
+        <item>On Survey</item>
+        <item>On CA</item>
+    </string-array>
+    <string-array name="cbUpdateOrder">
+        <item>Open Order</item>
+        <item>Cancel Order</item>
+    </string-array>
+    <string-array name="cbOrderReassign">
+        <item>Date</item>
+        <!-- <item >Nomor Order</item> -->
+    </string-array>
+    <string-array name="cbSearchBy">
+        <item>Tanggal</item>
+        <item>Bulan</item>
+        <item>Estimasi Tanggal</item>
+    </string-array>
+    <string-array name="cbSearchByMonth">
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
+
+    <!-- Main Menu -->
+    <!-- Main Menu -->
+    <string name="title_mn_home">Home</string>
+    <string name="title_mn_tasklist">DAFTAR TUGAS</string>
+    <string name="title_mn_log">LOG</string>
+    <string name="title_mn_reportsummary">Report Summary</string>
+    <string name="title_mn_depositreport">Deposit Report</string>
+    <string name="title_mn_absentin">ABSEN MASUK</string>
+    <string name="title_mn_synchronize">SINKRONISASI</string>
+    <string name="title_mn_about">INFO</string>
+    <string name="title_mn_exit">KELUAR</string>
+    <string name="title_mn_newtask">TUGAS BARU</string>
+    <string name="title_mn_surveyperformance">PERFORMA SURVEI</string>
+    <string name="title_mn_surveyverification">VERIFIKASI SURVEI</string>
+    <string name="title_mn_surveyapproval">PERSETUJUAN SURVEI</string>
+    <string name="title_mn_checkorder">Check Order</string>
+    <string name="title_mn_creditsimulation">Credit Simulation</string>
+    <string name="title_mn_news">News</string>
+    <string name="title_mn_promo">Promo</string>
+    <string name="title_mn_orderassign">Order Assignment</string>
+    <string name="title_mn_orderreassign">Order Re-Assignment</string>
+    <string name="title_mn_cancelorder">Cancel Order</string>
+    <string name="title_mn_surveyassign">TUGAS SURVEI</string>
+    <string name="title_mn_surveyreassign">PENUGASAN KEMBALI</string>
+    <string name="title_mn_verification_bybranch">VERIFIKASI BERDASARKAN CABANG</string>
+    <string name="title_mn_approval_bybranch">PERSETUJUAN BERDASARKAN CABANG</string>
+    <string name="title_mn_changepassword">Change Password</string>
+    <string name="title_mn_paymenthistory">Payment History</string>
+    <string name="title_mn_installmentschedule">Installment Schedule</string>
+    <string name="title_mn_absentout">Check Out</string>
+    <string name="title_mn_setting">Settings</string>
+    <string name="login_desc">Login ke Aplikasi CheckId</string>
+    <string name="text_gps">GPS</string>
+    <string name="filter_by">Pilih filter</string>
+    <string name="news_not_found">Promo tidak ditemukan</string>
+    <string name="nama_customer">Nama Konsumen</string>
+    <string name="form_name">Nama Form</string>
+    <string name="toast_crash">Ooooops ! Terjadi crash, report sudah dikirim ke developer untuk perbaikan issue ini!</string>
+    <string name="approve_failed">Approval Task tidak berhasil</string>
+    <string name="approve_success">Task berhasil di approve</string>
+    <string name="get_suggestion_user">Mendapatkan User yang disarankan...</string>
+    <string name="reject_failed">Task tidak berhasil di reject</string>
+    <string name="reject_success">Task berhasil di reject</string>
+    <string name="selectOne">PIlih salah satu</string>
+    <string name="title_activity_survey_verification_action">Survey Verifikasi</string>
+    <string name="taskChanged">Status task telah berubah.</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_developer_option">Dev Options</string>
+    <string name="changelog_v230"><![CDATA[Perbaikan: <br/>
+1. Support Multilingual <br/>
+2. Update compatibility untuk Android M <br/>
+3. Support refresh lokasi dengan mengetuk GPS Icon <br/>
+4. Peningkatan performa <br/>
+5. Perbaikan managemen memory <br/>
+6. Menampilkan radius accuracy di tampilan peta<br/>
+7. Menampilkan pertanyaan tidak relevan secara otomatis<br/>
+8. Mendukung menyalin jawaban dari pertanyaan lain <br/>
+9. Mendukung  validasi pertanyaan tingkat lanjut <br/>
+10. Minor Bug fixes]]></string>
+    <string name="action_not_available">Tidak tersedia aksi untuk Task ini</string>
+    <string name="changelog_v2310"><![CDATA[Perbaikan: <br/>
+1. Mendukung menyalin jawaban dengan kondisi tertentu]]></string>
+    <string name="changelog_v2320"><![CDATA[Perbaikan: <br/>
+1. perbaikan gambar profile dan gambar cover
+]]></string>
+    <string name="changelog_v200"><![CDATA[Perbaikan: <br/>
+1. Mendukung fitur linimasa tugas<br/>
+2. Mendukung menu navigasi]]></string>
+    <string name="changelog_v210"><![CDATA[Perbaikan: <br/>
+1. Mendukung fitur Survey Approval<br/>
+2. Mendukung fitur Survey Verification]]></string>
+    <string name="changelog_v220"><![CDATA[Perbaikan: <br/>
+1. Mendukung fitur Survey Approval By Branch<br/>
+2. Mendukung fitur Survey Verification By Branch<br/>
+3. Mendukung fitur Reschedule Survey]]></string>
+    <string name="changelog_v2330"><![CDATA[Perbaikan: <br/>
+1. Perbaikan Sinkronisasi<br/>
+2. Perbaikan Linimasa untuk Absensi<br/>
+3. Perbaikan memuat jawaban pertanyaan<br/>
+4. Menambahkan pengecekan root device]]></string>
+    <string name="changelog_v2340"><![CDATA[Perbaikan: <br/>
+1. Alphanumeric pada Password]]></string>
+    <string name="changelog_v2350"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug<br/>
+2. Menghilangkan Form tidak aktif]]></string>
+    <string name="changelog_v2360"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v2370"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug
+2. Perbaikan eror pada GPS]]></string>
+    <string name="changelog_v2380"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v2390"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23100"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23110"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23120"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23130"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23140"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23150"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23160"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23170"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23180"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v23190"><![CDATA[Perbaikan: <br/>
+1. Perbaikan bug]]></string>
+    <string name="changelog_v2400"><![CDATA[Perbaikan: <br/>
+1. Penambahan informasi terkait device di menu about<br/>
+2. Mendukung tipe jawaban online lookup<br/>
+3. Tampilan task list dapat berupa box atau list]]></string>
+    <string name="changelog_v2500"><![CDATA[Changes: <br/>
+1. Interaksi antarmuka baru<br/>
+2. Penambahan sinkronisasi data<br/>
+3. Perbaikan bug]]></string>
+    <string name="changelog_v3000"><![CDATA[Changes: <br/>
+1. Pesan dan informasi lebih mudah dibaca<br/>
+2. Mendukung konfigurasi tema<br/>
+3. Mendukung foto profil yang bulat<br/>
+4. Penambahan kode unik<br/>
+5. Penambahan timestamp foto<br/>
+6. Perbaikan bug]]></string>
+    <string name="changelog_v3001"><![CDATA[Changes: <br/>
+1. Menambah toggle untuk visibilitas password pada halaman Change Password<br/>
+2. Mengubah pesan error untuk connection timeout<br/>
+3. Perbaikan bug dialog nonaktifkan Fake GPS tidak muncul ketika menggunakan lokasi palsu<br/>
+4. Perbaikan bug pada pesan user tidak aktif<br/>
+5. Menambah Migrasi Database dari Versi 2.5 ke 3.0<br/>
+6. Perbaikan header task hilang setelah simpan draft<br/>
+7. Perbaikan tipe dropdown search pada halaman Survey Performance]]></string>
+    <string name="changelog_v3002"><![CDATA[Changes: <br/>
+1. Perbaikan Search Timeline tidak ada pilihan Uploading Task meskipun ada task yang statusnya uploading.<br/>
+2. Perbaikan bug tidak tampil semua option pada radio button dynamic form.<br/>
+3. Perbaikan bug dialog nonaktifkan Fake GPS tidak muncul ketika menggunakan lokasi palsu.<br/>
+4. Perbaikan bug tidak dapat memunculkan opsi developer pada kanan atas aplikasi.<br/>
+5. Perbaikan bug jawaban hilang ketika memulai task dari draft setelah ganti user.<br/>
+6. Penambahan pengecekan regex pada input nama customer.]]></string>
+    <string name="changelog_v3003"><![CDATA[Changes: <br/>
+1. Perbaikan google play service update bisa diabaikan.<br/>
+2. Penambahan submit lokasi untuk reschedule task.<br/>
+3. Perbaikan task list tidak update.<br/>
+4. Perbaikan notifikasi uploading.<br/>
+5. Set default bulan berjalan di survey performance.<br/>
+6. Perbaikan log online.<br/>
+7. Penambahan notification channel untuk foreground service notification.<br/>
+8. Perbaikan pertanyaan tipe option dan multiple memiliki duplikasi jawaban.<br/>
+9. Perbaikan pertanyaan option choice filter tidak tampil.<br/>
+10.Penjagaan format datetime dengan panjang lebih dari 14 karakter pada DateTimePicker.<br/>
+11.Perbaikan crash saat submit task manual menggunakan long click.]]></string>
+    <string name="changelog_v3004"><![CDATA[Changes: <br/>
+1. Perbaikan fitur push tema.<br/>
+2. Menampilkan notifikasi aplikasi sedang berjalan.<br/>
+3. Perbaikan crash ketika membuka menu daftar task.<br/>
+4. Perbaikan fitur filter task.<br/>
+5. Perbaikan minor bugs.]]></string>
+    <string name="changelog_v3005"><![CDATA[Changes: <br/>
+1. Penambahan pengecekan dan update status task survey approval atau verification sesuai data di server.<br/>
+2. Fix minor bugs.]]></string>
+    <string name="changelog_v3006"><![CDATA[Changes: <br/>
+1. Perbaikan fragment overlapped.<br/>
+3. Perbaikan sync question set.<br/>
+4. Perbaikan filter status pending tidak ada hasil.]]></string>
+     <string name="changelog_v3007"><![CDATA[Changes: <br/>
+1. Perbaikan add taskd untuk log online.<br/>
+2. Perbaikan bug di viewholder.<br/>
+3. Perbaikan answer location, brand, dan model task approval tidak tampil pada halaman review.<br/>
+4. Menseragamkan format request submit task melalui force send, auto send, dan send biasa.<br/>
+5. Perbaikan bug timeline task header tertukar ketika diklik.<br/>
+6. Perbaikan minor bug.]]></string>
+    <string name="changelog_v3008"><![CDATA[Changes: <br/>
+1. Perbaikan minor bug.]]></string>
+    <string name="changelog_v3009"><![CDATA[Changes: <br/>
+1. Perbaikan timeline saat upgrade dari versi 2.5 ke 3.0.<br/>
+2. Menambah fitur bypass developer mode.<br/>
+3. Perbaikan crash saat mengolah pertanyaan dengan choice filter.<br/>
+4. Perbaikan minor bug.]]></string>
+    <string name="changelog_v30013"><![CDATA[Changes: <br/>
+1. Menambah support service lokasi untuk Android >= O.<br/>
+2. Menambah support service lokasi untuk perangkat oppo, vivo dan xiaomi.<br/>
+3. Perbaikan notifikasi update task untuk Android >= O.<br/>
+4. Perbaikan print gambar untuk Android >= O.<br/>
+5. Perbaikan minor bug.]]></string>
+    <string name="changelog_v3110"><![CDATA[Changes: <br/>
+1. Penambahan status TaskH FailedDraft ketika mendapatkan response code tertentu saat submit task dari web.<br/>
+2. Pembetulan bug SPV seharusnya tidak hit openreadtask saat verification dan approval .<br/>
+3. Penambahan user help .<br/>
+4. Pembetulan take picture failed di android 10 .<br/>
+5. App lemot saat Login-Logout-Login .<br/>
+6. Penyempurnaan answer type LuOnline .<br/>
+7. Pembetulan bug uploading task di timeline tidak muncul.<br/>
+8. Penambahan support untuk Android 10]]]]></string>
+    <string name="changelog_v3120">
+<![CDATA[ Changes: <br/>
+1. Pembetulan Cloud CSV tidak dapat diimport .<br/>
+2. Pembetulan service berhenti ketika keluar aplikasi.<br/>
+3. Pembetulan crash saat sinkronisasi .<br/>
+4. Pembetulan crash saat is_emergency mati . ]]>
+</string>
+    <string name="changelog_v3130">
+<![CDATA[ Changes: <br/>
+1. Perbaikan issue user help.<br/>
+2. Tambah aksi panggil nomor telepon customer pada customer form.<br/>
+3. Perbaikan validasi tidak berjalan pada form dikarenakan regex.<br/>
+4. Tambah status Failed Draft dan Save Draft pada timeline SPV.<br/>
+5. Tambah tombol simpan pada form survey verification.<br/>
+6. Tambahkan teks contoh pada user help data dinamis.<br/>
+7. Perbaiki crash pada verification dikarenakan daftar task belum tersinkronisasi keseluruhan.<br/>
+8. Tambahkan penjagaan error untuk workflow by form pada halaman survey verification.<br/>
+]]>
+</string>
+<string name="changelog_v3140">
+<![CDATA[ Changes: <br/>
+1. Refactor beberapa kode.<br/>
+2. Perbaikan bug.<br/>]]>
+</string>
+
+    <string name="changelog_v3201">
+<![CDATA[ Changes: <br/>
+1. Penambahan Term and Condition.<br/>]]>
+</string>
+
+    <string name="changelog_v3202"><![CDATA[ Changes: <br/>
+1. Penambahan Privacy And Policy.<br/>]]></string>
+</resources>

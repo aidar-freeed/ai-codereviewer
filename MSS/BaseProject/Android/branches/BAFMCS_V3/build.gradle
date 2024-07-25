@@ -1,0 +1,64 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.10'
+    repositories {
+        google()
+        maven {
+            url 'http://mss-webdev-svr.ad-ins.com:8081/artifactory/libs-release'
+        }
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://dl.bintray.com/firebase/gradle/'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.google.gms:google-services:4.3.3'
+        classpath 'com.google.firebase:perf-plugin:1.3.1'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.3.0'
+//        classpath 'com.google.firebase:firebase-plugins:1.1.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        maven {
+            url 'http://mss-webdev-svr.ad-ins.com:8081/artifactory/libs-release'
+        }
+        maven { url "https://www.jitpack.io" }
+        jcenter {
+            url "https://jcenter.bintray.com/"
+        }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+//apply from: "$project.rootDir/tools/script-pmd.gradle"
+apply plugin: 'org.sonarqube'
+sonarqube
+        {
+            properties
+                    {
+                        property "sonar.projectName", "MOBILE_AITMSS_ANDROID"
+                        property "sonar.projectKey", "MOBILE_AITMSS_ANDROID"
+                        property "sonar.language", "java"
+//                        property "sonar.sources", "mssbase/src,msscoll/src"
+                        property "sonar.binaries", "mssbase/build/generated,mssodr/build/generated,msssvy/build/generated,msscoll/build/generated"
+                        property "sonar.sourceEncoding", "UTF-8"
+                        property "sonar.login", "a8b892bfa1ee91c401867f9e1b76fafac92154dd"
+//                        property "sonar.password", "admin"
+                    }
+        }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lookupReviewLayout"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <TextView
+        android:id="@+id/questionNoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0. "
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+    <TextView
+        android:id="@+id/questionTextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Label"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_toRightOf="@+id/questionNoLabel"/>
+
+    <TableLayout
+        android:layout_below="@id/questionTextLabel"
+        android:id="@+id/reviewLookupAnswerLayout"
+        android:layout_width="match_parent"
+        android:paddingTop="5dp"
+        android:stretchColumns="1"
+        android:layout_height="wrap_content">
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/questionTextAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reviewLookupAnswerLayout"
+        android:layout_toEndOf="@+id/questionNoLabel"
+        android:layout_toRightOf="@+id/questionNoLabel"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Answer"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/questionTextAnswer"
+        android:background="@color/timelineLine"
+        android:layout_marginBottom="5dp"/>
+</RelativeLayout>

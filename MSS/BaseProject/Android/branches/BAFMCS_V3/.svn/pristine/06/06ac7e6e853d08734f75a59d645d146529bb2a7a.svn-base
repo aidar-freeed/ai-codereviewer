@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/contentComment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/txt_usrCrt"
+                android:minLines="2"
+                android:text="@string/comment"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+                android:id="@+id/txt_usrCrt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txt_timeCrt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_background"
+                android:text="@string/comment_item_name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+        <TextView
+                android:id="@+id/txt_timeCrt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/contentComment"
+                android:text="@string/comment_item_date"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#aaaaaa"/>
+
+        <!--          <View -->
+        <!--             android:layout_width="2dp" -->
+        <!--             android:id="@+id/divider" -->
+        <!--             android:layout_height="match_parent" -->
+        <!--             android:layout_marginLeft="5dp" -->
+        <!--             android:layout_alignBottom="@+id/contentComment" -->
+        <!--             android:layout_toRightOf="@+id/txt_usrCrt" -->
+        <!--             android:layout_alignParentTop="true" -->
+        <!--             android:background="#aaaaaa" /> -->
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/taskHeader"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/fontColorWhite">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle_thumbnail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/txtThumbnailCircle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="MA"
+                    android:textColor="@color/fontColorWhite"
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="MUHAMMAD AUDI"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/fontColorDarkGrey"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"/>
+
+            <ImageButton
+                android:id="@+id/callButtonAccount"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/call_button"
+                android:src="@drawable/ic_phone_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/Divider" />
+</LinearLayout>

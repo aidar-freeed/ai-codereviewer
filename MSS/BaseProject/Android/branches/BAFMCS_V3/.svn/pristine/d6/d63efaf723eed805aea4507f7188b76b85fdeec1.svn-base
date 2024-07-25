@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:id="@+id/layouttemp" >
+
+    <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:accessibilityLiveRegion="assertive">
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight=".5">
+                <DatePicker
+                        android:id="@+id/gDatePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:calendarViewShown="false"
+                        android:scaleX=".8"
+                        android:scaleY=".8"
+                        android:spinnersShown="true"
+                        android:translationX="-25dp" />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:translationX="-40dp">
+
+                <TimePicker
+                        android:id="@+id/gTimePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX=".8"
+                        android:scaleY=".8"
+                        android:translationX="-30dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+
+        <Button
+                android:id="@+id/btnCancel2"
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnCancel"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_background" />
+
+        <Button
+                android:id="@+id/btnOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_background"
+                android:text="@string/btnOk"
+                android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gradient_end"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:src="@drawable/profile_pic"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imageProfile"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/fontColorWhite"
+                    android:drawableLeft="@drawable/ic_person_white"
+                    android:drawableTint="@color/fontColorWhite"
+                    android:drawablePadding="10dp"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/txtJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Sales Dealer"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/fontColorWhite"
+                    android:drawableLeft="@drawable/ic_job_white"
+                    android:drawablePadding="10dp"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/txtDealer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Dealer ADI Utama"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/fontColorWhite"
+                    android:drawableLeft="@drawable/ic_location_white"
+                    android:drawablePadding="10dp"
+                    android:elevation="5dp"/>
+                <TextView
+                    android:id="@+id/txtCurrentCOH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Current COH : 2,000,000.00"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/fontColorWhite"
+                    android:drawableLeft="@drawable/ic_cash_white"
+                    android:drawablePadding="10dp"
+                    android:elevation="5dp"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/txtLimitCOH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Limit COH: 10,000,000.00"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/fontColorWhite"
+                    android:drawableLeft="@drawable/ic_money_limit"
+                    android:drawablePadding="10dp"
+                    android:elevation="5dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+            <!--<ImageButton-->
+                <!--android:id="@+id/btnLanguage"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:src="@drawable/english"-->
+                <!--android:background="@drawable/circle_button" />-->
+            <!--<ImageButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toLeftOf="@id/btnLanguage"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:src="@drawable/ic_key_color"-->
+                <!--android:background="@drawable/circle_shape"-->
+                <!--android:padding="5dp"/>-->
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menuRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp" />
+
+</RelativeLayout>

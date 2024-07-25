@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/questionDropdownLayout">
+    <TextView
+        android:id="@+id/questionDropdownLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0. Label"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+    <TextView
+        android:id="@+id/questionDropdownEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lookup_not_found"
+        android:padding="10dp"
+        android:textSize="11dp"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerQuestionList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/dropdown_background"
+            android:padding="5dp" />
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_expand"
+            android:layout_alignRight="@+id/spinnerQuestionList"
+            android:layout_alignBottom="@+id/spinnerQuestionList"
+            android:layout_alignTop="@+id/spinnerQuestionList"
+            android:layout_marginRight="10dp"
+            android:tint="@color/gradient_end"/>
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/questionDropdownDescription"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

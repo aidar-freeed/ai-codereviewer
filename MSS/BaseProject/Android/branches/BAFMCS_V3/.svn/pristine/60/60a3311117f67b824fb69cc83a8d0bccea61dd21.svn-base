@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/line_height"
+    android:background="@drawable/spinner_background" >
+
+    <TextView
+        android:id="@+id/txtTaskID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_task_id"
+        android:textColor="@color/tv_white"
+        android:layout_gravity="center_horizontal"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        />
+
+    <ImageView
+        android:id="@+id/imgStatus"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_schema"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="@string/dummy_header_name_2"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/tv_white" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/dummy_date"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/tv_white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/txtStatusTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_status_task"
+            android:visibility="gone"
+            android:textColor="@color/tv_white"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/txtScheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/tv_white"
+            android:minLines="2"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/dummy_scheme_name"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="gray_holo_dark" type="color">#ff464646</item>
+    <item name="gray_holo_light" type="color">#ffd0d0d0</item>
+    <color name="text_color">#FFFFFF</color>
+    <color name="divider_color">#11000000</color>
+    <color name="msg_color">#FFFFFFFF</color>
+    <color name="dialog_bg">#ff5f5f5f</color>
+
+    <color name="btn_press_color">#66000000</color>
+    <color name="btn_unpress_color">#22000000</color>
+
+    <color name="txt_view">#001135</color>
+
+
+    <color name="colorLegend">#3F51B5</color>
+
+    <!-- Text View -->
+    <color name="tv_darker">#041741</color>
+    <color name="tv_dark">#005baa</color>
+    <color name="tv_normal">#0a4cde</color>
+    <color name="tv_normal_press">#900a4cde</color>
+    <color name="tv_light">#6795fb</color>
+    <color name="tv_lighter">#73c4f5</color>
+    <color name="tv_gray_light">#DDDDDD</color>
+    <color name="tv_gray">#cccccc</color>
+    <color name="tv_white">#FFFFFF</color>
+    <!-- Text View -->
+    <color name="tv_darker_trans">#33041741</color>
+    <color name="tv_dark_trans">#50005baa</color>
+    <color name="tv_normal_trans">#500a4cde</color>
+    <color name="tv_light_trans">#506795fb</color>
+
+    <!-- Theme about colors -->
+    <color name="theme_default_primary">#536dfe</color>
+    <color name="theme_default_primary_dark">#3f51b5</color>
+    <color name="theme_accent">#ff4081</color>
+    <color name="theme_window_background">#ECECEC</color>
+
+    <color name="card">#FAFAFA</color>
+
+    <color name="title_openSource">#212121</color>
+    <color name="text_openSource">#727272</color>
+
+    <color name="dividerDark_openSource">#AAA</color>
+    <color name="dividerLight_openSource">#DADADA</color>
+
+    <color name="default_progress_bar_color">#FF33B5E5</color>
+
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+
+    <color name="drawer_background">#cfcfcf</color>
+
+    <!--     Action Bar -->
+    <color name="ab_start">#2c2d31</color>
+    <color name="ab_end">#2c2d31</color>
+
+    <!--     Gradient -->
+    <color name="gradient_start">#00aea7</color>
+    <color name="gradient_end">#002F5F</color>
+
+    <color name="black_translucent">#50000000</color>
+
+    <!-- in-app camera -->
+    <color name="autoFocusFailed">#F44336</color>
+    <color name="autoFocusSuccess">#4CAF50</color>
+
+    <!-- Graph Color -->
+    <color name="graphColor1">#FBBA72</color>
+    <color name="graphColor2">#F86624</color>
+    <color name="graphColor3">#BA5624</color>
+    <color name="graphColor4">#8F250C</color>
+    <color name="graphColor5">#7d1d05</color>
+
+
+    <!-- Rank Legends Color -->
+    <color name="rankColor1">#FF0000</color>
+    <color name="rankColor2">#000000</color>
+    <color name="rankColor3">#32CD32</color>
+    <color name="rankColor4">#0000FF</color>
+
+    <color name="colorMC">#002F5F</color>
+    <color name="bgColor">#E0E0E0</color>
+    <color name="fontColor">#212121</color>
+    <color name="fontColorWhite">#ffff</color>
+    <color name="disabledFontColor">#616161</color>
+    <color name="timelineLine">#BDBDBD</color>
+    <color name="shadowColor">#757575</color>
+    <color name="bgColorWhite">#ffff</color>
+
+    <color name="new_btn_unpress_color">#fdfbfb</color>
+    <color name="new_btn_press_color">#E3E1E1</color>
+
+    <color name="fontColorDarkGrey">#ff5f5f5f</color>
+    <color name="fontColorDarkGreen">#49744b</color>
+    <color name="green">#008000</color>
+    <color name="blueUrl">#0000EE</color>
+
+    <color name="txt_button">#0e5e5d</color>
+
+    <color name="slaGreen">#B2DFDB</color>
+    <color name="slaRed">#FFCDD2</color>
+    <color name="blazingRed">#FF0019</color>
+
+    <color name="cardview_shadow_start_color">#1a000000</color>
+    <color name="cardview_shadow_end_color">#1a000000</color>
+
+    <color name="background_white">#f2f1ed</color>
+
+
+    <color name="login_color">#4b754a</color>
+
+</resources>

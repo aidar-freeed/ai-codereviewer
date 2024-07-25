@@ -1,0 +1,182 @@
+<resources>
+    <string name="app_name">LeadIn</string>
+    <string name="appVersion">v2.1.0.1</string>
+    <string name="history_payment">History Payment</string>
+    <string name="installment_schedule">Installment Schedule</string>
+    <!-- Left Menu -->
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">close_drawer</string>
+
+    <!-- CHECK ORDER -->
+    <string name="btnLookupCMO">Lookup CMO</string>
+    <string name="btnLookupCMOMH">Lookup CMO / MH</string>
+    <string name="lblSearchBy">Search by</string>
+    <string name="lblStartDate">Start Date</string>
+    <string name="lblEndDate">End Date</string>
+    <string name="lblNomorOrder">Order Number</string>
+    <string name="btnSearchOrder">Search</string>
+    <string name="menu">Main Menu</string>
+    <string name="cekOrder">Check Order</string>
+    <string name="btnOpen">Open</string>
+    <string name="lblSearchByStatus">Status</string>
+    <string name="btnOk">OK</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="submit_all_task">Submit All Task</string>
+    <string name="submit_task_collection">Submit Task Collection</string>
+    <string name="lblAccountName">Account Name :</string>
+    <string name="lblProduct">Product :</string>
+    <string name="lblStatus">Status :</string>
+    <string name="allStatus">All Status</string>
+
+    <string-array name="dropdownAccountStatus">
+        <item>All Status</item>
+        <item>Lead</item>
+        <item>Bid</item>
+        <item>Qualified</item>
+        <item>Completed</item>
+        <item>Deleted</item>
+    </string-array>
+    <string-array name="cbSearchBy">
+        <item>Date</item>
+        <item>Order Number</item>
+        <item>Customer Name</item>
+    </string-array>
+    <string-array name="cbSearchByStatus">
+        <item>ALL</item>
+        <item>On Survey</item>
+        <item>On CA</item>
+    </string-array>
+    <string-array name="cbUpdateOrder">
+        <item>Open Order</item>
+        <item>Cancel Order</item>
+    </string-array>
+
+    <!-- 	Main Menu -->
+    <string name="title_mn_tasklist">Order Progress</string>
+    <string name="title_mn_reportsummary">Report Summary</string>
+    <string name="title_mn_depositreport">Deposit Report</string>
+    <string name="title_mn_newtask">New Order</string>
+    <string name="title_mn_surveyperformance">Survey Performance</string>
+    <string name="title_mn_surveyverification">Survey Verification</string>
+    <string name="title_mn_surveyapproval">Survey Approval</string>
+    <string name="title_mn_surveyassign">Survey Assignment</string>
+    <string name="title_mn_surveyreassign">Survey Re-Assignment</string>
+    <string name="title_mn_installmentschedule">Installment Schedule</string>
+    <string name="title_mn_setting">Settings</string>
+
+
+    <string name="msgNoTaskList">You have no task list</string>
+    <string name="msgNoNewVersion">This current version is the latest version</string>
+
+    <string name="login_desc">Login to LeadIn Application</string>
+
+    <string name="toast_crash">Ooooops ! MSSODR crashed, but a report has been sent to my developer to help fix the issue !</string>
+    <string name="password">Password :</string>
+    <string name="user_id">User ID :</string>
+
+    <string name="news_desc">TextView</string>
+    <string name="title_news_parent">Medium Text</string>
+    <string name="data_not_found">Data is empty.</string>
+
+    <string name="dummy_no_order">1234567</string>
+    <string name="notes">Notes</string>
+    <string name="medium_text">Medium Text</string>
+    <string name="title_activity_developer_option">Dev Options</string>
+    <string name="changelog_v230"><![CDATA[Changes: <br/>
+1. Support Multilingual <br/>
+2. Update compatibility for Android M <br/>
+3. Support refresh location by tap GPS Icon <br/>
+4. Increase performance <br/>
+5. Decrease memory usage <br/>
+6. Add cirle radius in map viewer if accuracy available <br/>
+7. Loading not relevant Questions automatically <br/>
+8. Support Copy value from other questions <br/>
+9. Support advanced question validation <br/>
+10. Minor Bug fixes]]></string>
+    <string name="changelog_v2310"><![CDATA[Changes: <br/> 1. Support copy value with condition]]></string>
+    <string name="changelog_v2320"><![CDATA[Changes: <br/>
+1. Fixing profile and cover image if exit
+]]></string>
+
+        <string name="changelog_v200"><![CDATA[Changes: <br/>
+1. Add support for Timeline Task <br/>
+2. Add support for navigation menu]]></string>
+<string name="changelog_v210"><![CDATA[Changes: <br/>
+1. Add Support for Promo<br/>]]></string>
+    <string name="changelog_v220"><![CDATA[Changes: <br/>
+1. Add Support for Oauth]]></string>
+    <string name="changelog_v2330"><![CDATA[Changes: <br/>
+1. Fixing Synchronize<br/>
+2. Fixing Timeline for Attendance<br/>
+3. Fixing load question answer<br/>
+4. Add check root device]]></string>
+    <string name="changelog_v2340"><![CDATA[Changes: <br/>
+1. Aplhanumeric Password requirement]]></string>
+    <string name="changelog_v2350"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes<br/>
+2. Removing Inactive Form]]></string>
+    <string name="changelog_v2360"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v2370"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes
+2. Fixing GPS issues]]></string>
+    <string name="changelog_v2380"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v2390"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23100"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23110"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23120"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23130"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23140"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23150"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23160"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23170"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23180"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v23190"><![CDATA[Changes: <br/>
+1. Minor Bug Fixes]]></string>
+    <string name="changelog_v2400"><![CDATA[Changes: <br/>
+1. Add device information at about<br/>
+2. Support online lookup<br/>
+3. Task list view : box or list]]></string>
+    <string name="changelog_v3110"><![CDATA[Changes: <br/>
+1. Add FailedDraft status on TaskH when there is specific response code is received from server .<br/>
+2. Add user help .<br/>
+3. Fix take picture failed on android 10 .<br/>
+4. App slow on Login-Logout-Login .<br/>
+5. Enhancement for answer type LuOnline.<br/>
+6. Fix bug uploading task on timeline not showing.<br/>
+7. Add support for Android 10
+]]></string>
+    <string name="changelog_v3120">
+<![CDATA[ Changes: <br/> 1. Fix bug Cloud CSV can\'t be imported .<br/>
+2. Fix bug application running service stopped caused by close application .<br/>
+3. Fix synchronize crash .<br/>
+4. Fix crash when is_tracking off . <br/>
+5. Remove search by priority . <br/>
+6. Fix force stop not opening timeline . ]]>
+</string>
+    <string name="changelog_v3130">
+<![CDATA[ Changes: <br/>
+1. Fix user help issues.<br/>
+2. Fix automatic logout when press back.<br/>
+3. Add call customer phone number action at customer form.<br/>
+4. Fix validation not working at form because of regex.<br/>
+5. Add sample text at user help with dynamic data.<br/>
+]]>
+</string>
+<string name="changelog_v3140">
+<![CDATA[ Changes: <br/>
+1. Refactor some codes.<br/>
+2. Fix some bugs.<br/>]]>
+</string>
+</resources>

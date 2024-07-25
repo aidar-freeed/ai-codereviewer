@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="define_int_MobileCollection">year;owner</string>
+    <string name="library_MobileCollection_author">AdIns</string>
+    <string name="library_MobileCollection_authorWebsite">http://ad-ins.com/</string>
+    <string name="library_MobileCollection_libraryName">CollAct v2.0</string>
+    <string name="library_MobileCollection_libraryDescription">
+        Mobile Collection is powerfull mobile application for smartphones that supports finance companies field task force and any field operators to increase their productivity.
+    </string>
+    <string name="library_MobileCollection_libraryVersion">1.0.0</string>
+    <string name="library_MobileCollection_libraryWebsite">https://ad-ins.com/MobileCollection</string>
+    <string name="library_MobileCollection_licenseId">apache_2_0</string>
+    <string name="library_MobileCollection_isOpenSource">true</string>
+    <string name="library_MobileCollection_repositoryLink">https://ad-ins.com/MobileCollection</string>
+    <!-- Custom variables section -->
+    <string name="library_MobileCollection_owner">PT. Adicipta Dinamika Inovasi</string>
+    <string name="library_MobileCollection_year">2015</string>
+</resources>

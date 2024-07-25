@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="define_AdInsLibrariesv2">year;owner</string>
+    <string name="library_AdInsLibrariesv2_author">AdIns</string>
+    <string name="library_AdInsLibrariesv2_authorWebsite">http://gegemobile.com/</string>
+    <string name="library_AdInsLibrariesv2_libraryName">MSS v2</string>
+    <string name="library_AdInsLibrariesv2_libraryDescription">
+		AdInsLibraries is a library to offer you all the information you need of your libraries!
+        Most modern apps feature an "Used Library"-Section and for this some information of those libs is required. 
+        As it gets annoying to copy those strings always to your app I have developed this small helper library to
+        provide the required information.
+    </string>
+    <string name="library_AdInsLibrariesv2_libraryVersion">2.1.0</string>
+    <string name="library_AdInsLibrariesv2_libraryWebsite">https://github.com/mikepenz/AdInsLibraries</string>
+    <string name="library_AdInsLibrariesv2_licenseId">mit</string>
+    <string name="library_AdInsLibrariesv2_isOpenSource">true</string>
+    <string name="library_AdInsLibrariesv2_repositoryLink">https://github.com/mikepenz/AdInsLibraries</string>
+    <!-- Custom variables section -->
+    <string name="library_AdInsLibrariesv2_owner">AdIns</string>
+    <string name="library_AdInsLibrariesv2_year">2014</string>
+</resources>

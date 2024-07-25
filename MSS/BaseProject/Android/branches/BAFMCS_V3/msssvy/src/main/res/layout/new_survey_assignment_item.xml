@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/taskListLayout">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/taskHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="5dp"
+        app:cardElevation="@dimen/card_shadow"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/fontColorWhite">
+        <LinearLayout
+            android:id="@+id/taskLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtNoOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Assignment"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/fontColor"
+                android:drawableLeft="@drawable/ic_assignment"
+                android:drawablePadding="5dp"/>
+            <TextView
+                android:id="@+id/txtCustomerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/fontColor"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:drawableLeft="@drawable/ic_person_color"
+                android:drawablePadding="5dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

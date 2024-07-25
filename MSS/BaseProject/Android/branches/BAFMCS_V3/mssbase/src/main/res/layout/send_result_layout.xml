@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_grayscale" >
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+        <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imgHeader"
+                android:text="@string/dummy_result"
+                android:gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+                android:id="@+id/txtTimeSent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txtResult"
+                android:gravity="center_horizontal"
+                android:text="@string/dummy_time_sent"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+                android:id="@+id/txtDataSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTimeSent"
+                android:layout_centerHorizontal="true"
+                android:text="@string/dummy_data_size"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+                android:id="@+id/btnOK"
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDataSize"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btnOk" />
+
+        <Button
+                android:id="@+id/btnPrintPage"
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnOK"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btnPrint" />
+
+        <ImageView
+                android:id="@+id/imgHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_submit_ok" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

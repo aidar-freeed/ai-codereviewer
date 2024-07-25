@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color" >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/footer" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutSyncQuestionSet"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/textViewSyncScheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sync_scheme"
+            android:textSize="10dp"
+            android:textColor="@color/tv_darker" />
+
+        <TextView
+            android:id="@+id/textViewSyncSchemeDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/textViewSyncScheme"
+            android:textColor="@color/tv_darker"
+            android:textSize="10dp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSyncQuestionSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutSyncLookup"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/textViewSyncQuestionSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sync_question_set"
+            android:textSize="10dp"
+            android:textColor="@color/tv_darker" />
+
+        <TextView
+            android:id="@+id/textViewSyncQuestionSetDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="10dp"
+            android:layout_toRightOf="@+id/textViewSyncQuestionSet"
+            android:textColor="@color/tv_darker"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSyncLookup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutSyncHoliday"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/textViewSyncLookup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sync_lookup"
+            android:textSize="10dp"
+            android:textColor="@color/tv_darker" />
+
+        <TextView
+            android:id="@+id/textViewSyncLookupDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="10dp"
+            android:layout_toRightOf="@+id/textViewSyncLookup"
+            android:textColor="@color/tv_darker"
+            android:textStyle="italic" />
+    </LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/layoutSyncHoliday"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_above="@+id/progressBar"
+	    android:layout_marginBottom="8dp" >
+	
+	    <TextView
+	        android:id="@+id/textViewSyncHoliday"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/sync_holiday"
+	        android:textSize="10dp"
+	        android:textColor="@color/tv_darker" />
+	
+	    <TextView
+	        android:id="@+id/textViewSyncHolidayDone"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:textSize="10dp"
+	        android:layout_toRightOf="@+id/textViewSyncHoliday"
+	        android:textColor="@color/tv_darker"
+	        android:textStyle="italic" />
+	</LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lblStatus"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_marginBottom="58dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:minWidth="240dp" />
+
+    <!--
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/progressBar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:text="Synchronizing"
+                android:textColor="@color/tv_darker" />
+    -->
+
+    <TextView
+        android:id="@+id/lblStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/progressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false"
+        android:layout_marginTop="26dp"
+        android:text="Progress : 0%"
+        android:textColor="@color/tv_darker" />
+
+</RelativeLayout>

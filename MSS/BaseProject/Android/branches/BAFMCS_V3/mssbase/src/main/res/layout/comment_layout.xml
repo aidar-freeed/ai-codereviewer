@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="8dp" >
+
+    <RelativeLayout
+            android:id="@+id/actionCommentLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true">
+
+        <EditText
+                android:id="@+id/editComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/btnSendComment"
+                android:hint="@string/comment_hint" >
+
+        </EditText>
+
+        <ImageButton
+                android:id="@+id/btnSendComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_send_comment" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/dataTimeline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        <RelativeLayout
+                android:id="@+id/timelineItemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dfdfdf" >
+
+            <TextView
+                    android:id="@+id/txtTitleC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtDescC"
+                    android:layout_toLeftOf="@+id/txtTimeC"
+                    android:gravity="center_vertical"
+                    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+                    android:paddingLeft="8dp"
+                    android:text="@string/title"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                    android:id="@+id/txtDescC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/timelineImageC"
+                    android:layout_below="@+id/txtTitleC"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/description"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <ImageView
+                    android:id="@+id/timelineImageC"
+                    android:layout_width="fill_parent"
+                    android:layout_height="96dp"
+                    android:layout_below="@+id/txtDescC"
+                    android:paddingLeft="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_notavailable" />
+
+            <TextView
+                    android:id="@+id/txtTimeC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txtTitleC"
+                    android:layout_alignBottom="@+id/txtTitleC"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/defaultTime"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/jmlComments"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dataTimeline"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/defaultComment"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+            android:id="@+id/commentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/actionCommentLayout"
+            android:layout_below="@+id/jmlComments"
+            android:orientation="vertical" >
+
+        <ListView
+                android:id="@+id/commentList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="5dp" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

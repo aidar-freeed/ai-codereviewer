@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questionDtmLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0. label"
+        android:id="@+id/questionDtmLabel" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <EditText
+            android:id="@+id/questionDtmAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:text="ddMMyyyy"
+            android:layout_weight="0.5"/>
+        <Button
+            android:id="@+id/btnSetDtm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="set the date"/>
+    </LinearLayout>
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

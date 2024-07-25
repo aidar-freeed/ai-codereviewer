@@ -1,0 +1,268 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/transparantLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_above="@+id/dialogLinearLayout"
+        android:orientation="vertical"/>
+    <LinearLayout
+        android:id="@+id/dialogLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottomnav_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.5">
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dropdown_background"
+                android:padding="5dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_expand"
+                android:layout_alignRight="@+id/spinnerForm"
+                android:layout_alignBottom="@+id/spinnerForm"
+                android:layout_alignTop="@+id/spinnerForm"
+                android:layout_marginRight="10dp"
+                android:tint="@color/gradient_end"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.5">
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dropdown_background"
+                android:padding="5dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_expand"
+                android:layout_alignRight="@+id/spinnerTask"
+                android:layout_alignBottom="@+id/spinnerTask"
+                android:layout_alignTop="@+id/spinnerTask"
+                android:layout_marginRight="10dp"
+                android:tint="@color/gradient_end"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Name:"
+                android:textColor="@color/gradient_end"/>
+
+            <EditText
+                android:id="@+id/customerNameEdtTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/form_edittext_background"
+                android:padding="5dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/gradient_end"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/gradient_end"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/gradient_end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OS Principal"
+                android:textColor="@color/gradient_end"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/osPrincipalFrom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/form_edittext_background"
+                    android:padding="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="number"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="~"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+
+                <EditText
+                    android:id="@+id/osPrincipalTo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/form_edittext_background"
+                    android:padding="5dp"
+                    android:inputType="number"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tenor"
+                android:textColor="@color/gradient_end"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/tenorFrom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/form_edittext_background"
+                    android:padding="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="number"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="~"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+
+                <EditText
+                    android:id="@+id/tenorTo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/form_edittext_background"
+                    android:padding="5dp"
+                    android:inputType="number"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.5">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PTP"
+                android:textColor="@color/gradient_end"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerPTP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dropdown_background"
+                    android:padding="5dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_expand"
+                    android:layout_alignRight="@+id/spinnerPTP"
+                    android:layout_alignBottom="@+id/spinnerPTP"
+                    android:layout_alignTop="@+id/spinnerPTP"
+                    android:layout_marginRight="10dp"
+                    android:tint="@color/gradient_end"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/button_background"
+            android:text="@string/btnSearch"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/fontColorWhite"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

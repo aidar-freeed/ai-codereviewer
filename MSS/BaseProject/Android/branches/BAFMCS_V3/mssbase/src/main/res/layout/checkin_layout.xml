@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkin_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical" >
+
+    <!-- <Button -->
+    <!-- android:id="@+id/btnRefreshCIn" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginRight="5dp" -->
+    <!-- android:layout_marginTop="5dp" -->
+    <!-- android:text="Refresh" -->
+    <!-- android:layout_gravity="right" /> -->
+
+    <LinearLayout
+        android:id="@+id/DescLayoutIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/lowpriority_background"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/addressImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_absent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textLocalIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/tv_white" />
+
+            <TextView
+                android:id="@+id/textAddressIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/tv_white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/mapIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/DescLayoutIn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/relativeLayout1"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:tag="mapin" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/actionbar" >
+
+        <ImageButton
+            android:id="@+id/btnRefreshCIn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_menu_refresh_white"
+            android:background="@drawable/button_background_round"
+            android:elevation="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"/>
+
+    </RelativeLayout>
+
+    <!--<View-->
+        <!--android:id="@+id/actionbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@drawable/actionbar_background" />-->
+
+</RelativeLayout>

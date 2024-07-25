@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adins.mss.foundation.questiongenerator.form.QuestionView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/question_text_button_url_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/question_text_button_url_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0. Label"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:clickable="false"
+            android:inputType="none"
+            android:padding="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@drawable/edit_text_selector"
+            />
+
+        <Button
+            android:id="@+id/btn_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_background"
+            android:gravity="center"
+            android:text="@string/btnView"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/fontColorWhite" />
+
+    </LinearLayout>
+</com.adins.mss.foundation.questiongenerator.form.QuestionView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--   <item android:id="@+id/recapitulation" android:showAsAction="never" -->
+<!--         android:title="Recapitulation"/> -->
+<!--   <item android:id="@+id/summary" android:showAsAction="never" -->
+<!--         android:title="Summary"/> -->
+</menu>

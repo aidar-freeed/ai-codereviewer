@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".todolist.form.todaysplan.TodayPlanFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tasklistPlanContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/planList"
+            android:paddingTop="8dp"
+            android:paddingBottom="100dp"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/plan_info_floating"
+            android:id="@+id/planSelectedInfo"
+            android:text="4 of 5 tasks selected"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/confirmPlanBtnCont"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/confirmPlanBtn"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="@string/start_visit"
+                android:background="@drawable/button_background"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noPlanTaskContent"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topNoPlanConstraint"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftNoPlanConstraint"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightNoPlanConstraint"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/topNoPlanConstraint"
+            app:layout_constraintStart_toEndOf="@id/leftNoPlanConstraint"
+            app:layout_constraintEnd_toStartOf="@id/rightNoPlanConstraint"
+            android:id="@+id/noPlanTaskInfo"
+            android:text="@string/have_not_plan_task"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/goToTasklistBtn"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintTop_toBottomOf="@id/noPlanTaskInfo"
+            app:layout_constraintStart_toEndOf="@id/leftNoPlanConstraint"
+            app:layout_constraintEnd_toStartOf="@id/rightNoPlanConstraint"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:text="@string/create_plan"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/itemControlPanel"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_marginVertical="20dp"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/toTopBtn"
+            android:textColor="#ffffff"
+            android:background="@drawable/plan_task_move_icon_bg"
+            android:src="@drawable/ic_vertical_align_top"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <ImageView
+            android:id="@+id/upBtn"
+            app:layout_constraintStart_toEndOf="@id/toTopBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#ffffff"
+            android:background="@drawable/plan_task_move_icon_bg"
+            android:src="@drawable/ic_arrow_upward"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+        <ImageView
+            android:id="@+id/downBtn"
+            android:textColor="#ffffff"
+            android:background="@drawable/plan_task_move_icon_bg"
+            android:src="@drawable/ic_arrow_downward"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <ImageView
+            android:id="@+id/toBottomBtn"
+            android:textColor="#ffffff"
+            android:background="@drawable/plan_task_move_icon_bg"
+            android:src="@drawable/ic_vertical_align_bottom"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <ImageView
+            android:id="@+id/doneMoveBtn"
+            android:background="@color/gradient_end"
+            android:src="@drawable/ic_done_control"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+</FrameLayout>

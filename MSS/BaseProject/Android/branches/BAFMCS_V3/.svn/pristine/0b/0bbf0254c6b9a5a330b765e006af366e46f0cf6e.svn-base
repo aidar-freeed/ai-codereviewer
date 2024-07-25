@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false"
+        android:bottom="2dp"
+        android:top="-2dp"
+        android:left="-2dp"
+        android:right="-2dp">
+        <shape android:shape="line">
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/disabledFontColor" />
+        </shape>
+    </item>
+    <item android:state_enabled="true"
+        android:bottom="2dp"
+        android:top="-2dp"
+        android:left="-2dp"
+        android:right="-2dp">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1dp"
+                android:color="@color/fontColor" />
+        </shape>
+    </item>
+</selector>

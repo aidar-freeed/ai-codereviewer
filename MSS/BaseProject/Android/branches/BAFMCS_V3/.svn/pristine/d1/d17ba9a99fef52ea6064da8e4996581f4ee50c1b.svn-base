@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_grayscale">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="46dp">
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize"
+                android:background="@drawable/actionbar_background">
+        </View>
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deposit_report"
+                        style="@style/PageTextTitle"/>
+
+                <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/MySpinner"
+                        android:id="@+id/transferBySpinner"
+                        android:entries="@array/transfer_spinner">
+                </Spinner>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/transferAsBank">
+
+                    <TextView
+                        android:id="@+id/txtNomorRekening"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_account_number_2"
+                            style="@style/FieldLabel"/>
+
+                    <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/editNomorRekening"/>
+
+                    <TextView
+                        android:id="@+id/txtBankName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_bank_name_2"
+                            style="@style/FieldLabel"/>
+
+                    <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/editNamaBank"/>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_batch_id_2"
+                            style="@style/FieldLabel"/>
+
+                    <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:editable="false"
+                            android:id="@+id/editBatchId"/>
+
+                    <TextView
+                        android:id="@+id/txtBuktiTransfer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_transfer_evidence_2"
+                            style="@style/FieldLabel"/>
+
+                    <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:background="#EEE"
+                            android:id="@+id/imageBukti"/>
+
+                    <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/take_a_photo"
+                            android:id="@+id/buttonSelectPhoto"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/transferAsCashier"
+                        android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtCashierName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_cashier_name_2"
+                            style="@style/FieldLabel"/>
+
+                    <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/editNamaKasir"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <Button
+            android:layout_height="45dp"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:text="@string/btnSend"
+            android:id="@+id/buttonSend"/>
+</FrameLayout>

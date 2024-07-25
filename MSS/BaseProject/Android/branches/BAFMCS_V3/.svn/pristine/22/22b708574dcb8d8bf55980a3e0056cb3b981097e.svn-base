@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:visibility="visible" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lblServerLinkId" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtServerLink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/lblServerLinkId"
+        android:text="" >
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.36"
+        android:gravity="bottom" >
+
+        <Button
+            android:id="@+id/btnSaveLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnSaveLink" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

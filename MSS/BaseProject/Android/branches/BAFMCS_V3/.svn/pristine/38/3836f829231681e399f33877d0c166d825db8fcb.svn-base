@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+								 android:layout_width="fill_parent"
+								 android:layout_height="fill_parent"
+								 android:id="@+id/footer" >
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_above="@+id/contentComment"
+		android:orientation="horizontal"
+		>
+		<TextView
+			android:id="@+id/contentVersion"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textSize="10dp"
+			android:text="@string/appVersion" />
+		<TextView
+			android:id="@+id/divider"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="|"
+			android:textSize="10dp"
+			android:visibility="gone" />
+		<TextView
+			android:id="@+id/androidId"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textSize="10dp"
+			android:text="androidId"
+			android:visibility="gone"/>
+	</LinearLayout>
+	<TextView
+		android:id="@+id/contentComment"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:text="@string/aboutCopyright" />
+
+</RelativeLayout>

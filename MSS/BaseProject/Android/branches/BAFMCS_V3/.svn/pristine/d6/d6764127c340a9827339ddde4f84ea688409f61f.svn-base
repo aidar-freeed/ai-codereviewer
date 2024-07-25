@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_grayscale"
+    android:orientation="vertical" >
+    <LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="vertical"
+		    android:visibility="visible" 
+		    android:padding="5dp">		   
+		    <LinearLayout
+		        android:padding="5dp"
+		        android:layout_width="fill_parent"
+		        android:background="@color/gradient_start"
+		        android:gravity="center"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+			    <ToggleButton
+			        android:id="@+id/btnVoiceNotes"
+			        android:layout_marginTop="5dp"
+			        android:layout_gravity="center_horizontal"
+			        android:layout_width="100dp"
+			        android:layout_height="100dp"
+			        android:drawableTop="@drawable/ic_record"			        
+			        android:textOn="Tap to Stop"
+			        android:textOff="Tap to Record"
+			        android:textColor="@color/tv_white"
+			        android:background="@android:color/transparent" />
+			    <TextView
+			        android:id="@+id/txtNoVoiceNote"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="7dp"
+			        android:gravity="center_horizontal"
+			        android:shadowColor="@color/tv_darker"
+			        android:maxLength="500"
+			        android:text="@string/voice_notes_not_available"
+			        android:textColor="@color/tv_white" 
+			        android:visibility="gone">
+			    </TextView>
+
+		    </LinearLayout>
+		    <LinearLayout android:id="@+id/recorderLayout"
+		        android:padding="5dp"
+		        android:layout_width="fill_parent"
+		        android:background="@color/gradient_end"
+		        android:gravity="center"
+		        android:visibility="gone"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal">
+
+		        <ImageButton
+		            android:id="@+id/btnPlay"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/ic_play" 
+		            android:background="@drawable/circle_button"/>
+
+		        <ImageButton
+		            android:id="@+id/btnStop"
+		            android:layout_marginLeft="30dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/ic_stop"
+		            android:background="@drawable/circle_button"/>
+		        
+		    </LinearLayout>
+
+		    <Button		        
+		        android:id="@+id/buttonSave"
+		        android:layout_marginTop="5dp"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/btnSave" />
+
+		</LinearLayout>
+
+</LinearLayout>

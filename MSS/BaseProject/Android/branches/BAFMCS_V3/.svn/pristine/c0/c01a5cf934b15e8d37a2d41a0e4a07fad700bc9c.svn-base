@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/appVersionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="15dp"
+        app:cardElevation="@dimen/card_shadow"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/fontColorWhite">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/lblApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name_order"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:textColor="@color/gradient_end"
+                android:paddingBottom="10dp"/>
+            <TextView
+                android:id="@+id/appDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/app_desc_order"/>
+            <Button
+                android:id="@+id/btnCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="@string/checkUpdate"
+                android:textColor="@color/fontColorWhite"
+                android:background="@drawable/button_background"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/appLogContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="5dp"
+        app:cardElevation="@dimen/card_shadow"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/fontColorWhite">
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

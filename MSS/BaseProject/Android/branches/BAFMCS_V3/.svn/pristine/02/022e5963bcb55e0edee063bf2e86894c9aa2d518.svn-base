@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DrawInsetsFrameLayout">
+        <attr name="insetBackground" format="reference|color"/>
+    </declare-styleable>
+
+    <declare-styleable name="PullToRefreshView">
+
+        <!-- The class to use as a View's View Delegate. Can be relative path from app's package name -->
+        <attr name="ptrViewDelegateClass" format="reference|string" />
+
+    </declare-styleable>
+
+    <!-- The attribute to set in your Application/Activity theme to reference your custom theme -->
+    <attr name="ptrHeaderStyle" format="reference" />
+
+    <declare-styleable name="PullToRefreshHeader">
+
+        <!-- A drawable to use as the background of the Header View -->
+        <attr name="ptrHeaderBackground" format="reference|color" />
+
+        <!-- The height of the Header View -->
+        <attr name="ptrHeaderHeight" format="reference|dimension" />
+
+        <!-- The Text Appearance of the Header View's Title text -->
+        <attr name="ptrHeaderTitleTextAppearance" format="reference" />
+
+        <!-- The color that the Progress Bar should be tinted with -->
+        <attr name="ptrProgressBarColor" format="reference|color" />
+
+        <!-- The style of the Progress Bar -->
+        <attr name="ptrProgressBarStyle">
+            <flag name="inside" value="0x0" />
+            <flag name="outside" value="0x1" />
+        </attr>
+
+	    <!-- The height of the Progress Bar -->
+	    <attr name="ptrProgressBarHeight" format="reference|dimension" />
+
+        <!-- Text to show to prompt the user is pull (or keep pulling) -->
+        <attr name="ptrPullText" format="reference|string" />
+
+        <!-- Text to show to tell the user that a refresh is currently in progress -->
+        <attr name="ptrRefreshingText" format="reference|string" />
+
+        <!-- Text to show to tell the user has scrolled enough to refresh -->
+        <attr name="ptrReleaseText" format="reference|string" />
+
+        <!--indeterminate progressbar style-->
+        <attr name="ptrSmoothProgressBarStyle" format="reference"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="SmoothProgressBar">
+        <attr name="spbStyle" format="reference"/>
+        <attr name="spb_color" format="color"/>
+        <attr name="spb_stroke_width" format="dimension"/>
+        <attr name="spb_stroke_separator_length" format="dimension"/>
+        <attr name="spb_sections_count" format="integer"/>
+        <attr name="spb_speed" format="float"/>
+        <attr name="spb_progressiveStart_speed" format="float"/>
+        <attr name="spb_progressiveStop_speed" format="float"/>
+        <attr name="spb_interpolator" format="enum">
+            <enum name="spb_interpolator_accelerate" value="0"/>
+            <enum name="spb_interpolator_linear" value="1"/>
+            <enum name="spb_interpolator_acceleratedecelerate" value="2"/>
+            <enum name="spb_interpolator_decelerate" value="3"/>
+        </attr>
+        <attr name="spb_reversed" format="boolean"/>
+        <attr name="spb_mirror_mode" format="boolean"/>
+        <attr name="spb_colors" format="reference"/>
+        <attr name="spb_progressiveStart_activated" format="boolean"/>
+        <attr name="spb_background" format="reference"/>
+        <attr name="spb_generate_background_with_colors" format="boolean"/>
+        <attr name="spb_gradients" format="boolean"/>
+    </declare-styleable>
+    
+    <attr name="cropImageStyle" format="reference" />
+
+    <declare-styleable name="CropImageView">
+        <attr name="highlightColor" format="reference|color" />
+        <attr name="showThirds" format="boolean" />
+        <attr name="showHandles">
+          <enum name="changing" value="0" />
+          <enum name="always" value="1" />
+          <enum name="never" value="2" />
+        </attr>
+        <attr name="guidelines">
+            <enum name="on" value="2"/>
+            <enum name="onTouch" value="1"/>
+            <enum name="off" value="0"/>
+        </attr>
+        <attr name="fixAspectRatio" format="boolean"/>
+        <attr name="aspectRatioX" format="integer"/>
+        <attr name="aspectRatioY" format= "integer"/>
+        <attr name="imageResource" format="reference"/>
+    </declare-styleable>    
+</resources>

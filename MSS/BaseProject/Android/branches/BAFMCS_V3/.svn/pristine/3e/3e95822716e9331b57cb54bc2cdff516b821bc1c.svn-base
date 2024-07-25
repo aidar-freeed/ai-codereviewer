@@ -1,0 +1,1156 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">Mobile Base</string>
+    <string name="app_name_order">LeadIn v2.0</string>
+    <string name="app_name_collection">CollAct v2.0</string>
+    <string name="app_name_survey">CheckId v2.0</string>
+
+    <string name="app_desc_order">LeadIn Description</string>
+    <string name="app_desc_collection">CollAct Description</string>
+    <string name="app_desc_survey">CheckId Description</string>
+
+    <!-- SERVER LINK -->
+    <string name="lblServerLinkId">Server Link</string>
+    <string name="btnSaveLink">SIMPAN</string>
+    <!-- LOGIN -->
+    <string name="lblLoginId">ID Pengguna</string>
+    <string name="lblLoginPassword">Kata Sandi</string>
+    <string name="btnLogin">LOGIN</string>
+    <string name="btnExit">KELUAR</string>
+    <string name="lblOldPassword">Kata Sandi Lama</string>
+    <string name="lblCurrentPassword">Kata Sandi Sekarang</string>
+    <string name="lblNewPassword">Kata Sandi Baru</string>
+    <string name="lblShowPassword">Lihat Kata Sandi</string>
+    <string name="lblConfirmPassword">Konfirmasi Kata Sandi</string>
+    <string name="hintOldPassword">Masukkan kata sandi lama Anda</string>
+    <string name="hintNewPassword">Masukkan kata sandi baru Anda</string>
+    <string name="hintConfirmPassword">Masukkan kembali kata sandi baru Anda</string>
+    <string name="hintRetypePassword">Ketik ulang kata sandi</string>
+    <string name="lblRememberMe">Ingat Saya</string>
+    <string name="enableDevMode">AKTIFKAN MODE PENGEMBANGAN</string>
+    <string name="disableDevMode">MATIKAN MODE PENGEMBANGAN</string>
+    <string name="androidIdnotregistered">Daftarkan Android Id berikut ke Administrator</string>
+    <string name="turn_on">Nyalakan</string>
+    <string name="use_your_location">Memerlukan Lokasi Anda</string>
+    <string name="location_explanation">Lokasi latar belakang anda diperlukan oleh supervisor Anda untuk keperluan pemantauan</string>
+    <string name="hintDigitalReceipt">Hubungi server untuk dapatkan resi</string>
+    <string name="btnDigitalReceipt">Hasilkan resi</string>
+
+    <!-- MAIN MENU -->
+    <string name="menuSurveyList">DAFTAR TUGAS</string>
+    <string name="menuNewSurvey">TUGAS BARU</string>
+    <string name="menuSentSurvey">LOG</string>
+    <string name="mnChangePassword">GANTI KATA SANDI</string>
+    <string name="mnPending">Pending</string>
+    <string name="mnCpImage">Copy Image</string>
+    <!-- Glen 7 Aug 2014 menu inquiry -->
+    <string name="menuInquiry">Inquiry</string>
+    <!-- Glen 2 Oct 2014 menu sync -->
+    <string name="mnSync">Synchronize</string>
+    <!-- Glen 2 Oct 2014 menu sync -->
+    <string name="mnAttendance">Attendance</string>
+    <!-- SURVEY LIST -->
+    <string name="msgNoSurvey">Tidak ada tugas dari server</string>
+    <string name="btnEdit">EDIT</string>
+    <string name="btnSend">KIRIM</string>
+    <string name="btnDelete">HAPUS</string>
+    <!-- DOWNLOAD ALL -->
+    <string name="msgAllDownloaded">Semua tugas berhasil diunduh</string>
+    <string name="msgSomeDownloaded">Beberapa tugas gagal diunduh</string>
+
+    <!-- FORM LIST -->
+    <string name="msgNoForm">Form template tidak ditemukan di server</string>
+    <string name="msgFormAllRelevant">Semua template form adalah pertanyaan relevan</string>
+    <!--Glen 24 Oct 2014 -->
+    <!-- DYNAMIC -->
+    <string name="btnFinish">Selesai</string>
+    <string name="btnDate">PILIH TANGGAL</string>
+    <string name="btnTime">PILIH WAKTU</string>
+    <string name="btnDateTime">PILIH TANGGAN DAN WAKTU</string>
+    <string name="btnLookup">MULAI PENCARIAN</string>
+    <string name="btn_reset_password">ATUR ULANG PASSWORD</string>
+    <string name="promptSelectOne">Pilih salah satu</string>
+    <string name="lblFinish">Preview</string>
+    <string name="lblHeader">Header</string>
+    <string name="lblStatus">Status</string>
+    <string name="lblStatusPrint">Status</string>
+    <string name="mnSend">Kirim</string>
+    <string name="alertExitSurvey">Apakah Anda yakin ingin keluar dari tugas saat ini?</string>
+    <string name="carModel">Car Model</string>
+    <string name="btnGPS">ATUR LOKASI</string>
+    <string name="btnGPSnLBS">Atur Lokasi</string>
+
+    <!-- RESULT -->
+    <string name="time">Waktu kirim data :\u0020</string>
+    <string name="size">Ukuran Data :\u0020</string>
+    <string name="result">Return Message :\u0020</string>
+    <string name="print">Print</string>
+    <string name="printResultNull">Tidak ada hasil cetak untuk tugas ini</string>
+    <!-- Glen 6 Aug 2014, show prospect ID -->
+    <string name="theProspectID">Prospect ID :\u0020</string>
+
+    <!-- PAINT -->
+    <string name="infoDraw">Sentuh untuk menggambar / menghapus</string>
+    <string name="mnPaint">Gambar</string>
+    <string name="mnErase">Hapus</string>
+    <string name="mnClear">Bersihkan</string>
+    <string name="mnSave">Simpan</string>
+    <!-- LOOKUP -->
+    <string name="lovCriteria">Cari kriteria</string>
+    <string name="lovCriteriaEmpty">Kriteria pencarian tidak ditemukan</string>
+    <string name="lovHint">Cari kata kunci</string>
+    <string name="lovSearch">Cari</string>
+    <string name="lovEmpty">Hasil tidak ditemukan</string>
+    <!-- CUSTOMER -->
+    <string name="lblCustomerName">Nama Customer</string>
+    <string name="lblCustomerPhone">Nomor Telepon Konsumen</string>
+    <string name="lblCustomerAddress">Alamat Konsumen</string>
+    <string name="lblNotes">Catatan Tentang Konsumen</string>
+    <string name="btnStartSurvey">Mulai Survey</string>
+    <string name="closedTaskMsg">Task ini sudah ditutup</string>
+
+    <!-- Glen 8 Aug 2014 -->
+    <string name="btnViewOnMap">Lihat Lokasi</string>
+    <string name="btnEditSurvey">Edit</string>
+    <string name="btnViewSurvey">Lihat detail</string>
+    <!-- SENT -->
+    <string name="msgNoSent">Anda tidak memiliki tugas terkirim</string>
+    <string name="msgNoVerification">Anda tidak memiliki tugas untuk diverifikasi</string>
+    <string name="msgNoApproval">Anda tidak memiliki tugas untuk disetujui</string>
+    <!-- PRINT -->
+    <string name="msgNoPrintItem">Tidak ditemukan format printing</string>
+    <string name="connectFailed">Tidak dapat menghubungkan ke printer bluetooth</string>
+    <string name="bt_off">Bluetooth sedang dimatikan. Silakan aktifkan untuk melanjutkan cetak tugas</string>
+    <string name="mnConnect">Connect</string>
+    <string name="connected">Koneksi berhasil</string>
+    <string name="mnPrint">Cetak</string>
+    <string name="mnDisconnect">Disconnect</string>
+    <string name="disconnected">Koneksi berakhir</string>
+    <string name="not_connected">Tidak terkoneksi</string>
+    <string name="bt_notavail">Bluetooth tidak tersedia</string>
+    <!-- GLOBAL -->
+    <string name="btnSave">SIMPAN</string>
+    <string name="btnCancel">BATAL</string>
+    <string name="btnBack">KEMBALI</string>
+    <string name="btnNext">BERIKUTNYA</string>
+    <string name="btnOk">OK</string>
+    <string name="btnReset">RESET</string>
+    <string name="btnStart">MULAI</string>
+    <string name="btnRevisit">KUNJUNGI KEMBALI</string>
+    <string name="btnView">LIHAT</string>
+    <string name="btnGone">GONE</string>
+    <string name="btnPrint">CETAK</string>
+    <string name="btnSearch">CARI</string>
+    <string name="btnAdvancedSearch">PENCARIAN SPESIFIK</string>
+    <string name="btnVerify">VERIFIKASI</string>
+    <string name="btnReject">TOLAK</string>
+    <string name="btnApprove">SETUJUI</string>
+    <string name="btnClose">TUTUP</string>
+    <string name="btnSubmit">SUBMIT</string>
+    <string name="btnChange">UBAH</string>
+    <string name="btnChangePlan">UBAH RENCANA</string>
+    <string name="description">Deskripsi</string>
+    <string name="license">License</string>
+    <string name="checkUpdate">CEK UPDATE</string>
+    <string name="comment">Komentar</string>
+    <string name="title">Judul</string>
+    <string name="defaultTime">00:00</string>
+    <string name="defaultDate">1 Jan 2015</string>
+    <string name="defaultComment">0 komentar</string>
+    <string name="defaultYourName">Nama Anda</string>
+    <string name="msgErrMaps">Google Maps Error atau Tidak Terinstall</string>
+    <string name="msgInvalidChar">Karakter tidak valid</string>
+    <string name="msgInvalid">tidak valid</string>
+    <string name="msgRequired">harus diisi</string>
+    <string name="dropdownmsgRequired">Mohon pilih opsi pada</string>
+    <string name="msgLoginFailed">Login gagal</string>
+    <string name="msgErrConcurrentSend">Data sedang dikirim di background service</string>
+    <string name="msgWrongOldPassword">Kata sandi lama salah</string>
+    <string name="msgWrongConfirmPassword">Kata sandi yang anda masukan tidak cocok</string>
+    <string name="msgPasswordChanged">Kata sandi Anda telah berhasil diubah</string>
+    <string name="msgRelogin">Login gagal, silahkan login kembali</string>
+    <string name="alertExit">Apakah Anda yakin ingin keluar dari aplikasi?</string>
+    <string name="alertUpdate">Versi yang lebih baru telah tersedia. Versi:</string>
+    <string name="progressWait">Mohon Tunggu...</string>
+    <string name="progressSave">Sedang menyimpan...</string>
+    <string name="progressSend">Sedang mengirim...</string>
+    <string name="progressDelete">Sedang menghapus...</string>
+    <string name="progressLocation">Mengambil lokasi...</string>
+    <string name="refresh">Refresh</string>
+    <string name="capture">Ambil Foto</string>
+    <string name="picSize">Ukuran Gambar</string>
+    <string name="requiredField">harus diisi</string>
+    <string name="notification">Anda memiliki %1$d sisa tugas untuk diselesaikan</string>
+    <string name="msgNoServerResponeString">Server tidak merespon hasil yang valid, silahkan ulangi kembali</string>
+    <string name="msgStillUploading">Tidak bisa keluar aplikasi karena sedang upload data</string>
+    <string name="msgNoList">List tidak ditemukan</string>
+    <string name="msgNoDetail">Detail tidak ditemukan</string>
+    <!-- Glen 6 Aug 2014, new message -->
+    <string name="msgConnectionFailed">Gagal menghubungkan ke server\nSilahkan coba lagi</string>
+
+    <!-- ABOUT -->
+    <string name="aboutTitle">Tentang Aplikasi</string>
+    <string name="aboutCopyright">Copyright \u00A9 (2015) AdIns</string>
+    <string name="checkIn">Lokasi Check in</string>
+    <string name="msgUnavaibleLocation">Tidak bisa mendapatkan lokasi</string>
+    <string name="msgNoNewVersion">Versi ini adalah versi terbaru</string>
+
+    <!-- GPS Dialog -->
+    <string name="enable_gps">Aktifkan GPS</string>
+    <string name="enable_gps_dialog">GPS provider tidak diaktifkan. Apakah Anda ingin mengaktifkannya?</string>
+    <string name="title_activity_synchronize">Sinkronisasi</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="something_went_wrong">Terjadi kesalaham, Harap hubungi admin.</string>
+
+    <string name="version">Versi</string>
+
+    <!-- Library -->
+    <string name="library_name">libraryname</string>
+    <string name="library_creator">librarycreator</string>
+    <string name="library_version">libraryversion</string>
+
+    <!-- Comment Item -->
+    <string name="comment_item_name">Nama</string>
+    <string name="comment_item_date">Tanggal</string>
+    <string name="comment_hint">Tulis komentar...</string>
+
+    <!--     Check in Check Out  -->
+    <string name="msgUnavaibleLocationCheckIn">Tidak mendapatkan lokasi untuk check in</string>
+    <string name="msgUnavaibleLocationCheckOut">Tidak mendapatkan lokasi untuk check out</string>
+    <string name="msgUnavailableAddress">Tidak dapat mendapatkan alamat</string>
+
+    <string name="action_search">Cari</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="hello_world">Hello world! bla bla bla n application designed around individuals who keep track of
+        their fill history on their vehicles: from price, gallons, date purchased, and miles traveled.
+    </string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">close_drawer</string>
+    <string name="title_action_items">Action Items</string>
+    <string name="sum_action_items">Showcasing items on the ActionBar (including appcompat and ActionBarSherlock)
+    </string>
+    <string name="title_action_bar">Action Views</string>
+    <string name="title_multiple">Multiple Showcases</string>
+    <string name="title_fragments">Fragments</string>
+    <string name="title_animations">Animations</string>
+    <string name="sum_animations">Using ObjectAnimators to animate ShowcaseViews</string>
+    <string name="anim_third">Finally this!</string>
+    <string name="title_memory">Memory management</string>
+
+    <string name="title_single_shot">Single shot</string>
+    <string name="sum_single_shot">Demonstrate how to make a ShowcaseView show only once</string>
+
+    <!--     cropping image -->
+    <string name="crop__saving">Menyimpan gambar...</string>
+    <string name="crop__wait">Mohon tunggu...</string>
+    <string name="crop__pick_error">Sumber gambar tidak ditemukan</string>
+
+    <string name="crop__done">Selesai</string>
+    <string name="crop__cancel" tools:ignore="ButtonCase">Batal</string>
+    <string name="crop__rotate">Putar</string>
+    <string name="rotate">Putar</string>
+
+    <!--Message Connect Printer-->
+    <string name="msg_state">Masukan Salah!</string>
+    <string name="Connecting">Device terhubung ke printer bluetooth</string>
+    <string name="empty1">Input kosong, masukkan dalam text box untuk mengkonversi konten &#8230;</string>
+    <string name="bt_not_enabled_leaving">Bluetooth gagal untuk di hidupkan, Keluar dari aplikasi</string>
+    <string name="empty">Input kosong</string>
+    <string name="title_connecting">menghubungkan…</string>
+    <string name="title_connected_to">terhubung: </string>
+    <string name="title_not_connected">Sedang tidak terhubung</string>
+    <string name="msg_statev1">Tanpa gambar</string>
+    <string name="strLang">in</string>
+    <string name="camer">Tidak ada Gambar</string>
+    <string name="failed_to_connect_bluetooth">Gagal mencari menggunakan bluetooth, silahkan coba lagi</string>
+    <!--     Update image -->
+    <string name="header__title">Ubah Foto header</string>
+    <string name="header__message">Apakan Anda yakin ingin mengubah Foto header?</string>
+    <string name="profile__title">Ubah gambar profile</string>
+    <string name="profile__message">Apakan Anda yakin ingin mengubah gambar profile?</string>
+
+    <string name="btn_camera">Ambil Foto</string>
+    <string name="btn_galery">Album</string>
+
+    <string name="optimize_battery">Pengaturan Optimasi Baterai</string>
+    <string name="optimize_battery_alert">Jangan optimalkan penggunaan baterai. Applikasi ini akan dapat berjalan di latar belakang dan penggunaan baterainya akan berhenti dioptimalkan. </string>
+    <string name="menu_desc_print_default">Default print service</string>
+
+    <string-array name="cbSearchBy">
+        <item>Tanggal</item>
+        <item>Bulan</item>
+        <item>Estimasi Tanggal</item>
+    </string-array>
+    <string-array name="cbSearchByMonth">
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
+
+    <!-- Main Menu -->
+    <string name="title_mn_main_menu">Menu Utama</string>
+    <string name="title_mn_other">Menu Lainnya</string>
+    <string name="title_mn_home">HALAMAN UTAMA</string>
+    <string name="title_mn_tasklist">DAFTAR TUGAS</string>
+    <string name="title_mn_verification_list">DAFTAR VERIFIKASI</string>
+    <string name="title_mn_approval_list">DAFTAR PERSETUJUAN</string>
+    <string name="title_mn_log">LOG</string>
+    <string name="title_mn_reportsummary">RINGKASAN LAPORAN</string>
+    <string name="title_mn_depositreport">LAPORAN DEPOSITO</string>
+    <string name="title_mn_depositreportAC">LAPORAN DEPOSIT ANTAR CABANG</string>
+    <string name="title_mn_depositreportPC">LAPORAN DEPOSIT PAYMENT CHANNEL</string>
+    <string name="title_mn_guideline_faq">Pedoman &amp; Pertanyaan umum</string>
+    <string name="title_mn_absentin">ABSEN MASUK</string>
+    <string name="title_mn_synchronize">SINKRONISASI</string>
+    <string name="title_mn_about">INFO</string>
+    <string name="title_mn_exit">KELUAR</string>
+    <string name="title_mn_dashboard">POIN SAYA</string>
+    <string name="title_mn_dashboard_collection">DASBOR</string>
+    <string name="title_mn_newtask">TUGAS BARU</string>
+    <string name="title_mn_neworder">PESANAN BARU</string>
+    <string name="title_mn_surveyperformance">PERFORMA SURVEI</string>
+    <string name="title_mn_surveyverification">VERIFIKASI SURVEY</string>
+    <string name="title_mn_surveyapproval">PERSETUJUAN SURVEI</string>
+    <string name="title_mn_checkorder">PERIKSA PESANAN</string>
+    <string name="title_mn_creditsimulation">SIMULASI KREDIT</string>
+    <string name="title_mn_news">BERITA</string>
+    <string name="title_mn_promo">PROMO</string>
+    <string name="title_mn_orderassign">TUGAS PESANAN</string>
+    <string name="title_mn_orderreassign">Order Re-Assignment</string>
+    <string name="title_mn_cancelorder">PEMBATALAN PESANAN</string>
+    <string name="title_mn_surveyassign">Survey Assignment</string>
+    <string name="title_mn_surveyreassign">Survey Re-Assignment</string>
+    <string name="title_mn_changepassword">GANTI PASSWORD</string>
+    <string name="title_mn_resetpassword">ATUR ULANG PASSWORD</string>
+    <string name="title_mn_paymenthistory">HISTORI PEMBAYARAN</string>
+    <string name="title_mn_request_new_task">REQUEST NEW TASK</string>
+    <string name="title_mn_installmentschedule">JADWAL CICILAN</string>
+    <string name="title_mn_absentout">Check Out</string>
+    <string name="title_mn_setting">PENGATURAN</string>
+    <string name="title_mn_guide">ULANGI PANDUAN USER</string>
+    <string name="bluetooth_message">Mengaktifkan bluetooth</string>
+    <string name="title_mn_verification_bybranch">Verification by Branch</string>
+    <string name="title_mn_approval_bybranch">Approval by Branch</string>
+    <string name="title_mn_closing_task">TUTUP TUGAS</string>
+    <string name="title_mn_account">AKUN</string>
+    <string name="title_mn_newlead">PROSPEK BARU</string>
+    <string name="title_mn_products">PRODUK</string>
+    <string name="title_mn_followup">TINJAU KEMBALI</string>
+    <string name="title_mn_marketingreport">LAPORAN PEMASARAN</string>
+    <string name="title_mn_catalogue">KATALOG PROMO</string>
+    <string name="title_mn_opportunities">OPPORTUNITIES</string>
+    <string name="title_mn_taskApproval">TASK APPROVAL</string>
+
+    <string name="outstanding_task">Sisa Tugas</string>
+    <string name="mn_plantask">PLAN TASK</string>
+
+    <!--Screen Name-->
+    <string name="screen_name_customer_detail">Customer Detail</string>
+    <string name="screen_name_odr_main_menu">Order Main Menu</string>
+    <string name="screen_name_svy_main_menu">Survey Main Menu</string>
+    <string name="screen_name_coll_main_menu">Collection Main Menu</string>
+    <string name="screen_name_odr_login">Order Login Page</string>
+    <string name="screen_name_svy_login">Survey Login Page</string>
+    <string name="screen_name_coll_login">Collection Login Page</string>
+    <string name="screen_name_camera">Camera Page</string>
+    <string name="screen_name_location_tagging">Location Tagging Page</string>
+    <string name="screen_name_odr_synchronize">Order Synchronize</string>
+    <string name="screen_name_svy_synchronize">Survey Synchronize</string>
+    <string name="screen_name_coll_synchronize">Collection Synchronize</string>
+    <string name="screen_name_payment_history">Payment History</string>
+    <string name="screen_name_image_viewer">Image Viewer Page</string>
+    <string name="screen_name_server_link">Server Link Page</string>
+    <string name="screen_name_device_list">Device List Page</string>
+    <string name="screen_name_collection_act">Collection Activity</string>
+    <string name="screen_name_deposit_report_detail">Deposit Report</string>
+    <string name="screen_name_collection_detail_act">Collection Detail Page</string>
+    <string name="screen_name_cropping_image">Cropping Image Page</string>
+    <string name="screen_name_emergency_lock">Emergency Page</string>
+    <string name="screen_name_change_password">Change Password Page</string>
+    <string name="screen_name_payment_history_detail">Payment History Detail</string>
+    <string name="screen_name_verification_activity">Survey Verification</string>
+    <string name="screen_name_signature_canvas">Signature Canvas</string>
+    <string name="screen_name_timeline">Timeline Page</string>
+    <string name="screen_name_lookup_criteria">Lookup Page</string>
+    <string name="screen_name_installment_schedule">Installment Schedule Page</string>
+    <string name="screen_name_print">Print Page</string>
+    <string name="screen_name_survey_performance">Survey Performance Page</string>
+    <string name="screen_name_plan_task">Plan Task Page</string>
+    <string name="screen_name_task_list">Task List Page</string>
+    <string name="screen_name_about">About Page</string>
+    <string name="screen_name_developer_option">Developer Option Page</string>
+    <string name="screen_name_attendance_in">Attendance Page</string>
+    <string name="screen_name_my_points">My Points Page</string>
+    <string name="screen_name_monthly_graph">Monthly Point Page</string>
+    <string name="screen_name_daily_graph">Daily Point Page</string>
+    <string name="screen_name_dashboard_coll">Dashboard Collection Page</string>
+    <string name="screen_name_report_summary">Report Summary Page</string>
+    <string name="screen_name_deposit_report">Deposit Report Page</string>
+    <string name="screen_name_closing_task">Closing Task Page</string>
+    <string name="screen_name_new_task">New Task Page</string>
+    <string name="screen_name_log">Log Result Page</string>
+    <string name="screen_name_survey_verification">Survey Verification Page</string>
+    <string name="screen_name_survey_approval">Survey Approval Page</string>
+    <string name="screen_name_order_assignment">Order Assignment Page</string>
+    <string name="screen_name_survey_assignment">Survey Assignment Page</string>
+    <string name="screen_name_order_assignment_result">Order Assignment Result Page</string>
+    <string name="screen_name_survey_assignment_result">Survey Assignment Result Page</string>
+    <string name="screen_name_order_reassignment">Order Re-Assignment Page</string>
+    <string name="screen_name_survey_reassignment">Survey Re-Assignment Page</string>
+    <string name="screen_name_verif_by_branch">Verification by Branch Page</string>
+    <string name="screen_name_cancel_order">Cancel Order Page</string>
+    <string name="screen_name_check_order">Check Order Page</string>
+    <string name="screen_name_promo">Promo Page</string>
+    <string name="screen_name_new_lead">New Lead Page</string>
+    <string name="screen_name_account_list">Account List Page</string>
+    <string name="screen_name_follow_up">Follow Up Page</string>
+    <string name="screen_name_marketing_report">Marketing Report Page</string>
+    <string name="screen_name_promo_catalogue">Promo Catalogue Page</string>
+    <string name="screen_name_product_page">Product Page</string>
+    <string name="screen_name_opportunities_page">Opportunities Page</string>
+    <string name="screen_name_new_order">New Order Page</string>
+
+    <!-- Customer -->
+    <string name="customer_task_id">ID Tugas</string>
+    <string name="customer_name">Nama Konsumen</string>
+    <string name="customer_phone_number">Nomor Telepon</string>
+    <string name="customer_address">Alamat Konsumen</string>
+    <string name="customer_zip_code">Kode Pos</string>
+    <string name="customer_notes">Catatan Tentang Konsumen</string>
+    <string name="survey_location">Lokasi saat survey</string>
+    <string name="survey_location_hint">hint</string>
+    <string name="customer_notes_hint">Catatan</string>
+
+    <!-- Review -->
+    <string name="review_label_nama">Nama konsumen :</string>
+    <string name="review_label_alamat">Alamat konsumen :</string>
+    <string name="review_label_rt_rw">RT/RW :</string>
+    <string name="review_label_kabupaten">Kabupaten :</string>
+    <string name="review_label_kode_pos">Kode Pos :</string>
+    <string name="review_label_reputasi_konsumen">Reputasi Konsumen :</string>
+    <string name="dummy_review_label_nama">Adicipta</string>
+    <string name="dummy_review_label_alamat">Jalan Kebon Jeruk Raya No. 80</string>
+    <string name="dummy_review_label_rt_rw">008/007</string>
+    <string name="dummy_review_label_kabupaten">Jakarta Barat</string>
+    <string name="dummy_review_label_kode_pos">11000</string>
+    <string name="dummy_review_label_reputasi_konsumen">Bagus</string>
+
+    <!-- Voice Notes -->
+    <string name="voice_notes">Catatan Suara</string>
+    <string name="voice_notes_not_available">Catatan suara tidak tersedia</string>
+    <string name="voice_notes_record">Klik untuk merekam</string>
+    <string name="voice_notes_stop">Klik untuk berhenti</string>
+
+    <!--time dialog-->
+    <string name="time_unable">Provider Waktu</string>
+    <string name="time_warning">Tanggal dan Waktu dari Provider tidak diaktifkan</string>
+    <string name="time_button">Aktifkan Provider Waktu</string>
+
+    <!-- Synchronize -->
+    <string name="sync_scheme">Sinkronisasi Skema</string>
+    <string name="sync_question_set">Sinkronisasi Daftar Pertanyaan</string>
+    <string name="sync_lookup">Sinkronisasi Lookup</string>
+    <string name="sync_channel">Sinkronisasi Saluran Pembayaran</string>
+    <string name="sync_holiday">Sinkronisasi Hari Libur</string>
+    <string name="synchronizing">Sinkronisasi</string>
+    <string name="sync_progress">Proses : 0%</string>
+
+    <!-- Timeline -->
+    <string name="search_timeline">Cari Timeline</string>
+    <string name="timeline_type">Tipe Timeline</string>
+    <string name="message">Pesan</string>
+    <string name="submitted_task">Tugas Terkirim</string>
+    <string name="server_task">Tugas Server</string>
+
+    <!-- Status, Dialog, Error, Warning -->
+    <string name="error">Error</string>
+    <string name="success">Sukses</string>
+    <string name="error_capital">ERROR</string>
+    <string name="warning_capital">PERHATIAN</string>
+    <string name="info_capital">INFO</string>
+    <string name="error_unknown">Unknown error, Coba lagi nanti</string>
+    <string name="error_occured">Terjadi eror: \u0020</string>
+    <string name="gps_unable">GPS tidak aktif</string>
+    <string name="gps_warning">GPS harus diaktifkan</string>
+    <string name="gps_button">Aktifkan GPS</string>
+    <string name="login_mandatory">Masukkan id pengguna dan kata sandi</string>
+    <string name="please_wait">Mohon tunggu...</string>
+    <string name="generate_image_data">Menghasilkan data dari foto</string>
+    <string name="db_corrupt">Database lokal rusak\nAnda harus uninstall dan instal ulang aplikasi</string>
+    <string name="connection_failed">Koneksi gagal - Mohon periksa koneksi Anda</string>
+    <string name="connection_failed_http">Koneksi gagal ke HTTP\u0020</string>
+    <string name="connection_timeout">Koneksi timed out. Silahkan coba lagi.</string>
+    <string name="server">Server</string>
+    <string name="critical_update">Aplikasi versi terbaru telah tersedia, segera lakukan update agar dapat menggunakan aplikasi.</string>
+    <string name="update">Perbarui</string>
+    <string name="inactive_user">User %1$s tidak aktif, Anda tidak bisa menggunakan aplikasi ini lebih lanjut, silahkan uninstall aplikasi atau hubungi administrator.</string>
+    <string name="change_password_required">Anda harus mengubah kata sandi</string>
+    <string name="update_available">Tersedia update terbaru.</string>
+    <string name="later">Nanti</string>
+    <string name="plugin_required">Activity plugin requires activity context.</string>
+    <string name="size_w">The Android Screen is: W=</string>
+    <string name="size_h">\u0020x H=</string>
+    <string name="picture_size">Ukuran gambar</string>
+    <string name="picture_size_label">Ukuran gambar :\u0020</string>
+    <string name="password_expired">Kata sandi sudah kadaluarsa</string>
+    <string name="old_password_incorrect">Kata sandi lama salah</string>
+    <string name="current_password_mandatory">Kata sandi lama harus diisi</string>
+    <string name="new_password_mandatory">Kata sandi baru harus diisi</string>
+    <string name="new_password_equal">Kata sandi baru dan konfirmasi kata sandi tidak sesuai</string>
+    <string name="new_password_different">Kata sandi baru harus berbeda dengan kata sandi sekarang</string>
+    <string name="contact_server">Menghubungkan dengan server...</string>
+    <string name="error_label">Error:\u0020</string>
+    <string name="password_changed">Kata sandi telah berhasil diubah</string>
+    <string name="text_empty">Kosong</string>
+    <string name="txtempty"></string>
+    <string name="masuk_on_change">Masuk on Change</string>
+    <string name="masuk_on_status_change">Masuk on Status Change</string>
+    <string name="masuk_on_provider_change">Masuk on Provider Change</string>
+    <string name="device_not_supported">Handphone Anda tidak support.</string>
+    <string name="get_services">Unduh Google Play services</string>
+    <string name="get_services_message">Google play services tidak terinstall, Aplikasi ini tidak bisa berjalan tanpa Google Play services.</string>
+    <string name="download_services">market://details?id=com.google.android.gms</string>
+    <string name="success_label">Sukses!</string>
+    <string name="test_label">Test</string>
+    <string name="datetime_format">ddMMyyyyHHmmss</string>
+    <string name="label_done">selesai</string>
+    <string name="label_on_progress">on progress</string>
+    <string name="sync_on_progress">Progress :\u0020</string>
+    <string name="syncing">On progress</string>
+    <string name="sync_completed">Progress : 100 %</string>
+    <string name="sync_error">Synchronize error</string>
+    <string name="try_again">Coba Lagi</string>
+    <string name="select_cmo">Pilih CMO terlebih dahulu !</string>
+    <string name="path_no_received">ERROR: path not received</string>
+    <string name="task_submitted">Tugas Berhasil di Submit</string>
+    <string name="input_not_valid">Input tidak valid</string>
+    <string name="data_range_not_allowed">Rentang tanggal melebihi 7 hari. Rentang tanggal yang diijinkan adalah 1 sampai 7 hari.</string>
+    <string name="enter_valid_date">Masukkan tanggal yang valid</string>
+    <string name="date_greater_than_today">Tanggal tidak boleh lebih besar dari hari ini</string>
+    <string name="server_down">Server mungkin sedang down atau Anda tidak terhubung dengan internet</string>
+    <string name="start_date_required">Tanggal mulai harus diisi\n</string>
+    <string name="end_date_required">Tanggal akhir harus diisi</string>
+    <string name="nomor_order_rewuired">Nomor Order harus diisi</string>
+    <string name="data_not_found">Data tidak ditemukan</string>
+    <string name="expanded">Expanded</string>
+    <string name="collapsed">Collapsed</string>
+    <string name="no_image">Gagal mendapatkan gambar</string>
+    <string name="scheme_not_found">Beberapa tugas gagal dimuat, Skema tidak ditemukan</string>
+    <string name="no_scheme_found">Tidak ada skema</string>
+    <string name="scheme_not_found_verification">Beberapa tugas verifikasi gagal dimuat, Skema tidak ditemukan</string>
+    <string name="task_hasnt_finished_sync">Task belum selesai tersinkronisasi dengan server, mohon coba beberapa saat lagi</string>
+    <string name="tasks_label">Anda memiliki\u0020</string>
+    <string name="tasks_label_2">\u0020 tugas,\u0020</string>
+    <string name="tasks_remaining">\u0020 tugas</string>
+    <string name="approval_tasks">%1$d tugas yang disetujui </string>
+    <string name="approval_tasks_remaining">Anda memiliki %1$d tugas yang disetujui untuk diselesaikan.</string>
+    <string name="incoming_news">\u0020Incoming News</string>
+    <string name="incoming_news_remaining">\u0020incoming News.</string>
+    <string name="click_to_open_approval">Klik Menu kemudian Survey Approval untuk membuka data</string>
+    <string name="click_to_open_approval_branch">Klik Menu kemudian Survey Approval by branch untuk membuka data</string>
+    <string name="verification_tasks">%1$d tugas verifikasi </string>
+    <string name="verification_tasks_remaining">Anda memiliki %1$d tugas verifikasi untuk diselesaikan.</string>
+    <string name="click_to_open_verification">Klik Menu kemudian Survey Verification untuk membuka data</string>
+    <string name="click_to_open_verification_branch">Klik Menu kemudian Verification by branch untuk membuka data</string>
+    <string name="click_to_open_news">Klik Menu kemudian News untuk membuka data</string>
+    <string name="no_address_associated">Tidak ada alamat yang terkait dengan hostname</string>
+    <string name="use_offline_mode">Tidak ada akses internet, mode offline diaktifkan</string>
+    <string name="data_expired">Data sudah kadaluarsa</string>
+    <string name="intent_detected">Intent Detected.</string>
+    <string name="latitude_label">Latitude:\u0020</string>
+    <string name="longitude_label">Longitude:\u0020</string>
+    <string name="cancel_order_error">Cancel order gagal, silahkan coba lagi</string>
+    <string name="order_canceled">Order berhasil di cancel</string>
+    <string name="no_result_from_server">Gagal mendapatkan data dari server</string>
+    <string name="order_rejected">Order berhasil di reject</string>
+    <string name="data_saved">Data tersimpan</string>
+    <string name="failed_save_data">Tidak dapat menyimpan data jika tidak ada koneksi internet</string>
+    <string name="failed_send_data">Tidak dapat mengirim data jika tidak ada koneksi internet</string>
+    <string name="no_data_found_offline">Data tidak tersedia di pengaturan offline. Sambungkan internet anda!</string>
+    <string name="server_error">Server Error</string>
+    <string name="cashier">Kasir</string>
+    <string name="bank">Bank</string>
+    <string name="detail">Detail</string>
+    <string name="upload_avatar">Upload Avatar: </string>
+    <string name="transfer_failed">Tidak bisa melakukan transfer, Total = 0</string>
+    <string name="nothing_to_report">Tidak ada yang bisa dilaporkan</string>
+    <string name="total">Total</string>
+    <string name="empty_data">Server mengirimkan data kosong.</string>
+    <string name="no_data_available">Data tidak ditemukan</string>
+    <string name="batch_id">ID Batch</string>
+    <string name="account_number_required">Nomor Rekening dibutuhkan\n</string>
+    <string name="http_status_400">Bad Request.</string>
+    <string name="http_status_401">Unauthorized.</string>
+    <string name="http_status_403">Forbidden.</string>
+    <string name="http_status_404">Request Not Found.</string>
+    <string name="http_status_408">Request Timeout.</string>
+    <string name="http_status_409">Conflict.</string>
+    <string name="http_status_500">Internal Server Error.</string>
+    <string name="http_status_502">Bad Gateway.</string>
+    <string name="http_status_503">Service Unavailable.</string>
+    <string name="auto_save_still_running">Penyimpanan automatis sedang berjalan, mohon dicoba kembali nanti</string>
+    <string name="allow_all_permission">Tolong izinkan semua izin yang diperlukan</string>
+    <string name="please_wait_rv_mobile">Sedang menghubungi server...</string>
+    <string name="finished_deposit">Selesaikan Deposit!</string>
+    <string name="submit_deposit">Kirimkan deposit terlebih dahulu</string>
+    <string name="all_tenor">Semua kolom tenor harus diisi</string>
+    <string name="all_os">Semua kolom OS harus diisi</string>
+    <string name="please_wait_misscall">Sedang melakukan panggilan ke nomor %1$s. Mohon Tunggu...</string>
+    <string name="click_button_misscall_required">Klik Tombol Dapatkan Miscall OTP dibutuhkan</string>
+    <string name="failed_start_task">Failed Start Task</string>
+    <string name="failed_change_plan">Failed Change Plan</string>
+
+    <!-- Dummy -->
+    <string name="dummy_header_name">ADI ADICIPTA</string>
+    <string name="dummy_header_name_2">Adi Adicipta</string>
+    <string name="dummy_header_scheme">Surveyor</string>
+    <string name="dummy_header_dealer">Dealer Kebon Jeruk</string>
+    <string name="dummy_header_job">Surveyor</string>
+    <string name="dummy_task_id">10029</string>
+    <string name="dummy_form_id">Form Id</string>
+    <string name="dummy_date_time">01/01/2015 00:00</string>
+    <string name="dummy_date">21-12-2012</string>
+    <string name="dummy_quantity">0</string>
+    <string name="dummy_quantity_task">2 TASKS</string>
+    <string name="dummy_priority">Priority disable</string>
+    <string name="dummy_status_task">Draft</string>
+    <string name="dummy_scheme_name">Scheme Name</string>
+    <string name="dummy_result">Data Berhasil Dikirim</string>
+    <string name="dummy_time_sent">Waktu untuk mengirim data : 05 Second</string>
+    <string name="dummy_data_size">"Data Size : 231 Bytes</string>
+    <string name="dummy_text">Aditya Avaga</string>
+    <string name="dummy_text_2">The Titan</string>
+    <string name="dummy_text_3">Dummy Text</string>
+    <string name="dummy_number">12345678</string>
+
+    <string name="divider_dash">-</string>
+    <string name="divider_colon">:</string>
+    <string name="divider_vertical_bar">\u0020|\u0020</string>
+    <string name="divider_percent">%</string>
+
+    <string name="check_in">Check In</string>
+    <string name="change_profile_picture">Ubah Foto Profil</string>
+    <string name="search_question">Mencari pertanyaan</string>
+    <string name="task_id">taskId</string>
+    <string name="save_task_id">lastTaskId</string>
+    <string name="title_priority">Prioritas</string>
+    <string name="title_status">Status</string>
+    <string name="login_desc">Login ke Aplikasi CheckId</string>
+    <string name="watermark">ADI Mobile App</string>
+    <string name="msgNoTaskList">Daftar tugas tidak ditemukan</string>
+    <string name="tag_paymenthistoryDetail">paymenthistoryDetail</string>
+    <string name="tag_transactioncode">transactioncode</string>
+    <string name="no_data_from_server">Data dari server tidak tersedia</string>
+    <string name="no_promo_try_again">Belum ada promo tersedia! Silahkan coba kembali nanti.</string>
+    <string name="toast_crash">Ooooops ! Terjadi crash, report sudah dikirim ke developer untuk perbaikan issue ini!
+    </string>
+    <string name="copied">Telah disalin !</string>
+
+    <string name="no_internet_connection">Tidak ada koneksi internet</string>
+    <string name="message_sending_success">Data berhasil terkirim</string>
+    <string name="message_sending_failed">Data tidak berhasil dikirim</string>
+    <string name="message_sending_deleted">Tugas tidak dapat dikirim</string>
+    <string name="message_verification_success">Data sukses diverifikasi</string>
+    <string name="message_verification_failed">Data tidak berhasil diverifikasi</string>
+    <string name="message_verification_deleted">Tugas tidak dapat diverifikasi</string>
+    <string name="message_no_task_id_from_server">Tidak mendapatkan ID tugas dari Server</string>
+    <string name="message_task_not_mapping">belum di-mapping</string>
+    <string name="message_imei_not_registered">IMEI tidak terdaftar</string>
+    <string name="message_android_id_not_registered">AndroidID tidak terdaftar</string>
+
+
+    <string-array name="cbPriorityBy">
+        <item >Semua Prioritas</item>
+        <item >Prioritas Tinggi</item>
+        <item >Prioritas Normal</item>
+        <item >Prioritas Rendah</item>
+    </string-array>
+
+    <string name="title_activity_action_on_verification">Survey Verification</string>
+    <string name="selectOne">Pilih salah satu</string>
+
+    <string name="msgLogout">Akun Anda tidak dapat menggunakan aplikasi ini lebih lanjut,
+        silahkan keluar dari aplikasi dan login kembali atau hubungi Administrator.</string>
+    <string name="appVersion">v2.1.5 / 20160321</string>
+    <string name="jsonParseFailed">Gagal untuk mendapatkan respon dari server, Silahkan coba lagi</string>
+    <string name="title_activity_developer_option">Developer Option</string>
+    <string name="reject_failed">Gagal melakukan tolak tugas</string>
+    <string name="reject_success">Tugas berhasil ditolak</string>
+    <string name="approve_failed">Gagal melakukan persetujuan tugas</string>
+    <string name="approve_success">Tugas berhasil disetujui</string>
+    <string name="get_suggestion_user">Mendapatkan user yang disarankan...</string>
+    <string name="request_error">Terjadi kesalahan, silakan coba kembali</string>
+    <string name="view_task_reschedule">Tugas yang dijadwalkan ulang tidak bisa ditampilkan</string>
+    <string name="phone_validasi">Input nomor telepon minimal 8 digit</string>
+    <string name="geodata_error">Tidak bisa mendapatkan data LBS dari sim card</string>
+    <string name="gps_error">Lokasi GPS tidak tersedia</string>
+    <string name="camera_error">Gagal menggunakan kamera, silakan coba kembali</string>
+    <string name="processing_image_error">Gagal memproses gambar. Memory penuh. Silakan coba lagi.</string>
+    <string name="save_on_relevant">Anda telah mengubah jawaban di pertanyaan relevan, Klik ulang tombol Simpan untuk menyimpan Task</string>
+    <string name="question_not_found">Daftar Pertanyaan tidak ditemukan</string>
+    <string name="customer_header_error">Customer Header gagal terbaca, silahkan coba kembali</string>
+    <string name="recording_not_allowed">Tidak diizinkan untuk merekam</string>
+    <string name="task_count">Jumlah Tugas :</string>
+    <string name="task_cant_seen">Tugas tidak bisa ditampilkan, Skema tidak ditemukan.</string>
+    <string name="task_cant_seen2">Tugas tidak bisa ditampilkan, silahkan hubungi administrator</string>
+    <string name="task_cant_seen_form">Tugas tidak bisa ditampilkan, Form belum di Publish.</string>
+    <string name="select_reschedule_time">Pilih waktu janji survey (reschedule)</string>
+    <string name="date_after_today">Tanggal yang dipilih harus lebih dari tanggal hari ini!</string>
+    <string name="reschedule_success">Tugas %1$s berhasil di jadwalkan ulang</string>
+    <string name="reschedule_failed">Penjadwalan ulang tugas %1$s gagal</string>
+    <string name="failed">gagal</string>
+    <string name="sending_reschedule_progress">Mengirim Penjadwalan Ulang Tugas</string>
+    <string name="scheme_gone">Skema tidak ditemukan, silahkan sinkronisasi ulang atau hubungi administrator. </string>
+    <string name="confirm_delete">Apakah Anda yakin akan menghapus</string>
+    <string name="confirm_upload">Apakah Anda yakin akan mengunggah paksa foto untuk tugas</string>
+    <string name="btnYes">YA</string>
+    <string name="upload_on_queue">Mengunggah gambar sedang berjalan, tugas yang anda pilih akan masuk antrian</string>
+    <string name="not_allowed">tidak diizinkan</string>
+    <string name="date_must_after_today">harus setelah hari ini!</string>
+    <string name="date_must_before_today">harus sebelum hari ini!</string>
+    <string name="more_than">lebih dari</string>
+    <string name="less_than">kurang dari</string>
+    <string name="day">hari</string>
+    <string name="upload_failed">Gagal mengunggah gambar, tugas Anda akan masuk antrian</string>
+    <string name="upload_complete">Uploading Complete</string>
+    <string name="btnReschedule">JADWALKAN ULANG</string>
+    <string name="ptsDate">Tanggal PTS</string>
+    <string name="txt_language_setting">Pengaturan Bahasa :</string>
+    <string name="english_language">Bahasa Inggris</string>
+    <string name="indonesian_language">Bahasa Indonesia</string>
+    <string name="click_to_open_tasklist">Klik Menu kemudian Daftar Tugas untuk membuka data</string>
+    <string name="mnViewAllHeader">Lihat Semua Task</string>
+    <string name="mnViewData">Lihat Data</string>
+    <string name="title_mn_collection_history">Riwayat Penagihan</string>
+    <string name="mock_location">Lokasi Tiruan</string>
+    <string name="mock_location_alert">\'Izinkan Lokasi Tiruan\' harus dimatikan</string>
+    <string name="dev_option">Pilihan Pengembang</string>
+    <string name="library_MobileSurvey_libraryDescription">Survei tidak pernah semudah ini. Anda dapat menangkap riset pasar kapan saja, pada perangkat apapun, bahkan offline.</string>
+    <string name="authentication_user">Otentikasi User...</string>
+    <string name="password_not_match">IMEI atau Kata sandi tidak tersinkronisasi dengan server. Silahkan keluar aplikasi dan login kembali atau hubungi administrator Anda!</string>
+    <string name="timeline_type_task">Tugas Diterima</string>
+    <string name="timeline_type_savedraft">Tugas Disimpan</string>
+    <string name="timeline_type_submitted">Tugas Berhasil Terkirim</string>
+    <string name="timeline_type_uploading">Tugas Sedang Diunggah</string>
+    <string name="timeline_type_verified">Tugas Berhasil Diverifikasi</string>
+    <string name="timeline_type_pending">Tugas Gagal Terkirim</string>
+    <string name="timeline_type_rejected">Tugas Berhasil Ditolak</string>
+    <string name="timeline_type_changed">Status Tugas Berubah</string>
+    <string name="timeline_type_approved">Tugas Berhasil Disetujui</string>
+    <string name="timeline_type_verification">Tugas Verifikasi</string>
+    <string name="timeline_type_approval">Tugas Approval</string>
+    <string name="timeline_type_checkin">Absensi</string>
+    <string name="timeline_type_checkout">Absen Keluar</string>
+    <string name="timeline_type_message">Pesan</string>
+    <string name="upload_queue">Mengunggah foto tertahan, Tugas yang anda pilih akan masuk antrian</string>
+    <string name="task_not_available">Tugas tidak tersedia atau telah dihapus dari sistem</string>
+    <string name="task_reassign_svy">Tugas tidak tersedia atau sudah di tugaskan ke surveyor lain, hubungi Administrator Anda</string>
+    <string name="task_reassign_col">Tugas tidak tersedia atau sudah di tugaskan ke collector lain, hubungi administator Anda</string>
+    <string name="task_not_available2">Tugas tidak tersedia, hubungi Administrator Anda</string>
+    <string name="task_verified">Tugas sudah terverifikasi</string>
+    <string name="task_approved_view">Tugas bisa menampilkan Tugas yang sudah disetujui(approve)</string>
+    <string name="task_rejected_view">Tugas bisa menampilkan Tugas yang sudah ditolak(reject) </string>
+    <string name="minute_ago">menit yang lalu</string>
+    <string name="hour_ago">jam yang lalu</string>
+    <string name="moment_ago">beberapa saat yang lalu</string>
+    <string name="btnNo">TIDAK</string>
+    <string name="uploading_image">Mengunggah gambar</string>
+    <string name="progress_uploading">Proses unggah sedang berjalan</string>
+    <string name="uploading_image_counter">Mengunggah %1$d / %2$d  gambar</string>
+    <string name="uploading_image_title">Mengunggah gambar %1$s</string>
+    <string name="auto_start_visit_title">Visit Plan Service</string>
+    <string name="auto_start_visit_content">Mengirim rencana kunjungan anda ke server.</string>
+    <string name="auto_changeplan_title">Change Plan Service</string>
+    <string name="auto_changeplan_content">Mengirim proses ubah plan tertunda ke server.</string>
+    <string name="picture_option">Pengaturan gambar</string>
+    <string name="btnRetake">Foto ulang</string>
+    <string name="take_foto_first">Ambil foto terlebih dahulu!</string>
+    <string name="lblDevOption">Opsi Pengembang</string>
+    <string name="address_not_found">Alamat tidak tersedia</string>
+    <string name="contact_administrator">hubungi Administrator Anda</string>
+    <string name="recording_done">Merekam suara selesai</string>
+    <string name="no_selected_field">- Jawaban tidak ditemukan -</string>
+    <string name="scheme_not_found_sync">Skema tidak tersedia, Silahkan sinkronisasi ulang atau hubungi administrator Anda.</string>
+    <string name="data_corrupt">Terjadi kesalahan data. Silahkan keluar dari aplikasi dan login kembali.</string>
+    <string name="select_outstanding">Pilih Outstanding</string>
+    <string name="notes_not_available">deskripsi tidak tersedia</string>
+    <string name="lookup_not_available">Parameter %1$s tidak tersedia di server web, hubungi administrator Anda</string>
+    <string name="get_lookup_failed">Gagal untuk mendapatkan parameter %1$s dari server, hubungi administrator Anda</string>
+    <string name="lookup_progress">Mengunduh parameters %1$s</string>
+    <string name="permission_required">Tanpa mengizinkan semua akses yang dibutuhkan, Anda tidak bisa menggunakan aplikasi ini. Anda harus mengizinkan semua akses yang dibutuhkan.</string>
+    <string name="background_location_permission_required">Mohon IZINKAN penggunaan lokasi.\n Tekan OK -> Izin -> Lokasi -> Izinkan sepanjang waktu</string>
+    <string name="need_permision">Anda harus mengizinkan akses untuk </string>
+    <string name="connection_failed_wifi">Silahkan cek status internet Anda</string>
+    <string name="data_saved_failed">Data gagal disimpan, silahkan coba kembali.</string>
+    <string name="taskd_was_gone">Tugas %1$s mengalami kerusakan data, Anda harus kembali menjawab pertanyaan untuk tugas tersebut</string>
+    <string name="gps_gd_error">Lokasi GPS tidak tesedia, silakan cek lokasi Anda dan foto kembali untuk hasil terbaik</string>
+    <string name="coordinat_not_available">Koordinat lokasi tidak tersedia</string>
+    <string name="lbs_gd_error">Gagal mendapatkan koordinat foto, lakukan refresh GPS dan ambil foto kembali</string>
+    <string name="freeup_space">Penyimpanan hampir penuh</string>
+    <string name="freeup_space_detail">Hapus beberapa file atau aplikasi untuk mendapatkan lebih banyak ruang. Anda membutuhkan lebih dari
+        300MB ruang kosong dari kapasitas tersedia untuk menggunakan aplikasi ini dengan aman</string>
+    <string name="processing_image">Mengolah...</string>
+    <string name="btnValidation">Validasi</string>
+    <string name="pressButtonValidation">Tekan Tombol Validasi</string>
+
+    <string name="sync_dialog">Aplikasi diperbarui</string>
+    <string name="sync_dialog_message">Aplikasi telah diperbarui, segera lakukan sinkronisasi agar dapat menggunakan aplikasi.</string>
+    <string name="failed_refresh_token">Token tidak valid. Silahkan keluar dari aplikasi dan login kembali.</string>
+    <string name="faild_save_image">gagal simpan gambar, coba kembali nanti</string>
+    <string name="not_available">tidak tersedia</string>
+    <string name="lookup_not_found">List tidak tersedia, silahkan hubungi administrator</string>
+    <string name="no_answer_found">- Jawaban tidak ditemukan -</string>
+    <string name="copy_value_failed">Gagal menyalin jawaban</string>
+    <string name="copy_value_dkcp_failed">Tidak dapat menghasilkan data, mohon isi manual</string>
+    <string name="calculate_failed">Formula Kalkulasi salah, silahkan hubungi administrator.</string>
+    <string name="cashcount">Jumlah Kas :</string>
+    <string name="lblCashOnHand">COH saat ini: %1$s</string>
+    <string name="lblLimitCOH">Batas COH : %1$s</string>
+    <string name="limit_coh">Tidak bisa memproses tugas. Cash on hand Anda sudah mencapai limit. Silahkan lakukan deposito terlebih dahulu.</string>
+    <string name="msgErrorParsingJson">Gagal mendapatkan data dari server, silahkan mencoba kembali</string>
+    <string name="no_paired_device">No paired devices</string>
+    <string name="input_rv_number_failed">Gagal mendapatkan data dari server</string>
+    <string name="connecting">Connecting</string>
+    <string name="label_device_name">Nama printer</string>
+    <string name="connect_failed">Menghubungkan printer gagal</string>
+    <string name="reconnect_message">Apakah Anda akan mencoba menghubungkan kembali?</string>
+    <string name="reconnect">Menghubungkan kembali</string>
+    <string name="input_rv">Input RV</string>
+    <string name="sync_rv_failed">Gagal mendapatkan nomor RV. Cek koneksi internat dan coba kembali.</string>
+    <string name="rv_number_not_empty">Anda telah menggunakan nomor RV untuk tugas ini</string>
+    <string name="rv_task_h_not_found">Tugas tidak tersedia</string>
+    <string name="sync_rv_number">Sinkronisasi nomor RV </string>
+    <string name="select_dealer">Pilih parameter Dealer terlebih dahulu!</string>
+    <string name="select_rv_number">Pilih nomor RV</string>
+    <string name="logout_dialog">Keluar...</string>
+    <string name="rv_send_failed">Your RV will be queued</string>
+    <string name="input_rv_number">Please input RV Number</string>
+    <string name="input_rv_number_title">Input RV Number</string>
+    <string name="input_rv_number_hint">RV Number</string>
+    <string name="input_rv_number_error">Please select RV Number</string>
+    <string name="input_rv_number_confirm_title">Confirm</string>
+    <string name="input_rv_number_confirm_message">RV Number : %1$s </string>
+    <string name="assignment_task">Penugasan</string>
+    <string name="notification_assignment">Anda memiliki %1$d tugas</string>
+    <string name="push_notification_info">Kamu mendapat notifikasi</string>
+    <string name="click_to_open_assignment_task">Klik untuk membuka tugas</string>
+    <string name="failed_get_taskd">Gagal mendapatkan data dari server. Silahkan coba kembali.</string>
+    <string name="chooseLookup">PILIH JAWABAN</string>
+    <string name="select_answer">Pilih salah satu :</string>
+    <string name="message_preview_failed">Review Gagal</string>
+    <string name="keyword">Kata Kunci :</string>
+    <string name="selectedAnswer">Jawaban terpilih :</string>
+    <string name="change_answer">UBAH JAWABAN</string>
+    <string name="titleProposal">List Proposal</string>
+    <string name="titleSubsidi">List Subsidi</string>
+    <string name="titleRecipient">List Recipient</string>
+    <string name="alpha_numeric_warning">Kata sandi harus berisi minimal 8 karakter dengan minimal satu nomor dan satu huruf</string>
+    <string name="more_than_date">hanya menerima isian tidak kurang dari %1$s</string>
+    <string name="less_than_date">hanya menerima isian tidak lebih dari %1$s</string>
+    <string name="ktp_notice">Nomor KTP harus di isi</string>
+    <string name="validation_required">Mohon melakukan validasi ktp terlebih dahulu</string>
+    <string name="lblCashOnHand_wo_limit">COH saat ini : %1$s</string>
+    <string name="delete_backup_progress">Task yang tidak relevan sedang dihapus pada backup data</string>
+    <string name="delete_backup_success">Berhasil menghapus task yang tidak relevan pada backup data</string>
+    <string name="delete_backup_failed">Gagal menghapus task yang tidak relevan pada backup data</string>
+    <string name="update_backup_progress">Task sedang diperbarui pada backup data</string>
+    <string name="update_backup_success">Berhasil memperbarui task pada backup data</string>
+    <string name="update_backup_failed">Gagal memperbarui task pada backup data</string>
+    <string name="restore_backup_progress">Task sedang dipulihkan dari backup data</string>
+    <string name="restore_backup_success">Berhasil memulihkan task dari backup data, jumlah task : </string>
+    <string name="restore_backup_failed">Tidak terdapat task untuk dipulihkan dari backup data</string>
+    <string name="delete_backup_half_failed">Failed to delete some irrelevant task</string>
+
+    <string name="tabDevice">PERANGKAT</string>
+    <string name="tabApplication">APLIKASI</string>
+    <string name="appVer">Versi Aplikasi</string>
+    <string name="androidVersion">Versi Android</string>
+    <string name="batteryPercen">Persentase Baterai</string>
+    <string name="appStorage">Penggunaan Memori Aplikasi</string>
+    <string name="dataUsage">Penggunaan Paket Data</string>
+    <string name="deviceStorage">Memori Perangkat Tersedia</string>
+    <string name="androidID">Android ID</string>
+
+    <string name="choosePrinter">Pilih Printer</string>
+    <string name="changeLanguage">GANTI BAHASA</string>
+
+    <string name="title_mn_customer_form">FORM PELANGGAN</string>
+    <string name="mn_paymenthistory">Histori Pembayaran</string>
+    <string name="mn_installmentschedule">Jadwal Angsuran</string>
+    <string name="mn_collectionactivity">Aktivitas Pengumpulan</string>
+    <string name="mn_viewmap">Lihat Peta</string>
+    <string name="mn_recapitulation">Rekapitulasi</string>
+    <string name="mn_summary">Ringkasan</string>
+    <string name="mn_neworder">NEW ORDER</string>
+    <string name="mn_absentout">CHECK OUT</string>
+    <string name="mn_setting">SETTINGS</string>
+    <string name="mn_verification_bybranch">VERIFICATION BY BRANCH</string>
+    <string name="mn_approval_bybranch">APPROVAL BY BRANCH</string>
+    <string name="mn_closing_task">CLOSING TASK</string>
+    <string name="mn_products">PRODUCTS</string>
+    <string name="mn_opportunities">OPPORTUNITIES</string>
+    <string name="mn_account">ACCOUNTS</string>
+    <string name="mn_newlead">NEW LEAD</string>
+    <string name="mn_followup">FOLLOW UP</string>
+    <string name="mn_marketingreport">MARKETING REPORT</string>
+    <string name="mn_catalogue">PROMO CATALOGUE</string>
+    <string name="mn_orderprogress">ORDER PROGRESS</string>
+    <string name="title_mn_map">DAFTAR TUGAS</string>
+    <string name="connect">SAMBUNGKAN</string>
+    <string name="disconnect">PUTUSKAN</string>
+    <string name="printerName">Nama Printer</string>
+    <string name="title_print">CETAK</string>
+    <string name="title_question_form">FORM PERTANYAAN</string>
+    <string name="title_question_review">REVIEW PERTANYAAN</string>
+    <string name="title_server_link">LINK SERVER</string>
+    <string name="title_developer_option">OPSI PENGEMBANG</string>
+    <string name="cust_name_required">Nama Customer harus diisi</string>
+    <string name="cust_name_minimun_required">Nama Customer minimal 3 karakter</string>
+    <string name="failed_to_connect">Koneksi Gagal, Silahkan Coba Lagi</string>
+    <string name="edit_still_pending">Masih ada tugas dengan ID yang sama yang masih berstatus pending</string>
+
+    <string name="menuUnavailable">Menu ini sedang tidak tersedia</string>
+    <string name="cantPrint">Tidak bisa mencetak struk. Anda telah memasukkan nomor RV.</string>
+    <string name="selectForm">Pilih Form :</string>
+    <string name="selectAction">Pilih Tindakan :</string>
+    <string name="surveyorList">Daftar Surveyor :</string>
+    <string name="verifyBtn">VERIFIKASI</string>
+    <string name="approveBtn">SETUJUI</string>
+    <string name="txtDay"> hari</string>
+    <string name="chooseAcc">Pilih Akun</string>
+    <string name="lbltopic">Catatan / Topik</string>
+    <string name="msgFollowupFailed">Gagal melakukan tinjauan kembali tugas</string>
+    <string name="msgNoneSelected">Mohon pilih minimal satu tugas untuk diminta</string>
+    <string name="msgNoneOptionSelected">Mohon pilih minimal satu pilihan</string>
+    <string name="lblStartDate">Tanggal Mulai</string>
+    <string name="lblEndDate">Tanggal Selesai</string>
+    <string name="requestSent">Permohonan tinjauan kembali anda sudah terkirim</string>
+
+    <string name="error_camera_device">Kamera Rusak / Tidak Dapat Digunakan</string>
+    <string name="error_camera_disabled">Kamera Di NonAktifkan oleh pengaturan</string>
+    <string name="error_camera_in_use">Aplikasi lain sedang menggunakan kamera</string>
+
+    <!--FileSync-->
+    <string name="no_new_files">Tidak ada file baru untuk diunduh</string>
+    <string name="getting_file_list">Mendapatkan data dari server, mohon tunggu...</string>
+    <string name="failed_to_get_file">Gagal mendapatkan data, silahkan cek koneksi anda dan coba lagi</string>
+    <string name="no_links_found">Tidak ada link yang ditemukan untuk file ID #%1$d Mohon hubungi administrator</string>
+    <string name="downloading_file">Mengunduh file ke %1$d dari %2$d file</string>
+    <string name="import_file_to">Mengambil file ke %1$d dari %2$d file.</string>
+    <string name="updating_apk">Mengunduh perubahan...</string>
+    <string name="updating_error">Gagal melakukan pembaharuan</string>
+    <string name="userhelp_download_error">Data user help data gagal diunduh, nama file: </string>
+    <string name="userhelp_exception">Pengunduhan data user help gagal. </string>
+    <string name="userhelp_loading">User help sedang diunduh. </string>
+    <string name="getting_brochure">Mendapatkan berkas brosur dari server, mohon tunggu...</string>
+
+    <!--Dialog-->
+    <string name="device_rooted">Device Anda di Root</string>
+    <string name="device_rooted_uninstall">Device Anda di Root, silahkan Uninstall Aplikasi</string>
+    <string name="uninstall_apk">Uninstall Aplikasi</string>
+    <string name="please_wait_dialog">Mohon Tunggu</string>
+    <string name="check_in_failed">Tidak dapat melakukan absen masuk</string>
+    <string name="application_is_running">Aplikasi sedang berjalan...</string>
+    <string name="please_wait_almost_done">Mohon Tunggu, Hampir Selesai</string>
+    <string name="retryCallAgain">Anda dapat melakukan panggilan lagi setelah %1$s</string>
+
+    <!--Collection-->
+    <string name="submit_follow_up_success">Catatan Follow-Up berhasil diserahkan!</string>
+    <string name="lblAgreementNo">Nomor Kontrak</string>
+    <string name="lblAmountDue">Jumlah Tunggakan</string>
+    <string name="lblOverdue">Tanggal Jatuh Tempo</string>
+    <string name="lblInstallment">Angsuran Ke</string>
+
+    <string name="lblCoord">Kordinat : </string>
+    <string name="lblAcc">Akurasi : </string>
+    <string name="notes_required">Catatan harus diisi</string>
+    <string name="paymentchannel_alert">Jumlah yang perlu disetorkan untuk batch ini:  %1$s.\nTotal tagihan untuk task ini: %2$s.\n\nBeberapa saluran pembayaran %3$s telah mencapai limit dan tidak akan tersedia untuk deposit. Jika ingin melakukan deposit melalui payment channel tersebut silahkan melakukan deposit terlebih dahulu</string>
+    <string name="msgUnavaibleCodeTransaction">Tidak bisa mendapatkan kode transaksi dari Server</string>
+
+    <string name="paymentchannel_limit">Jumlah yang disetorkan untuk batch ini telah mencapai limit untuk melalui payment channel tersebut</string>
+
+    <string name="view_pdf">Lihat PDF</string>
+    <string name="failed_view_lu_online">Gagal melihat Lu Online</string>
+
+    <string name="set_location">Pilih Lokasi Terlebih Dahulu!</string>
+    <string name="processing_failed">Gagal memproses, memori habis</string>
+    <string name="offline_mode">GUNAKAN MODE OFFLINE</string>
+    <string name="menu_not_available">Menu %1$s tidak tersedia saat ini</string>
+    <string name="database_is_uptodate">Database sudah yang paling baru!.</string>
+    <string name="database_has_been_updated">Database sudah diupdate!</string>
+    <string name="comment_cannot_be_empty">Komen tidak boleh kosong.</string>
+    <string name="change_password_error">Gagal Mengganti kata sandi</string>
+    <string name="options_saved">Pilihan disimpan</string>
+    <string name="no_pdf_viewer">Tidak ditemukan pembaca pdf</string>
+    <string name="error_reading">Gagal membaca gambar</string>
+    <string name="error_image_invalid">Gambar tidak valid</string>
+    <string name="picture_resolution">Resolusi gambar : %1$s</string>
+    <string name="error_occure1">Terjadi eror : %1$s</string>
+    <string name="error_occure2">Terjadi eror : %1$s - %2$s</string>
+    <string name="title_developer_mode">Mode Pengembang</string>
+    <string name="text_turn_off_dev_mode">Mode Pengembang harus dimatikan</string>
+    <string name="btnSetting">PENGATURAN</string>
+    <string name="news_desc">TextView</string>
+    <string name="import_from_csv_failed">Terjadi Kesalahan Saat Import Data dari CSV</string>
+
+    <string name="message_remove_default_printer">Apa anda yakin ingin menghapus layanan cetak %1s ?</string>
+    <string name="message_confirm_unpair_bluetooth">Anda yakin ingin membatalkan pemasangan printer bluetooth ini?</string>
+    <string name="menu_setting_printing">Pencetakan</string>
+    <string name="menu_setting_language">Bahasa</string>
+    <string name="title_printing_service">Layanan Pencetakan</string>
+    <string name="action_choose_printer">Pilih printer</string>
+    <string name="action_print_test">Test cetak</string>
+    <string name="btnConfirm">Konfirmasi</string>
+    <string name="title_mn_printing">Pencetakan</string>
+    <string name="branchName">Branch Name</string>
+    <string name="applNo">Application Number</string>
+    <string name="submitDate">Submit Date</string>
+    <string name="assignDate">Assign Date</string>
+    <string name="approvalId">Approval Id</string>
+    <string name="slaTime">SLA Time</string>
+    <string name="downloadDate">Download Date</string>
+    <string name="customerName">Customer Name</string>
+
+    <string name="reqFollowup">Minta Tinjauan Kembali</string>
+    <string name="reqOppor">Minta Daftar Peluang</string>
+    <string name="btnOpportunities">OPPORTUNITIES</string>
+    <string name="txtTodo">Aktivitas yang harus dilakukan :</string>
+    <string name="txtHistory">Aktivitas yang sudah dilakukan :</string>
+    <string name="btnNewProspect">NEW PROSPECT</string>
+    <string name="task_corrupt">Cant process these task right now, please try again later!</string>
+
+    <string name="library_MobileCollection_libraryDescription">
+        CollAct adalah aplikasi mobile yang sangat multifungsi untuk smartphone yang mendukung badan usaha bidang keuangan dan pekerja lapangan untuk meningkatkan produktivitas mereka.
+    </string>
+    <string name="intent_action_restart_location_tracking">com.adins.intent.action_RESTART_AUTOSEND_LOCATION</string>
+    <string name="intent_action_dynamic_question">com.adins.mss.ACTION_ENTER_DYNAMIC_FORM</string>
+    <string name="intent_action_exit_dynamic_form">com.adins.mss.ACTION_EXIT_DYNAMIC_FORM</string>
+    <string name="action_turn_off_mocklocation">com.adins.mss.ACTION.TURN_OFF_MOCKLOCATION</string>
+    <string name="action_send_rv_result">com.adins.mss.ACTION_SENDRV_RESULT</string>
+    <string name="print_message">Sudah melebihi batas maksimum print</string>
+    <string name="info_failgetdata">No competition found. Please re-sync to open your details achievement</string>
+    <string name="failed_get_data_try_again">Gagal memperoleh data. Coba sesaat lagi</string>
+    <string name="collector_dashboard">Dasbor Kolektor</string>
+    <string name="target_collected">Target Penagihan</string>
+    <string name="collection_result">Hasil Penagihan</string>
+    <string name="collection_result_detail">Rincian Hasil Penagihan</string>
+    <string name="emergency">Darurat !</string>
+
+    <!-- Task Plan -->
+    <string name="selected">terpilih</string>
+    <string name="tasklist_tab_page">Daftar Tugas</string>
+    <string name="todays_plan_tab_page">Rencana Hari Ini</string>
+    <string name="have_not_plan_task">Kamu tidak memiliki tugas terencana. Silahkan pilih tugas untuk membuat perencanaan.</string>
+    <string name="cannot_change_revisit">Tidak dapat mengubah rencana revisit</string>
+    <string name="error_change_plan">Terjadi Kesalahan Ubah Rencana</string>
+    <string name="create_plan">Buat Rencana</string>
+    <string name="pls_add_task">Tambahkan tugas ke dalam rencana harian dahulu</string>
+    <string name="pls_start_visit">Mohon mulai kunjungan terlebih dahulu</string>
+    <string name="start_visit">Mulai Kunjungan</string>
+    <string name="add_todays_plan">Tambahkan Ke Rencana Harian</string>
+    <string name="all_form_all_task">Semua Form . Semua Tugas</string>
+    <string name="all_form">Semua Form</string>
+    <string name="plan_started">Rencana berhasil dimulai</string>
+    <string name="added_todays_plan">Berhasil ditambahkan ke rencana hari ini</string>
+    <string name="add_customer_to_todays_plan">Apakah Anda ingin menambahkan task %1$s ke Rencana Hari Ini</string>
+    <string name="from_todays_plan">dari rencana hari ini ?</string>
+    <string name="change_plan_success">Ubah Rencana Sukses</string>
+    <string name="successfully_removed_task">Berhasil menghapus %1$s dari rencana harian</string>
+
+    <!-- Loyalti Dashboard Competition -->
+    <string name="dashboard_competition_page_title"> Daftar Rincian Program</string>
+    <string name="my_point_competition">Poin Saya (%1$s)</string>
+    <string name="my_rank">Peringkat (%1$s)</string>
+    <string name="custName">Nama Customer</string>
+    <string name="amount_paid">Total Bayar</string>
+    <string name="ptp_date">Tanggal PTP</string>
+    <string name="notes">Catatan</string>
+
+    <!-- Loyalti Monthly Point -->
+    <string name="monthly_point_page_title">Perolehan Poin Bulanan</string>
+
+    <!-- Loyalti Daily Point -->
+    <string name="daily_point_page_title">Perolehan Poin Harian</string>
+    <string name="daily_point_chart_title">Poin Diperoleh Pada %1$s</string>
+    <string name="average_point">Rata-rata: %1$d</string>
+    <string name="y_axis_point_title">Total Poin</string>
+
+    <!-- My Point -->
+    <string name="points_detail_not_found">Detail Poin Tidak Ditemukan</string>
+    <string name="daily_points">Poin Harian</string>
+    <string name="monthly_points">Poin Bulanan</string>
+    <string name="total_points">Total Poin</string>
+    <string name="month_total_points">Total Poin %1$s</string>
+    <string name="current_month_point">Poin Bulan Ini</string>
+    <string name="daily_avg_period">Rerata Periode Berjalan</string>
+    <string name="daily_avg_month">Rerata Bulan Berjalan</string>
+
+    <!--Firebase Trace-->
+    <string name="plan_task_trace">Plan Task Trace</string>
+    <string name="task_list_trace">Task List Trace</string>
+    <string name="synchronize_trace_order">Order Synchronize Trace</string>
+    <string name="synchronize_trace_survey">Survey Synchronize Trace</string>
+    <string name="synchronize_trace_coll">Collection Synchronize Trace</string>
+    <string name="customer_header_trace">Customer Header Trace</string>
+    <string name="customer_detail_trace">Customer Detail Trace</string>
+    <string name="question_form_trace">Question Form Do Next Trace</string>
+
+    <string name="planned_info">%1$d of %2$d terencana</string>
+    <string name="termAndCondition">Terms &amp; Conditions</string>
+    <string name="privacyAndPolicy">Privacy Policy</string>
+    <string name="camera_message">Pastikan kartu identitas di dalam kotak dan pastikan foto jelas</string>
+    <string-array name="dropdownSearchTask">
+        <item>Semua Tugas</item>
+        <item>Tugas Prioritas Tinggi</item>
+        <item>Tugas Prioritas Normal</item>
+        <item>Tugas Prioritas Rendah</item>
+        <item>Tugas Terkirim</item>
+        <item>Tugas Gagal Terkirim</item>
+        <item>Tugas Diunggah</item>
+        <item>Tugas Tersimpan</item>
+        <item>Draft Tugas Gagal Terkirim</item>
+    </string-array>
+
+    <string-array name="dropdownSearchTaskSPV">
+        <item>Semua Tugas</item>
+        <item>Tugas Terkirim</item>
+        <item>Tugas Gagal Terkirim</item>
+        <item>Tugas Diunggah</item>
+        <item>Tugas Tersimpan</item>
+        <item>Tugas Gagal Tersimpan</item>
+    </string-array>
+
+    <string-array name="taskSearch">
+        <item>Semua Tugas</item>
+        <item>Tugas Prioritas Tinggi</item>
+        <item>Tugas Prioritas Normal</item>
+        <item>Tugas Prioritas Rendah</item>
+        <item>Tugas Gagal Terkirim</item>
+        <item>Tugas Diunggah</item>
+        <item>Tugas Tersimpan</item>
+    </string-array>
+    <string-array name="taskPtp">
+        <item>Semua PTP</item>
+        <item>Broken PTP</item>
+        <item>Hari ini</item>
+        <item>Besok</item>
+    </string-array>
+    <string-array name="dropdownSearchOrder">
+        <item>Semua Tugas</item>
+        <item>Tugas Terkirim</item>
+        <item>Tugas Gagal Terkirim</item>
+        <item>Tugas Diunggah</item>
+        <item>Tugas Tersimpan</item>
+        <item>Draft Tugas Gagal Terkirim</item>
+    </string-array>
+</resources>

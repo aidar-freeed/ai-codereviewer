@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#002F5F</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="divider_color">#11000000</color>
+    <color name="msg_color">#FFFFFFFF</color>
+    <color name="dialog_bg">#030039</color>
+
+    <color name="btn_press_color">#66013c3b</color>
+    <color name="btn_unpress_color">#22000000</color>
+
+    <color name="txt_view">#001135</color>
+
+    <!-- Text View -->
+    <color name="tv_darker">#01011C</color>
+    <color name="tv_dark">#150082</color>
+    <color name="tv_normal">#0300AC</color>
+    <color name="tv_normal_press">#040190</color>
+    <color name="tv_light">#322ED9</color>
+    <color name="tv_lighter">#EAA</color>
+    <color name="tv_gray">#cccccc</color>
+    <color name="tv_gray_light">#DDDDDD</color>
+    <color name="tv_white">#FFFFFF</color>
+    <color name="tv_black">#000000</color>
+    <!-- Text View -->
+    <color name="tv_darker_trans">#33041741</color>
+    <color name="tv_dark_trans">#50005baa</color>
+    <color name="tv_normal_trans">#500a4cde</color>
+    <color name="tv_light_trans">#33d92e32</color>
+
+    <!-- Theme about colors -->
+    <color name="theme_default_primary">#536dfe</color>
+    <color name="theme_default_primary_dark">#3f51b5</color>
+    <color name="theme_accent">#ff4081</color>
+    <color name="theme_window_background">#ECECEC</color>
+
+    <color name="card">#FAFAFA</color>
+
+    <color name="title_openSource">#212121</color>
+    <color name="text_openSource">#727272</color>
+
+    <color name="dividerDark_openSource">#AAA</color>
+    <color name="dividerLight_openSource">#DADADA</color>
+
+    <color name="default_progress_bar_color">#FF33B5E5</color>
+
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+
+    <color name="drawer_background">#cfcfcf</color>
+
+    <!--     Action Bar -->
+    <!--     <color name="ab_start">#2c2d31</color> -->
+    <!--     <color name="ab_end">#2c2d31</color> -->
+    <color name="ab_start">#002F5F</color>
+    <color name="ab_end">#002F5F</color>
+
+    <!--     Gradient -->
+    <color name="gradient_start">#5E9CD8</color>
+    <color name="gradient_end">#2F5275</color>
+    <!--#ed3e58-->
+    <!--#ee314d-->
+    <!--d0132f-->
+    <!--c80b27-->
+    <color name="child_view_background">#FFDFE5</color>
+    <color name="login_color">#002F5F</color>
+</resources>

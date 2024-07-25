@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bgColor">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@drawable/header"
+            app:titleTextAppearance="?android:attr/textAppearanceSmall"
+            app:popupTheme="@style/AppTheme" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/card_shadow"
+            android:layout_margin="@dimen/card_margin"
+            android:layout_below="@id/toolbar"
+            app:contentPadding="10dp"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Encrypt and Decrypt Options"
+                    android:id="@+id/textView14"
+                    android:textColor="@color/gradient_end"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView14"
+                    android:layout_alignLeft="@id/textView14"
+                    android:text="Encrypt Connection"
+                    android:id="@+id/switchEncrypt"
+                    android:textColor="@color/fontColor"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:checked="false"
+                    android:paddingTop="5dp" />
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/switchEncrypt"
+                    android:layout_alignLeft="@id/switchEncrypt"
+                    android:text="Decrypt Connection"
+                    android:id="@+id/switchDecrypt"
+                    android:textColor="@color/fontColor"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:checked="false"
+                    android:paddingTop="5dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/card_shadow"
+            android:layout_margin="@dimen/card_margin"
+            android:layout_below="@id/cardView1"
+            app:contentPadding="10dp"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Access Token Options"
+                    android:textColor="@color/gradient_end"
+                    android:textStyle="bold"
+                    android:id="@+id/textView11" />
+
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView11"
+                    android:text="Using Access Token"
+                    android:textColor="@color/fontColor"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/switchAccessToken"
+                    android:checked="false"
+                    android:paddingTop="5dp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutClientId"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/switchAccessToken">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Client ID : "
+                        android:textColor="@color/fontColor"
+                        android:id="@+id/txtClientId" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/edtClientId"
+                        android:padding="10dp"
+                        android:textColor="@color/fontColor"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/card_shadow"
+        android:layout_margin="@dimen/card_margin"
+        android:layout_below="@id/cardView2"
+        app:contentPadding="10dp"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Developer Options"
+                android:id="@+id/textView15"
+                android:textColor="@color/gradient_end"
+                android:textStyle="bold" />
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView15"
+                android:layout_alignLeft="@id/textView15"
+                android:text="Ignore Developer Validation"
+                android:id="@+id/switchDevMode"
+                android:textColor="@color/fontColor"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:checked="false"
+                android:paddingTop="5dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnSave"
+        android:id="@+id/btnSave"
+        android:background="@drawable/button_background"
+        android:layout_margin="5dp"
+        android:textColor="@color/fontColorWhite"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

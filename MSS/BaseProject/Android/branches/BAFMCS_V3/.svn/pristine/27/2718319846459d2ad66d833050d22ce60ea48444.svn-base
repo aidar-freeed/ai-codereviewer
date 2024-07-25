@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<View
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:background="@drawable/actionbar_background" />
+
+<!--     <uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout -->
+<!--         android:id="@+id/ptr_layout" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="match_parent" -->
+<!--         android:layout_below="@+id/actionbar" -->
+<!--         android:padding="4dp" > -->
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/swiperefresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/actionbar"
+      android:padding="4dp">
+   <GridView
+        android:id="@+id/gridStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:numColumns="3" 
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp">
+        
+    </GridView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+<!--     </uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout> -->
+
+</RelativeLayout>

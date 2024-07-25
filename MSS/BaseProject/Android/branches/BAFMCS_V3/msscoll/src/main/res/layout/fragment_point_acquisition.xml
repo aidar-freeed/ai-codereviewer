@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#ffff"
+    android:id="@+id/scrollView"
+    tools:context=".loyalti.pointacquisitionmonthly.MonthlyPointsChartView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chartContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        >
+
+        <TextView
+            android:id="@+id/chartTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/monthly_point_page_title"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chartContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/chartTitle">
+
+            <TextView
+                android:id="@+id/yAxisTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/y_axis_point_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total : 2800"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/monthlyChart"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:layout_constraintTop_toBottomOf="@id/totalPoint" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/legendsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chartContainer">
+
+            <com.adins.mss.coll.loyalti.barchart.NonScrollListView
+                android:id="@+id/legendPoints"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:dividerHeight="0dp"
+                android:divider="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.65"
+                 />
+
+            <com.adins.mss.coll.loyalti.barchart.NonScrollListView
+                android:id="@+id/legendRanks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:dividerHeight="0dp"
+                android:divider="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.35"
+                app:layout_constraintTop_toTopOf="parent"
+                 />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_grayscale">
+
+    <View android:id="@+id/actionbar"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:layout_alignParentTop="true"
+          android:background="@drawable/actionbar_background"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_marginTop="48dp"
+            android:id="@+id/swipeRefreshApproval"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp">
+
+        <GridView
+                android:id="@+id/gridApproval"
+                android:layout_below="@+id/actionbar"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:numColumns="3"
+                android:padding="5dp"
+                android:horizontalSpacing="4dp"
+                android:verticalSpacing="4dp">
+        </GridView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

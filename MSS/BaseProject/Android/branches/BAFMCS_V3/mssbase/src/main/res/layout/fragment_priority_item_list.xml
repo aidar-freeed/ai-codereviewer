@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bgGridPriority"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/line_height"
+    android:background="@drawable/grid_background" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ImgSLE"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/light_red" />
+
+            <ImageView
+                android:id="@+id/imgStsPriority"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/light_red" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ImgSLE"
+            android:src="@drawable/icon_not_priority"
+            android:layout_centerHorizontal="true" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtPriority"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/imgPriority"
+            android:text="@string/dummy_priority"
+            android:textColor="@color/tv_white"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/txtTaskID"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_task_id"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/tv_white"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_marginLeft="3dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="@string/dummy_header_name_2"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/tv_white" />
+
+        <TextView
+            android:id="@+id/txtScheme"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/tv_white"
+            android:text="@string/dummy_scheme_name"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/txtStatusTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_status_task"
+            android:visibility="gone"
+            android:textColor="@color/tv_white"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/txtslatime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ImgSLE"
+            android:text="00:00"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/tv_white"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

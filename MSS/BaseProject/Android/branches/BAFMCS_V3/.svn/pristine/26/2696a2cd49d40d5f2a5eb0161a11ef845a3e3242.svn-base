@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    android:background="?android:selectableItemBackground"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="@dimen/card_shadow">
+
+    <LinearLayout
+        android:id="@+id/menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fontColorWhite"
+        android:paddingTop="10dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/itemIcon"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                app:srcCompat="@drawable/menu_newtask" />
+            <TextView
+                android:id="@+id/counter"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:text="0"
+                android:textColor="@color/fontColorWhite"
+                android:textSize="7dp"
+                android:gravity="center"
+                android:elevation="5dp"
+                android:background="@drawable/counter_bg"
+                android:visibility="gone"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="11dp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:text="Item Menu"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

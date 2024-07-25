@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgColor">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/taskHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="5dp"
+        app:cardElevation="5dp"
+        android:layout_margin="3dp"
+        app:cardBackgroundColor="@color/fontColorWhite">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Status"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:drawableLeft="@drawable/ic_info"
+                android:drawablePadding="5dp" />
+            <TextView
+                android:id="@+id/txtProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Product"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:drawableLeft="@drawable/ic_product"
+                android:drawablePadding="5dp" />
+            <TextView
+                android:id="@+id/txtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="OpportunityID"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:drawableLeft="@drawable/ic_form_color"
+                android:drawablePadding="5dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

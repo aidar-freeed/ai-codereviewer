@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@drawable/spinner_background">
+    
+    <TextView
+        android:id="@+id/txtNoOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:text="@string/dummy_no_order"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/txtDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:text="@string/divider_dash"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/txtCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:text="@string/customer_name"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+</LinearLayout>

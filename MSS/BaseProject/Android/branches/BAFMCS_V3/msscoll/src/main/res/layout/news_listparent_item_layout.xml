@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/spinner_background">
+
+<!--     <ImageView -->
+<!--         android:id="@+id/iconNewsParent" -->
+<!--         android:layout_width="48dp" -->
+<!--         android:layout_height="48dp" -->
+<!--         android:layout_alignParentLeft="true" -->
+<!--         android:layout_alignParentTop="true" -->
+<!--         android:src="@drawable/ic_approve" /> -->
+
+    <TextView
+        android:id="@+id/titleNewsParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Medium Text"
+        android:minHeight="48dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+</RelativeLayout>

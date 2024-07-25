@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/header"
+        app:titleTextAppearance="?android:attr/textAppearanceSmall"
+        android:titleTextColor="@color/fontColorWhite"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_collapseMode="pin"
+        android:fitsSystemWindows="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/collActivityContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="7dp"
+            app:cardElevation="@dimen/card_shadow"
+            android:layout_marginTop="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin"
+            android:layout_marginBottom="60dp"
+            app:cardBackgroundColor="@color/fontColorWhite">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/agreementNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_agreement_number"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorMC"
+                            android:paddingBottom="10dp"/>
+                        <TextView
+                            android:id="@+id/agreementNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorMC"
+                            android:paddingBottom="10dp"/>
+                    </LinearLayout>
+                    <HorizontalScrollView
+                        android:id="@+id/horizontalScrollView1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true">
+                        <TableLayout
+                            android:id="@+id/tablePaymentHeaders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:stretchColumns="2">
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/label_no"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"/>
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/timelineLine" />
+                                <TextView
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/label_transaction_code"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/timelineLine" />
+                                <TextView
+                                    android:gravity="center_horizontal"
+                                    android:minWidth="50dp"
+                                    android:text="@string/label_posting_date"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/timelineLine" />
+                                <TextView
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/label_amount_paid_2"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/timelineLine" />
+                                <TextView
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/label_amount_installment_2"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                            </TableRow>
+                            <TableRow>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/timelineLine"/>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/timelineLine"/>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/timelineLine"/>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/timelineLine"/>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/timelineLine"/>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/timelineLine"/>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/timelineLine"/>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/timelineLine"/>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/timelineLine"/>
+                            </TableRow>
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp">
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/timelineLine" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/timelineLine" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/timelineLine" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/timelineLine" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp" />
+                            </TableRow>
+                        </TableLayout>
+
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/imageBtnDownload"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_file_download"
+            android:background="@drawable/round_shape" />
+    </RelativeLayout>
+</LinearLayout>

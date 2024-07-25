@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_grayscale"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons"
+        android:layout_below="@+id/actionbar">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="13dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtTypeDeposit"
+                style="@style/FieldLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_type_deposit" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerTypeDeposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/dropdown_background"
+                    android:padding="5dp"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/spinnerTypeDeposit"
+                    android:layout_alignEnd="@+id/spinnerTypeDeposit"
+                    android:layout_alignBottom="@+id/spinnerTypeDeposit"
+                    android:layout_marginEnd="10dp"
+                    android:tint="@color/colorMC"
+                    app:srcCompat="@drawable/ic_expand" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/label_branch_payment" />
+
+            <AutoCompleteTextView
+                android:id="@+id/textWithSuggestionBranch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="@string/branch_payment_hint"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/txtTransferTo"
+                style="@style/FieldLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/label_transfer_to" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerBankAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/dropdown_background"
+                    android:padding="5dp"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:id="@+id/img_expand_bank_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/spinnerBankAccount"
+                    android:layout_alignEnd="@+id/spinnerBankAccount"
+                    android:layout_alignBottom="@+id/spinnerBankAccount"
+                    android:layout_marginEnd="10dp"
+                    android:tint="@color/colorMC"
+                    app:srcCompat="@drawable/ic_expand" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/questionDropdownEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lookup_not_found"
+                android:textSize="15dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtBuktiTransfer"
+                style="@style/FieldLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/label_transfer_evidence_pc" />
+
+            <ImageView
+                android:id="@+id/imageBukti"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_gallery" />
+
+            <Button
+                android:id="@+id/buttonSelectPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:text="@string/take_a_photo"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/fontColorWhite" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/label_form"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/priorityViewByForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/dropdown_background"
+                    android:padding="5dp"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:id="@+id/img_expand_by_form_ac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/priorityViewByForm"
+                    android:layout_alignEnd="@+id/priorityViewByForm"
+                    android:layout_alignBottom="@+id/priorityViewByForm"
+                    android:layout_marginEnd="10dp"
+                    android:tint="@color/colorMC"
+                    app:srcCompat="@drawable/ic_expand" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_info_batch" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/priorityViewByBatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/dropdown_background"
+                    android:padding="5dp"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/priorityViewByBatch"
+                    android:layout_alignEnd="@+id/priorityViewByBatch"
+                    android:layout_alignBottom="@+id/priorityViewByBatch"
+                    android:layout_marginEnd="10dp"
+                    android:tint="@color/colorMC"
+                    app:srcCompat="@drawable/ic_expand" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/formBatch"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_info_form"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/divider_colon"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/formBatchValue"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/dateBatch"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_info_submitdate"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/divider_colon"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/dateBatchValue"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="right"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/totalDep"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_info_total"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/divider_colon"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/totalDepValue"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="right"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/priorityViewByUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/dropdown_background"
+                    android:padding="5dp"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:id="@+id/img_expand_by_user_ac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/priorityViewByUser"
+                    android:layout_alignEnd="@+id/priorityViewByUser"
+                    android:layout_alignBottom="@+id/priorityViewByUser"
+                    android:layout_marginEnd="10dp"
+                    android:tint="@color/colorMC"
+                    app:srcCompat="@drawable/ic_expand" />
+            </RelativeLayout>
+
+            <ExpandableListView
+                android:id="@+id/expandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="5dp"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="0.5dp"
+                android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+                android:nestedScrollingEnabled="true" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/transferButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:enabled="true"
+            android:text="@string/btnSend"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/fontColorWhite" />
+    </LinearLayout>
+
+</RelativeLayout>

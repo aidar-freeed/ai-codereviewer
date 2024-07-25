@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.adins.mss.base">
+
+    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> <!-- External storage for caching. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /><!-- My Location -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- agar aplikasi tidak dikill -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application>
+        <receiver
+            android:name="com.receivers.BackupReceiver"
+            android:enabled="true"
+            android:exported="false"></receiver>
+
+        <service
+            android:name="com.services.MainServices"
+            android:foregroundServiceType="location"
+            android:exported="false" /> <!-- broadcast receiver -->
+        <receiver
+            android:name="com.services.ServiceAutoRestart"
+            android:directBootAware="true"
+            android:exported="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".dynamicform.form.DynamicQuestionActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".dynamicform.form.questions.DrawingCanvasActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize" />
+        <activity android:name=".dynamicform.form.questions.ImageViewerActivity" />
+        <activity
+            android:name="com.adins.mss.printer.main_winson"
+            android:label="@string/title_activity_main_winson" />
+        <activity
+            android:name="zj.com.cn.bluetooth.sdk.Main_Activity1"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="zj.com.cn.bluetooth.sdk.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/select_device"
+            android:theme="@android:style/Theme.Dialog" /> <!-- LOOKUP ONLINE -->
+        <activity
+            android:name=".dynamicform.form.questions.viewholder.LookupFilterActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".dynamicform.form.questions.viewholder.LookupCriteriaOnlineActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize" /> <!-- <activity android:name=".NewMainActivity" /> -->
+        <activity android:name=".NewChangePasswordActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name="com.services.MssJobScheduler"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.services.plantask.StartVisitJob"
+            android:exported="false"/>
+        <service
+            android:name="com.services.plantask.ChangePlanService"
+            android:exported="false"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

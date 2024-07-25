@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_grayscale">
+
+    <!--      <com.fima.cardsui.views.CardUI -->
+    <!--         android:layout_below="@+id/export" -->
+    <!--         android:id="@+id/cardsview" -->
+    <!--         android:layout_width="match_parent" -->
+    <!--         android:layout_height="match_parent"/> -->
+    <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:headerDividersEnabled="true"
+            android:footerDividersEnabled="true"
+            android:scrollbarSize="1dp"
+            android:layout_below="@+id/appDescription"
+            android:scrollbarStyle="outsideOverlay"
+            android:background="#ffffff"
+            android:divider="#eeeeee"
+            android:dividerHeight="5dp" />
+
+    <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_mss_new" />
+
+    <TextView
+            android:id="@+id/txt_appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnCheckUpdate"
+            android:layout_centerHorizontal="true"
+            android:text="@string/app_name_order"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin" />
+
+    <TextView
+            android:id="@+id/appDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iconDivider"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="@string/app_desc_order"
+            android:textSize="@dimen/textSizeSmall_openSource"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin" />
+
+    <View
+            android:id="@+id/iconDivider"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignLeft="@+id/appDescription"
+            android:layout_below="@+id/txt_appName"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@android:color/darker_gray" />
+
+    <Button
+            android:id="@+id/btnCheckUpdate"
+            android:background="@drawable/button_background"
+            android:textColor="@color/tv_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_logo"
+            android:layout_centerHorizontal="true"
+            android:text="@string/checkUpdate" />
+
+</RelativeLayout>
+
