@@ -51,11 +51,9 @@ const minimatch_1 = __importDefault(__nccwpck_require__(2002));
 const GITHUB_TOKEN = core.getInput("GITHUB_TOKEN");
 const OPENAI_API_KEY = core.getInput("OPENAI_API_KEY");
 const OPENAI_API_MODEL = core.getInput("OPENAI_API_MODEL");
-const FRAMEWORK = core.getInput("framework"); // New input for framework
+const FRAMEWORK = core.getInput("framework");
 const octokit = new rest_1.Octokit({ auth: GITHUB_TOKEN });
-const openai = new openai_1.default({
-    apiKey: OPENAI_API_KEY,
-});
+const openai = new openai_1.default({ apiKey: OPENAI_API_KEY });
 function getPRDetails() {
     var _a, _b;
     return __awaiter(this, void 0, void 0, function* () {
@@ -82,23 +80,28 @@ function getDiff(owner, repo, pull_number) {
             pull_number,
             mediaType: { format: "diff" },
         });
-        // @ts-expect-error - response.data is a string
-        return response.data;
+        // Fix: return the response as a string
+        return response.data; // Explicitly cast it to string
     });
 }
 function analyzeCode(parsedDiff, prDetails) {
     return __awaiter(this, void 0, void 0, function* () {
         const comments = [];
+        const existingComments = new Set();
         for (const file of parsedDiff) {
             if (file.to === "/dev/null")
-                continue; // Ignore deleted files
+                continue;
             for (const chunk of file.chunks) {
-                const prompt = createPrompt(file, chunk, prDetails);
-                const aiResponse = yield getAIResponse(prompt);
-                if (aiResponse) {
-                    const newComments = createComment(file, chunk, aiResponse);
-                    if (newComments) {
-                        comments.push(...newComments);
+                for (const change of chunk.changes) {
+                    if (!change.content.startsWith("+"))
+                        continue;
+                    const prompt = createPrompt(file, chunk, prDetails);
+                    const aiResponse = yield getAIResponse(prompt);
+                    if (aiResponse) {
+                        const newComments = createComment(file, chunk, aiResponse, existingComments);
+                        if (newComments) {
+                            comments.push(...newComments);
+                        }
                     }
                 }
             }
@@ -108,90 +111,17 @@ function analyzeCode(parsedDiff, prDetails) {
 }
 function getRailsGuidelines() {
     return `
-- **Environment Specific Code**: Avoid hard-coding values. Use configuration files or environment variables.
-
-- **Legacy Code**: Remove hard-coded values, clean up unused code, and ensure cross-environment compatibility.
-
-- **Code Quality**: Adhere to Ruby and Rails Style Guides. Use Rubocop.
-
-- **OOP Principles**: Follow SOLID principles.
-
-- **Methods**: Keep methods concise. Use guard clauses and refactoring to reduce complexity.
-
-- **Variables**: Use clear and descriptive names within appropriate scope.
-
-- **File Structure**: 
-  - \`app/\`: Domain-specific code.
-  - \`lib/\`: Generic Ruby code.
-
-- **Keyword Arguments**: Prefer keyword arguments for readability.
-
-- **Service Layer**: Encapsulate business logic within services.
-
-- **Database Performance**: Avoid N+1 queries. Use \`includes\` or \`preload\`. Index frequently queried columns and use bulk operations.
-
-- **Safe Migrations**: Avoid models in migrations. Use plain SQL and commit \`structure.sql\`. Use \`LHM\` for complex migrations.
+  - **Environment Specific Code**: Avoid hard-coding values. Use configuration files or environment variables.
+  - **Legacy Code**: Clean up unused code and ensure cross-environment compatibility.
+  - **OOP Principles**: Follow SOLID principles.
+  - **Database Performance**: Avoid N+1 queries. Use \`includes\` or \`preload\`. 
   `;
 }
 function getAngularGuidelines() {
     return `
-- **Component Structure**: Ensure components are small and focused on a single responsibility. Follow the Angular style guide for component structure.
-
-- **Module Organization**: Organize modules to keep related functionalities together. Use feature modules for distinct features.
-
-- **Service Usage**: Use services for business logic and data access. Keep components focused on presentation logic.
-
-- **Reactive Programming**: Prefer the use of RxJS for asynchronous operations. Ensure proper management of subscriptions to avoid memory leaks.
-
-- **Templates**: Keep templates clean and readable. Use Angular directives (\`*ngIf\`, \`*ngFor\`) appropriately.
-
-- **Change Detection**: Optimize change detection by using \`OnPush\` strategy where possible to improve performance.
-
-- **Forms**: Use Reactive Forms for complex forms and Template-driven forms for simpler ones. Ensure proper validation.
-
-- **Routing**: Use the Angular Router for navigation. Ensure routes are organized and lazy load modules where appropriate.
-
-- **Dependency Injection**: Use Angular's dependency injection to manage dependencies. Avoid creating instances manually.
-
-- **Testing**: Ensure comprehensive unit tests for components, services, and other classes. Use Jasmine and Karma for testing.
-  `;
-}
-function getAngularJSGuidelines() {
-    return `
-- **Component Structure**: Ensure components follow a single responsibility principle. Organize code using modules.
-
-- **Controller Usage**: Minimize the use of controllers. Prefer directives and services.
-
-- **Scope Management**: Avoid excessive use of \`$scope\`. Prefer using \`controllerAs\` syntax and bind properties to the controller.
-
-- **Service Usage**: Use services and factories for business logic. Keep controllers lean.
-
-- **Templates**: Keep templates clean. Use directives to encapsulate reusable components.
-
-- **Dependency Injection**: Use AngularJS dependency injection to manage dependencies. Avoid creating instances manually.
-
-- **Performance**: Optimize watchers and digest cycles. Use one-time bindings where possible.
-
-- **Testing**: Ensure comprehensive unit tests for controllers, services, and directives. Use Jasmine and Karma for testing.
-  `;
-}
-function getCypressGuidelines() {
-    return `
-- **Test Structure**: Organize tests in a logical structure. Use \`describe\` and \`it\` blocks to structure test cases.
-
-- **Selectors**: Use data attributes for selecting elements (\`data-cy\`). Avoid using selectors based on CSS or HTML structure which may change.
-
-- **Assertions**: Use appropriate assertions to verify application behavior. Avoid excessive assertions in a single test.
-
-- **Test Data**: Use fixtures and factories for test data. Avoid hardcoding data within tests.
-
-- **Commands**: Use custom Cypress commands to reuse common test logic. 
-
-- **Error Handling**: Ensure tests handle errors gracefully and provide meaningful error messages.
-
-- **Performance**: Optimize tests to run quickly. Avoid unnecessary steps and redundant tests.
-
-- **Cross-browser Testing**: Ensure tests run across different browsers to verify compatibility.
+  - **Component Structure**: Ensure components are small and focused on a single responsibility.
+  - **Reactive Programming**: Prefer the use of RxJS for asynchronous operations.
+  - **Testing**: Ensure comprehensive unit tests for components, services, and other classes.
   `;
 }
 function createPrompt(file, chunk, prDetails) {
@@ -202,46 +132,20 @@ function createPrompt(file, chunk, prDetails) {
     else if (FRAMEWORK === "Angular") {
         guidelines = getAngularGuidelines();
     }
-    else if (FRAMEWORK === "AngularJS") {
-        guidelines = getAngularJSGuidelines();
-    }
-    else if (FRAMEWORK === "Cypress") {
-        guidelines = getCypressGuidelines();
-    }
     return `Your task is to review a pull request for ${FRAMEWORK} code. Follow these instructions:
-
-- Provide your response in JSON format: {"reviews": [{"lineNumber": <line_number>, "reviewComment": "<review comment>", "optimizedCode": "<optimized code>"}]}
-- Comment only where there is an issue or a suggestion for improvement. No positive comments.
-- Use GitHub Markdown format for comments.
-- For each issue or suggestion, provide the optimized code snippet.
-- Identify specific types of issues:
-  - **Security**: Look for vulnerabilities such as SQL injection, XSS, and insecure configurations.
-  - **Performance**: Identify potential performance bottlenecks and suggest optimizations.
-  - **Maintainability**: Ensure the code is easy to read and maintain. Suggest refactoring if necessary.
-  - **Best Practices**: Ensure adherence to best practices specific to ${FRAMEWORK} and the overall project.
-  - **Testing**: Verify that the code changes include appropriate tests. If not, suggest adding tests.
-  - **Documentation**: Check if the code changes are well-documented. If not, suggest improvements in documentation.
-
+  
+  - Provide your response in JSON format: {"reviews": [{"lineNumber": <line_number>, "reviewComment": "<review comment>", "optimizedCode": "<optimized code>", "severity": "Low"|"Medium"|"High"}]}
+  - Comment only where there is an issue or a suggestion for improvement. No positive comments.
+  - Only include comments with a severity of "Medium" or "High".
+  
 ${guidelines}
 
-Review the following code diff in the file "${file.to}", considering the pull request title and description for context:
-
-Pull request title: ${prDetails.title}
-Pull request description:
-
----
-${prDetails.description}
----
-
 Git diff to review:
-
 \`\`\`diff
 ${chunk.content}
-${chunk.changes
-        .map((c) => `${'ln' in c ? c.ln : 'ln2' in c ? c.ln2 : ''} ${c.content}`)
-        .join("\n")}
+${chunk.changes.map((c) => `${'ln' in c ? c.ln : 'ln2' in c ? c.ln2 : ''} ${c.content}`).join("\n")}
 \`\`\`
-`;
+  `;
 }
 function getAIResponse(prompt) {
     var _a, _b, _c;
@@ -255,61 +159,62 @@ function getAIResponse(prompt) {
             presence_penalty: 0,
         };
         try {
-            const response = yield openai.chat.completions.create(Object.assign(Object.assign({}, queryConfig), { messages: [
-                    {
-                        role: "system",
-                        content: prompt,
-                    },
-                ] }));
-            // Log the raw response for debugging
-            console.log('Raw response:', JSON.stringify(response, null, 2));
+            const response = yield openai.chat.completions.create(Object.assign(Object.assign({}, queryConfig), { messages: [{ role: "system", content: prompt }] }));
             const res = ((_b = (_a = response.choices[0].message) === null || _a === void 0 ? void 0 : _a.content) === null || _b === void 0 ? void 0 : _b.trim()) || "";
-            // Extract JSON content from Markdown code block
             const jsonContent = (_c = res.match(/```json([\s\S]*)```/)) === null || _c === void 0 ? void 0 : _c[1];
             if (!jsonContent) {
-                console.error("Failed to extract JSON content from response.");
                 return null;
             }
-            // Attempt to parse JSON
-            try {
-                return JSON.parse(jsonContent).reviews;
-            }
-            catch (e) {
-                console.error("Failed to parse JSON:", e);
-                console.error("Response content:", jsonContent);
-                return null;
-            }
+            return JSON.parse(jsonContent).reviews;
         }
         catch (error) {
-            console.error("Error:", error);
             return null;
         }
     });
 }
-function createComment(file, chunk, aiResponses) {
+function getSimilarityRatio(original, optimized) {
+    let changes = 0;
+    const minLength = Math.min(original.length, optimized.length);
+    for (let i = 0; i < minLength; i++) {
+        if (original[i] !== optimized[i]) {
+            changes++;
+        }
+    }
+    return 1 - (changes / Math.max(original.length, optimized.length));
+}
+function isSignificantDifference(original, optimized) {
+    const threshold = 0.9;
+    const similarityRatio = getSimilarityRatio(original, optimized);
+    return similarityRatio < threshold;
+}
+function isDuplicateComment(comment, existingComments) {
+    if (existingComments.has(comment)) {
+        return true;
+    }
+    else {
+        existingComments.add(comment);
+        return false;
+    }
+}
+function createComment(file, chunk, aiResponses, existingComments) {
     return aiResponses.flatMap((aiResponse) => {
         if (!file.to) {
             return [];
         }
         const lineNumber = Number(aiResponse.lineNumber);
-        // Find the matching change in the chunk
-        const change = chunk.changes.find((c) => {
-            if ("ln" in c && c.ln === lineNumber)
-                return true;
-            if ("ln2" in c && c.ln2 === lineNumber)
-                return true;
-            return false;
-        });
+        const change = chunk.changes.find((c) => ("ln" in c && c.ln === lineNumber) || ("ln2" in c && c.ln2 === lineNumber));
         if (!change) {
-            console.error(`Line number ${aiResponse.lineNumber} not found in the diff for file ${file.to}`);
             return [];
         }
         const commentLine = "ln" in change ? change.ln : "ln2" in change ? change.ln2 : 0;
-        return {
-            body: `${aiResponse.reviewComment}\n\n**Optimized Code:**\n\`\`\`${FRAMEWORK === 'Ruby on Rails' ? 'ruby' : FRAMEWORK === 'Cypress' ? 'javascript' : 'typescript'}\n${aiResponse.optimizedCode}\n\`\`\``,
-            path: file.to,
-            line: commentLine,
-        };
+        if (!isSignificantDifference(change.content, aiResponse.optimizedCode) || isDuplicateComment(aiResponse.reviewComment, existingComments)) {
+            return [];
+        }
+        return [{
+                body: `${aiResponse.reviewComment}\n\n**Optimized Code:**\n\`\`\`${FRAMEWORK === 'Ruby on Rails' ? 'ruby' : 'typescript'}\n${aiResponse.optimizedCode}\n\`\`\``,
+                path: file.to,
+                line: commentLine,
+            }];
     });
 }
 function createReviewComment(owner, repo, pull_number, comments) {
@@ -323,6 +228,15 @@ function createReviewComment(owner, repo, pull_number, comments) {
         });
     });
 }
+function removeOldComments(owner, repo, pull_number) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const reviews = yield octokit.pulls.listReviews({ owner, repo, pull_number });
+        const reviewIds = reviews.data.map((review) => review.id);
+        for (const reviewId of reviewIds) {
+            yield octokit.pulls.deletePendingReview({ owner, repo, pull_number, review_id: reviewId }); // Fix: Use deletePendingReview
+        }
+    });
+}
 function main() {
     var _a;
     return __awaiter(this, void 0, void 0, function* () {
@@ -333,12 +247,13 @@ function main() {
             diff = yield getDiff(prDetails.owner, prDetails.repo, prDetails.pull_number);
         }
         else if (eventData.action === "synchronize") {
+            if (eventData.forced) {
+                yield removeOldComments(prDetails.owner, prDetails.repo, prDetails.pull_number);
+            }
             const newBaseSha = eventData.before;
             const newHeadSha = eventData.after;
             const response = yield octokit.repos.compareCommits({
-                headers: {
-                    accept: "application/vnd.github.v3.diff",
-                },
+                headers: { accept: "application/vnd.github.v3.diff" },
                 owner: prDetails.owner,
                 repo: prDetails.repo,
                 base: newBaseSha,
@@ -347,21 +262,13 @@ function main() {
             diff = String(response.data);
         }
         else {
-            console.log("Unsupported event:", process.env.GITHUB_EVENT_NAME);
             return;
         }
-        if (!diff) {
-            console.log("No diff found");
+        if (!diff)
             return;
-        }
         const parsedDiff = (0, parse_diff_1.default)(diff);
-        const excludePatterns = core
-            .getInput("exclude")
-            .split(",")
-            .map((s) => s.trim());
-        const filteredDiff = parsedDiff.filter((file) => {
-            return !excludePatterns.some((pattern) => { var _a; return (0, minimatch_1.default)((_a = file.to) !== null && _a !== void 0 ? _a : "", pattern); });
-        });
+        const excludePatterns = core.getInput("exclude").split(",").map((s) => s.trim());
+        const filteredDiff = parsedDiff.filter((file) => !excludePatterns.some((pattern) => { var _a; return (0, minimatch_1.default)((_a = file.to) !== null && _a !== void 0 ? _a : "", pattern); }));
         const comments = yield analyzeCode(filteredDiff, prDetails);
         if (comments.length > 0) {
             yield createReviewComment(prDetails.owner, prDetails.repo, prDetails.pull_number, comments);
@@ -369,7 +276,6 @@ function main() {
     });
 }
 main().catch((error) => {
-    console.error("Error:", error);
     process.exit(1);
 });
 
