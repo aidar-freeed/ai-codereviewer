@@ -97,6 +97,8 @@ function analyzeCode(parsedDiff, prDetails) {
                         continue;
                     const prompt = createPrompt(file, chunk, prDetails);
                     const aiResponse = yield getAIResponse(prompt);
+                    console.log('AI Prompt:', prompt);
+                    console.log('AI Response:', aiResponse);
                     if (aiResponse) {
                         const newComments = createComment(file, chunk, aiResponse, existingComments);
                         if (newComments) {
@@ -168,6 +170,7 @@ function getAIResponse(prompt) {
             return JSON.parse(jsonContent).reviews;
         }
         catch (error) {
+            console.error("Error in AI Response:", error);
             return null;
         }
     });

@@ -71,6 +71,8 @@ async function analyzeCode(
 
         const prompt = createPrompt(file, chunk, prDetails);
         const aiResponse = await getAIResponse(prompt);
+        console.log('AI Prompt:', prompt);
+        console.log('AI Response:', aiResponse);
 
         if (aiResponse) {
           const newComments = createComment(file, chunk, aiResponse, existingComments);
@@ -156,6 +158,7 @@ async function getAIResponse(prompt: string): Promise<Array<{
 
     return JSON.parse(jsonContent).reviews;
   } catch (error) {
+    console.error("Error in AI Response:", error);
     return null;
   }
 }
