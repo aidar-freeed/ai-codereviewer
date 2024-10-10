@@ -23,22 +23,70 @@ interface PRDetails {
   description: string;
 }
 
+const MAX_LINES_TO_REVIEW: number = 250;
+const INCLUDE_PATHS: string[] = core.getInput("INCLUDE_PATHS").split(",").map(p => p.trim());
+
 async function getPRDetails(): Promise<PRDetails> {
-  const { repository, number } = JSON.parse(
-    readFileSync(process.env.GITHUB_EVENT_PATH || "", "utf8")
-  );
-  const prResponse = await octokit.pulls.get({
-    owner: repository.owner.login,
-    repo: repository.name,
-    pull_number: number,
-  });
-  return {
-    owner: repository.owner.login,
-    repo: repository.name,
-    pull_number: number,
-    title: prResponse.data.title ?? "",
-    description: prResponse.data.body ?? "",
-  };
+  try {
+    let owner: string;
+    let repo: string;
+    let pull_number: number;
+
+    const eventName = process.env.GITHUB_EVENT_NAME;
+    console.log("Event name:", eventName);
+
+    if (eventName === 'issue_comment' || eventName === 'pull_request_review') {
+      // For comment and review triggers, we need to fetch PR details separately
+      const prNumber = process.env.PR_NUMBER;
+      if (!prNumber) {
+        throw new Error("PR_NUMBER is not set for comment/review trigger");
+      }
+      [owner, repo] = process.env.GITHUB_REPOSITORY?.split('/') || [];
+      if (!owner || !repo) {
+        throw new Error("Unable to parse owner and repo from GITHUB_REPOSITORY");
+      }
+      pull_number = parseInt(prNumber);
+    } else {
+      // For other triggers, use the event file
+      const eventPath = process.env.GITHUB_EVENT_PATH;
+      if (!eventPath) {
+        throw new Error("GITHUB_EVENT_PATH is not set");
+      }
+      console.log("GITHUB_EVENT_PATH:", eventPath);
+      const eventContent = readFileSync(eventPath, "utf8");
+      console.log("Event file content:", eventContent);
+
+      const eventData = JSON.parse(eventContent);
+      if (!eventData.repository || !eventData.pull_request || !eventData.pull_request.number) {
+        throw new Error("Unable to parse repository or PR number from event file");
+      }
+
+      owner = eventData.repository.owner.login;
+      repo = eventData.repository.name;
+      pull_number = eventData.pull_request.number;
+    }
+
+    console.log("Owner:", owner);
+    console.log("Repo:", repo);
+    console.log("PR number:", pull_number);
+
+    const prResponse = await octokit.pulls.get({
+      owner,
+      repo,
+      pull_number,
+    });
+
+    return {
+      owner,
+      repo,
+      pull_number,
+      title: prResponse.data.title ?? "",
+      description: prResponse.data.body ?? "",
+    };
+  } catch (error) {
+    console.error("Error in getPRDetails:", error);
+    throw error;
+  }
 }
 
 async function getDiff(
@@ -46,51 +94,46 @@ async function getDiff(
   repo: string,
   pull_number: number
 ): Promise<string | null> {
-  const response = await octokit.pulls.get({
-    owner,
-    repo,
-    pull_number,
-    mediaType: { format: "diff" },
-  });
-  // @ts-expect-error - response.data is a string
-  return response.data;
+  try {
+    const response = await octokit.pulls.get({
+      owner,
+      repo,
+      pull_number,
+      mediaType: { format: "diff" },
+    });
+
+    // Check if the response is a string (diff content)
+    if (typeof response.data === 'string') {
+      const diffContent = response.data;
+      console.log("Raw diff content sample:", diffContent);
+      return diffContent;
+    } else {
+      console.error("Unexpected response format. Expected string, got:", typeof response.data);
+      return null;
+    }
+  } catch (error) {
+    console.error("Error fetching diff:", error);
+    return null;
+  }
 }
 
-async function analyzeCode(
-  parsedDiff: File[],
+async function analyzeEntirePR(
+  files: File[],
   prDetails: PRDetails
 ): Promise<Array<{ body: string; path: string; line: number }>> {
-  const comments: Array<{ body: string; path: string; line: number }> = [];
+  const fileContents = files.map(file => `File: ${file.to}\n${file.chunks.map(chunk => chunk.changes.map(change => change.content).join('\n')).join('\n')}`).join('\n\n');
 
-  for (const file of parsedDiff) {
-    if (file.to === "/dev/null") continue; // Ignore deleted files
-    for (const chunk of file.chunks) {
-      const prompt = createPrompt(file, chunk, prDetails);
-      const aiResponse = await getAIResponse(prompt);
-      if (aiResponse) {
-        const newComments = createComment(file, chunk, aiResponse);
-        if (newComments) {
-          comments.push(...newComments);
-        }
-      }
-    }
-  }
-  return comments;
-}
-
-function createPrompt(file: File, chunk: Chunk, prDetails: PRDetails): string {
-  return `Your task is to review pull requests. Instructions:
-- Provide the response in following JSON format:  {"reviews": [{"lineNumber":  <line_number>, "reviewComment": "<review comment>"}]}
+  const prompt = `Your task is to review this entire pull request. Instructions:
+- Provide the response in the following JSON format: {"reviews": [{"path": "<file_path>", "line": <line_number>, "comment": "<review comment>"}]}
 - Do not give positive comments or compliments.
-- Provide comments and suggestions ONLY if there is something to improve, otherwise "reviews" should be an empty array.
-- Write the comment in GitHub Markdown format.
-- Use the given description only for the overall context and only comment the code.
+- Provide comments and suggestions ONLY if there is something to improve.
+- Write the comments in GitHub Markdown format.
+- Use the given description for overall context.
 - IMPORTANT: NEVER suggest adding comments to the code.
+- IMPORTANT: Only comment on lines that are part of the diff (added or modified lines).
 
-Review the following code diff in the file "${
-    file.to
-  }" and take the pull request title and description into account when writing the response.
-  
+Review the following pull request and take the title and description into account when writing the response.
+
 Pull request title: ${prDetails.title}
 Pull request description:
 
@@ -100,36 +143,35 @@ ${prDetails.description}
 
 Git diff to review:
 
-\`\`\`diff
-${chunk.content}
-${chunk.changes
-  // @ts-expect-error - ln and ln2 exists where needed
-  .map((c) => `${c.ln ? c.ln : c.ln2} ${c.content}`)
-  .join("\n")}
-\`\`\`
+${fileContents}
 `;
+
+  const aiResponse = await getAIResponse(prompt);
+  return aiResponse ? aiResponse.map(review => ({
+    body: review.comment,
+    path: review.path,
+    line: review.line
+  })) : [];
 }
 
 async function getAIResponse(prompt: string): Promise<Array<{
-  lineNumber: string;
-  reviewComment: string;
+  path: string;
+  line: number;
+  comment: string;
 }> | null> {
   const queryConfig = {
     model: OPENAI_API_MODEL,
     temperature: 0.2,
-    max_tokens: 700,
+    max_tokens: 2000,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
   };
+  console.log("Sending prompt to AI...", prompt);
 
   try {
     const response = await openai.chat.completions.create({
       ...queryConfig,
-      // return JSON if the model supports it:
-      ...(OPENAI_API_MODEL === "gpt-4-1106-preview"
-        ? { response_format: { type: "json_object" } }
-        : {}),
       messages: [
         {
           role: "system",
@@ -138,8 +180,21 @@ async function getAIResponse(prompt: string): Promise<Array<{
       ],
     });
 
-    const res = response.choices[0].message?.content?.trim() || "{}";
-    return JSON.parse(res).reviews;
+    let res = response.choices[0].message?.content?.trim() || "{}";
+    console.info("Raw AI response:", res);
+
+    // Remove any markdown code block syntax
+    res = res.replace(/^```json\s*/, '').replace(/\s*```$/, '');
+
+    // Attempt to parse the JSON
+    try {
+      const parsedResponse = JSON.parse(res);
+      console.info("Parsed AI response:", parsedResponse);
+      return parsedResponse.reviews;
+    } catch (parseError) {
+      console.error("Error parsing AI response:", parseError);
+      return null;
+    }
   } catch (error) {
     console.error("Error:", error);
     return null;
@@ -182,68 +237,88 @@ async function createReviewComment(
 }
 
 async function main() {
+  console.info("Starting main function");
   const prDetails = await getPRDetails();
-  let diff: string | null;
-  const eventData = JSON.parse(
-    readFileSync(process.env.GITHUB_EVENT_PATH ?? "", "utf8")
+  console.info("PR Details:", prDetails);
+
+  const diff = await getDiff(
+    prDetails.owner,
+    prDetails.repo,
+    prDetails.pull_number
   );
-
-  if (eventData.action === "opened") {
-    diff = await getDiff(
-      prDetails.owner,
-      prDetails.repo,
-      prDetails.pull_number
-    );
-  } else if (eventData.action === "synchronize") {
-    const newBaseSha = eventData.before;
-    const newHeadSha = eventData.after;
-
-    const response = await octokit.repos.compareCommits({
-      headers: {
-        accept: "application/vnd.github.v3.diff",
-      },
-      owner: prDetails.owner,
-      repo: prDetails.repo,
-      base: newBaseSha,
-      head: newHeadSha,
-    });
-
-    diff = String(response.data);
-  } else {
-    console.log("Unsupported event:", process.env.GITHUB_EVENT_NAME);
-    return;
-  }
 
   if (!diff) {
     console.log("No diff found");
     return;
   }
+  console.log("Diff length:", diff.length);
 
   const parsedDiff = parseDiff(diff);
+  console.log("Parsed diff length:", parsedDiff.length);
 
-  const excludePatterns = core
-    .getInput("exclude")
-    .split(",")
-    .map((s) => s.trim());
+  // Filter the diff to only include files that match the include paths
+  console.log("Filtering diff based on include paths:", INCLUDE_PATHS);
+  const filteredDiff = parsedDiff.filter(file => {
+    const matchesPattern = INCLUDE_PATHS.some(pattern => minimatch(file.to || "", pattern));
+    console.log(`File ${file.to}: ${matchesPattern ? 'included' : 'excluded'}`);
+    return matchesPattern;
+  });
+  console.log("Filtered diff files:", filteredDiff.map(file => file.to));
+  console.log("Filtered diff length:", filteredDiff.length);
 
-  const filteredDiff = parsedDiff.filter((file) => {
-    return !excludePatterns.some((pattern) =>
-      minimatch(file.to ?? "", pattern)
-    );
+  // Check if the PR is too long
+  const totalChangedLines = filteredDiff.reduce((total, file) => {
+    return total + file.additions + file.deletions;
+  }, 0);
+
+  if (totalChangedLines > MAX_LINES_TO_REVIEW) {
+    console.log("PR is too long. Adding general comment and exiting.");
+    await octokit.pulls.createReview({
+      owner: prDetails.owner,
+      repo: prDetails.repo,
+      pull_number: prDetails.pull_number,
+      body: `LLM reviewer will not review this as the PR is too long (${totalChangedLines} lines). Please consider splitting it up to make it more readable for humans too!`,
+      event: "COMMENT"
+    });
+    return;
+  }
+
+  const comments = await analyzeEntirePR(filteredDiff, prDetails);
+  console.log("Generated comments:", comments.length);
+
+  // Filter comments to ensure they're on changed lines and adjust line numbers
+  const validComments = comments.filter(comment => {
+    const file = filteredDiff.find(f => f.to === comment.path);
+    if (!file) return false;
+
+    const changedLines = new Set();
+    file.chunks.forEach(chunk => {
+      for (let i = 0; i < chunk.changes.length; i++) {
+        const change = chunk.changes[i];
+        if (change.type === 'add' || change.type === 'del') {
+          changedLines.add(chunk.newStart + i);
+        }
+      }
+    });
+
+    return changedLines.has(comment.line);
   });
 
-  const comments = await analyzeCode(filteredDiff, prDetails);
-  if (comments.length > 0) {
+  console.log("Valid comments:", validComments.length);
+
+  if (validComments.length > 0) {
+    console.log("Creating review comments");
     await createReviewComment(
       prDetails.owner,
       prDetails.repo,
       prDetails.pull_number,
-      comments
+      validComments
     );
   }
+  console.log("Main function completed");
 }
 
 main().catch((error) => {
-  console.error("Error:", error);
+  console.error("Error in main function:", error);
   process.exit(1);
 });
