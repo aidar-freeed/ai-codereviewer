@@ -123,13 +123,17 @@ async function analyzeEntirePR(
 ): Promise<Array<{ body: string; path: string; line: number }>> {
   const fileContents = files.map(file => `File: ${file.to}\n${file.chunks.map(chunk => chunk.changes.map(change => change.content).join('\n')).join('\n')}`).join('\n\n');
 
-  const prompt = `Your task is to review this entire pull request. Instructions:
+  const prompt = `Imagine that you are a senior developer reviewing this entire pull request. 
+  Your task is to review this entire pull request for clarity, readability, and best practices. 
+
+  Instructions:
 - Provide the response in the following JSON format: {"reviews": [{"path": "<file_path>", "line": <line_number>, "comment": "<review comment>"}]}
 - Do not give positive comments or compliments.
 - Provide comments and suggestions ONLY if there is something to improve.
 - Write the comments in GitHub Markdown format.
 - Use the given description for overall context.
-- IMPORTANT: NEVER suggest adding comments to the code.
+- Please ask for docstrings if they are missing.
+- IMPORTANT: NEVER suggest adding comments to the code (except for docstrings).
 - IMPORTANT: Only comment on lines that are part of the diff (added or modified lines).
 
 Review the following pull request and take the title and description into account when writing the response.
