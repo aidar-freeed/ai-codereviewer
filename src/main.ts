@@ -1,12 +1,13 @@
 import { readFileSync } from "fs";
+
 import * as core from "@actions/core";
 import OpenAI from "openai";
 import { Octokit } from "@octokit/rest";
 import parseDiff, { Chunk, File } from "parse-diff";
 import minimatch from "minimatch";
 
-const GITHUB_TOKEN: string = core.getInput("GITHUB_TOKEN");
-const OPENAI_API_KEY: string = core.getInput("OPENAI_API_KEY");
+const GITHUB_TOKEN: string = core.getInput("GITHUB_TOKEN") || process.env.GITHUB_TOKEN || "";
+const OPENAI_API_KEY: string = core.getInput("OPENAI_API_KEY") || process.env.OPENAI_API_KEY || "";
 const OPENAI_API_MODEL: string = core.getInput("OPENAI_API_MODEL");
 
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
@@ -24,7 +25,7 @@ interface PRDetails {
 }
 
 const MAX_LINES_TO_REVIEW: number = 250;
-const INCLUDE_PATHS: string[] = core.getInput("INCLUDE_PATHS").split(",").map(p => p.trim());
+const INCLUDE_PATHS: string[] = (core.getInput("INCLUDE_PATHS") || process.env.INCLUDE_PATHS || "").split(",").map(p => p.trim());
 
 async function getPRDetails(): Promise<PRDetails> {
   try {
@@ -89,11 +90,11 @@ async function getPRDetails(): Promise<PRDetails> {
   }
 }
 
-async function getDiff(
+export async function getDiff(
   owner: string,
   repo: string,
   pull_number: number
-): Promise<string | null> {
+): Promise<File[] | null> {
   try {
     const response = await octokit.pulls.get({
       owner,
@@ -102,19 +103,61 @@ async function getDiff(
       mediaType: { format: "diff" },
     });
 
-    // Check if the response is a string (diff content)
-    if (typeof response.data === 'string') {
-      const diffContent = response.data;
-      console.log("Raw diff content sample:", diffContent);
-      return diffContent;
-    } else {
-      console.error("Unexpected response format. Expected string, got:", typeof response.data);
+    // Explicitly assert the type of response.data
+    const diffContent = response.data as unknown as string;
+
+    if (typeof diffContent !== 'string') {
+      console.error("Unexpected response format. Expected string, got:", typeof diffContent);
       return null;
     }
+
+    console.log("Raw diff content sample:", diffContent.substring(0, 200));
+    
+    const parsedDiff = parseDiff(diffContent);
+    console.log("Parsed diff length:", parsedDiff.length);
+
+    // Filter the diff to only include files that match the include paths
+    console.log("Filtering diff based on include paths:", INCLUDE_PATHS);
+    const filteredDiff = parsedDiff.filter(file => {
+      const matchesPattern = INCLUDE_PATHS.some(pattern => minimatch(file.to || "", pattern));
+      console.log(`File ${file.to}: ${matchesPattern ? 'included' : 'excluded'}`);
+      return matchesPattern;
+    });
+    console.log("Filtered diff files:", filteredDiff.map(file => file.to));
+    console.log("Filtered diff length:", filteredDiff.length);
+
+    // Log the string representation of the filtered diff
+    console.log("Filtered diff string:\n", diffToString(filteredDiff));
+
+    return filteredDiff;
   } catch (error) {
     console.error("Error fetching diff:", error);
     return null;
   }
+}
+
+export function diffToString(files: File[]): string {
+  return files.map(fileToString).join('\n\n');
+}
+
+function fileToString(file: File): string {
+  const header = `diff --git a/${file.from} b/${file.to}
+${file.index ? `index ${file.index}\n` : ''}${file.deleted ? '--- ' + file.from : ''}
+${file.new ? '+++ ' + file.to : ''}`;
+
+  const chunks = file.chunks.map(chunkToString).join('\n');
+
+  return `${header}\n${chunks}`;
+}
+
+function chunkToString(chunk: Chunk): string {
+  const header = `@@ -${chunk.oldStart},${chunk.oldLines} +${chunk.newStart},${chunk.newLines} @@`;
+  const changes = chunk.changes.map(change => {
+    const prefix = change.type === 'add' ? '+' : (change.type === 'del' ? '-' : ' ');
+    return prefix + change.content;
+  }).join('\n');
+
+  return `${header}\n${changes}`;
 }
 
 async function analyzeEntirePR(
@@ -240,52 +283,22 @@ async function createReviewComment(
   });
 }
 
-async function main() {
+export async function main() {
   console.info("Starting main function");
   const prDetails = await getPRDetails();
   console.info("PR Details:", prDetails);
 
-  const diff = await getDiff(
+  const filteredDiff = await getDiff(
     prDetails.owner,
     prDetails.repo,
     prDetails.pull_number
   );
 
-  if (!diff) {
+  if (!filteredDiff) {
     console.log("No diff found");
     return;
   }
-  console.log("Diff length:", diff.length);
-
-  const parsedDiff = parseDiff(diff);
-  console.log("Parsed diff length:", parsedDiff.length);
-
-  // Filter the diff to only include files that match the include paths
-  console.log("Filtering diff based on include paths:", INCLUDE_PATHS);
-  const filteredDiff = parsedDiff.filter(file => {
-    const matchesPattern = INCLUDE_PATHS.some(pattern => minimatch(file.to || "", pattern));
-    console.log(`File ${file.to}: ${matchesPattern ? 'included' : 'excluded'}`);
-    return matchesPattern;
-  });
-  console.log("Filtered diff files:", filteredDiff.map(file => file.to));
   console.log("Filtered diff length:", filteredDiff.length);
-
-  // Check if the PR is too long
-  const totalChangedLines = filteredDiff.reduce((total, file) => {
-    return total + file.additions + file.deletions;
-  }, 0);
-
-  if (totalChangedLines > MAX_LINES_TO_REVIEW) {
-    console.log("PR is too long. Adding general comment and exiting.");
-    await octokit.pulls.createReview({
-      owner: prDetails.owner,
-      repo: prDetails.repo,
-      pull_number: prDetails.pull_number,
-      body: `LLM reviewer will not review this as the PR is too long (${totalChangedLines} lines). Please consider splitting it up to make it more readable for humans too!`,
-      event: "COMMENT"
-    });
-    return;
-  }
 
   const comments = await analyzeEntirePR(filteredDiff, prDetails);
   console.log("Generated comments:", comments.length);
@@ -322,7 +335,10 @@ async function main() {
   console.log("Main function completed");
 }
 
-main().catch((error) => {
-  console.error("Error in main function:", error);
-  process.exit(1);
-});
+// Add this condition to prevent automatic execution when imported
+if (require.main === module) {
+  main().catch((error) => {
+    console.error("Error in main function:", error);
+    process.exit(1);
+  });
+}
