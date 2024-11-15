@@ -19,10 +19,7 @@ public without sharing class acvSpecializedViewSummaryRenewController {
     @AuraEnabled
     public static summaryWrap getSummaryViewList(Id OpptyId) {
         //added by akoteshw
-        //OpptyId = '0062T00001IyzuKQAR'  ; 
-        List<summaryViewDetails> summaryViewDetlsLst = new List<summaryViewDetails>();
-        //Software Summary view
-        List<softwareSummaryViewDetails> swsummaryViewDetlsLst = new List<softwareSummaryViewDetails>();
+       st = new List<softwareSummaryViewDetails>();
         Boolean isError = False;
         List<OpportunityLinesSV__c> opptyLinesSVList = new List<OpportunityLinesSV__c>();
         List<OpportunityLineItem> opptyLinesList = new List<OpportunityLineItem>();        
