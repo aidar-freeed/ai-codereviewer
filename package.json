@@ -17,7 +17,7 @@
     "minimatch": "^7.4.2",
     "openai": "^4.20.1",
     "parse-diff": "^0.11.1",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/node": "^18.15.5",
