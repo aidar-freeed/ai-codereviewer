@@ -86,10 +86,9 @@ function createPrompt(file: File, chunk: Chunk, prDetails: PRDetails): string {
 - Write the comment in GitHub Markdown format.
 - Use the given description only for the overall context and only comment the code.
 - IMPORTANT: NEVER suggest adding comments to the code.
+- IMPORTANT: Only comment on lines that are part of the changed code (lines starting with + or -).
 
-Review the following code diff in the file "${
-    file.to
-  }" and take the pull request title and description into account when writing the response.
+Review the following code diff in the file "${file.to}" and take the pull request title and description into account when writing the response.
   
 Pull request title: ${prDetails.title}
 Pull request description:
@@ -158,10 +157,27 @@ function createComment(
     if (!file.to) {
       return [];
     }
+
+    // Convert lineNumber to number
+    const lineNum = Number(aiResponse.lineNumber);
+
+    // Verify the line number is within the current chunk
+    const isLineInChunk = chunk.changes.some(
+      (change) => 
+        // Check both new and old line numbers
+        (change.ln && change.ln === lineNum) || 
+        (change.ln2 && change.ln2 === lineNum)
+    );
+
+    if (!isLineInChunk) {
+      console.log(`Warning: Line ${lineNum} is not part of the current diff chunk in ${file.to}`);
+      return [];
+    }
+
     return {
       body: aiResponse.reviewComment,
       path: file.to,
-      line: Number(aiResponse.lineNumber),
+      line: lineNum,
     };
   });
 }
