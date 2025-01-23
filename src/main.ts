@@ -12,6 +12,8 @@ const OPENAI_API_DEPLOYMENT: string = core.getInput("OPENAI_API_DEPLOYMENT");
 const OPENAI_API_VERSION: string = core.getInput("OPENAI_API_VERSION");
 const OPENAI_API_BASE_URL: string = core.getInput("OPENAI_API_BASE_URL");
 
+console.log(OPENAI_API_MODEL, OPENAI_API_DEPLOYMENT, OPENAI_API_VERSION, OPENAI_API_BASE_URL)
+
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
 const openai = new AzureOpenAI({
